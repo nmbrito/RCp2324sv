@@ -11,8 +11,8 @@ Commented and adapted by: Nuno Brito
 from socket import *
 
 # Specify servername and port destination
-serverName = ’servername’
-serverPort = 12000
+serverName = ’172.24.1.12’
+serverPort = 80
 
 # Socket open and connect
 clientSocket = socket(AF_INET, SOCK_STREAM)
@@ -20,7 +20,8 @@ clientSocket.connect((serverName,serverPort))
 
 # HTTP1.1/GET message
 #   Input manually
-sentence = raw_input(‘Input lowercase sentence:’)
+#sentence = raw_input(‘Input lowercase sentence:’)
+sentence = 
 #   Cycle through a list
 # TODO!!!
 

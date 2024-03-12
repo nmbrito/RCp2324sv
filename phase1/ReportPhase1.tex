@@ -3,14 +3,19 @@
 \author{Nuno Brito}
 %\date{}
 
-%packaging  {{{1
+%packaging
 \usepackage{graphicx}                                   % Inserir imagens
     \graphicspath{ {./images/} }                        % Caminho para o recurso imagens
 \usepackage[portuguese]{babel}                          % Pacote que descarrega e traduz linguagem global dos campos pré-definidos de LaTeX
     \selectlanguage{portuguese}                         % Define linguagem para português
 \usepackage{multicol}                                   % Criar texto em colunas (\begin{multicols}{#} [...] \end{multicols}). Usar \raggedcolumns e \columnbreak
     \setlength{\columnsep}{3cm}                         % Define espaçamento entre múltiplas colunas
+\usepackage{longtable}
 \usepackage{listings}                                   % Para código
+%\usepackage{comment}                                    % Permite criar um segmento de comentários (/begin{comment} [...] /end{comment})
+%\usepackage{xcolor}                                     % Colorir texto (esta versão é mais flexível do que a {color})
+%\usepackage{subcaption}                                 % Subcaptions para figuras
+%\usepackage{fullpage}                                   % Utilizar página inteira
     \lstdefinestyle{pythoncode}
     {
         %backgroundcolor=\color{backcolour},
@@ -29,40 +34,11 @@
         showstringspaces=false,
         showtabs=false,
         tabsize=2
+        %inputencoding=utf8,
+        %extendedchars=true,
     }
 
-%unused     {{{1
-\usepackage{fullpage}                                   % Utilizar página inteira
-\usepackage{comment}                                    % Permite criar um segmento de comentários (/begin{comment} [...] /end{comment})
-\usepackage{xcolor}                                     % Colorir texto (esta versão é mais flexível do que a {color})
-\usepackage{indentfirst}                                % Indenta SEMPRE o primeiro parágrafo (/noindent para não indentar)
-\usepackage{placeins}                                   % Controla o posicionamento de tabelas e figuras logo após o texto (/FloatBarrier)
-\usepackage{subcaption}                                 % Subcaptions para figuras
-\usepackage{flafter}                                    % Qualquer coisa com o posicionamento dos Floats
-\usepackage{titling}                                    % Centrar, horizontal e verticalmente o título na página (/begin{titling} [...] /end{titling})
-\usepackage[linesnumbered,ruled,vlined]{algorithm2e}    % Criação de algoritmos
-\usepackage[acronym]{glossaries}                        % Permite criação de glossários. Usar \makeglossaries \newglossaryentry{palavra} e \printglossaries
-\usepackage{fancyhdr}                                   % Criação de cabeçalhos e rodapés
-\usepackage{tikz}                                       % Figuras tikz (construção de vetores, fluxogramas, etc.)
-
-%settings
-%unused%
-\renewcommand\maketitlehooka{\null\mbox{}\vfill}        % Comando adicional para centrar o título
-\renewcommand\maketitlehookd{\vfill\null}               % Comando adicional 2 para centrar o título
-\usetikzlibrary{shapes.geometric, arrows}
-\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
-\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
-\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
-\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
-\tikzstyle{arrow} = [thick,->,>=stealth]
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[LE, RO]{ISEL}
-\fancyhead[RE, LO]{Phase 1 - 25\%}
-\fancyfoot[CE, CO]{\leftmark}
-\fancyfoot[LE, RO]{\thepage}
-
-\begin{document}    {{{1
+\begin{document}
 
 \tableofcontents
 
@@ -100,12 +76,12 @@
     
     \subsection{Configurations}
         SSLEngine disabled in apache to ease access with http
-        \includegraphics[scale=1.0]{xampp01} \\
-        <=++figure sslengine off++=>
-        <=++figure access from localhost++=>
-        <=++figure access from 127.0.0.1++=>
-        <=++figure access from anotherhost++=>
-        <=++figure wireshark capture from another host++=>
+        %\includegraphics[scale=1.0]{xampp01} \\
+        %<=++figure sslengine off++=>
+        %<=++figure access from localhost++=>
+        %<=++figure access from 127.0.0.1++=>
+        %<=++figure access from anotherhost++=>
+        %<=++figure wireshark capture from another host++=>
     
     \subsection{Python code}
         \lstset{style=pythoncode}
@@ -124,8 +100,8 @@
         wireshark settings
         wireshark filters
         
-        \begin{tabular}
-            text & \includegraphics[scale=1.0]{xampp01} \\
+        \begin{tabular}{ l r }
+            text & \includegraphics[scale=1.0]{xampp01} \\ % 0.3 scale!
             text & \includegraphics[scale=1.0]{xampp02} \\
             text & \includegraphics[scale=1.0]{xampp03} \\
             text & \includegraphics[scale=1.0]{xampp04} \\

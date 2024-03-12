@@ -66,7 +66,7 @@ Web client requirements:
 \end{itemize}
 
 \section{Project}
-Software:
+\subsection{Software}
     local server:
         windows 11 x64
         xampp-portable-windows-x64-8.2.12-0-VS16.7z
@@ -75,7 +75,15 @@ Software:
         librefox version
         wireshark version
 
-Python code:
+\subsection{Configurations}
+    SSLEngine disabled in apache to ease access with http
+    <=++figure sslengine off++=>
+    <=++figure access from localhost++=>
+    <=++figure access from 127.0.0.1++=>
+    <=++figure access from anotherhost++=>
+    <=++figure wireshark capture from another host++=>
+
+\subsection{Python code}
     """
     Name: Python TCP Client
     Description: Simple TCP client using sockets
@@ -112,12 +120,18 @@ Python code:
     # Socket close connection
     clientSocket.close()
 
-Configurations
+\subsection{List of headers}
+    client
+        meaning
+    server
+        meaning
 
-<=++figure access from localhost++=>
-<=++figure access from 127.0.0.1++=>
-<=++figure access from anotherhost++=>
-<=++figure wireshark capture from another host++=>
+\subsection{Objectives}
 
+Step-by-step instructions performed
+Xampp install
+wireshark install
+wireshark settings
+wireshark filters
 
 \end{document}

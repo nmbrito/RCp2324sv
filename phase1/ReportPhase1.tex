@@ -1,0 +1,123 @@
+\documentclass[11pt]{report}
+\title{Computer Networks}
+\author{Nuno Brito}
+%\date{}
+
+%packaging
+\usepackage{fullpage}									% Utilizar página inteira
+\usepackage{tikz}										% Figuras tikz (construção de vetores, fluxogramas, etc.)
+\usepackage{comment}									% Permite criar um segmento de comentários (/begin{comment} [...] /end{comment})
+\usepackage{xcolor}										% Colorir texto (esta versão é mais flexível do que a {color})
+\usepackage{indentfirst}								% Indenta SEMPRE o primeiro parágrafo (/noindent para não indentar)
+\usepackage{graphicx}									% Inserir imagens
+\usepackage{placeins}									% Controla o posicionamento de tabelas e figuras logo após o texto (/FloatBarrier)
+\usepackage{subcaption}									% Subcaptions para figuras
+\usepackage{flafter}									% Qualquer coisa com o posicionamento dos Floats
+\usepackage[portuguese]{babel}							% Pacote que descarrega e traduz linguagem global dos campos pré-definidos de LaTeX
+\usepackage{multicol}									% Criar texto em colunas (\begin{multicols}{#} [...] \end{multicols}). Usar \raggedcolumns e \columnbreak
+\usepackage{titling}									% Centrar, horizontal e verticalmente o título na página (/begin{titling} [...] /end{titling})
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}	% Criação de algoritmos
+\usepackage[acronym]{glossaries}						% Permite criação de glossários. Usar \makeglossaries \newglossaryentry{palavra} e \printglossaries
+\usepackage{fancyhdr}									% Criação de cabeçalhos e rodapés
+
+%settings
+\selectlanguage{portuguese}								% Define linguagem para português
+\setlength{\columnsep}{3cm}								% Define espaçamento entre múltiplas colunas
+\graphicspath{ {./imagens/} }							% Caminho para o recurso imagens
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}		% Comando adicional para centrar o título
+\renewcommand\maketitlehookd{\vfill\null}				% Comando adicional 2 para centrar o título
+\usetikzlibrary{shapes.geometric, arrows}
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE, RO]{ISEL}
+\fancyhead[RE, LO]{Phase 1 - 25\%}
+\fancyfoot[CE, CO]{\leftmark}
+\fancyfoot[LE, RO]{\thepage}
+
+\begin{document}
+
+\tableofcontents
+
+\section{Introduction}
+Milestones:
+\begin{itemize}
+    \item Getting apache2 web server running in localhost
+    \item Access web server - http://127.0.0.1/
+    \item Access web server from other computer
+    \item Use wireshark to capture the web access from another host
+    \item Compare the HTTP headers sent by the client and the server
+    \item Develop a web client
+    \item Establish a TCP connection to the server
+    \item Request the base webpage
+\end{itemize}
+
+Web client requirements:
+\begin{itemize}
+    \item Usage of HTTP library forbidden
+    \item Establish TCP connection using available sockets library - send the HTTP request and receive the HTTP reply
+    \item HTTP reply should be presented to the user
+    \item - Optional - act to the various HTTP replies
+    \item Text-only application
+\end{itemize}
+
+\section{Project}
+Software:
+    local server:
+        windows 11 x64
+        xampp-portable-windows-x64-8.2.12-0-VS16.7z
+    client:
+        firefox version
+        librefox version
+        wireshark version
+
+Python code:
+    """
+    Name: Python TCP Client
+    Description: Simple TCP client using sockets
+    Original code by: Luís Pires
+    Source: Chapter 2, slide 104
+    
+    Commented and adapted by: Nuno Brito
+    """
+    
+    # Import from everything from the socket library
+    from socket import *
+    
+    # Specify servername and port destination
+    serverName = ’servername’
+    serverPort = 12000
+    
+    # Socket open and connect
+    clientSocket = socket(AF_INET, SOCK_STREAM)
+    clientSocket.connect((serverName,serverPort))
+    
+    # HTTP1.1/GET message
+    #   Input manually
+    sentence = raw_input(‘Input lowercase sentence:’)
+    #   Cycle through a list
+    # TODO!!!
+    
+    # Socket send
+    clientSocket.send(sentence.encode())
+    
+    # Receive and output the response message
+    modifiedSentence = clientSocket.recv(1024)
+    print (‘From Server:’, modifiedSentence.decode())
+    
+    # Socket close connection
+    clientSocket.close()
+
+Configurations
+
+<=++figure access from localhost++=>
+<=++figure access from 127.0.0.1++=>
+<=++figure access from anotherhost++=>
+<=++figure wireshark capture from another host++=>
+
+
+\end{document}

@@ -15,22 +15,32 @@ serverName = "172.24.1.12"
 serverPort = 80
 
 # GET list
-httpMessages = [
-        "GET /dashboard/ HTTP/1.1\r\nHost:172.24.1.12\r\n\r\n",             # 200 OK
-        "GET /dashboard HTTP/1.1\r\nHost:172.24.1.12\r\n\r\n",              # 301 Moved Permanently
-        "PUT / HTTP/1.1\r\nHost:172.24.1.12\r\n\r\n",                       # 302 Found
-        "GET /dashboard HTTP/1.\r\nHost:172.24.1.12\r\n\r\n",               # 400 Bad Request
-        "GET /dashboard/index.htm HTTP/1.1\r\nHost:172.24.1.12\r\n\r\n",    # 404 Not Found
-        "PUT /d HTTP/1.1\r\nHost:172.24.1.12\r\n\r\n",                      # 405 Method Not Allowed
+#httpMessages = [
+#        "GET /dashboard/ HTTP/1.1\r\nHost:172.24.1.12\r\n\r\n",             # 200 OK
+#        "GET /dashboard HTTP/1.1\r\nHost:172.24.1.12\r\n\r\n",              # 301 Moved Permanently
+#        "PUT / HTTP/1.1\r\nHost:172.24.1.12\r\n\r\n",                       # 302 Found
+#        "GET /dashboard HTTP/1.\r\nHost:172.24.1.12\r\n\r\n",               # 400 Bad Request
+#        "GET /dashboard/index.htm HTTP/1.1\r\nHost:172.24.1.12\r\n\r\n",    # 404 Not Found
+#        "PUT /d HTTP/1.1\r\nHost:172.24.1.12\r\n\r\n",                      # 405 Method Not Allowed
+#        ]
+
+httpTestMessages = [
+        "GET /dashboard/ HTTP/1.1",             # 200 OK
+        "GET /dashboard HTTP/1.1",              # 301 Moved Permanently
+        "PUT / HTTP/1.1",                       # 302 Found
+        "GET /dashboard HTTP/1.",               # 400 Bad Request
+        "GET /dashboard/index.htm HTTP/1.1",    # 404 Not Found
+        "PUT /d HTTP/1.1",                      # 405 Method Not Allowed
         ]
 
 # Cycle through predefined messages
-for sentence in httpMessages:
+for sentence in httpTestMessages:
 
     # Socket open and connect
     clientSocket = socket(AF_INET, SOCK_STREAM)
     clientSocket.connect((serverName,serverPort))
 
+    sentence += "\r\nHost:" + serverName + "\r\n\r\n"
     # Socket encode message and send
     clientSocket.send(sentence.encode())
 

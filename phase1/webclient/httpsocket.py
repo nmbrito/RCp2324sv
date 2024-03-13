@@ -11,7 +11,7 @@ Commented and adapted by: Nuno Brito
 from socket import *
 
 # Specify servername and port destination
-serverName = ’172.24.1.12’
+serverName = "172.24.1.12"
 serverPort = 80
 
 # Socket open and connect
@@ -21,7 +21,7 @@ clientSocket.connect((serverName,serverPort))
 # HTTP1.1/GET message
 #   Input manually
 #sentence = raw_input(‘Input lowercase sentence:’)
-sentence = 
+sentence = "GET /index.html HTTP/1.1\r\n"
 #   Cycle through a list
 # TODO!!!
 
@@ -30,7 +30,7 @@ clientSocket.send(sentence.encode())
 
 # Receive and output the response message
 modifiedSentence = clientSocket.recv(1024)
-print (‘From Server:’, modifiedSentence.decode())
+print ("From Server:", modifiedSentence.decode())
 
 # Socket close connection
 clientSocket.close()

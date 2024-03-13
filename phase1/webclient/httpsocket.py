@@ -24,10 +24,12 @@ httpMessages = ["GET HTTP/1.1\r\nHost:\r\n\r\n",
 """
 
 httpMessages = [
-        "GET /dashboard HTTP/1.1\r\nHost:172.24.1.12\r\n\r\n",
-        "GET /dashboard HTTP/1.\r\nHost:172.24.1.12\r\n\r\n",
-        "GET HTTP/1.1\r\nHost:172.24.1.12\r\n\r\n",
-        "GET /dashboard/ HTTP/1.1\r\nHost:172.24.1.12\r\n\r\n",
+        "GET /dashboard/ HTTP/1.1\r\nHost:172.24.1.12\r\n\r\n",             # 200 OK
+        "GET /dashboard HTTP/1.1\r\nHost:172.24.1.12\r\n\r\n",              # 301 Moved Permanently
+        "PUT / HTTP/1.1\r\nHost:172.24.1.12\r\n\r\n",                       # 302 Found
+        "GET /dashboard HTTP/1.\r\nHost:172.24.1.12\r\n\r\n",               # 400 Bad Request
+        "GET /dashboard/index.htm HTTP/1.1\r\nHost:172.24.1.12\r\n\r\n",    # 404 Not Found
+        "PUT /d HTTP/1.1\r\nHost:172.24.1.12\r\n\r\n",                      # 405 Method Not Allowed
         ]
 
 # Socket open and connect

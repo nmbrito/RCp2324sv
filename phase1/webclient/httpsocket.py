@@ -13,24 +13,41 @@ from socket import *
 # Specify servername and port destination
 serverName = "172.24.1.12"
 serverPort = 80
+serverDestination = "/dashboard"
 
+# GET list
+httpMessages = ["GET " + serverDestination + " HTTP/1.1\r\nHost:" + serverName + "\r\n\r\n",
+                "GET " + serverDestination + " HTTP/1.\r\nHost:" + serverName + "\r\n\r\n"]
+
+httpMessages = ["GET HTTP/1.1\r\nHost:\r\n\r\n",
+                "GET HTTP/1.1\r\nHost:\r\n\r\n"]
 # Socket open and connect
 clientSocket = socket(AF_INET, SOCK_STREAM)
 clientSocket.connect((serverName,serverPort))
 
+# FALL BACK
 # HTTP1.1/GET message
-#   Input manually
-#sentence = raw_input(‘Input lowercase sentence:’)
-sentence = "GET /index.html HTTP/1.1\r\n"
-#   Cycle through a list
-# TODO!!!
+#sentence = raw_input(‘Input lowercase sentence:’)                   # User input
+#sentence = "GET /dashboard/ HTTP/1.1\r\nHost:172.24.1.12\r\n\r\n"   # Manual message
+#
+## Socket send
+#clientSocket.send(sentence.encode())
+#
+## Receive and output the response message
+#modifiedSentence = clientSocket.recv(1024)
+#print ("From Server:", modifiedSentence.decode())
+#
+## Socket close connection
+#clientSocket.close()
 
-# Socket send
-clientSocket.send(sentence.encode())
+# The cycle Way
+for sentence in httpMessages:
+    # Socket encode message and send
+    clientSocket.send(sentence.encode())
 
-# Receive and output the response message
-modifiedSentence = clientSocket.recv(1024)
-print ("From Server:", modifiedSentence.decode())
+    # Receive and out the response message
+    modifiedSentence = clientSocket.recv(1024)
 
-# Socket close connection
-clientSocket.close()
+    # Print the requested message
+    print ("From Server:", modifiedSentence.decode())
+    clientSocket.close()

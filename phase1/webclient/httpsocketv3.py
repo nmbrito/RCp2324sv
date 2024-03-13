@@ -16,12 +16,12 @@ serverPort = 80
 
 # GET list
 httpTestMessages = [
-        "GET /dashboard/ HTTP/1.1",             # 200 OK
-        "GET /dashboard HTTP/1.1",              # 301 Moved Permanently
-        "PUT / HTTP/1.1",                       # 302 Found
-        "GET /dashboard HTTP/1.",               # 400 Bad Request
-        "GET /dashboard/index.htm HTTP/1.1",    # 404 Not Found
-        "PUT /d HTTP/1.1",                      # 405 Method Not Allowed
+        "GET /dashboard/ HTTP/1.1\r\n",             # 200 OK
+        "GET /dashboard HTTP/1.1\r\n",              # 301 Moved Permanently
+        "PUT / HTTP/1.1\r\n",                       # 302 Found
+        "GET /dashboard HTTP/1.\r\n",               # 400 Bad Request
+        "GET /dashboard/index.htm HTTP/1.1\r\n",    # 404 Not Found
+        "PUT /d HTTP/1.1\r\n",                      # 405 Method Not Allowed
         ]
 
 # Cycle through predefined messages
@@ -32,7 +32,7 @@ for sentence in httpTestMessages:
     clientSocket.connect((serverName,serverPort))
 
     # Join serverName to the current sentence
-    sentence += "\r\nHost:" + serverName + "\r\n\r\n"
+    sentence += "Host:" + serverName + "\r\n\r\n"
 
     # Socket encode message and send
     clientSocket.send(sentence.encode())
@@ -40,9 +40,10 @@ for sentence in httpTestMessages:
     # Receive and out the response message
     modifiedSentence = clientSocket.recv(1024)
 
+    # Close socket connection
+    clientSocket.close()
+
     # Print the requested message
     print ("-"*60)
     print ("From Server:", modifiedSentence.decode())
 
-    # Close socket connection
-    clientSocket.close()

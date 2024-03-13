@@ -16,14 +16,23 @@ serverPort = 80
 serverDestination = "/dashboard"
 
 # GET list
+"""
 httpMessages = ["GET " + serverDestination + " HTTP/1.1\r\nHost:" + serverName + "\r\n\r\n",
                 "GET " + serverDestination + " HTTP/1.\r\nHost:" + serverName + "\r\n\r\n"]
-
 httpMessages = ["GET HTTP/1.1\r\nHost:\r\n\r\n",
                 "GET HTTP/1.1\r\nHost:\r\n\r\n"]
+"""
+
+httpMessages = [
+        "GET /dashboard HTTP/1.1\r\nHost:172.24.1.12\r\n\r\n",
+        "GET /dashboard HTTP/1.\r\nHost:172.24.1.12\r\n\r\n",
+        "GET HTTP/1.1\r\nHost:172.24.1.12\r\n\r\n",
+        "GET /dashboard/ HTTP/1.1\r\nHost:172.24.1.12\r\n\r\n",
+        ]
+
 # Socket open and connect
-clientSocket = socket(AF_INET, SOCK_STREAM)
-clientSocket.connect((serverName,serverPort))
+#clientSocket = socket(AF_INET, SOCK_STREAM)
+#clientSocket.connect((serverName,serverPort))
 
 # FALL BACK
 # HTTP1.1/GET message
@@ -42,12 +51,15 @@ clientSocket.connect((serverName,serverPort))
 
 # The cycle Way
 for sentence in httpMessages:
+    clientSocket = socket(AF_INET, SOCK_STREAM)
+    clientSocket.connect((serverName,serverPort))
     # Socket encode message and send
     clientSocket.send(sentence.encode())
-
     # Receive and out the response message
     modifiedSentence = clientSocket.recv(1024)
-
     # Print the requested message
+    print ("-"*60)
     print ("From Server:", modifiedSentence.decode())
     clientSocket.close()
+
+#clientSocket.close()

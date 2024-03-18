@@ -1,48 +1,85 @@
-\documentclass[11pt]{report}
-\title{Computer Networks - RCp}
-\author{Nuno Brito}
-%\date{}
+%% Document template source: LaTeX2e template for FEUP's Project FE-UP
+%% Document template author: jlopes@fe.up.pt
+%% Template adapted
 
-%packaging
-\usepackage{graphicx}                                   % Inserir imagens
-    \graphicspath{ {./images/} }                        % Caminho para o recurso imagens
-\usepackage[portuguese]{babel}                          % Pacote que descarrega e traduz linguagem global dos campos pré-definidos de LaTeX
-    \selectlanguage{portuguese}                         % Define linguagem para português
-\usepackage{multicol}                                   % Criar texto em colunas (\begin{multicols}{#} [...] \end{multicols}). Usar \raggedcolumns e \columnbreak
-    \setlength{\columnsep}{3cm}                         % Define espaçamento entre múltiplas colunas
-\usepackage{longtable}
-\usepackage{listings}                                   % Para código
-%\usepackage{comment}                                    % Permite criar um segmento de comentários (/begin{comment} [...] /end{comment})
-%\usepackage{xcolor}                                     % Colorir texto (esta versão é mais flexível do que a {color})
-%\usepackage{subcaption}                                 % Subcaptions para figuras
-%\usepackage{fullpage}                                   % Utilizar página inteira
-    \lstdefinestyle{pythoncode}
-    {
-        %backgroundcolor=\color{backcolour},
-        %commentstyle=\color{codegreen},
-        %keywordstyle=\color{magenta},
-        %numberstyle=\tiny\color{codegray},
-        %stringstyle=\color{codepurple},
-        %basicstyle=\ttfamily\footnotesize,
-        breakatwhitespace=false,
-        breaklines=true,
-        captionpos=b,
-        keepspaces=true,
-        numbers=left,
-        numbersep=5pt,
-        showspaces=false,
-        showstringspaces=false,
-        showtabs=false,
-        tabsize=2
-        %inputencoding=utf8,
-        %extendedchars=true,
-    }
+\documentclass[11pt,a4paper]{report}
 
+%% Macros ----------------------------------------------------------------------{{{1
+\newcommand{\school}{Instituto Superior de Engenharia de Lisboa}
+\newcommand{\degree}{Licenciatura em Engenharia Eletrotécnica, Telecomunicações e Computadores}
+%\newcommand{\projfeup}{Projeto FEUP 2023/24 --- LEIC}
+\newcommand{\projtitle}{Título do Trabalho}
+\newcommand{\projsubtitle}{Subtítulo do Trabalho}
+\newcommand{\projteam}{Grupo 7}
+
+%% Package ---------------------------------------------------------------------{{{1
+\usepackage{graphicx}           % 
+\usepackage[portuguese]{babel}  % [portuges]??
+\usepackage{multicol}           % 
+\usepackage{longtable}          % Tables continue in the next page
+\usepackage{listings}           % Programming syntax
+
+\usepackage[utf8]{inputenc}     % accents
+\usepackage{color}
+
+
+%% Package settings ------------------------------------------------------------{{{1
+\graphicspath{{./images/}}                          % {graphicx} - Images path
+\selectlanguage{portuguese}                         % {babel} - Language portuguese
+\setlength{\columnsep}{3cm}                         % {multicol} - Column spacement
+\definecolor{engineering}{rgb}{0.549,0.176,0.098}   % {color}
+\definecolor{cloudwhite}{cmyk}{0,0,0,0.025}         % {color}
+\lstdefinestyle{pythoncode}                         % {listings} - Python syntax
+{
+    keepspaces=true,
+    numbersep=5pt,
+
+    basicstyle=\footnotesize\ttfamily,
+    keywordstyle=\bfseries,
+    numbers=left,                      % where to put the line-numbers
+    numberstyle=\scriptsize\texttt,    % the size of the fonts that are used for the line-numbers
+    stepnumber=1,                      % the step between two line-numbers. If it's 1 each line will be numbered
+    numbersep=8pt,                     % how far the line-numbers are from the code
+    frame=tb,
+    float=htb,
+    aboveskip=8mm,
+    belowskip=4mm,
+    backgroundcolor=\color{cloudwhite},
+    showspaces=false,                  % show spaces adding particular underscores
+    showstringspaces=false,            % underline spaces within strings
+    showtabs=false,                    % show tabs within strings adding particular underscores
+    tabsize=2,                         % sets default tabsize to 2 spaces
+    captionpos=b,                      % sets the caption-position to bottom
+    breaklines=true,                   % sets automatic line breaking
+    breakatwhitespace=false,           % sets if automatic breaks should only happen at whitespace
+    escapeinside={\%*}{*)},            % if you want to add a comment within your code
+    morekeywords={*,var,template,new}  % if you want to add more keywords to the set
+}
+
+%\usepackage{comment}               % Permite criar um segmento de comentários (/begin{comment} [...] /end{comment})
+%\usepackage{xcolor}                % Colorir texto (esta versão é mais flexível do que a {color})
+%\usepackage{subcaption}            % Subcaptions para figuras
+%\usepackage{fullpage}              % Utilizar página inteira
+
+%% Document start --------------------------------------------------------------{{{1
 \begin{document}
 
+
+%% Cover -----------------------------------------------------------------------{{{1
+
+%% TOC -------------------------------------------------------------------------{{{1
 \tableofcontents
 
-\section{Introduction}
+%% List of figures -------------------------------------------------------------{{{1
+
+%% List of tables --------------------------------------------------------------{{{1
+
+%% Acronyms --------------------------------------------------------------------{{{1
+
+%% Glossary --------------------------------------------------------------------{{{1
+
+%% Chapter: introduction -------------------------------------------------------{{{1
+\chapter{Introduction}
     Milestones:
     \begin{itemize}
         \item Getting apache2 web server running in localhost
@@ -64,6 +101,7 @@
         \item Text-only application
     \end{itemize}
 
+%% Chapter: project ------------------------------------------------------------{{{1
 \section{Project}
     \subsection{Software}
         local server:
@@ -147,9 +185,17 @@
         [Install]
         \includegraphics[scale=1.0]{1}
 
+%% Chapter: recomendations -----------------------------------------------------{{{1
 \section{Problems and resolutions}
     Python code: default system came with python2. Python3 installed.
     Encrypted html body: since the xampp server is running in a laptop at home and to make some progress i have to work remotely via vpn, the content came encrypted.
     Default http protocol SSL: disabled in apache2 the ssl engine
+
+%% Chapter: conclusions --------------------------------------------------------{{{1
+
+%% Bibliography ----------------------------------------------------------------{{{1
+
+%% Appendix --------------------------------------------------------------------{{{1
+%%1}}}
 
 \end{document}

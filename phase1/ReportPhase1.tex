@@ -2,15 +2,17 @@
 %% Document template author: jlopes@fe.up.pt
 %% Template adapted
 
+%% A alterar: <--ALTERAR-->
+
 \documentclass[11pt,a4paper]{report}
 
 %% Macros ----------------------------------------------------------------------{{{1
 \newcommand{\school}{Instituto Superior de Engenharia de Lisboa}
 \newcommand{\degree}{Licenciatura em Engenharia Eletrotécnica, Telecomunicações e Computadores}
-%\newcommand{\projfeup}{Projeto FEUP 2023/24 --- LEIC}
-\newcommand{\projtitle}{Título do Trabalho}
+\newcommand{\projisel}{Projeto ISEL 2023/24 --- LEETC}
+\newcommand{\projtitle}{RCp}
 \newcommand{\projsubtitle}{Subtítulo do Trabalho}
-\newcommand{\projteam}{Grupo 7}
+\newcommand{\projteam}{Grupo LP-07}
 
 %% Package ---------------------------------------------------------------------{{{1
 \usepackage{graphicx}           % 
@@ -19,8 +21,42 @@
 \usepackage{longtable}          % Tables continue in the next page
 \usepackage{listings}           % Programming syntax
 
+%importados e verificar
 \usepackage[utf8]{inputenc}     % accents
 \usepackage{color}
+\usepackage[a4paper,left=25mm,right=25mm,top=25mm,bottom=25mm,headheight=6mm,footskip=12mm]{geometry}   % Document dimensions
+\usepackage{lastpage}           % 
+\usepackage{fancyhdr}           % Headers and footers
+\usepackage{hyperref}           % Hyper references
+\usepackage{chicago}            % Bibliography style
+
+
+%verificar
+\usepackage[T1]{fontenc}          % PS fonts
+\usepackage{newtxtext,newtxmath}  % do not use CM fonts
+\usepackage{amsmath}              % multi-line and other mathematical statements
+\usepackage{setspace}             % setting the spacing between lines
+\usepackage[normalem]{ulem}       % various types of underlining
+\usepackage{caption}              % rotating captions, sideways captions, etc.
+\usepackage{float}                % tables and figures in the multi-column environment 
+\usepackage{subcaption}           % for subfigures and the like
+\usepackage{multirow}             % tabular cells spanning multiple rows
+\usepackage[table]{xcolor}        % driver-independent color extensions
+\usepackage{lipsum}               % loren dummy text
+\setlength{\marginparwidth}{2cm}  % todonotes' requirements
+\usepackage{todonotes}            % todo's
+
+%% my other macros, if needed
+\newcommand{\windspt}{\textsf{WindsPT\/}}
+\newcommand{\windscannerpt}{\emph{Windscanner.PT\/}}
+\newcommand{\class}[1]{{\normalfont\slshape #1\/}}
+\newcommand{\svg}{\class{SVG}}
+
+%% my environments for infos
+\newenvironment{info}[1]{\vspace*{6mm}\color{blue}[ \begin{em} #1}
+                        {\vspace*{6mm}\end{em} ]}
+\newenvironment{infoopt}[1]{\vspace*{6mm}\color{blue}[ \textbf{Elemento opcional.} \begin{em} #1}
+                        {\vspace*{6mm}\end{em} ]}
 
 
 %% Package settings ------------------------------------------------------------{{{1
@@ -29,6 +65,8 @@
 \setlength{\columnsep}{3cm}                         % {multicol} - Column spacement
 \definecolor{engineering}{rgb}{0.549,0.176,0.098}   % {color}
 \definecolor{cloudwhite}{cmyk}{0,0,0,0.025}         % {color}
+\setlength{\parindent}{0em}                         % {geometry}
+\setlength{\parskip}{1ex}                           % {geometry}
 \lstdefinestyle{pythoncode}                         % {listings} - Python syntax
 {
     keepspaces=true,
@@ -36,24 +74,44 @@
 
     basicstyle=\footnotesize\ttfamily,
     keywordstyle=\bfseries,
-    numbers=left,                      % where to put the line-numbers
-    numberstyle=\scriptsize\texttt,    % the size of the fonts that are used for the line-numbers
-    stepnumber=1,                      % the step between two line-numbers. If it's 1 each line will be numbered
-    numbersep=8pt,                     % how far the line-numbers are from the code
+    numbers=left,                                   % where to put the line-numbers
+    numberstyle=\scriptsize\texttt,                 % the size of the fonts that are used for the line-numbers
+    stepnumber=1,                                   % the step between two line-numbers. If it's 1 each line will be numbered
+    numbersep=8pt,                                  % how far the line-numbers are from the code
     frame=tb,
     float=htb,
     aboveskip=8mm,
     belowskip=4mm,
-    backgroundcolor=\color{cloudwhite},
-    showspaces=false,                  % show spaces adding particular underscores
-    showstringspaces=false,            % underline spaces within strings
-    showtabs=false,                    % show tabs within strings adding particular underscores
-    tabsize=2,                         % sets default tabsize to 2 spaces
-    captionpos=b,                      % sets the caption-position to bottom
-    breaklines=true,                   % sets automatic line breaking
-    breakatwhitespace=false,           % sets if automatic breaks should only happen at whitespace
-    escapeinside={\%*}{*)},            % if you want to add a comment within your code
-    morekeywords={*,var,template,new}  % if you want to add more keywords to the set
+    backgroundcolor=\color{cloudwhite},             
+    showspaces=false,                               % show spaces adding particular underscores
+    showstringspaces=false,                         % underline spaces within strings
+    showtabs=false,                                 % show tabs within strings adding particular underscores
+    tabsize=2,                                      % sets default tabsize to 2 spaces
+    captionpos=b,                                   % sets the caption-position to bottom
+    breaklines=true,                                % sets automatic line breaking
+    breakatwhitespace=false,                        % sets if automatic breaks should only happen at whitespace
+    escapeinside={\%*}{*)},                         % if you want to add a comment within your code
+    morekeywords={*,var,template,new}               % if you want to add more keywords to the set
+}
+\fancyhf{}                                          % {fancyhdr} clear off all default fancyhdr headers and footers
+\lfoot{\small{\emph{\projtitle, \projsubtitle}}}    % {fancyhdr}
+\rfoot{\small{\thepage\ / \pageref{LastPage}}}      % {fancyhdr}
+\pagestyle{fancy}                                   % {fancyhdr} apply the fancy header style
+\renewcommand{\headrulewidth}{0.0pt}                % {fancyhdr} no head rule
+\renewcommand{\footrulewidth}{0.4pt}                % {fancyhdr}
+\hypersetup{                                        % {hyperref}
+    plainpages=false,
+    pdfpagelayout=SinglePage,
+    bookmarksopen=false,
+    bookmarksnumbered=true,
+    breaklinks=true,
+    linktocpage,
+    colorlinks=true,
+    linkcolor=engineering,
+    urlcolor=engineering,
+    filecolor=engineering,
+    citecolor=engineering,
+    allcolors=engineering
 }
 
 %\usepackage{comment}               % Permite criar um segmento de comentários (/begin{comment} [...] /end{comment})
@@ -63,54 +121,132 @@
 
 %% Document start --------------------------------------------------------------{{{1
 \begin{document}
-
+\pagenumbering{roman}\setcounter{page}{1}
 
 %% Cover -----------------------------------------------------------------------{{{1
+\begin{titlepage}
+    \center
+
+    \vspace*{-12mm}
+    {\large \textbf{\textsc{\school}}}\\
+
+    \vfill
+
+    \includegraphics[width=62mm]{<--ALTERAR-->}
+    
+    \vfill
+    
+    {\huge \textbf{\projtitle}}\\[6mm]
+    {\Large \textbf{\projsubtitle}}\\
+    
+    \vfill
+    
+    \includegraphics[width=52mm]{<--ALTERAR-->}
+    
+    \vfill
+    
+    {\Large \textbf{\projisel}}\\[12mm]
+    
+    {\Large \textbf{Coordenação}}\\[4mm]
+    {\large Geral: Manuel Firmino e Sara Ferreira \hspace*{18mm}
+            De curso: José Magalhães Cruz}\\[6mm]
+    
+    {\Large \textbf{\projteam}}\\[4mm]
+    {\large Supervisor: João Correia Lopes \hspace*{12mm}
+            Monitor: Nome do Monitor}\\[6mm]
+    
+    {\Large \textbf{Estudante}}\\[4mm]
+    {\large Nuno Brito $<$A46948@alunos.isel.pt$>$ \hspace*{12mm}
+    
+    \renewcommand{\today}{<--ALTERAR-->}
+    \today
+    
+\end{titlepage}
 
 %% TOC -------------------------------------------------------------------------{{{1
 \tableofcontents
 
 %% List of figures -------------------------------------------------------------{{{1
+\listoffigures
+\addcontentsline{toc}{chapter}{Lista de figuras}
+
 
 %% List of tables --------------------------------------------------------------{{{1
+\listoftables
+\addcontentsline{toc}{chapter}{Lista de tabelas}
 
 %% Acronyms --------------------------------------------------------------------{{{1
+\chapter*{Lista de acrónimos}
+\addcontentsline{toc}{chapter}{Lista de acrónimos}
+
+\begin{flushleft}
+\begin{tabular}{l p{0.8\linewidth}}
+ADT      & Abstract Data Type\\
+API      & Application Programming Interface\\
+WWW      & World Wide Web
+\end{tabular}
+\end{flushleft}
 
 %% Glossary --------------------------------------------------------------------{{{1
+\chapter*{Glossário}
+\addcontentsline{toc}{chapter}{Glossário}
+
+\begin{description}
+\item[bash] \hfill \\
+  Bash é uma \emph{shell Unix} e uma linguagem de comando escrita
+  em 1989 por Brian Fox para o Projeto GNU como um substituto de
+  software livre para a \emph{Bourne shell}.
+\item[firewall] \hfill \\
+  Em computação, uma \emph{firewall} é um sistema de segurança de rede
+  que monitoriza e controla o tráfego de entrada e saída da rede
+  com base em regras de segurança predeterminadas.
+  Uma \emph{firewall} normalmente estabelece uma barreira entre uma
+  rede confiável e uma rede não confiável, como a Internet.
+\item[Glossário] \hfill \\
+  Glossário é uma espécie de pequeno dicionário específico para
+  palavras e expressões pouco conhecidas presentes num texto, seja
+  por serem de natureza técnica, regional ou de outro idioma.
+\end{description}
 
 %% Chapter: introduction -------------------------------------------------------{{{1
 \chapter{Introduction}
-    Milestones:
-    \begin{itemize}
-        \item Getting apache2 web server running in localhost
-        \item Access web server - http://127.0.0.1/
-        \item Access web server from other computer
-        \item Use wireshark to capture the web access from another host
-        \item Compare the HTTP headers sent by the client and the server
-        \item Develop a web client
-        \item Establish a TCP connection to the server
-        \item Request the base webpage
-    \end{itemize}
-    
-    Web client requirements:
-    \begin{itemize}
-        \item Usage of HTTP library forbidden
-        \item Establish TCP connection using available sockets library - send the HTTP request and receive the HTTP reply
-        \item HTTP reply should be presented to the user
-        \item - Optional - act to the various HTTP replies
-        \item Text-only application
-    \end{itemize}
+%% display headers & footers
+\pagestyle{fancy}
+%% main page numbers with arabic numerals
+\pagenumbering{arabic}\setcounter{page}{1}
 
 %% Chapter: project ------------------------------------------------------------{{{1
-\section{Project}
+\chapter{WebClient}
+    \section{Milestones}
+        Milestones:
+        \begin{itemize}
+            \item Getting apache2 web server running in localhost
+            \item Access web server - http://127.0.0.1/
+            \item Access web server from other computer
+            \item Use wireshark to capture the web access from another host
+            \item Compare the HTTP headers sent by the client and the server
+            \item Develop a web client
+            \item Establish a TCP connection to the server
+            \item Request the base webpage
+        \end{itemize}
+        
+    \section{Web client requirements}
+        \begin{itemize}
+            \item Usage of HTTP library forbidden
+            \item Establish TCP connection using available sockets library - send the HTTP request and receive the HTTP reply
+            \item HTTP reply should be presented to the user
+            \item - Optional - act to the various HTTP replies
+            \item Text-only application
+        \end{itemize}
+
     \subsection{Software}
-        local server:
-            windows 11 x64
-            xampp-portable-windows-x64-8.2.12-0-VS16.7z
-        client:
-            firefox version
-            librefox version
-            wireshark version
+        \item local server:
+            \subitem windows 11 x64
+            \subitem xampp-portable-windows-x64-8.2.12-0-VS16.7z
+        \item client:
+            \subitem firefox version
+            \subitem librefox version
+            \subitem wireshark version
     
     \subsection{Configurations}
         SSLEngine disabled in apache to ease access with http
@@ -121,9 +257,9 @@
         %<=++figure access from anotherhost++=>
         %<=++figure wireshark capture from another host++=>
     
-    \subsection{Python code}
+    \subsection{WebClient Python Code}
         \lstset{style=pythoncode}
-        \lstinputlisting[language=python, caption=Simple HTTP webclient using sockets in python]{webclient/httpsocketv3.py}
+        \lstinputlisting[language=python, caption=Simple HTTP WebClient using sockets in python]{webclient/httpsocketv3.py}
         The code was adapted to be simple and cycle through the various responses.
         Modifiable variables include serverName, serverPort and the httpTestMessages list.
         The httpTestMessages is built in a way that only the first part is necessary to modify.
@@ -194,8 +330,14 @@
 %% Chapter: conclusions --------------------------------------------------------{{{1
 
 %% Bibliography ----------------------------------------------------------------{{{1
+\renewcommand{\bibname}{Referências bibliográficas}
+\bibliographystyle{chicago}
+\bibliography{refs}
+\addcontentsline{toc}{chapter}{\refname}  % add it to table of contents
 
 %% Appendix --------------------------------------------------------------------{{{1
+\appendix
+\chapter{Um Apêndice}
 %%1}}}
 
 \end{document}

@@ -192,6 +192,59 @@ WWW      & World Wide Web
 \addcontentsline{toc}{chapter}{Glossário}
 
 \begin{description}
+    \item[Operating system] \hfill \\
+        Text
+    \item[Browser] \hfill \\
+        Text
+    \item[Package monitor] \hfill \\
+        Text
+    \item[Windows] \hfill \\
+        Text
+    \item[Rolling distribuition] \hfill \\
+        Text
+    \item[openSUSE Tumbleweed] \hfill \\
+        Text
+    \item[Wireshark] \hfill \\
+        Text
+    \item[LibreWolf] \hfill \\
+        Text
+    \item[XAMPP] \hfill \\
+        Text
+    \item[HTTP] \hfill \\
+        Text
+    \item[TCP] \hfill \\
+        Text
+    \item[Apache2] \hfill \\
+        Text
+    \item[Localhost] \hfill \\
+        Text
+    \item[Socket] \hfill \\
+        Text
+    \item[Python] \hfill \\
+        Text
+    \item[TLS] \hfill \\
+        Text
+    \item[Firewall] \hfill \\
+        Text
+    \item[VPN] \hfill \\
+        Text
+    \item[SSL] \hfill \\
+        Text
+    \item[] \hfill \\
+        Text
+    \item[] \hfill \\
+        Text
+    \item[] \hfill \\
+        Text
+    \item[] \hfill \\
+        Text
+    \item[] \hfill \\
+        Text
+    \item[] \hfill \\
+        Text
+    \item[] \hfill \\
+        Text
+
 \item[bash] \hfill \\
   Bash é uma \emph{shell Unix} e uma linguagem de comando escrita
   em 1989 por Brian Fox para o Projeto GNU como um substituto de
@@ -218,9 +271,8 @@ WWW      & World Wide Web
 
 
 %% Chapter: project ------------------------------------------------------------{{{1
-\chapter{WebClient}
+\chapter{Phase 1}
     \section{Milestones}
-        Milestones:
         \begin{itemize}
             \item Setup apache2 web server in localhost
             \item Access web server locally (http://127.0.0.1/)
@@ -245,11 +297,91 @@ WWW      & World Wide Web
         \item Local server side
             \subitem Operating system: Windows 11 x64
             \subitem WebServer: XAMPP x64 8.2.12-0-VS16 for windows
+        Disclaimer: the versions listed below might not be the latest, by present date, given the nature of rolling distribuitions software updates.
         \item Client side
             \subitem Operating system: openSUSE Tumbleweed
-            \subitem Browser: LibreWolf ver.
-            \subitem Package monitor: Wireshark ver.
+            \subitem Browser: LibreWolf version 123.0-1
+            \subitem Package monitor: Wireshark version 4.2.3 (Git commit b0da86c196d1).
     
+    \subsection{WebClient - Python Code}
+        \lstset{style=pythoncode}
+        \lstinputlisting[language=python, caption=Simple HTTP WebClient using sockets in python]{webclient/httpsocketv3.py}
+        The code was adapted to be simple and cycle through the various request messages without any user input.
+        Modifiable variables include serverName, serverPort and the httpTestMessages list.
+    
+    \subsection{List of headers and replies}
+            \textbf{Request:} GET /dashboard/ HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n
+            \textbf{Reply:} HTTP/1.1 200 OK
+                Meaning: this header complies with what the server expects from a webclient request.
+            \textbf{Request:} GET /dashboard HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n
+            \textbf{Reply:} HTTP/1.1 301 Moved Permanently
+                Meaning: this header request a relative directory without a forward slash at the end, prompting the server to reply with a "moved" answer.
+            \textbf{Request:} PUT / HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n
+            \textbf{Reply:} HTTP/1.1 302 Found
+                Meaning: this header request is an upload request to an unexistent directory.
+            \textbf{Request:} GET /dashboard HTTP/1.\r\nHost:127.24.1.12\r\n\r\n
+            \textbf{Reply:} HTTP/1.1 400 Bad Request
+                Meaning: this header request, although it has an invalid directory, has the HTTP protocol version badly writen (HTTP/1.1 vs. actual HTTP/1.) which causes
+                a "bad request" reply from the server.
+            \textbf{Request:} GET /dashboard/index.htm HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n
+            \textbf{Reply:} HTTP/1.1 404 Not Found
+                Meaning: this header request tries to get a file that doesn't exist in the local server.
+            \textbf{Request:} PUT /d HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n
+            \textbf{Reply:} HTTP/1.1 405 Method Not Allowed
+                Meaning: this header request tries to upload something to the relative directory "d".
+        
+    \subsection{Software install steps}
+        Step-by-step instructions performed
+        Xampp install
+        wireshark install
+        wireshark settings
+        wireshark filters
+
+        Webclient output
+        Wireshark outputs browser
+        Wireshark outputs webclient
+
+        % Yo reduce the ammount of pictures! Or maybe side by side 
+        \begin{tabular}{ l r }
+            text & \includegraphics[scale=1.0]{install_xampp01} \\ % 0.3 scale!
+            text & \includegraphics[scale=1.0]{install_xampp02} \\
+            text & \includegraphics[scale=1.0]{install_xampp03} \\
+            text & \includegraphics[scale=1.0]{install_xampp04} \\
+            text & \includegraphics[scale=1.0]{install_xampp05} \\
+            text & \includegraphics[scale=1.0]{install_xampp06} \\
+            text & \includegraphics[scale=1.0]{install_xampp07} \\
+            text & \includegraphics[scale=1.0]{install_xampp08} \\
+            text & \includegraphics[scale=1.0]{install_xampp09} \\
+            text & \includegraphics[scale=1.0]{install_xampp10} \\
+            text & \includegraphics[scale=1.0]{install_xampp11} \\
+            text & \includegraphics[scale=1.0]{install_xampp12} \\
+            text & \includegraphics[scale=1.0]{install_xampp13} \\
+            text & \includegraphics[scale=1.0]{install_xampp14} \\
+            text & \includegraphics[scale=1.0]{install_xampp15} \\
+            text & \includegraphics[scale=1.0]{install_xampp16} \\
+            text & \includegraphics[scale=1.0]{install_wireshark01} \\
+            text & \includegraphics[scale=1.0]{install_wireshark02} \\
+            text & \includegraphics[scale=1.0]{install_wireshark03} \\
+            text & \includegraphics[scale=1.0]{install_wireshark04} \\
+            text & \includegraphics[scale=1.0]{install_wireshark05} \\
+            text & \includegraphics[scale=1.0]{install_wireshark06} \\
+            text & \includegraphics[scale=1.0]{install_wireshark07} \\
+            text & \includegraphics[scale=1.0]{install_wireshark08} \\
+            text & \includegraphics[scale=1.0]{install_wireshark09} \\
+            text & \includegraphics[scale=1.0]{install_wireshark10} \\
+            text & \includegraphics[scale=1.0]{install_wireshark11} \\
+            text & \includegraphics[scale=1.0]{install_wireshark12} \\
+            text & \includegraphics[scale=1.0]{install_wireshark13} \\
+            text & \includegraphics[scale=1.0]{install_wireshark14} \\
+            text & \includegraphics[scale=1.0]{install_wireshark15} \\
+            text & \includegraphics[scale=1.0]{install_wireshark16} \\
+            text & \includegraphics[scale=1.0]{install_wireshark17} \\
+            text & \includegraphics[scale=1.0]{install_wireshark18} \\
+            text & \includegraphics[scale=1.0]{install_wireshark19} \\
+            text & \includegraphics[scale=1.0]{install_wireshark20} \\
+            text & \includegraphics[scale=1.0]{install_wireshark21} \\
+        \end{tabular}
+
     \subsection{Configurations}
         LibreWolf using deprecated TLS and unsecured sites enabled
         SSLEngine disabled in apache2 to ease access with http protocol
@@ -259,70 +391,6 @@ WWW      & World Wide Web
         %<=++figure access from 127.0.0.1++=>
         %<=++figure access from anotherhost++=>
         %<=++figure wireshark capture from another host++=>
-    
-    \subsection{WebClient - Python Code}
-        \lstset{style=pythoncode}
-        \lstinputlisting[language=python, caption=Simple HTTP WebClient using sockets in python]{webclient/httpsocketv3.py}
-        The code was adapted to be simple and cycle through the various request messages.
-        Modifiable variables include serverName, serverPort and the httpTestMessages list.
-    
-    \subsection{List of headers}
-        Client requests
-            "GET /dashboard/ HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n",
-            "GET /dashboard HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n",
-            "PUT / HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n",
-            "GET /dashboard HTTP/1.\r\nHost:127.24.1.12\r\n\r\n",
-            "GET /dashboard/index.htm HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n",
-            "PUT /d HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n",
-        Server replies
-            meaning
-    
-    \subsection{Objectives}
-        Step-by-step instructions performed
-        Xampp install
-        wireshark install
-        wireshark settings
-        wireshark filters
-        
-        \begin{tabular}{ l r }
-            text & \includegraphics[scale=1.0]{xampp01} \\ % 0.3 scale!
-            text & \includegraphics[scale=1.0]{xampp02} \\
-            text & \includegraphics[scale=1.0]{xampp03} \\
-            text & \includegraphics[scale=1.0]{xampp04} \\
-            text & \includegraphics[scale=1.0]{xampp05} \\
-            text & \includegraphics[scale=1.0]{xampp06} \\
-            text & \includegraphics[scale=1.0]{xampp07} \\
-            text & \includegraphics[scale=1.0]{xampp08} \\
-            text & \includegraphics[scale=1.0]{xampp09} \\
-            text & \includegraphics[scale=1.0]{xampp10} \\
-            text & \includegraphics[scale=1.0]{xampp11} \\
-            text & \includegraphics[scale=1.0]{xampp12} \\
-            text & \includegraphics[scale=1.0]{xampp13} \\
-            text & \includegraphics[scale=1.0]{xampp14} \\
-            text & \includegraphics[scale=1.0]{xampp15} \\
-            text & \includegraphics[scale=1.0]{xampp16} \\
-            text & \includegraphics[scale=1.0]{wireshark01} \\
-            text & \includegraphics[scale=1.0]{wireshark02} \\
-            text & \includegraphics[scale=1.0]{wireshark03} \\
-            text & \includegraphics[scale=1.0]{wireshark04} \\
-            text & \includegraphics[scale=1.0]{wireshark05} \\
-            text & \includegraphics[scale=1.0]{wireshark06} \\
-            text & \includegraphics[scale=1.0]{wireshark07} \\
-            text & \includegraphics[scale=1.0]{wireshark08} \\
-            text & \includegraphics[scale=1.0]{wireshark09} \\
-            text & \includegraphics[scale=1.0]{wireshark10} \\
-            text & \includegraphics[scale=1.0]{wireshark11} \\
-            text & \includegraphics[scale=1.0]{wireshark12} \\
-            text & \includegraphics[scale=1.0]{wireshark13} \\
-            text & \includegraphics[scale=1.0]{wireshark14} \\
-            text & \includegraphics[scale=1.0]{wireshark15} \\
-            text & \includegraphics[scale=1.0]{wireshark16} \\
-            text & \includegraphics[scale=1.0]{wireshark17} \\
-            text & \includegraphics[scale=1.0]{wireshark18} \\
-            text & \includegraphics[scale=1.0]{wireshark19} \\
-            text & \includegraphics[scale=1.0]{wireshark20} \\
-            text & \includegraphics[scale=1.0]{wireshark21} \\
-        \end{tabular}
         
         \begin{multicols}{2}
         [Install]

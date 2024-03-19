@@ -148,12 +148,12 @@
     {\Large \textbf{\projisel}}\\[12mm]
     
     {\Large \textbf{Coordenação}}\\[4mm]
-    {\large Geral: Manuel Firmino e Sara Ferreira \hspace*{18mm}
-            De curso: José Magalhães Cruz}\\[6mm]
+    {\large Geral:  \hspace*{18mm}
+            De curso: }\\[6mm]
     
     {\Large \textbf{\projteam}}\\[4mm]
-    {\large Supervisor: João Correia Lopes \hspace*{12mm}
-            Monitor: Nome do Monitor}\\[6mm]
+    {\large Supervisor: \hspace*{12mm}
+            Monitor: }\\[6mm]
     
     {\Large \textbf{Estudante}}\\[4mm]
     {\large Nuno Brito $<$A46948@alunos.isel.pt$>$ \hspace*{12mm}
@@ -215,41 +215,44 @@ WWW      & World Wide Web
 %% main page numbers with arabic numerals
 \pagenumbering{arabic}\setcounter{page}{1}
 
+
+
 %% Chapter: project ------------------------------------------------------------{{{1
 \chapter{WebClient}
     \section{Milestones}
         Milestones:
         \begin{itemize}
-            \item Getting apache2 web server running in localhost
-            \item Access web server - http://127.0.0.1/
-            \item Access web server from other computer
-            \item Use wireshark to capture the web access from another host
+            \item Setup apache2 web server in localhost
+            \item Access web server locally (http://127.0.0.1/)
+            \item Access web server from a remote computer
+            \item Use wireshark in a remote host to capture packages from the server
             \item Compare the HTTP headers sent by the client and the server
-            \item Develop a web client
+            \item Develop a simple barebones HTTP webclient
             \item Establish a TCP connection to the server
             \item Request the base webpage
         \end{itemize}
         
-    \section{Web client requirements}
+    \section{WebClient requirements}
         \begin{itemize}
-            \item Usage of HTTP library forbidden
-            \item Establish TCP connection using available sockets library - send the HTTP request and receive the HTTP reply
-            \item HTTP reply should be presented to the user
+            \item HTTP library forbidden
+            \item Establish TCP connection using available sockets library - send/receive the HTTP request/reply
+            \item Output HTTP reply to the user
             \item - Optional - act to the various HTTP replies
             \item Text-only application
         \end{itemize}
 
     \subsection{Software}
-        \item local server:
-            \subitem windows 11 x64
-            \subitem xampp-portable-windows-x64-8.2.12-0-VS16.7z
-        \item client:
-            \subitem firefox version
-            \subitem librefox version
-            \subitem wireshark version
+        \item Local server side
+            \subitem Operating system: Windows 11 x64
+            \subitem WebServer: XAMPP x64 8.2.12-0-VS16 for windows
+        \item Client side
+            \subitem Operating system: openSUSE Tumbleweed
+            \subitem Browser: LibreWolf ver.
+            \subitem Package monitor: Wireshark ver.
     
     \subsection{Configurations}
-        SSLEngine disabled in apache to ease access with http
+        LibreWolf using deprecated TLS and unsecured sites enabled
+        SSLEngine disabled in apache2 to ease access with http protocol
         %\includegraphics[scale=1.0]{xampp01} \\
         %<=++figure sslengine off++=>
         %<=++figure access from localhost++=>
@@ -257,17 +260,21 @@ WWW      & World Wide Web
         %<=++figure access from anotherhost++=>
         %<=++figure wireshark capture from another host++=>
     
-    \subsection{WebClient Python Code}
+    \subsection{WebClient - Python Code}
         \lstset{style=pythoncode}
         \lstinputlisting[language=python, caption=Simple HTTP WebClient using sockets in python]{webclient/httpsocketv3.py}
-        The code was adapted to be simple and cycle through the various responses.
+        The code was adapted to be simple and cycle through the various request messages.
         Modifiable variables include serverName, serverPort and the httpTestMessages list.
-        The httpTestMessages is built in a way that only the first part is necessary to modify.
     
     \subsection{List of headers}
-        client
-            meaning
-        server
+        Client requests
+            "GET /dashboard/ HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n",
+            "GET /dashboard HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n",
+            "PUT / HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n",
+            "GET /dashboard HTTP/1.\r\nHost:127.24.1.12\r\n\r\n",
+            "GET /dashboard/index.htm HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n",
+            "PUT /d HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n",
+        Server replies
             meaning
     
     \subsection{Objectives}

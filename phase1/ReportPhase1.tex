@@ -308,33 +308,6 @@
             \subitem Browser: LibreWolf version 123.0-1
             \subitem Package monitor: Wireshark version 4.2.3 (Git commit b0da86c196d1).
     
-    \subsection{WebClient - Python Code}
-        \lstset{style=pythoncode}
-        \lstinputlisting[language=python, caption=Simple HTTP WebClient using sockets in python]{webclient/httpsocketv3.py}
-        The code was adapted to be simple and cycle through the various request messages without any user input.
-        Modifiable variables include serverName, serverPort and the httpTestMessages list.
-    
-    \subsection{List of headers and replies}
-            \textbf{Request:} GET /dashboard/ HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n
-            \textbf{Reply:} HTTP/1.1 200 OK
-                Meaning: this header complies with what the server expects from a webclient request.
-            \textbf{Request:} GET /dashboard HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n
-            \textbf{Reply:} HTTP/1.1 301 Moved Permanently
-                Meaning: this header request a relative directory without a forward slash at the end, prompting the server to reply with a "moved" answer.
-            \textbf{Request:} PUT / HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n
-            \textbf{Reply:} HTTP/1.1 302 Found
-                Meaning: this header request is an upload request to an unexistent directory.
-            \textbf{Request:} GET /dashboard HTTP/1.\r\nHost:127.24.1.12\r\n\r\n
-            \textbf{Reply:} HTTP/1.1 400 Bad Request
-                Meaning: this header request, although it has an invalid directory, has the HTTP protocol version badly writen (HTTP/1.1 vs. actual HTTP/1.) which causes
-                a "bad request" reply from the server.
-            \textbf{Request:} GET /dashboard/index.htm HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n
-            \textbf{Reply:} HTTP/1.1 404 Not Found
-                Meaning: this header request tries to get a file that doesn't exist in the local server.
-            \textbf{Request:} PUT /d HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n
-            \textbf{Reply:} HTTP/1.1 405 Method Not Allowed
-                Meaning: this header request tries to upload something to the relative directory "d".
-        
     \subsection{Software install steps}
         Step-by-step instructions performed
         Xampp install
@@ -376,30 +349,63 @@
 
         % Sério, alterar palavreado!
         Next up is wireshark, the almighty powerful network analyser.
-        We shall download the installer just because it'll be useful for the rest of this semester.
+        We shall download the installer, \url{https://www.wireshark.org/download.html}{link} just because it'll be useful for the rest of this semester.
+        The install process is pretty simple, selecting everything available and pressing next all the time.
         \begin{tabular}{ l r }
-            text & \includegraphics[scale=1.0]{install_wireshark01} \\
-            text & \includegraphics[scale=1.0]{install_wireshark02} \\
-            text & \includegraphics[scale=1.0]{install_wireshark03} \\
-            text & \includegraphics[scale=1.0]{install_wireshark04} \\
-            text & \includegraphics[scale=1.0]{install_wireshark05} \\
-            text & \includegraphics[scale=1.0]{install_wireshark06} \\
-            text & \includegraphics[scale=1.0]{install_wireshark07} \\
-            text & \includegraphics[scale=1.0]{install_wireshark08} \\
-            text & \includegraphics[scale=1.0]{install_wireshark09} \\
-            text & \includegraphics[scale=1.0]{install_wireshark10} \\
-            text & \includegraphics[scale=1.0]{install_wireshark11} \\
-            text & \includegraphics[scale=1.0]{install_wireshark12} \\
-            text & \includegraphics[scale=1.0]{install_wireshark13} \\
-            text & \includegraphics[scale=1.0]{install_wireshark14} \\
-            text & \includegraphics[scale=1.0]{install_wireshark15} \\
-            text & \includegraphics[scale=1.0]{install_wireshark16} \\
-            text & \includegraphics[scale=1.0]{install_wireshark17} \\
-            text & \includegraphics[scale=1.0]{install_wireshark18} \\
-            text & \includegraphics[scale=1.0]{install_wireshark19} \\
-            text & \includegraphics[scale=1.0]{install_wireshark20} \\
-            text & \includegraphics[scale=1.0]{install_wireshark21} \\
+            text & \includegraphics[scale=0.3]{install_wireshark01} \\
+            text & \includegraphics[scale=0.3]{install_wireshark02} \\
+            text & \includegraphics[scale=0.3]{install_wireshark03} \\
+            text & \includegraphics[scale=0.3]{install_wireshark04} \\
+            text & \includegraphics[scale=0.3]{install_wireshark05} \\
+            text & \includegraphics[scale=0.3]{install_wireshark06} \\
+            text & \includegraphics[scale=0.3]{install_wireshark07} \\
+            text & \includegraphics[scale=0.3]{install_wireshark08} \\
+            text & \includegraphics[scale=0.3]{install_wireshark09} \\
+            text & \includegraphics[scale=0.3]{install_wireshark10} \\
+            text & \includegraphics[scale=0.3]{install_wireshark11} \\
+            text & \includegraphics[scale=0.3]{install_wireshark12} \\
+            text & \includegraphics[scale=0.3]{install_wireshark13} \\
+            text & \includegraphics[scale=0.3]{install_wireshark14} \\
+            text & \includegraphics[scale=0.3]{install_wireshark15} \\
+            text & \includegraphics[scale=0.3]{install_wireshark16} \\
+            text & \includegraphics[scale=0.3]{install_wireshark17} \\
+            text & \includegraphics[scale=0.3]{install_wireshark18} \\
+            text & \includegraphics[scale=0.3]{install_wireshark19} \\
+            text & \includegraphics[scale=0.3]{install_wireshark20} \\
+            text & \includegraphics[scale=0.3]{install_wireshark21} \\
         \end{tabular}
+
+    \subsection{WebClient - Python Code}
+        \lstset{style=pythoncode}
+        \lstinputlisting[language=python, caption=Simple HTTP WebClient using sockets in python]{webclient/httpsocketv3.py}
+        The code was adapted to be simple and cycle through the various request messages without any user input.
+        Modifiable variables include serverName, serverPort and the httpTestMessages list.
+
+        \VerbatimInput{./webclient/httpsocketv3_output.txt}
+        \VerbatimInput{./wireshark/ws_capture01_export.txt}
+        \VerbatimInput{./wireshark/ws_capture02_export.txt}
+        \VerbatimInput{./wireshark/ws_capture03_export.txt}
+    
+    \subsection{List of headers and replies}
+            \textbf{Request:} GET /dashboard/ HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n
+            \textbf{Reply:} HTTP/1.1 200 OK
+                Meaning: this header complies with what the server expects from a webclient request.
+            \textbf{Request:} GET /dashboard HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n
+            \textbf{Reply:} HTTP/1.1 301 Moved Permanently
+                Meaning: this header request a relative directory without a forward slash at the end, prompting the server to reply with a "moved" answer.
+            \textbf{Request:} PUT / HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n
+            \textbf{Reply:} HTTP/1.1 302 Found
+                Meaning: this header request is an upload request to an unexistent directory.
+            \textbf{Request:} GET /dashboard HTTP/1.\r\nHost:127.24.1.12\r\n\r\n
+            \textbf{Reply:} HTTP/1.1 400 Bad Request
+                Meaning: this header request, although it has an invalid directory, has the HTTP protocol version badly writen (HTTP/1.1 vs. actual HTTP/1.) which causes
+                a "bad request" reply from the server.
+            \textbf{Request:} GET /dashboard/index.htm HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n
+            \textbf{Reply:} HTTP/1.1 404 Not Found
+                Meaning: this header request tries to get a file that doesn't exist in the local server.
+            \textbf{Request:} PUT /d HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n
+            \textbf{Reply:} HTTP/1.1 405 Method Not Allowed
+                Meaning: this header request tries to upload something to the relative directory "d".
 
     \subsection{Configurations}
         LibreWolf using deprecated TLS and unsecured sites enabled

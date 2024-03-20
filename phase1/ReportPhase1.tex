@@ -181,9 +181,20 @@
 
 \begin{flushleft}
 \begin{tabular}{l p{0.8\linewidth}}
-ADT      & Abstract Data Type\\
-API      & Application Programming Interface\\
-WWW      & World Wide Web
+    API     & Application Programming Interface\\
+    GUI     & Graphical User Interface\\
+    HTTP    & Hyper Text Transfer Protocol\\
+    OS      & Operating System\\
+    OSS     & openSUSE\\
+    PHP     & PHP: Hypertext Preprocessor\\
+    SSL     & Secure Sockets Layer\\
+    TCP     & Transmission Control Protocol\\
+    TLS     & Transport Layer Security\\
+    TUI     & Terminal User Interface\\ % Not used yet
+    UDP     & User Datagram Protocol\\
+    VPN     & Virtual Private Network\\
+    WWW     & World Wide Web\\
+    XAMPP   & Cross-Platform, Apache, MySQL, PHP, and Perl
 \end{tabular}
 \end{flushleft}
 
@@ -193,37 +204,31 @@ WWW      & World Wide Web
 
 \begin{description}
     \item[Operating system] \hfill \\
-        Text
+        A program that manages a computer's resources from software to hardware.
     \item[Browser] \hfill \\
-        Text
-    \item[Package monitor] \hfill \\
-        Text
+        A browser is a internet navigation software. It comes in multiple flavours, nowadays the big three are Microsoft Edge, Mozilla Firefox and Google Chrome.
     \item[Windows] \hfill \\
-        Text
-    \item[Rolling distribuition] \hfill \\
-        Text
+        Microsoft's operating system. First released in 1985 as a Graphical User Interface (GUI) for MS-DOS, continued to evolve with it's latest version being 11.
+    \item[Rolling release distribuition] \hfill \\
+        A distribuition where it's software release cycle is more frequent than those of Long Term Support (LTS). It's up to the Linux-based distribuitor to guarantee
+        the testing of a package.
+        Due to it's nature, it's not recommended for server production environment.
     \item[openSUSE Tumbleweed] \hfill \\
-        Text
+        An openSUSE (OSS) is an open-source community driven Linux-based distribuition sponsored by SUSE Software Solutions. Tumbleweed is a rolling release version 
+        allowing for up-to-date software releases.
     \item[Wireshark] \hfill \\
-        Text
+        Wireshark is a network protocol analyser software. Allows traffic capture between a computer and a network.
     \item[LibreWolf] \hfill \\
-        Text
+        An internet browser based on Mozilla's Firefox. It's primary purpose is to allow privacy, and with it comes security. It achieves this by removing telemetry and
+        data collection.
     \item[XAMPP] \hfill \\
-        Text
-    \item[HTTP] \hfill \\
-        Text
-    \item[TCP] \hfill \\
-        Text
+        A software package environment collection containing Apache2 webserver, MariaDB database, PHP and Perl.
     \item[Apache2] \hfill \\
-        Text
-    \item[Localhost] \hfill \\
         Text
     \item[Socket] \hfill \\
         Text
     \item[Python] \hfill \\
-        Text
-    \item[TLS] \hfill \\
-        Text
+        Python is a high-level programming language, object-oriented.
     \item[Firewall] \hfill \\
         Text
     \item[VPN] \hfill \\
@@ -297,7 +302,7 @@ WWW      & World Wide Web
         \item Local server side
             \subitem Operating system: Windows 11 x64
             \subitem WebServer: XAMPP x64 8.2.12-0-VS16 for windows
-        Disclaimer: the versions listed below might not be the latest, by present date, given the nature of rolling distribuitions software updates.
+        Disclaimer: the versions listed below might not be the latest, by present date, given the nature of rolling release distribuitions software updates.
         \item Client side
             \subitem Operating system: openSUSE Tumbleweed
             \subitem Browser: LibreWolf version 123.0-1
@@ -342,23 +347,37 @@ WWW      & World Wide Web
         Wireshark outputs webclient
 
         % Yo reduce the ammount of pictures! Or maybe side by side 
+        Number one step is to install, start and configure XAMPP. Using the following \url{https://www.apachefriends.org/download.html}{link} we can choose our prefered
+        method, for this project the portable version was the best choice since no installation was needed.
+        After uncompressing our downloaded file, we can start the process.
         \begin{tabular}{ l r }
-            text & \includegraphics[scale=1.0]{install_xampp01} \\ % 0.3 scale!
-            text & \includegraphics[scale=1.0]{install_xampp02} \\
-            text & \includegraphics[scale=1.0]{install_xampp03} \\
-            text & \includegraphics[scale=1.0]{install_xampp04} \\
-            text & \includegraphics[scale=1.0]{install_xampp05} \\
-            text & \includegraphics[scale=1.0]{install_xampp06} \\
-            text & \includegraphics[scale=1.0]{install_xampp07} \\
-            text & \includegraphics[scale=1.0]{install_xampp08} \\
-            text & \includegraphics[scale=1.0]{install_xampp09} \\
-            text & \includegraphics[scale=1.0]{install_xampp10} \\
-            text & \includegraphics[scale=1.0]{install_xampp11} \\
-            text & \includegraphics[scale=1.0]{install_xampp12} \\
-            text & \includegraphics[scale=1.0]{install_xampp13} \\
-            text & \includegraphics[scale=1.0]{install_xampp14} \\
-            text & \includegraphics[scale=1.0]{install_xampp15} \\
-            text & \includegraphics[scale=1.0]{install_xampp16} \\
+            The read me file available in the root directory states that
+            we need to run \textit{setup_xampp} batch file first to populate the
+            registry it's directory.                                        & \includegraphics[scale=0.3]{install_xampp08} \\ % 0.3 scale!
+
+            After completing, just press any button to continue.            & \includegraphics[scale=0.3]{install_xampp09} \\
+
+            Next click in the \textit{xampp_start} executable, windows
+            will prompt some firewall permissions which will gladly accept. & \includegraphics[scale=0.3]{install_xampp10} & \includegraphics[scale=0.3]{install_xampp13} \\
+
+            Pick a language for the program.                                & \includegraphics[scale=0.3]{install_xampp14} \\
+
+            Apache2 comes with SSL on by default. Since we're studying the
+            HTTP protocol it's convenient to disable HTTPS.
+            Pressing the \textit{config} button shows a list of
+            configuration files. Select \textit{Apache (httpd-ssl.conf)}.   & \includegraphics[scale=0.3]{install_xampp15} \\
+
+            Search and comment the line with \textit{SSLEngine on}.         & \includegraphics[scale=0.3]{install_xampp16} \\
+
+            Previously if we went to http://localhost it would redirect
+            to the HTTPS version. After completing the above step it'll no
+            longer redirect, showing us the non-secure version.             & \includegraphics[scale=0.3]{install_xampp17} \\
+        \end{tabular}
+
+        % Sério, alterar palavreado!
+        Next up is wireshark, the almighty powerful network analyser.
+        We shall download the installer just because it'll be useful for the rest of this semester.
+        \begin{tabular}{ l r }
             text & \includegraphics[scale=1.0]{install_wireshark01} \\
             text & \includegraphics[scale=1.0]{install_wireshark02} \\
             text & \includegraphics[scale=1.0]{install_wireshark03} \\

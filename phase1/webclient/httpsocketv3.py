@@ -1,7 +1,7 @@
 """
 Name: Python TCP Client
 Description: Simple TCP client using sockets
-Original code by: Luís Pires
+Original code by: Luis Pires
 Source: Chapter 2, slide 104
 
 Commented and adapted by: Nuno Brito

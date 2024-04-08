@@ -10,8 +10,8 @@
 \newcommand{\school}{Instituto Superior de Engenharia de Lisboa}
 \newcommand{\degree}{Licenciatura em Engenharia Eletrotécnica, Telecomunicações e Computadores}
 \newcommand{\projisel}{Projeto ISEL 2023/24 --- LEETC}
-\newcommand{\projtitle}{RCp}
-\newcommand{\projsubtitle}{Subtítulo do Trabalho}
+\newcommand{\projtitle}{Computer Networks}
+\newcommand{\projsubtitle}{Phase 1 - Web Server}
 \newcommand{\projteam}{Grupo LP-07}
 
 %% Package ---------------------------------------------------------------------{{{1
@@ -273,15 +273,13 @@
 %% main page numbers with arabic numerals
 \pagenumbering{arabic}\setcounter{page}{1}
 
-
-
 %% Chapter: project ------------------------------------------------------------{{{1
 \chapter{Phase 1}
     \section{Milestones}
         \begin{itemize}
             \item Setup apache2 web server in localhost
-            \item Access web server locally (http://127.0.0.1/)
-            \item Access web server from a remote computer
+            \item Access web server locally (http://127.0.0.1/ or http://localhost)
+            \item Access web server from a remote computer (http://172.24.1.12)
             \item Use wireshark in a remote host to capture packages from the server
             \item Compare the HTTP headers sent by the client and the server
             \item Develop a simple barebones HTTP webclient
@@ -309,28 +307,17 @@
             \subitem Package monitor: Wireshark version 4.2.3 (Git commit b0da86c196d1).
     
     \subsection{Software install steps}
-        Step-by-step instructions performed
-        Xampp install
-        wireshark install
-        wireshark settings
-        wireshark filters
-
-        Webclient output
-        Wireshark outputs browser
-        Wireshark outputs webclient
-
-        % Yo reduce the ammount of pictures! Or maybe side by side 
         Number one step is to install, start and configure XAMPP. Using the following \url{https://www.apachefriends.org/download.html}{link} we can choose our prefered
         method, for this project the portable version was the best choice since no installation was needed.
         After uncompressing our downloaded file, we can start the process.
         \begin{tabular}{ l r }
             The read me file available in the root directory states that
-            we need to run \textit{setup_xampp} batch file first to populate the
+            we need to run \textit{setup\_xampp} batch file first to populate the
             registry it's directory.                                        & \includegraphics[scale=0.3]{install_xampp08} \\ % 0.3 scale!
 
             After completing, just press any button to continue.            & \includegraphics[scale=0.3]{install_xampp09} \\
 
-            Next click in the \textit{xampp_start} executable, windows
+            Next click in the \textit{xampp\_start} executable, windows
             will prompt some firewall permissions which will gladly accept. & \includegraphics[scale=0.3]{install_xampp10} & \includegraphics[scale=0.3]{install_xampp13} \\
 
             Pick a language for the program.                                & \includegraphics[scale=0.3]{install_xampp14} \\
@@ -347,45 +334,38 @@
             longer redirect, showing us the non-secure version.             & \includegraphics[scale=0.3]{install_xampp17} \\
         \end{tabular}
 
-        % Sério, alterar palavreado!
-        Next up is wireshark, the almighty powerful network analyser.
-        We shall download the installer, \url{https://www.wireshark.org/download.html}{link} just because it'll be useful for the rest of this semester.
-        The install process is pretty simple, selecting everything available and pressing next all the time.
+        Next up is wireshark, the powerful network analyser.
+        We'll download the installer from \url{https://www.wireshark.org/download.html}{here}.
+        The install process is pretty simple, selecting everything available and pressing next.
         \begin{tabular}{ l r }
-            text & \includegraphics[scale=0.3]{install_wireshark01} \\
-            text & \includegraphics[scale=0.3]{install_wireshark02} \\
-            text & \includegraphics[scale=0.3]{install_wireshark03} \\
-            text & \includegraphics[scale=0.3]{install_wireshark04} \\
-            text & \includegraphics[scale=0.3]{install_wireshark05} \\
-            text & \includegraphics[scale=0.3]{install_wireshark06} \\
-            text & \includegraphics[scale=0.3]{install_wireshark07} \\
-            text & \includegraphics[scale=0.3]{install_wireshark08} \\
-            text & \includegraphics[scale=0.3]{install_wireshark09} \\
-            text & \includegraphics[scale=0.3]{install_wireshark10} \\
-            text & \includegraphics[scale=0.3]{install_wireshark11} \\
-            text & \includegraphics[scale=0.3]{install_wireshark12} \\
-            text & \includegraphics[scale=0.3]{install_wireshark13} \\
-            text & \includegraphics[scale=0.3]{install_wireshark14} \\
-            text & \includegraphics[scale=0.3]{install_wireshark15} \\
-            text & \includegraphics[scale=0.3]{install_wireshark16} \\
-            text & \includegraphics[scale=0.3]{install_wireshark17} \\
-            text & \includegraphics[scale=0.3]{install_wireshark18} \\
-            text & \includegraphics[scale=0.3]{install_wireshark19} \\
-            text & \includegraphics[scale=0.3]{install_wireshark20} \\
-            text & \includegraphics[scale=0.3]{install_wireshark21} \\
+            Wireshark setup.                                        & \includegraphics[scale=0.3]{install_wireshark02} \\
+            After completing the installation, reboot the computer. & \includegraphics[scale=0.3]{install_wireshark21} \\
         \end{tabular}
 
     \subsection{WebClient - Python Code}
         \lstset{style=pythoncode}
         \lstinputlisting[language=python, caption=Simple HTTP WebClient using sockets in python]{webclient/httpsocketv3.py}
         The code was adapted to be simple and cycle through the various request messages without any user input.
-        Modifiable variables include serverName, serverPort and the httpTestMessages list.
+        Modifiable variables include \textit{serverName}, \textit{serverPort} and the \textit{httpTestMessages} list.
 
-        \VerbatimInput{./webclient/httpsocketv3_output.txt}
-        \VerbatimInput{./wireshark/ws_capture01_export.txt}
-        \VerbatimInput{./wireshark/ws_capture02_export.txt}
-        \VerbatimInput{./wireshark/ws_capture03_export.txt}
+        \VerbatimInput{./webclient/httpsocketv3\_output\_20240329.txt}
     
+    \subsection{Wireshark captures}
+        First we must ensure the browser being used can connect to the XAMPP server with HTTP. We can do that by enabling the usage of deprecated TLS.
+        \includegraphics[scale=0.3]{librewolf_tls} 
+        \captionof{figure}{Changing from false to true the \textit{security.tls.version.enable-deprecated} option }
+
+        Printscreen
+        \includegraphics[scale=0.3]{wscapwcsocket05} % webclient get
+        \includegraphics[scale=0.3]{wscapwcsocket06} % webclient reply
+        \includegraphics[scale=0.3]{wscapwcsocket07} % browser vpn
+        \includegraphics[scale=0.3]{wscapwcsocket08} % browser local
+
+        Capture output
+        \VerbatimInput{./wireshark/ws\_capture01\_export.txt} % vpn
+        \VerbatimInput{./wireshark/ws\_capture02\_export.txt} % browser
+        \VerbatimInput{./wireshark/ws\_capture04\_export.txt} % webclient
+
     \subsection{List of headers and replies}
             \textbf{Request:} GET /dashboard/ HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n
             \textbf{Reply:} HTTP/1.1 200 OK
@@ -406,26 +386,19 @@
             \textbf{Request:} PUT /d HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n
             \textbf{Reply:} HTTP/1.1 405 Method Not Allowed
                 Meaning: this header request tries to upload something to the relative directory "d".
-
-    \subsection{Configurations}
-        LibreWolf using deprecated TLS and unsecured sites enabled
-        SSLEngine disabled in apache2 to ease access with http protocol
-        %\includegraphics[scale=1.0]{xampp01} \\
-        %<=++figure sslengine off++=>
-        %<=++figure access from localhost++=>
-        %<=++figure access from 127.0.0.1++=>
-        %<=++figure access from anotherhost++=>
-        %<=++figure wireshark capture from another host++=>
-        
-        \begin{multicols}{2}
-        [Install]
-        \includegraphics[scale=1.0]{1}
+            \textbf{Request:} BREW /coffee/ HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n
+            \textbf{Reply:} HTTP/1.1 501 Not Implemented
+                Meaning: A poorly attempt to get the 1998 April fool's day. It should have replied with 418 I'm a teapot. Even with GET instead of BREW it didn't work.
+                Apache doesn't have the implementation. 
 
 %% Chapter: recomendations -----------------------------------------------------{{{1
-\section{Problems and resolutions}
-    Python code: default system came with python2. Python3 installed.
-    Encrypted html body: since the xampp server is running in a laptop at home and to make some progress i have to work remotely via vpn, the content came encrypted.
-    Default http protocol SSL: disabled in apache2 the ssl engine
+\section{Issues and fixes}
+    Running python code:
+        Python3 wasn't installed by default. Then had to run the code with: \$ python3 httpsocketv3.py.
+    Encrypted html body in wireshark:
+        Initially I had to run wireshark in a remote virtual private network (VPN) connection. Fortunately I could see the VPN doing it's magic but also couldn't see the HTTP body, since it was encrypted.
+    Default HTTP protocol, HTTPS:
+        To guarantee the HTTP connection I had to disable SSLEngine in Apache2 WebServer.
 
 %% Chapter: conclusions --------------------------------------------------------{{{1
 

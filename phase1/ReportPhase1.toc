@@ -11,8 +11,8 @@
 \contentsline {subsection}{\numberline {2.2.1}Software}{2}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Software install steps}{3}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}WebClient - Python Code}{5}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Wireshark captures}{6}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}List of headers and replies}{7}{subsection.2.2.5}%
-\contentsline {section}{\numberline {2.3}Issues and fixes}{7}{section.2.3}%
-\contentsline {chapter}{Refer\^encias}{8}{section.2.3}%
-\contentsline {chapter}{\numberline {A}Um Apêndice}{9}{appendix.A}%
+\contentsline {subsection}{\numberline {2.2.4}Wireshark captures}{8}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}List of headers and replies}{417}{subsection.2.2.5}%
+\contentsline {section}{\numberline {2.3}Issues and fixes}{418}{section.2.3}%
+\contentsline {chapter}{Refer\^encias}{418}{section.2.3}%
+\contentsline {chapter}{\numberline {A}Um Apêndice}{419}{appendix.A}%

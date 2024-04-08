@@ -44,7 +44,7 @@
 \usepackage[table]{xcolor}        % driver-independent color extensions
 \usepackage{lipsum}               % loren dummy text
 \setlength{\marginparwidth}{2cm}  % todonotes' requirements
-\usepackage{todonotes}            % todo's
+%\usepackage{todonotes}            % todo's
 
 %% my other macros, if needed
 \newcommand{\windspt}{\textsf{WindsPT\/}}
@@ -71,7 +71,6 @@
 {
     keepspaces=true,
     numbersep=5pt,
-
     basicstyle=\footnotesize\ttfamily,
     keywordstyle=\bfseries,
     numbers=left,                                   % where to put the line-numbers
@@ -132,7 +131,7 @@
 
     \vfill
 
-    \includegraphics[width=62mm]{<--ALTERAR-->}
+    \includegraphics[width=62mm]{logoisel}
     
     \vfill
     
@@ -141,24 +140,24 @@
     
     \vfill
     
-    \includegraphics[width=52mm]{<--ALTERAR-->}
-    
     \vfill
     
     {\Large \textbf{\projisel}}\\[12mm]
     
-    {\Large \textbf{Coordenação}}\\[4mm]
-    {\large Geral:  \hspace*{18mm}
-            De curso: }\\[6mm]
+    {\Large \textbf{Coordination}}\\[4mm]
+    {\large General: Carlos Meneses\hspace*{18mm}
+            Course: Nuno Cruz}\\[6mm]
     
     {\Large \textbf{\projteam}}\\[4mm]
-    {\large Supervisor: \hspace*{12mm}
-            Monitor: }\\[6mm]
+    {\large Supervisor: Luís Pires\hspace*{12mm}}\\[6mm]
     
-    {\Large \textbf{Estudante}}\\[4mm]
-    {\large Nuno Brito $<$A46948@alunos.isel.pt$>$ \hspace*{12mm}
+    {\Large \textbf{Student}}\\[4mm]
+    {\large Nuno Brito $<$A46948@alunos.isel.pt$>$}
     
-    \renewcommand{\today}{<--ALTERAR-->}
+
+    \vspace*{10mm}
+    
+    \renewcommand{\today}{April 14th 2024}
     \today
     
 \end{titlepage}
@@ -168,16 +167,16 @@
 
 %% List of figures -------------------------------------------------------------{{{1
 \listoffigures
-\addcontentsline{toc}{chapter}{Lista de figuras}
+\addcontentsline{toc}{chapter}{Figure list}
 
 
 %% List of tables --------------------------------------------------------------{{{1
 \listoftables
-\addcontentsline{toc}{chapter}{Lista de tabelas}
+\addcontentsline{toc}{chapter}{Table list}
 
 %% Acronyms --------------------------------------------------------------------{{{1
-\chapter*{Lista de acrónimos}
-\addcontentsline{toc}{chapter}{Lista de acrónimos}
+\chapter*{Acronyms list}
+\addcontentsline{toc}{chapter}{Acronyms list}
 
 \begin{flushleft}
 \begin{tabular}{l p{0.8\linewidth}}
@@ -232,35 +231,8 @@
         Text
     \item[SSL] \hfill \\
         Text
-    \item[] \hfill \\
-        Text
-    \item[] \hfill \\
-        Text
-    \item[] \hfill \\
-        Text
-    \item[] \hfill \\
-        Text
-    \item[] \hfill \\
-        Text
-    \item[] \hfill \\
-        Text
-    \item[] \hfill \\
-        Text
-
-\item[bash] \hfill \\
-  Bash é uma \emph{shell Unix} e uma linguagem de comando escrita
-  em 1989 por Brian Fox para o Projeto GNU como um substituto de
-  software livre para a \emph{Bourne shell}.
-\item[firewall] \hfill \\
-  Em computação, uma \emph{firewall} é um sistema de segurança de rede
-  que monitoriza e controla o tráfego de entrada e saída da rede
-  com base em regras de segurança predeterminadas.
-  Uma \emph{firewall} normalmente estabelece uma barreira entre uma
-  rede confiável e uma rede não confiável, como a Internet.
-\item[Glossário] \hfill \\
-  Glossário é uma espécie de pequeno dicionário específico para
-  palavras e expressões pouco conhecidas presentes num texto, seja
-  por serem de natureza técnica, regional ou de outro idioma.
+    \item[Glossário] \hfill \\
+        Glossário é uma espécie de pequeno dicionário específico para palavras e expressões pouco conhecidas presentes num texto, seja por serem de natureza técnica, regional ou de outro idioma.
 \end{description}
 
 %% Chapter: introduction -------------------------------------------------------{{{1
@@ -294,17 +266,19 @@
         \end{itemize}
 
     \subsection{Software}
-        \item Local server side
-            \subitem Operating system: Windows 11 x64
-            \subitem WebServer: XAMPP x64 8.2.12-0-VS16 for windows
-        Disclaimer: the versions listed below might not be the latest, by present date, given the nature of rolling release distribuitions software updates.
-        \item Client side
-            \subitem Operating system: openSUSE Tumbleweed
-            \subitem Browser: LibreWolf version 123.0-1
-            \subitem Package monitor: Wireshark version 4.2.3 (Git commit b0da86c196d1).
-    
+        \begin{itemize}
+            \item Local server side
+                \subitem Operating system: Windows 11 x64
+                \subitem WebServer: XAMPP x64 8.2.12-0-VS16 for windows
+                Disclaimer: the versions listed below might not be the latest, by present date, given the nature of rolling release distribuitions software updates.
+            \item Client side
+                \subitem Operating system: openSUSE Tumbleweed
+                \subitem Browser: LibreWolf version 123.0-1
+                \subitem Package monitor: Wireshark version 4.2.3 (Git commit b0da86c196d1).
+        \end{itemize}
+
     \subsection{Software install steps}
-        Number one step is to install, start and configure XAMPP. Using the following \url{https://www.apachefriends.org/download.html}{link} we can choose our prefered method, for this project the portable version was the best choice since no installation was needed.
+        Number one step is to install, start and configure XAMPP. Using the following \href{https://www.apachefriends.org/download.html}{link} we can choose our prefered method, for this project the portable version was the best choice since no installation was needed.
         After uncompressing our downloaded file, we can start the process.
         \begin{tabular}{ l r }
             The read me file available in the root directory states that
@@ -314,7 +288,7 @@
             After completing, just press any button to continue.            & \includegraphics[scale=0.3]{install_xampp09} \\
 
             Next click in the \textit{xampp\_start} executable, windows
-            will prompt some firewall permissions which will gladly accept. & \includegraphics[scale=0.3]{install_xampp10} & \includegraphics[scale=0.3]{install_xampp13} \\
+            will prompt some firewall permissions which will gladly accept. & \includegraphics[scale=0.3]{install_xampp10} \includegraphics[scale=0.3]{install_xampp13} \\
 
             Pick a language for the program.                                & \includegraphics[scale=0.3]{install_xampp14} \\
 
@@ -331,7 +305,7 @@
         \end{tabular}
 
         Next up is wireshark, the powerful network analyser.
-        We'll download the installer from \url{https://www.wireshark.org/download.html}{here}.
+        We'll download the installer from \href{https://www.wireshark.org/download.html}{here}.
         The install process is pretty simple, selecting everything available and pressing next.
         \begin{tabular}{ l r }
             Wireshark setup.                                        & \includegraphics[scale=0.3]{install_wireshark02} \\
@@ -363,10 +337,10 @@
         \VerbatimInput{./wireshark/ws\_capture04\_export.txt} % webclient
 
     \subsection{List of headers and replies}
-            \textbf{Request:} GET /dashboard/ HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n
-            \textbf{Reply:} HTTP/1.1 200 OK
-                Meaning: this header complies with what the server expects from a webclient request.
-            \textbf{Request:} GET /dashboard HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n
+            \textbf{Request:} GET /dashboard/ HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n \\
+            \textbf{Reply:} HTTP/1.1 200 OK \\
+                Meaning: this header complies with what the server expects from a webclient request. \\
+            \textbf{Request:} GET /dashboard HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n \\
             \textbf{Reply:} HTTP/1.1 301 Moved Permanently
                 Meaning: this header request a relative directory without a forward slash at the end, prompting the server to reply with a "moved" answer.
             \textbf{Request:} PUT / HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n

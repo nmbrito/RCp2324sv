@@ -22,7 +22,7 @@ httpTestMessages = [
         "GET /dashboard HTTP/1.\r\n",               # 400 Bad Request
         "GET /dashboard/index.htm HTTP/1.1\r\n",    # 404 Not Found
         "PUT /d HTTP/1.1\r\n",                      # 405 Method Not Allowed
-        "BREW /coffee HTTP/1.1\r\n",                # 501 Not implemented
+        "BREW /coffee/ HTTP/1.1\r\n",               # 501 Not implemented
         ]
 
 # Cycle through predefined messages

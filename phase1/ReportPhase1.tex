@@ -210,17 +210,14 @@
     \item[Windows] \hfill \\
         Microsoft's operating system. First released in 1985 as a Graphical User Interface (GUI) for MS-DOS, continued to evolve with it's latest version being 11.
     \item[Rolling release distribuition] \hfill \\
-        A distribuition where it's software release cycle is more frequent than those of Long Term Support (LTS). It's up to the Linux-based distribuitor to guarantee
-        the testing of a package.
+        A distribuition where it's software release cycle is more frequent than those of Long Term Support (LTS). It's up to the Linux-based distribuitor to guarantee the testing of a package.
         Due to it's nature, it's not recommended for server production environment.
     \item[openSUSE Tumbleweed] \hfill \\
-        An openSUSE (OSS) is an open-source community driven Linux-based distribuition sponsored by SUSE Software Solutions. Tumbleweed is a rolling release version 
-        allowing for up-to-date software releases.
+        An openSUSE (OSS) is an open-source community driven Linux-based distribuition sponsored by SUSE Software Solutions. Tumbleweed is a rolling release version allowing for up-to-date software releases.
     \item[Wireshark] \hfill \\
         Wireshark is a network protocol analyser software. Allows traffic capture between a computer and a network.
     \item[LibreWolf] \hfill \\
-        An internet browser based on Mozilla's Firefox. It's primary purpose is to allow privacy, and with it comes security. It achieves this by removing telemetry and
-        data collection.
+        An internet browser based on Mozilla's Firefox. It's primary purpose is to allow privacy, and with it comes security. It achieves this by removing telemetry and data collection.
     \item[XAMPP] \hfill \\
         A software package environment collection containing Apache2 webserver, MariaDB database, PHP and Perl.
     \item[Apache2] \hfill \\
@@ -307,8 +304,7 @@
             \subitem Package monitor: Wireshark version 4.2.3 (Git commit b0da86c196d1).
     
     \subsection{Software install steps}
-        Number one step is to install, start and configure XAMPP. Using the following \url{https://www.apachefriends.org/download.html}{link} we can choose our prefered
-        method, for this project the portable version was the best choice since no installation was needed.
+        Number one step is to install, start and configure XAMPP. Using the following \url{https://www.apachefriends.org/download.html}{link} we can choose our prefered method, for this project the portable version was the best choice since no installation was needed.
         After uncompressing our downloaded file, we can start the process.
         \begin{tabular}{ l r }
             The read me file available in the root directory states that
@@ -378,8 +374,7 @@
                 Meaning: this header request is an upload request to an unexistent directory.
             \textbf{Request:} GET /dashboard HTTP/1.\r\nHost:127.24.1.12\r\n\r\n
             \textbf{Reply:} HTTP/1.1 400 Bad Request
-                Meaning: this header request, although it has an invalid directory, has the HTTP protocol version badly writen (HTTP/1.1 vs. actual HTTP/1.) which causes
-                a "bad request" reply from the server.
+                Meaning: this header request, although it has an invalid directory, has the HTTP protocol version badly writen (HTTP/1.1 vs. actual HTTP/1.) which causes a "bad request" reply from the server.
             \textbf{Request:} GET /dashboard/index.htm HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n
             \textbf{Reply:} HTTP/1.1 404 Not Found
                 Meaning: this header request tries to get a file that doesn't exist in the local server.
@@ -388,8 +383,7 @@
                 Meaning: this header request tries to upload something to the relative directory "d".
             \textbf{Request:} BREW /coffee/ HTTP/1.1\r\nHost:127.24.1.12\r\n\r\n
             \textbf{Reply:} HTTP/1.1 501 Not Implemented
-                Meaning: A poorly attempt to get the 1998 April fool's day. It should have replied with 418 I'm a teapot. Even with GET instead of BREW it didn't work.
-                Apache doesn't have the implementation. 
+                Meaning: A poorly attempt to get the 1998 April fool's day. It should have replied with 418 I'm a teapot. Even with GET instead of BREW it didn't work. Apache doesn't have the implementation.
 
 %% Chapter: recomendations -----------------------------------------------------{{{1
 \section{Issues and fixes}

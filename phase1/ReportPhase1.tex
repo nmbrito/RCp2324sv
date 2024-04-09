@@ -266,7 +266,7 @@
             \item Text-only application
         \end{itemize}
 
-    \subsection{Software}
+    \section{Software}
         \begin{itemize}
             \item Local server side
                 \subitem Operating system: Windows 11 x64
@@ -278,50 +278,40 @@
                 \subitem Package monitor: Wireshark version 4.2.3 (Git commit b0da86c196d1).
         \end{itemize}
 
-    \subsection{Software install steps}
+    \section{Software install steps}
         Number one step is to install, start and configure XAMPP. Using the following \href{https://www.apachefriends.org/download.html}{link} we can choose our prefered method, for this project the portable version was the best choice since no installation was needed.
         After uncompressing our downloaded file, we can start the process.
-        \begin{tabular}{ l r }
-            The read me file available in the root directory states that
-            we need to run \textit{setup\_xampp} batch file first to populate the
-            registry it's directory.                                        & \includegraphics[scale=0.3]{install_xampp08} \\ % 0.3 scale!
-
-            After completing, just press any button to continue.            & \includegraphics[scale=0.3]{install_xampp09} \\
-
-            Next click in the \textit{xampp\_start} executable, windows
-            will prompt some firewall permissions which will gladly accept. & \includegraphics[scale=0.3]{install_xampp10} \includegraphics[scale=0.3]{install_xampp13} \\
-
-            Pick a language for the program.                                & \includegraphics[scale=0.3]{install_xampp14} \\
-
-            Apache2 comes with SSL on by default. Since we're studying the
-            HTTP protocol it's convenient to disable HTTPS.
-            Pressing the \textit{config} button shows a list of
-            configuration files. Select \textit{Apache (httpd-ssl.conf)}.   & \includegraphics[scale=0.3]{install_xampp15} \\
-
-            Search and comment the line with \textit{SSLEngine on}.         & \includegraphics[scale=0.3]{install_xampp16} \\
-
-            Previously if we went to http://localhost it would redirect
-            to the HTTPS version. After completing the above step it'll no
-            longer redirect, showing us the non-secure version.             & \includegraphics[scale=0.3]{install_xampp17} \\
+        \begin{flushleft}
+        \begin{tabular}{ p{0.3\linewidth} r }
+The read me file available in the root directory states that we need to run \textit{setup\_xampp} batch file first to populate the registry it's directory. & \includegraphics[scale=0.3]{install_xampp08} \\ % 0.3 scale!
+After completing, just press any button to continue. & \includegraphics[scale=0.3]{install_xampp09} \\
+Next click in the \textit{xampp\_start} executable, windows will prompt some firewall permissions which will gladly accept. & \includegraphics[scale=0.3]{install_xampp10} \\
+... & \includegraphics[scale=0.3]{install_xampp13} \\
+Pick a language for the program. & \includegraphics[scale=0.3]{install_xampp14} \\
+Apache2 comes with SSL on by default. Since we're studying the HTTP protocol it's convenient to disable HTTPS. Pressing the \textit{config} button shows a list of
+configuration files. Select \textit{Apache (httpd-ssl.conf)}. & \includegraphics[scale=0.3]{install_xampp15} \\
+Search and comment the line with \textit{SSLEngine on}. & \includegraphics[scale=0.3]{install_xampp16} \\
+Previously if we went to http://localhost it would redirect to the HTTPS version. After completing the above step it'll no longer redirect, showing us the non-secure version. & \includegraphics[scale=0.3]{install_xampp17} \\
         \end{tabular}
+        \end{flushleft}
 
         Next up is wireshark, the powerful network analyser.
         We'll download the installer from \href{https://www.wireshark.org/download.html}{here}.
         The install process is pretty simple, selecting everything available and pressing next.
         \begin{tabular}{ l r }
-            Wireshark setup.                                        & \includegraphics[scale=0.3]{install_wireshark02} \\
-            After completing the installation, reboot the computer. & \includegraphics[scale=0.3]{install_wireshark21} \\
+Wireshark setup. & \includegraphics[scale=0.3]{install_wireshark02} \\
+After completing the installation, reboot the computer. & \includegraphics[scale=0.3]{install_wireshark21} \\
         \end{tabular}
 
-    \subsection{WebClient - Python Code}
+    \section{WebClient - Python Code}
         \lstset{style=pythoncode}
         \lstinputlisting[language=python, caption=Simple HTTP WebClient using sockets in python]{webclient/httpsocketv3.py}
         The code was adapted to be simple and cycle through the various request messages without any user input.
         Modifiable variables include \textit{serverName}, \textit{serverPort} and the \textit{httpTestMessages} list.
 
-        \verbatiminput{./webclient/httpsocketv3_output_20240329.txt}
+        %\verbatiminput{./webclient/httpsocketv3_output_20240329.txt}
     
-    \subsection{Wireshark captures}
+    \section{Wireshark captures}
         First we must ensure the browser being used can connect to the XAMPP server with HTTP. We can do that by enabling the usage of deprecated TLS.
         \includegraphics[scale=0.3]{librewolf_tls} 
         \captionof{figure}{Changing from false to true the \textit{security.tls.version.enable-deprecated} option }
@@ -333,11 +323,11 @@
         \includegraphics[scale=0.3]{wscapwcsocket08} % browser local
 
         Capture output
-        \verbatiminput{./wireshark/ws_capture01_export.txt} % vpn
-        \verbatiminput{./wireshark/ws_capture02_export.txt} % browser
-        \verbatiminput{./wireshark/ws_capture04_export.txt} % webclient
+        %\verbatiminput{./wireshark/ws_capture01_export.txt} % vpn
+        %\verbatiminput{./wireshark/ws_capture02_export.txt} % browser
+        %\verbatiminput{./wireshark/ws_capture04_export.txt} % webclient
 
-    \subsection{List of headers and replies}
+    \section{List of headers and replies}
             \textbf{Request:} GET /dashboard/ HTTP/1.1\textbackslash r\textbackslash nHost:127.24.1.12 \textbackslash r\textbackslash n\textbackslash r\textbackslash n \\
             \textbf{Reply:} HTTP/1.1 200 OK \\
                 Meaning: this header complies with what the server expects from a webclient request. \\ \\

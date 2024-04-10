@@ -1,5 +1,5 @@
 \babel@toc {portuguese}{}\relax 
-\babel@toc {portuguese}{}\relax 
+\babel@toc {english}{}\relax 
 \contentsline {chapter}{Figure list}{ii}{chapter*.2}%
 \contentsline {chapter}{Table list}{iii}{chapter*.3}%
 \contentsline {chapter}{Acronyms list}{iv}{chapter*.4}%
@@ -14,5 +14,5 @@
 \contentsline {section}{\numberline {2.6}Wireshark captures}{6}{section.2.6}%
 \contentsline {section}{\numberline {2.7}List of headers and replies}{7}{section.2.7}%
 \contentsline {section}{\numberline {2.8}Issues and fixes}{8}{section.2.8}%
-\contentsline {chapter}{Refer\^encias}{8}{section.2.8}%
+\contentsline {chapter}{References}{8}{section.2.8}%
 \contentsline {chapter}{\numberline {A}Um Apêndice}{9}{appendix.A}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.10)  10 APR 2024 22:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.10)  10 APR 2024 23:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -705,59 +705,59 @@ Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
 Package babel Info: Importing basic data for portuguese
 (babel)             from babel-pt.ini. Reported on input line 11.
 )
-Package hyperref Info: Option `plainpages' set `false' on input line 118.
-Package hyperref Info: Option `bookmarksopen' set `false' on input line 118.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 118.
-Package hyperref Info: Option `breaklinks' set `true' on input line 118.
-Package hyperref Info: Option `linktocpage' set `true' on input line 118.
-Package hyperref Info: Option `colorlinks' set `true' on input line 118.
-LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line 126.
+Package hyperref Info: Option `plainpages' set `false' on input line 121.
+Package hyperref Info: Option `bookmarksopen' set `false' on input line 121.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 121.
+Package hyperref Info: Option `breaklinks' set `true' on input line 121.
+Package hyperref Info: Option `linktocpage' set `true' on input line 121.
+Package hyperref Info: Option `colorlinks' set `true' on input line 121.
+LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line 129.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/t1ntxtlf.fd
 File: t1ntxtlf.fd 2021/05/24 v1.1 font definition file for T1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.95pt on input line 126.
+(Font)              scaled to size 10.95pt on input line 129.
  (./ReportPhase1.aux)
 \openout1 = `ReportPhase1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 126.
-LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 126.
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 129.
+LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 129.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 126.
-LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 126.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 129.
+LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 129.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 126.
-LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 126.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 129.
+LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 129.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 126.
-LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 126.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 129.
+LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 129.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    ... okay on input line 129.
  (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count338
@@ -813,59 +813,59 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 126.
+Package hyperref Info: Link coloring ON on input line 129.
 (./ReportPhase1.out) (./ReportPhase1.out)
 \@outlinefile=\write3
 \openout3 = `ReportPhase1.out'.
 
 \c@mv@tabular=\count345
 \c@mv@boldtabular=\count346
-LaTeX Info: Command `\dddot' is already robust on input line 126.
-LaTeX Info: Command `\ddddot' is already robust on input line 126.
+LaTeX Info: Command `\dddot' is already robust on input line 129.
+LaTeX Info: Command `\ddddot' is already robust on input line 129.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 134.
+(Font)              scaled to size 12.0pt on input line 137.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 12.0pt on input line 134.
+(Font)              scaled to size 12.0pt on input line 137.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/sc' will be
-(Font)              scaled to size 12.0pt on input line 134.
+(Font)              scaled to size 12.0pt on input line 137.
 <./images/logoisel.png, id=67, 426.8748pt x 286.1892pt>
 File: ./images/logoisel.png Graphic file (type png)
 <use ./images/logoisel.png>
-Package pdftex.def Info: ./images/logoisel.png  used on input line 138.
+Package pdftex.def Info: ./images/logoisel.png  used on input line 141.
 (pdftex.def)             Requested size: 176.40707pt x 118.26846pt.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 20.74pt on input line 142.
+(Font)              scaled to size 20.74pt on input line 145.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 20.74pt on input line 142.
+(Font)              scaled to size 20.74pt on input line 145.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 143.
+(Font)              scaled to size 14.4pt on input line 146.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 14.4pt on input line 143.
-LaTeX Font Info:    Trying to load font information for OT1+minntx on input line 159.
+(Font)              scaled to size 14.4pt on input line 146.
+LaTeX Font Info:    Trying to load font information for OT1+minntx on input line 162.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/ot1minntx.fd
 File: ot1minntx.fd 2023/09/09 v1.1 font definition file for OT1/minntx
 )
-LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 159.
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 162.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
 )
-LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 159.
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 162.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
 )
-LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 159.
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 162.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 ) [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc} <./images/logoisel.png>]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 24.88pt on input line 170.
+(Font)              scaled to size 24.88pt on input line 173.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 24.88pt on input line 170.
+(Font)              scaled to size 24.88pt on input line 173.
  (./ReportPhase1.toc
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 10.95pt on input line 3.
@@ -877,7 +877,7 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.173 \listoffigures
+l.176 \listoffigures
                      [1
 
 ] (./ReportPhase1.lof
@@ -901,121 +901,135 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 
 ]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 243.
+(Font)              scaled to size 10.0pt on input line 246.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 10.0pt on input line 243.
+(Font)              scaled to size 10.0pt on input line 246.
  [6]
 Chapter 1.
 [1
 
 ]
 Chapter 2.
-LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 253.
+LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 256.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 )
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.95pt on input line 253.
+(Font)              scaled to size 10.95pt on input line 256.
  [2
 
 {/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}]
-Overfull \hbox (6.91705pt too wide) in alignment at lines 289--292
+Overfull \hbox (6.91705pt too wide) in alignment at lines 291--294
  [] [] 
  []
 
 
-Overfull \hbox (6.91705pt too wide) in alignment at lines 292--296
+Overfull \hbox (6.91705pt too wide) in alignment at lines 294--298
  [] [] 
  []
 
 
-Overfull \hbox (6.91705pt too wide) in alignment at lines 296--298
+Overfull \hbox (6.91705pt too wide) in alignment at lines 298--300
  [] [] 
  []
 
 
-Overfull \hbox (6.91705pt too wide) in alignment at lines 298--299
+Overfull \hbox (6.91705pt too wide) in alignment at lines 300--301
  [] [] 
  []
 
-<./images/install_xampp08.png, id=137, 844.65562pt x 444.91219pt>
+<./images/install_xampp08.png, id=145, 844.65562pt x 444.91219pt>
 File: ./images/install_xampp08.png Graphic file (type png)
 <use ./images/install_xampp08.png>
-Package pdftex.def Info: ./images/install_xampp08.png  used on input line 301.
+Package pdftex.def Info: ./images/install_xampp08.png  used on input line 304.
 (pdftex.def)             Requested size: 295.6339pt x 155.72159pt.
-<./images/install_xampp09.png, id=138, 975.645pt x 484.81125pt>
+<./images/install_xampp09.png, id=146, 975.645pt x 484.81125pt>
 File: ./images/install_xampp09.png Graphic file (type png)
 <use ./images/install_xampp09.png>
-Package pdftex.def Info: ./images/install_xampp09.png  used on input line 304.
+Package pdftex.def Info: ./images/install_xampp09.png  used on input line 307.
 (pdftex.def)             Requested size: 295.61363pt x 146.89442pt.
-<./images/install_xampp10.png, id=139, 845.40843pt x 444.91219pt>
+<./images/install_xampp10.png, id=147, 845.40843pt x 444.91219pt>
 File: ./images/install_xampp10.png Graphic file (type png)
 <use ./images/install_xampp10.png>
-Package pdftex.def Info: ./images/install_xampp10.png  used on input line 307.
+Package pdftex.def Info: ./images/install_xampp10.png  used on input line 310.
 (pdftex.def)             Requested size: 295.89738pt x 155.72159pt.
-<./images/install_xampp13.png, id=140, 956.07187pt x 465.23813pt>
+<./images/install_xampp13.png, id=148, 956.07187pt x 465.23813pt>
 File: ./images/install_xampp13.png Graphic file (type png)
 <use ./images/install_xampp13.png>
-Package pdftex.def Info: ./images/install_xampp13.png  used on input line 308.
+Package pdftex.def Info: ./images/install_xampp13.png  used on input line 311.
 (pdftex.def)             Requested size: 289.6831pt x 140.9639pt.
-<./images/install_xampp14.png, id=141, 956.07187pt x 465.23813pt>
+<./images/install_xampp14.png, id=149, 956.07187pt x 465.23813pt>
 File: ./images/install_xampp14.png Graphic file (type png)
 <use ./images/install_xampp14.png>
-Package pdftex.def Info: ./images/install_xampp14.png  used on input line 311.
+Package pdftex.def Info: ./images/install_xampp14.png  used on input line 314.
 (pdftex.def)             Requested size: 289.6831pt x 140.9639pt.
-<./images/install_xampp15.png, id=142, 1015.54407pt x 523.9575pt>
+<./images/install_xampp15.png, id=150, 1015.54407pt x 523.9575pt>
 File: ./images/install_xampp15.png Graphic file (type png)
 <use ./images/install_xampp15.png>
-Package pdftex.def Info: ./images/install_xampp15.png  used on input line 314.
+Package pdftex.def Info: ./images/install_xampp15.png  used on input line 317.
 (pdftex.def)             Requested size: 289.43306pt x 149.32944pt.
-<./images/install_xampp16.png, id=143, 1015.54407pt x 523.9575pt>
+<./images/install_xampp16.png, id=151, 1015.54407pt x 523.9575pt>
 File: ./images/install_xampp16.png Graphic file (type png)
 <use ./images/install_xampp16.png>
-Package pdftex.def Info: ./images/install_xampp16.png  used on input line 317.
+Package pdftex.def Info: ./images/install_xampp16.png  used on input line 320.
 (pdftex.def)             Requested size: 289.43306pt x 149.32944pt.
-
-Underfull \hbox (badness 7168) in paragraph at lines 319--320
-[]|\T1/ntxtlf/m/n/10.95 Previously if we went to
- []
-
-<./images/install_xampp17.png, id=144, 1028.34187pt x 517.935pt>
+<./images/install_xampp17.png, id=152, 1028.34187pt x 517.935pt>
 File: ./images/install_xampp17.png Graphic file (type png)
 <use ./images/install_xampp17.png>
-Package pdftex.def Info: ./images/install_xampp17.png  used on input line 320.
+Package pdftex.def Info: ./images/install_xampp17.png  used on input line 325.
 (pdftex.def)             Requested size: 293.08047pt x 147.61299pt.
 
-Overfull \hbox (6.91705pt too wide) in alignment at lines 299--324
+Overfull \hbox (6.91705pt too wide) in alignment at lines 301--329
  [] [] 
  []
 
 [3 <./images/install_xampp08.png> <./images/install_xampp09.png> <./images/install_xampp10.png>] [4 <./images/install_xampp13.png> <./images/install_xampp14.png> <./images/install_xampp15.png> <./images/install_xampp16.png>]
-<./images/install_wireshark02.png, id=162, 373.395pt x 289.83281pt>
-File: ./images/install_wireshark02.png Graphic file (type png)
-<use ./images/install_wireshark02.png>
-Package pdftex.def Info: ./images/install_wireshark02.png  used on input line 332.
-(pdftex.def)             Requested size: 112.01936pt x 86.9505pt.
-<./images/install_wireshark21.png, id=163, 373.395pt x 289.83281pt>
-File: ./images/install_wireshark21.png Graphic file (type png)
-<use ./images/install_wireshark21.png>
-Package pdftex.def Info: ./images/install_wireshark21.png  used on input line 333.
-(pdftex.def)             Requested size: 112.01936pt x 86.9505pt.
-
-Overfull \hbox (233.09871pt too wide) in paragraph at lines 328--335
-\T1/ntxtlf/m/n/10.95 pro-cess is pretty sim-ple, se-lect-ing ev-ery-thing avail-able and press-ing next. [] 
+Overfull \hbox (9.73607pt too wide) in alignment at lines 334--337
+ [] [] 
  []
 
-(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
+
+Overfull \hbox (9.73607pt too wide) in alignment at lines 337--341
+ [] [] 
+ []
+
+
+Overfull \hbox (9.73607pt too wide) in alignment at lines 341--343
+ [] [] 
+ []
+
+
+Overfull \hbox (9.73607pt too wide) in alignment at lines 343--344
+ [] [] 
+ []
+
+<./images/install_wireshark02.png, id=170, 373.395pt x 289.83281pt>
+File: ./images/install_wireshark02.png Graphic file (type png)
+<use ./images/install_wireshark02.png>
+Package pdftex.def Info: ./images/install_wireshark02.png  used on input line 347.
+(pdftex.def)             Requested size: 298.7164pt x 231.86655pt.
+<./images/install_wireshark21.png, id=171, 373.395pt x 289.83281pt>
+File: ./images/install_wireshark21.png Graphic file (type png)
+<use ./images/install_wireshark21.png>
+Package pdftex.def Info: ./images/install_wireshark21.png  used on input line 350.
+(pdftex.def)             Requested size: 298.7164pt x 231.86655pt.
+
+Overfull \hbox (9.73607pt too wide) in alignment at lines 344--354
+ [] [] 
+ []
+
+[5 <./images/install_xampp17.png> <./images/install_wireshark02.png>] (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/02/21 1.10 listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 338.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 360.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.0pt on input line 338.
-LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 338.
+(Font)              scaled to size 9.0pt on input line 360.
+LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 360.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/t1ntxtt.fd
 File: t1ntxtt.fd 2012/04/20 v3.1
 )
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 9.0pt on input line 338.
+(Font)              scaled to size 9.0pt on input line 360.
  (./webclient/httpsocketv3.py
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.0pt on input line 1.
@@ -1029,109 +1043,89 @@ LaTeX Font Info:    Font shape `T1/ntxtt/m/it' in size <9> not available
 (Font)              Font shape `T1/txtt/m/sl' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/ntxtt/b/n' in size <9> not available
 (Font)              Font shape `T1/txtt/bx/n' tried instead on input line 11.
- [5 <./images/install_xampp17.png> <./images/install_wireshark02.png> <./images/install_wireshark21.png>])
+ [6 <./images/install_wireshark21.png>])
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 10.95pt on input line 338.
-<./images/librewolf_tls.png, id=191, 971.12813pt x 583.42969pt>
+(Font)              scaled to size 10.95pt on input line 360.
+<./images/librewolf_tls.png, id=216, 971.12813pt x 583.42969pt>
 File: ./images/librewolf_tls.png Graphic file (type png)
 <use ./images/librewolf_tls.png>
-Package pdftex.def Info: ./images/librewolf_tls.png  used on input line 346.
-(pdftex.def)             Requested size: 291.34068pt x 175.03024pt.
-
-
-Package caption Warning: \setcaptiontype
-(caption)                outside box or environment on input line 347.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 347.
-See the caption package documentation for explanation.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 345--347
-\T1/ntxtlf/m/n/10.95 First we must en-sure the browser be-ing used can con-nect to the XAMPP
- []
-
-
-Underfull \hbox (badness 7944) in paragraph at lines 345--347
-\T1/ntxtlf/m/n/10.95 server with HTTP. We can do that by en-abling the us-age of dep-re-cated TLS.
- []
-
-<./images/wscapwcsocket05.png, id=192, 1028.34187pt x 523.9575pt>
+Package pdftex.def Info: ./images/librewolf_tls.png  used on input line 372.
+(pdftex.def)             Requested size: 388.44437pt x 233.36774pt.
+<./images/wscapwcsocket05.png, id=217, 1028.34187pt x 523.9575pt>
 File: ./images/wscapwcsocket05.png Graphic file (type png)
 <use ./images/wscapwcsocket05.png>
-Package pdftex.def Info: ./images/wscapwcsocket05.png  used on input line 350.
-(pdftex.def)             Requested size: 308.50494pt x 157.18846pt.
-<./images/wscapwcsocket06.png, id=193, 1028.34187pt x 523.9575pt>
-File: ./images/wscapwcsocket06.png Graphic file (type png)
-<use ./images/wscapwcsocket06.png>
-Package pdftex.def Info: ./images/wscapwcsocket06.png  used on input line 351.
-(pdftex.def)             Requested size: 308.50494pt x 157.18846pt.
-<./images/wscapwcsocket07.png, id=194, 1028.34187pt x 523.9575pt>
-File: ./images/wscapwcsocket07.png Graphic file (type png)
-<use ./images/wscapwcsocket07.png>
-Package pdftex.def Info: ./images/wscapwcsocket07.png  used on input line 352.
-(pdftex.def)             Requested size: 308.50494pt x 157.18846pt.
-<./images/wscapwcsocket08.png, id=195, 1028.34187pt x 523.9575pt>
+Package pdftex.def Info: ./images/wscapwcsocket05.png  used on input line 381.
+(pdftex.def)             Requested size: 442.17839pt x 225.29733pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./images/wscapwcsocket08.png, id=218, 1028.34187pt x 523.9575pt>
 File: ./images/wscapwcsocket08.png Graphic file (type png)
 <use ./images/wscapwcsocket08.png>
-Package pdftex.def Info: ./images/wscapwcsocket08.png  used on input line 353.
-(pdftex.def)             Requested size: 308.50494pt x 157.18846pt.
+Package pdftex.def Info: ./images/wscapwcsocket08.png  used on input line 388.
+(pdftex.def)             Requested size: 205.66473pt x 104.78964pt.
+<./images/wscapwcsocket07.png, id=219, 1028.34187pt x 523.9575pt>
+File: ./images/wscapwcsocket07.png Graphic file (type png)
+<use ./images/wscapwcsocket07.png>
+Package pdftex.def Info: ./images/wscapwcsocket07.png  used on input line 392.
+(pdftex.def)             Requested size: 205.66473pt x 104.78964pt.
+<./images/wscapwcsocket06.png, id=220, 1028.34187pt x 523.9575pt>
+File: ./images/wscapwcsocket06.png Graphic file (type png)
+<use ./images/wscapwcsocket06.png>
+Package pdftex.def Info: ./images/wscapwcsocket06.png  used on input line 400.
+(pdftex.def)             Requested size: 442.17839pt x 225.29733pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--354
-[]\T1/ntxtlf/m/n/10.95 Printscreen []
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[7 <./images/librewolf_tls.png>]
 
-Overfull \hbox (163.4082pt too wide) in paragraph at lines 349--354
-[] []
- []
+LaTeX Warning: Text page 8 contains only floats.
 
-[6 <./images/librewolf_tls.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 361--382
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--382
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--382
+[8 <./images/wscapwcsocket05.png> <./images/wscapwcsocket08.png> <./images/wscapwcsocket07.png> <./images/wscapwcsocket06.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 413--440
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--382
+Underfull \hbox (badness 10000) in paragraph at lines 413--440
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--382
+Underfull \hbox (badness 10000) in paragraph at lines 413--440
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--382
+Underfull \hbox (badness 10000) in paragraph at lines 413--440
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--382
+Underfull \hbox (badness 10000) in paragraph at lines 413--440
 
  []
 
-[7 <./images/wscapwcsocket05.png> <./images/wscapwcsocket06.png> <./images/wscapwcsocket07.png> <./images/wscapwcsocket08.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 385--391
+
+Underfull \hbox (badness 10000) in paragraph at lines 413--440
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 413--440
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 443--449
 
  []
 
 No file ReportPhase1.bbl.
-[8]
+[9]
 Appendix A.
-[9
+[10
 
 ] 
 enddocument/afterlastpage: lastpage setting LastPage.
@@ -1141,21 +1135,21 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `ReportPhase1.out' has not changed.
-(rerunfilecheck)             Checksum: 704644DDB9F5070295AFB0137B04F417;2218.
+(rerunfilecheck)             Checksum: DF4F61479CADDBFB187882211F12CD68;2185.
  ) 
 Here is how much of TeX's memory you used:
- 21222 strings out of 474116
- 334804 string characters out of 5743682
- 2196187 words of memory out of 5000000
- 43132 multiletter control sequences out of 15000+600000
+ 21251 strings out of 474116
+ 335332 string characters out of 5743682
+ 2147187 words of memory out of 5000000
+ 43156 multiletter control sequences out of 15000+600000
  631739 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,14n,117p,427b,2374s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 80i,14n,117p,471b,2374s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/txfonts/t1xbtt.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on ReportPhase1.pdf (16 pages, 2010641 bytes).
+Output written on ReportPhase1.pdf (17 pages, 2011638 bytes).
 PDF statistics:
- 313 PDF objects out of 1000 (max. 8388607)
- 247 compressed objects within 3 object streams
- 84 named destinations out of 1000 (max. 500000)
+ 327 PDF objects out of 1000 (max. 8388607)
+ 260 compressed objects within 3 object streams
+ 89 named destinations out of 1000 (max. 500000)
  209 words of extra memory for PDF output out of 10000 (max. 10000000)
 

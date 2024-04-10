@@ -1,5 +1,5 @@
 # Fdb version 4
-["bibtex ReportPhase1"] 0 "ReportPhase1.aux" "ReportPhase1.bbl" "ReportPhase1" 1712679481.12052 0
+["bibtex ReportPhase1"] 0 "ReportPhase1.aux" "ReportPhase1.bbl" "ReportPhase1" 0 0
   "ReportPhase1.aux" 0 -1 0 "pdflatex"
   "c:/texlive/2023/texmf-dist/bibtex/bst/chicago/chicago.bst" 1709141602 37416 2ae04276c51f11eda70770f4081293b7 ""
   "refs.bib" 0 -1 0 ""
@@ -7,15 +7,15 @@
   "ReportPhase1.bbl"
   "ReportPhase1.blg"
   (rewritten before read)
-["pdflatex"] 1712679469.32837 "c:/Users/brito/OneDrive - Instituto Superior de Engenharia de Lisboa/GITRepos/RCp2324sv/phase1/ReportPhase1.tex" "ReportPhase1.pdf" "ReportPhase1" 1712679481.12174 0
-  "ReportPhase1.aux" 1712679477 2787 7b2d0951e8e36f4b3d1e466973464aca "pdflatex"
+["pdflatex"] 1712775507.544 "c:/Users/brito/OneDrive - Instituto Superior de Engenharia de Lisboa/GITRepos/RCp2324sv/phase1/ReportPhase1.tex" "ReportPhase1.pdf" "ReportPhase1" 1712775516.43761 0
+  "ReportPhase1.aux" 1712775513 2787 7b2d0951e8e36f4b3d1e466973464aca "pdflatex"
   "ReportPhase1.bbl" 0 -1 0 "bibtex ReportPhase1"
-  "ReportPhase1.lof" 1712679478 288 2cc2acd9ec2f06919fd856e11e536327 "pdflatex"
-  "ReportPhase1.lot" 1712679478 126 bdeff6d8280b4ead6d7dd9dc79ab76f6 "pdflatex"
-  "ReportPhase1.out" 1712679477 2226 12fca4a8219fc72b254cf05412765d82 "pdflatex"
-  "ReportPhase1.tex" 1712679464 20008 9f9e483264bb1181c0a13b0b7778ae83 ""
-  "ReportPhase1.toc" 1712679478 1164 789485a201d2eb70de785f17068766c4 "pdflatex"
-  "c:/Users/brito/OneDrive - Instituto Superior de Engenharia de Lisboa/GITRepos/RCp2324sv/phase1/ReportPhase1.tex" 1712679464 20008 9f9e483264bb1181c0a13b0b7778ae83 ""
+  "ReportPhase1.lof" 1712775513 288 2cc2acd9ec2f06919fd856e11e536327 "pdflatex"
+  "ReportPhase1.lot" 1712775513 126 bdeff6d8280b4ead6d7dd9dc79ab76f6 "pdflatex"
+  "ReportPhase1.out" 1712775513 2226 12fca4a8219fc72b254cf05412765d82 "pdflatex"
+  "ReportPhase1.tex" 1712775503 20034 b14a3571eec7e1c56c8e9777f9e36157 ""
+  "ReportPhase1.toc" 1712775513 1164 789485a201d2eb70de785f17068766c4 "pdflatex"
+  "c:/Users/brito/OneDrive - Instituto Superior de Engenharia de Lisboa/GITRepos/RCp2324sv/phase1/ReportPhase1.tex" 1712775503 20034 b14a3571eec7e1c56c8e9777f9e36157 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc" 1709144512 3136 bbe665bd0bb471a2da1e8fd326cff9fa ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1709144512 2914 fdbc4a54b9bc76f4551b5303f2737d33 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc" 1709146075 3124 3813fd4c981d99822890a2861b0d274c ""

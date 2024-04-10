@@ -16,10 +16,12 @@
 
 %% Package ---------------------------------------------------------------------{{{1
 \usepackage{graphicx}           % 
-\usepackage[portuguese]{babel}  % [portuges]??
+\usepackage[english]{babel}  % [portuges]??
 \usepackage{multicol}           % 
 \usepackage{longtable}          % Tables continue in the next page
 \usepackage{listings}           % Programming syntax
+\usepackage{array}              % Images in tables
+\usepackage[export]{adjustbox}
 
 %importados e verificar
 \usepackage[utf8]{inputenc}     % accents
@@ -29,6 +31,7 @@
 \usepackage{fancyhdr}           % Headers and footers
 \usepackage{hyperref}           % Hyper references
 \usepackage{chicago}            % Bibliography style
+
 
 
 %verificar
@@ -279,20 +282,47 @@
         \end{itemize}
 
     \section{Software install steps}
-        Number one step is to install, start and configure XAMPP. Using the following \href{https://www.apachefriends.org/download.html}{link} we can choose our prefered method, for this project the portable version was the best choice since no installation was needed.
+        First we install, start and configure XAMPP. Using the following \href{https://www.apachefriends.org/download.html}{link} we can choose our prefered method, for this project the portable version was the best choice since no installation was needed.
         After uncompressing our downloaded file, we can start the process.
         \begin{flushleft}
-        \begin{tabular}{ p{0.3\linewidth} r }
-The read me file available in the root directory states that we need to run \textit{setup\_xampp} batch file first to populate the registry it's directory. & \raisebox{-\totalheight}{\includegraphics[scale=0.3]{install_xampp08}} \\ % 0.3 scale!
-After completing, just press any button to continue. & \includegraphics[scale=0.3]{install_xampp09} \\
-Next click in the \textit{xampp\_start} executable, windows will prompt some firewall permissions which will gladly accept. & \includegraphics[scale=0.3]{install_xampp10} \\
-... & \includegraphics[scale=0.3]{install_xampp13} \\
-Pick a language for the program. & \includegraphics[scale=0.3]{install_xampp14} \\
-Apache2 comes with SSL on by default. Since we're studying the HTTP protocol it's convenient to disable HTTPS. Pressing the \textit{config} button shows a list of
-configuration files. Select \textit{Apache (httpd-ssl.conf)}. & \includegraphics[scale=0.3]{install_xampp15} \\
-Search and comment the line with \textit{SSLEngine on}. & \includegraphics[scale=0.3]{install_xampp16} \\
-Previously if we went to http://localhost it would redirect to the HTTPS version. After completing the above step it'll no longer redirect, showing us the non-secure version. & \includegraphics[scale=0.3]{install_xampp17} \\
-        \end{tabular}
+            \begin{center}
+                \begin{longtable}{ m{5cm} l }
+                    \textbf{Steps} & \textbf{Example} \\
+                    \hline
+                    \endfirsthead
+                    {{\bfseries \tablename\ \thetable{} -- continued}} \\
+                    \textbf{Steps} & \textbf{Example} \\
+                    \hline
+                    \endhead
+                    \hline Continued on next page \\
+                    \endfoot
+                    \endlastfoot
+                    The read me file available in the root directory states that we need to run \textit{setup\_xampp} batch file first to populate the registry it's directory.
+                    & \includegraphics[scale=0.35,valign=c]{install_xampp08} \\
+                    \hline
+                    After completing, just press any button to continue.
+                    & \includegraphics[scale=0.303,valign=c]{install_xampp09} \\
+                    \hline
+                    Next click in the \textit{xampp\_start} executable, windows will prompt some firewall permissions which will gladly accept.
+                    & \includegraphics[scale=0.35,valign=c]{install_xampp10} \\
+                    & \includegraphics[scale=0.303,valign=c]{install_xampp13} \\
+                    \hline
+                    Pick a language for the program.
+                    & \includegraphics[scale=0.303,valign=c]{install_xampp14} \\
+                    \hline
+                    Apache2 comes with SSL on by default. Since we're studying the HTTP protocol it's convenient to disable HTTPS. Pressing the \textit{config} button shows a list of configuration files. Select \textit{Apache (httpd-ssl.conf)}.
+                    & \includegraphics[scale=0.285,valign=c]{install_xampp15} \\
+                    \hline
+                    Search and comment the line with \textit{SSLEngine on}.
+                    & \includegraphics[scale=0.285,valign=c]{install_xampp16} \\
+                    \hline
+                    Previously if we went to \textit{http://localhost} it would redirect to the HTTPS version. After completing the above step it'll no longer redirect, showing us the non-secure version.
+                    & \includegraphics[scale=0.285,valign=c]{install_xampp17} \\
+                    \hline
+                \caption{XAMPP install steps}
+                \label{tab:lastcheck}
+                \end{longtable}
+            \end{center}
         \end{flushleft}
 
         Next up is wireshark, the powerful network analyser.

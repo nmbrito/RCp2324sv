@@ -9,10 +9,10 @@
 \contentsline {section}{\numberline {2.1}Milestones}{2}{section.2.1}%
 \contentsline {section}{\numberline {2.2}WebClient requirements}{2}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Software}{2}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Software install steps}{3}{section.2.4}%
-\contentsline {section}{\numberline {2.5}WebClient - Python Code}{5}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Wireshark captures}{6}{section.2.6}%
-\contentsline {section}{\numberline {2.7}List of headers and replies}{7}{section.2.7}%
-\contentsline {section}{\numberline {2.8}Issues and fixes}{8}{section.2.8}%
-\contentsline {chapter}{References}{8}{section.2.8}%
-\contentsline {chapter}{\numberline {A}Um Apêndice}{9}{appendix.A}%
+\contentsline {section}{\numberline {2.4}Software install}{3}{section.2.4}%
+\contentsline {section}{\numberline {2.5}WebClient - Python Code}{6}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Wireshark captures}{7}{section.2.6}%
+\contentsline {section}{\numberline {2.7}List of headers and replies}{9}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Issues and fixes}{9}{section.2.8}%
+\contentsline {chapter}{References}{9}{section.2.8}%
+\contentsline {chapter}{\numberline {A}Um Apêndice}{10}{appendix.A}%

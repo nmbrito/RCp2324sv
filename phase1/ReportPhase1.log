@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.28)  9 APR 2024 17:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.28)  10 APR 2024 19:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -928,7 +928,7 @@ Overfull \hbox (13.83545pt too wide) in paragraph at lines 285--296
  []
 
 [3]
-Overfull \vbox (783.25476pt too high) has occurred while \output is active []
+Overfull \vbox (734.29466pt too high) has occurred while \output is active []
 
  [4 <./images/install_xampp08.png> <./images/install_xampp09.png> <./images/install_xampp10.png> <./images/install_xampp13.png> <./images/install_xampp14.png> <./images/install_xampp15.png> <./images/install_xampp16.png> <./images/install_xampp17.png>]
 <./images/install_wireshark02.png, id=160, 373.395pt x 289.83281pt>
@@ -1092,9 +1092,9 @@ Here is how much of TeX's memory you used:
  42160 multiletter control sequences out of 15000+600000
  631739 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,12n,117p,465b,2373s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 80i,13n,117p,465b,2373s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/t1xbtt.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on ReportPhase1.pdf (16 pages, 2010024 bytes).
+Output written on ReportPhase1.pdf (16 pages, 2010026 bytes).
 PDF statistics:
  311 PDF objects out of 1000 (max. 8388607)
  245 compressed objects within 3 object streams

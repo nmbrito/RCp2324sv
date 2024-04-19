@@ -1,0 +1,31 @@
+
+Cisco Packet Tracer PC Command Line 1.0
+C:\>arp -a
+No ARP Entries Found
+C:\>ping 192.168.7.2
+
+Pinging 192.168.7.2 with 32 bytes of data:
+
+Reply from 192.168.7.2: bytes=32 time<1ms TTL=128
+Reply from 192.168.7.2: bytes=32 time<1ms TTL=128
+Reply from 192.168.7.2: bytes=32 time<1ms TTL=128
+Reply from 192.168.7.2: bytes=32 time<1ms TTL=128
+
+Ping statistics for 192.168.7.2:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>arp -a
+  Internet Address      Physical Address      Type
+  192.168.7.2           0001.429b.91a6        dynamic
+
+C:\>tracert 192.168.7.2
+
+Tracing route to 192.168.7.2 over a maximum of 30 hops: 
+
+  1   0 ms      0 ms      0 ms      192.168.7.2
+
+Trace complete.
+
+C:\>

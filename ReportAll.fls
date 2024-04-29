@@ -465,6 +465,9 @@ INPUT phase1/wireshark/wscapture04export.txt
 INPUT ./phase2/outputs/diagram.txt
 INPUT ./phase2/outputs/diagram.txt
 INPUT phase2/outputs/diagram.txt
+INPUT ./phase1/webclient/httpsocketv3output20240329.txt
+INPUT ./phase1/webclient/httpsocketv3output20240329.txt
+INPUT phase1/webclient/httpsocketv3output20240329.txt
 INPUT ReportAll.aux
 INPUT ./ReportAll.out
 INPUT ./ReportAll.out

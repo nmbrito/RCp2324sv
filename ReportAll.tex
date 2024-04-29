@@ -1,0 +1,627 @@
+%% Document template source: LaTeX2e template for FEUP's Project FE-UP
+%% Document template author: jlopes@fe.up.pt
+%% Template adapted
+
+%% A alterar: <--ALTERAR-->
+
+\documentclass[11pt,a4paper]{report}
+
+%% Macros ----------------------------------------------------------------------
+\newcommand{\school}{Instituto Superior de Engenharia de Lisboa}
+\newcommand{\degree}{Licenciatura em Engenharia Eletrotécnica, Telecomunicações e Computadores}
+\newcommand{\projisel}{Projeto ISEL 2023/24 --- LEETC}
+\newcommand{\projtitle}{Computer Networks}
+\newcommand{\projsubtitle}{Phase 1 - Web Server}
+\newcommand{\projteam}{Grupo LP-07}
+
+%% Package ---------------------------------------------------------------------
+\usepackage[T1]{fontenc}            % PS fonts
+\usepackage[a4paper,left=25mm,right=25mm,top=25mm,bottom=25mm,headheight=6mm,footskip=12mm]{geometry}   % Document dimensions
+\usepackage[english]{babel}         % [portuges]??
+\usepackage[export]{adjustbox}      %
+\usepackage[normalem]{ulem}         % various types of underlining
+\usepackage[table,xcdraw]{xcolor}   % driver-independent color extensions
+\usepackage[utf8]{inputenc}         % accents
+\usepackage{amsmath}                % multi-line and other mathematical statements
+\usepackage{array}                  % Images in tables
+\usepackage{booktabs}
+\usepackage{caption}                % rotating captions, sideways captions, etc.
+\usepackage{chicago}                % Bibliography style
+\usepackage{color}                  %
+\usepackage{fancyhdr}               % Headers and footers
+\usepackage{float}                  % tables and figures in the multi-column environment 
+\usepackage{graphicx}               % 
+\usepackage{hyperref}               % Hyper references
+\usepackage{lastpage}               % 
+\usepackage{lipsum}                 % loren dummy text
+\usepackage{listings}               % Programming syntax
+\usepackage{longtable}              % Tables continue in the next page
+\usepackage{multicol}               % 
+\usepackage{multirow}               % tabular cells spanning multiple rows
+\usepackage{newtxtext,newtxmath}    % do not use CM fonts
+\usepackage{setspace}               % setting the spacing between lines
+\usepackage{subcaption}             % for subfigures and the like
+
+%other macros, if needed
+\newcommand{\windspt}{\textsf{WindsPT\/}}
+\newcommand{\windscannerpt}{\emph{Windscanner.PT\/}}
+\newcommand{\class}[1]{{\normalfont\slshape #1\/}}
+\newcommand{\svg}{\class{SVG}}
+
+%environments for infos
+\newenvironment{info}[1]{\vspace*{6mm}\color{blue}[ \begin{em} #1}
+                        {\vspace*{6mm}\end{em} ]}
+\newenvironment{infoopt}[1]{\vspace*{6mm}\color{blue}[ \textbf{Elemento opcional.} \begin{em} #1}
+                        {\vspace*{6mm}\end{em} ]}
+
+%% Package settings ------------------------------------------------------------
+\graphicspath{{./}}                                 % {graphicx} - Images path
+\selectlanguage{portuguese}                         % {babel} - Language portuguese
+\setlength{\columnsep}{3cm}                         % {multicol} - Column spacement
+\definecolor{engineering}{rgb}{0.549,0.176,0.098}   % {color}
+\definecolor{cloudwhite}{cmyk}{0,0,0,0.025}         % {color}
+\definecolor{deepblue}{rgb}{0,0,0.5}                % {color}
+\definecolor{deepred}{rgb}{0.6,0,0}                 % {color}
+\definecolor{deepgreen}{rgb}{0,0.5,0}               % {color}
+\setlength{\parindent}{0em}                         % {geometry}
+\setlength{\parskip}{1ex}                           % {geometry}
+\lstdefinestyle{pythoncode}                         % {listings} - Python syntax
+{
+    aboveskip=8mm,
+    backgroundcolor=\color{cloudwhite},             
+    basicstyle=\footnotesize\ttfamily,
+    numbers=left,                                   % where to put the line-numbers
+    belowskip=4mm,
+    breakatwhitespace=false,                        % sets if automatic breaks should only happen at whitespace
+    breaklines=true,                                % sets automatic line breaking
+    captionpos=b,                                   % sets the caption-position to bottom
+    escapeinside={\%*}{*)},                         % if you want to add a comment within your code
+    float=htb,
+    frame=tb,
+    keepspaces=true,
+    keywordstyle=\bfseries\color{deepblue},
+    morekeywords={*,var,template,new}               % if you want to add more keywords to the set
+    numbersep=8pt,                                  % how far the line-numbers are from the code
+    numberstyle=\scriptsize\texttt,                 % the size of the fonts that are used for the line-numbers
+    showspaces=false,                               % show spaces adding particular underscores
+    showstringspaces=false,                         % underline spaces within strings
+    showtabs=false,                                 % show tabs within strings adding particular underscores
+    stepnumber=1,                                   % the step between two line-numbers. If it's 1 each line will be numbered
+    stringstyle=\color{deepgreen},
+    tabsize=2,                                      % sets default tabsize to 2 spaces
+}
+\fancyhf{}                                          % {fancyhdr} clear off all default fancyhdr headers and footers
+\lfoot{\small{\emph{\projtitle, \projsubtitle}}}    % {fancyhdr}
+\rfoot{\small{\thepage\ / \pageref{LastPage}}}      % {fancyhdr}
+\pagestyle{fancy}                                   % {fancyhdr} apply the fancy header style
+\renewcommand{\headrulewidth}{0.0pt}                % {fancyhdr} no head rule
+\renewcommand{\footrulewidth}{0.4pt}                % {fancyhdr}
+\hypersetup{                                        % {hyperref}
+    plainpages=false,
+    pdfpagelayout=SinglePage,
+    bookmarksopen=false,
+    bookmarksnumbered=true,
+    breaklinks=true,
+    linktocpage,
+    colorlinks=true,
+    linkcolor=engineering,
+    urlcolor=engineering,
+    filecolor=engineering,
+    citecolor=engineering,
+    allcolors=engineering
+}
+
+%% Document start --------------------------------------------------------------
+\begin{document}
+\pagenumbering{roman}\setcounter{page}{1}
+
+%% Cover -----------------------------------------------------------------------
+\begin{titlepage}
+    \center
+
+    \vspace*{-12mm}
+    {\large \textbf{\textsc{\school}}}\\
+
+    \vfill
+
+    \includegraphics[width=62mm]{phase1/images/logoisel}
+    
+    \vfill
+    
+    {\huge \textbf{\projtitle}}\\[6mm]
+    {\Large \textbf{\projsubtitle}}\\
+    
+    \vfill
+    
+    \vfill
+    
+    {\Large \textbf{\projisel}}\\[12mm]
+    
+    {\Large \textbf{Coordination}}\\[4mm]
+    {\large General: Carlos Meneses\hspace*{18mm}
+            Course: Nuno Cruz}\\[6mm]
+    
+    {\Large \textbf{\projteam}}\\[4mm]
+    {\large Supervisor: Luís Pires\hspace*{12mm}}\\[6mm]
+    
+    {\Large \textbf{Student}}\\[4mm]
+    {\large Nuno Brito $<$A46948@alunos.isel.pt$>$}
+    
+    \vspace*{10mm}
+    
+    \renewcommand{\today}{April 14th 2024}
+    \today
+    
+\end{titlepage}
+
+%% TOC -------------------------------------------------------------------------{{{1
+\tableofcontents
+
+%% List of figures -------------------------------------------------------------{{{1
+\listoffigures
+\addcontentsline{toc}{chapter}{Figure list}
+
+%% List of tables --------------------------------------------------------------{{{1
+\listoftables
+\addcontentsline{toc}{chapter}{Table list}
+
+%% List of listings --------------------------------------------------------------{{{1
+\lstlistoflistings
+\addcontentsline{toc}{chapter}{Listings list}
+
+%% Acronyms --------------------------------------------------------------------{{{1
+\chapter*{Acronyms list}
+    \addcontentsline{toc}{chapter}{Acronyms list}
+
+    \begin{flushleft}
+        \begin{tabular}{l p{0.8\linewidth}}
+            API     & Application Programming Interface\\
+            GUI     & Graphical User Interface\\
+            HTTP    & Hyper Text Transfer Protocol\\
+            HTTPS   & Hyper Text Transfer Protocol Secure\\
+            OS      & Operating System\\
+            OSS     & openSUSE\\
+            PHP     & PHP: Hypertext Preprocessor\\
+            SSL     & Secure Sockets Layer\\
+            TCP     & Transmission Control Protocol\\
+            TLS     & Transport Layer Security\\
+            TUI     & Terminal User Interface\\ % Not used yet
+            UDP     & User Datagram Protocol\\
+            VPN     & Virtual Private Network\\
+            WWW     & World Wide Web\\
+            XAMPP   & Cross-Platform, Apache, MySQL, PHP, and Perl
+        \end{tabular}
+    \end{flushleft}
+
+%% Glossary --------------------------------------------------------------------{{{1
+\chapter*{Glossary}
+    \addcontentsline{toc}{chapter}{Glossary}
+
+    \begin{description}
+        \item[Apache2] \hfill \\
+            An opensource HTTP web server.
+        \item[Browser] \hfill \\
+            A browser is a internet navigation software. It comes in multiple flavours, nowadays the big three are Microsoft Edge, Mozilla Firefox and Google Chrome.
+        \item[Firewall] \hfill \\
+            A barrier between networks. Controls inbound and outbound traffic.
+        \item[LibreWolf] \hfill \\
+            An internet browser based on Mozilla's Firefox. It's primary purpose is to allow privacy, and with it comes security. It achieves this by removing telemetry and data collection.
+        \item[MariaDB] \hfill \\
+            A community-developed fork of MySQL database server.
+        \item[openSUSE Tumbleweed] \hfill \\
+            An openSUSE (OSS) is an open-source community driven Linux-based distribuition sponsored by SUSE Software Solutions. Tumbleweed is a rolling release version allowing for up-to-date software releases.
+        \item[Operating system] \hfill \\
+            A program that manages a computer's resources from software to hardware.
+        \item[Python] \hfill \\
+            Python is a high-level programming language, object-oriented.
+        \item[Perl] \hfill \\
+            A high-level, general-purpose, interpreted, dynamic programming language
+        \item[Rolling release distribuition] \hfill \\
+            A distribuition where it's software release cycle is more frequent than those of Long Term Support (LTS). It's up to the Linux-based distribuitor to guarantee the testing of a package.
+        \item[Socket] \hfill \\
+            A network socket serves as an endpoint for sending and receiving data across the network.
+        \item[VPN] \hfill \\
+            A private network creating a secure connection between a device and a network.
+        \item[Windows] \hfill \\
+            Microsoft's operating system. First released in 1985 as a Graphical User Interface (GUI) for MS-DOS, continued to evolve with it's latest version being 11.
+            Due to it's nature, it's not recommended for server production environment.
+        \item[Wireshark] \hfill \\
+            Wireshark is a network protocol analyser software. Allows traffic capture between a computer and a network.
+        \item[XAMPP] \hfill \\
+            A software package environment collection containing Apache2 webserver, MariaDB database, PHP and Perl.
+    \end{description}
+
+%% Chapter: introduction -------------------------------------------------------{{{1
+\chapter{Introduction}
+% display headers & footers
+    \pagestyle{fancy}
+    The project consists in building a computer network through four phases. First with a webserver, then simulating a local area network (LAN) with two computers and a switch.
+    By the end of the journey, this project will develop into something similar to a corporate network.
+
+% main page numbers with arabic numerals
+    \pagenumbering{arabic}\setcounter{page}{1}
+
+%% Chapter: phase 1 ------------------------------------------------------------{{{1
+\chapter{Phase 1}
+    \section{Milestones}
+        \begin{itemize}
+            \item Setup apache2 web server in localhost
+            \item Access web server locally (http://127.0.0.1/ or http://localhost)
+            \item Access web server from a remote computer (http://172.24.1.12)
+            \item Use wireshark in a remote host to capture packages from the server
+            \item Compare the HTTP headers sent by the client and the server
+            \item Develop a simple barebones HTTP webclient
+            \item Establish a TCP connection to the server
+            \item Request the base webpage
+        \end{itemize}
+        
+    \section{WebClient requirements}
+        \begin{itemize}
+            \item HTTP library forbidden
+            \item Establish TCP connection using available sockets library - send/receive the HTTP request/reply
+            \item Output HTTP reply to the user
+            \item - Optional - act to the various HTTP replies
+            \item Text-only application
+        \end{itemize}
+
+    \section{Software}
+        \begin{itemize}
+            \item Local server side
+                \subitem Operating system: Windows 11 x64
+                \subitem WebServer: XAMPP x64 8.2.12-0-VS16 for windows
+            \item Client side
+                \subitem Operating system: openSUSE Tumbleweed
+                \subitem Browser: LibreWolf version 123.0-1
+                \subitem Package monitor: Wireshark version 4.2.3 (Git commit b0da86c196d1).
+        \end{itemize}
+
+    \section{Software install}
+        \begin{flushleft}
+            First we install, start and configure XAMPP. Using the following link, \href{https://www.apachefriends.org/download.html}{https://www.apachefriends.org/download.html}, we can choose our prefered method, for this project the portable version was the best choice since no installation was needed. After uncompressing our downloaded file, we can start the process.
+                \begin{center}
+                    \begin{longtable}{ m{5cm} l }
+                        \textbf{Steps} & \textbf{Example} \\
+                        \hline
+                        \endfirsthead
+                        {{\bfseries \tablename\ \thetable{} -- continued}} \\
+                        \textbf{Steps} & \textbf{Example} \\
+                        \hline
+                        \endhead
+                        \hline Continued on next page \\
+                        \endfoot
+                        \endlastfoot
+
+                        The read me file available in the root directory states that we need to run \textit{setup\_xampp} batch file first to populate the registry it's directory.
+                        & \includegraphics[scale=0.35,valign=c]{phase1/images/install_xampp08} \\
+                        \hline
+                        
+                        After completing, just press any button to continue.
+                        & \includegraphics[scale=0.303,valign=c]{phase1/images/install_xampp09} \\
+                        \hline
+                        
+                        Next click in the \textit{xampp\_start} executable, windows will prompt some firewall permissions which will gladly accept.
+                        & \includegraphics[scale=0.35,valign=c]{phase1/images/install_xampp10} \\
+                        & \includegraphics[scale=0.303,valign=c]{phase1/images/install_xampp13} \\
+                        \hline
+                        
+                        Pick a language for the program.
+                        & \includegraphics[scale=0.303,valign=c]{phase1/images/install_xampp14} \\
+                        \hline
+                        
+                        Apache2 comes with SSL on by default. Since we're studying the HTTP protocol it's convenient to disable HTTPS. Pressing the \textit{config} button shows a list of configuration files. Select \textit{Apache (httpd-ssl.conf)}.
+                        & \includegraphics[scale=0.285,valign=c]{phase1/images/install_xampp15} \\
+                        \hline
+                        
+                        Search and comment the line with \textit{SSLEngine on}.
+                        & \includegraphics[scale=0.285,valign=c]{phase1/images/install_xampp16} \\
+                        \hline
+                        
+                        \begin{flushleft}
+                            Previously if we went to \textit{http://localhost} it would redirect to the HTTPS version. After completing the above step it'll no longer redirect, showing us the non-secure version.
+                        \end{flushleft}
+                        & \includegraphics[scale=0.285,valign=c]{phase1/images/install_xampp17} \\
+                        \hline
+
+                        \caption{XAMPP install} \label{tab:xampp}
+                    \end{longtable}
+                \end{center}
+
+            Next up is wireshark, the powerful network analyser. We'll download the installer from \href{https://www.wireshark.org/download.html}{https://www.wireshark.org/download.html}.
+                \begin{center}
+                    \begin{longtable}{ m{5cm} l }
+                        \textbf{Steps} & \textbf{Example} \\
+                        \hline
+                        \endfirsthead
+                        {{\bfseries \tablename\ \thetable{} -- continued}} \\
+                        \textbf{Steps} & \textbf{Example} \\
+                        \hline
+                        \endhead
+                        \hline Continued on next page \\
+                        \endfoot
+                        \endlastfoot
+
+                        Wireshark setup. Select everything available and continue by clicking \textit{next}.
+                        & \includegraphics[scale=0.80,valign=c]{phase1/images/install_wireshark02} \\
+                        \hline
+                        After completing the installation, reboot the computer.
+                        & \includegraphics[scale=0.80,valign=c]{phase1/images/install_wireshark21} \\
+                        \hline
+
+                        \caption{Wireshark install} \label{tab:wireshark}
+                    \end{longtable}
+                \end{center}
+        \end{flushleft}
+
+    \section{WebClient - Python Code}
+        \lstset{style=pythoncode}
+        \lstinputlisting[
+            language=python,
+            caption={Simple HTTP WebClient using sockets in python},
+            label={lst:webclientpy}
+        ]{phase1/webclient/httpsocketv3.py}
+        
+        \begin{flushleft}
+            The code listed in \ref{lst:webclientpy} was adapted to be simple and cycle through the various request messages without any user input. \\
+            Modifiable variables include \textit{serverName}, \textit{serverPort} and the \textit{httpTestMessages} list. \\
+        \end{flushleft}
+
+        The webclient produces the following output:
+        \lstinputlisting[
+            language={},
+            caption={WebClient output},
+            label={lst:webclientoutput}
+        ]{phase1/webclient/httpsocketv3output20240329.txt}
+
+    \section{Wireshark captures}
+        \begin{flushleft}
+            First we must ensure the browser being used can connect to the XAMPP server with HTTP. We can do that by enabling the usage of deprecated TLS.
+            \clearpage
+            \begin{figure}[h]
+                \centering
+                \includegraphics[scale=0.4]{phase1/images/librewolf_tls} 
+                \caption{Changing from false to true the \textit{security.tls.version.enable-deprecated} option}
+                \label{fig:librewolf}
+            \end{figure}
+
+            Then we can start our capture process, next follows some printscreen examples filtered by HTTP.
+            \begin{flushleft}
+                \begin{figure}[h]
+                    \centering
+                    \includegraphics[scale=0.43]{phase1/images/wscapwcsocket05} % Webclient get
+                    \caption{Webclient get capture} \label{fig:wireshark1}
+                \end{figure}
+                
+                \begin{figure}[t]
+                    \centering
+                        \begin{subfigure}{0.49\linewidth} \centering
+                            \includegraphics[scale=0.20]{phase1/images/wscapwcsocket08} % Browser local
+                            \caption{Browser} \label{fig:wireshark4}
+                        \end{subfigure}
+                        \begin{subfigure}{0.49\linewidth} \centering
+                            \includegraphics[scale=0.20]{phase1/images/wscapwcsocket07} % Browser vpn
+                            \caption{Browser (VPN)} \label{fig:wireshark3}
+                        \end{subfigure}
+                    \caption{Browser capture} \label{fig:twobrowsers}
+                    \end{figure}
+
+                \begin{figure}
+                    \centering
+                    \includegraphics[scale=0.43]{phase1/images/wscapwcsocket06} % Webclient reply
+                    \caption{Webclient reply capture} \label{fig:wireshark2}
+                \end{figure}
+            \end{flushleft}
+            
+            \clearpage
+            To compliment the images, below are segmented outputs (the important parts):
+            \lstinputlisting[
+                language={},
+                %firstline=1,
+                %lastline=2,
+                linerange={1-2,
+                            108-127,
+                            129-130,
+                            247-284},
+                caption={Wireshark capture output sample - VPN},
+                label={lst:wiresharkoutvpn}
+            ]{phase1/wireshark/wscapture01export.txt} % vpn
+            \lstinputlisting[
+                language={},
+                linerange={1-2,
+                            108-130,
+                            132-133,
+                            241-266},
+                caption={Wireshark capture output sample - Browser},
+                label={lst:wiresharkoutbrowser}
+            ]{phase1/wireshark/wscapture02export.txt} % browser
+            \lstinputlisting[
+                language={},
+                linerange={1-2,
+                            8-6,
+                            16-17,
+                            24-39},
+                caption={Wireshark capture output sample - WebClient},
+                label={lst:wiresharkoutwebclient}
+            ]{phase1/wireshark/wscapture04export.txt} % webclient
+        \end{flushleft}
+
+    \section{List of headers and replies}
+        \textbf{Request:} GET /dashboard/ HTTP/1.1\textbackslash r\textbackslash nHost:127.24.1.12 \textbackslash r\textbackslash n\textbackslash r\textbackslash n \\
+        \textbf{Reply:} HTTP/1.1 200 OK \\
+        Meaning: this header complies with what the server expects from a webclient request. \\
+        \\
+        \textbf{Request:} GET /dashboard HTTP/1.1\textbackslash r\textbackslash nHost:127.24.1.12 \textbackslash r\textbackslash n\textbackslash r\textbackslash n \\
+        \textbf{Reply:} HTTP/1.1 301 Moved Permanently \\
+        Meaning: this header request a relative directory without a forward slash at the end, prompting the server to reply with a "moved" answer. \\
+        \\
+        \textbf{Request:} PUT / HTTP/1.1\textbackslash r\textbackslash nHost:127.24.1.12 \textbackslash r\textbackslash n\textbackslash r\textbackslash n \\
+        \textbf{Reply:} HTTP/1.1 302 Found \\
+        Meaning: this header request is an upload request to an unexistent directory. \\
+        \\
+        \textbf{Request:} GET /dashboard HTTP/1.\textbackslash r\textbackslash nHost:127.24.1.12 \textbackslash r\textbackslash n\textbackslash r\textbackslash n \\
+        \textbf{Reply:} HTTP/1.1 400 Bad Request \\
+        Meaning: this header request, although it has an invalid directory, has the HTTP protocol version badly writen (HTTP/1.1 vs. actual HTTP/1.) which causes a "bad request" reply from the server. \\
+        \\
+        \textbf{Request:} GET /dashboard/index.htm HTTP/1.1\textbackslash r\textbackslash nHost:127.24.1.12 \textbackslash r\textbackslash n\textbackslash r\textbackslash n \\
+        \textbf{Reply:} HTTP/1.1 404 Not Found \\
+        Meaning: this header request tries to get a file that doesn't exist in the local server. \\
+        \\
+        \textbf{Request:} PUT /d HTTP/1.1\textbackslash r\textbackslash nHost:127.24.1.12 \textbackslash r\textbackslash n\textbackslash r\textbackslash n \\
+        \textbf{Reply:} HTTP/1.1 405 Method Not Allowed \\
+        Meaning: this header request tries to upload something to the relative directory "d". \\
+        \\
+        \textbf{Request:} BREW /coffee/ HTTP/1.1\textbackslash r\textbackslash nHost:127.24.1.12 \textbackslash r\textbackslash n\textbackslash r\textbackslash n \\
+        \textbf{Reply:} HTTP/1.1 501 Not Implemented \\
+        Meaning: a poorly attempt to get the 1998 April fool's day. It should have replied with 418 I'm a teapot. Even with GET instead of BREW it didn't work. Apache doesn't have the implementation. \\
+
+%% Chapter: phase 2 ------------------------------------------------------------{{{1
+\chapter{Phase 2}
+Commands: ping, tracert, ipconfig
+
+Part 1
+Group 7 -> N = 7 -> 192.168.7.0/24
+Laptop0 -> 192.168.7.1
+PC0     -> 192.168.7.2
+
+Question: How can a PC know if it is connected to a switch? Is traceroute useful in this situation?
+Answer: 
+
+% TODO: attach screenshots
+% TODO: attach outputs
+% TODO: explain how I configured computers
+
+Part 2
+        \lstinputlisting[
+            language={},
+            numbers=none,
+            caption={Network plan},
+            label={lst:netplan}
+        ]{phase2/outputs/diagram.txt}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage[table,xcdraw]{xcolor}
+% Beamer presentation requires \usepackage{colortbl} instead of \usepackage[table,xcdraw]{xcolor}
+\begin{table}[]
+\begin{center}
+\begin{tabular}{rlcccccccccccccccc}
+\hline
+\multicolumn{1}{c}{}                                                                                     & \textbf{}             & \multicolumn{16}{c}{\textbf{IP}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  \\ \cline{3-18} 
+\multicolumn{1}{c}{\multirow{-2}{*}{\textbf{Subnet}}}                                                    &                       & \cellcolor[HTML]{C09FE5}0 & \cellcolor[HTML]{C09FE5}3 & \cellcolor[HTML]{C09FE5}4 & \cellcolor[HTML]{C09FE5}7 & \cellcolor[HTML]{C09FE5}8 & \cellcolor[HTML]{C09FE5}11 & \cellcolor[HTML]{C09FE5}12 & \cellcolor[HTML]{C09FE5}15 & \cellcolor[HTML]{BFBFBF}16      & \cellcolor[HTML]{BFBFBF}31      & \cellcolor[HTML]{FFD966}32      & \cellcolor[HTML]{FFD966}63      & \cellcolor[HTML]{A9D08E}64      & \cellcolor[HTML]{A9D08E}127     & \cellcolor[HTML]{F4B084}128      & \cellcolor[HTML]{F4B084}255     \\ \cline{1-1} \cline{3-18} 
+\textbf{/25}                                                                                             &                       &                           &                           &                           &                           &                           &                            &                            &                            &                                 &                                 &                                 &                                 &                                 &                                 & \cellcolor[HTML]{F4B084}         & \cellcolor[HTML]{F4B084}        \\ \cline{3-18} 
+\textbf{/26}                                                                                             &                       &                           &                           &                           &                           &                           &                            &                            &                            &                                 &                                 &                                 &                                 & \cellcolor[HTML]{A9D08E}        & \cellcolor[HTML]{A9D08E}        &                                  &                                 \\ \cline{3-18} 
+\textbf{/27}                                                                                             &                       &                           &                           &                           &                           &                           &                            &                            &                            &                                 &                                 & \cellcolor[HTML]{FFD966}        & \cellcolor[HTML]{FFD966}        &                                 &                                 &                                  &                                 \\ \cline{3-18} 
+\textbf{/28}                                                                                             &                       &                           &                           &                           &                           &                           &                            &                            &                            & \cellcolor[HTML]{BFBFBF}        & \cellcolor[HTML]{BFBFBF}        &                                 &                                 &                                 &                                 &                                  &                                 \\ \cline{3-18} 
+\textbf{/30}                                                                                             &                       &                           &                           &                           &                           &                           &                            & \cellcolor[HTML]{C09FE5}   & \cellcolor[HTML]{C09FE5}   &                                 &                                 &                                 &                                 &                                 &                                 &                                  &                                 \\ \cline{3-18} 
+\textbf{/30}                                                                                             &                       &                           &                           &                           &                           & \cellcolor[HTML]{C09FE5}  & \cellcolor[HTML]{C09FE5}   &                            &                            &                                 &                                 &                                 &                                 &                                 &                                 &                                  &                                 \\ \cline{3-18} 
+\textbf{/30}                                                                                             &                       &                           &                           & \cellcolor[HTML]{C09FE5}  & \cellcolor[HTML]{C09FE5}  &                           &                            &                            &                            &                                 &                                 &                                 &                                 &                                 &                                 &                                  &                                 \\ \cline{3-18} 
+\textbf{/30}                                                                                             &                       & \cellcolor[HTML]{C09FE5}  & \cellcolor[HTML]{C09FE5}  &                           &                           &                           &                            &                            &                            &                                 &                                 &                                 &                                 &                                 &                                 &                                  &                                 \\ \cline{1-1} \cline{3-18} 
+                                                                                                         & \multicolumn{1}{l|}{} & \multicolumn{2}{l}{\cellcolor[HTML]{C09FE5}/30}       & \multicolumn{2}{c}{\cellcolor[HTML]{C09FE5}/30}       & \multicolumn{2}{c}{\cellcolor[HTML]{C09FE5}/30}        & \multicolumn{2}{c}{\cellcolor[HTML]{C09FE5}/30}         & \multicolumn{2}{c}{\cellcolor[HTML]{BFBFBF}}                      & \multicolumn{2}{c}{\cellcolor[HTML]{FFD966}}                      & \multicolumn{2}{c}{\cellcolor[HTML]{A9D08E}}                      & \multicolumn{2}{c|}{\cellcolor[HTML]{F4B084}}                      \\
+                                                                                                         & \multicolumn{1}{l|}{} & \multicolumn{4}{l}{/29}                                                                                       & \multicolumn{4}{c}{}                                                                                             & \multicolumn{2}{c}{\cellcolor[HTML]{BFBFBF}}                      & \multicolumn{2}{c}{\cellcolor[HTML]{FFD966}}                      & \multicolumn{2}{c}{\cellcolor[HTML]{A9D08E}}                      & \multicolumn{2}{c|}{\cellcolor[HTML]{F4B084}}                      \\
+                                                                                                         & \multicolumn{1}{l|}{} & \multicolumn{8}{l}{\cellcolor[HTML]{BFBFBF}/28}                                                                                                                                                                                  & \multicolumn{2}{c}{\multirow{-3}{*}{\cellcolor[HTML]{BFBFBF}/28}} & \multicolumn{2}{c}{\cellcolor[HTML]{FFD966}}                      & \multicolumn{2}{c}{\cellcolor[HTML]{A9D08E}}                      & \multicolumn{2}{c|}{\cellcolor[HTML]{F4B084}}                      \\
+                                                                                                         & \multicolumn{1}{l|}{} & \multicolumn{10}{l}{\cellcolor[HTML]{FFD966}/27}                                                                                                                                                                                                                                                     & \multicolumn{2}{c}{\multirow{-4}{*}{\cellcolor[HTML]{FFD966}/27}} & \multicolumn{2}{c}{\cellcolor[HTML]{A9D08E}}                      & \multicolumn{2}{c|}{\cellcolor[HTML]{F4B084}}                      \\
+                                                                                                         & \multicolumn{1}{l|}{} & \multicolumn{12}{l}{\cellcolor[HTML]{A9D08E}/26}                                                                                                                                                                                                                                                                                                                         & \multicolumn{2}{c}{\multirow{-5}{*}{\cellcolor[HTML]{A9D08E}/26}} & \multicolumn{2}{c|}{\cellcolor[HTML]{F4B084}}                      \\
+                                                                                                         & \multicolumn{1}{l|}{} & \multicolumn{14}{l}{\cellcolor[HTML]{F4B084}/25}                                                                                                                                                                                                                                                                                                                                                                                             & \multicolumn{2}{c|}{\multirow{-6}{*}{\cellcolor[HTML]{F4B084}/25}} \\
+\multirow{-7}{*}{\textbf{\begin{tabular}[c]{@{}r@{}}Subnet\\      visual\\      portrayal\end{tabular}}} & \multicolumn{1}{l|}{} & \multicolumn{16}{l|}{\cellcolor[HTML]{00B0F0}/24}                                                                                                                                                                                                                                                                                                                                                                                                                                                                 \\ \hline
+\end{tabular}
+\caption{Visual LAN allocation}
+\label{tab:visuallanalloc}
+\end{center}
+\end{table}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage[table,xcdraw]{xcolor}
+% Beamer presentation requires \usepackage{colortbl} instead of \usepackage[table,xcdraw]{xcolor}
+\begin{table}[]
+\begin{center}
+\begin{tabular}{lllllll}
+\hline
+                                               & \textbf{Network}           & \textbf{Usable IPs} & \textbf{Router} & \multicolumn{1}{c}{\textbf{Broadcast}} & \multicolumn{1}{c}{\textbf{Subnet Mask}} &                                      \\ \cline{2-6}
+\multirow{-2}{*}{\textbf{Name}}                & \multicolumn{5}{c}{192.168.7.}                                                                                                                         & \multirow{-2}{*}{\textbf{Populated}} \\ \hline
+\cellcolor[HTML]{F4B084}\textbf{LAN Server}    & 128                        & 129 - 253           & 254             & 255                                    & 128                                      & 126                                  \\ \hline
+\cellcolor[HTML]{A9D08E}\textbf{LAN A}         & 64                         & 65 - 125            & 126             & 127                                    & 192                                      & 48                                   \\ \hline
+\cellcolor[HTML]{FFD966}\textbf{LAN B}         & 32                         & 33 - 61             & 62              & 63                                     & 224                                      & 27                                   \\ \hline
+                                               & \cellcolor[HTML]{BFBFBF}16 & 17 - 31             &                 & 32                                     &                                          & 0                                    \\ \cline{2-7}
+\multirow{-2}{*}{\textbf{Unused remaining}}    & \cellcolor[HTML]{C09FE5}12 & 13 - 14             &                 & 15                                     &                                          & 0                                    \\ \hline
+\cellcolor[HTML]{C09FE5}\textbf{LAN Transit C} & 8                          & 9 - 10              &                 & 11                                     & 252                                      & 2                                    \\ \hline
+\cellcolor[HTML]{C09FE5}\textbf{LAN Transit B} & 4                          & 5 - 6               &                 & 7                                      & 252                                      & 2                                    \\ \hline
+\cellcolor[HTML]{C09FE5}\textbf{LAN Transit A} & 0                          & 1 - 2               &                 & 3                                      & 252                                      & 2                                    \\ \hline
+\end{tabular}
+\caption{LAN allocation table}
+\label{tab:lanalloctable}
+\end{center}
+\end{table}
+
+The above table will be used for the next phases. Instead of planning for each phase and re-assigning the entire network, the network was fully detailed to accomodate all phases.
+
+However, here we'll focus on router R1 and LAN A. For now let's just focus on the IP addresses, the values will be explained in Phase 3.
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{multirow}
+\begin{table}[]
+\begin{center}
+\begin{tabular}{@{}llllll@{}}
+\toprule
+\multicolumn{1}{c}{\multirow{2}{*}{\textbf{Name}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Ports Link}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Network}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{IP}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Subnet Mask}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Gateway}}} \\
+\multicolumn{1}{c}{}                               & \multicolumn{1}{c}{}                                     & \multicolumn{1}{c}{}                                  & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\ \midrule
+\textbf{PC0}                                       & Fa0 -\textgreater Sw0 Fa0/2                              & \multirow{2}{*}{LAN A}                                & 192.168.7.65                                     & 255.255.255.192                                           & 192.168.7.126                                         \\ \cmidrule(r){1-2} \cmidrule(l){4-6}
+\textbf{Laptop0}                                   & Fa0 -\textgreater Sw0 Fa0/3                              &                                                       & 192.168.7.66                                     & 255.255.255.192                                           & 192.168.7.126                                         \\ \midrule
+\textbf{PC1}                                       & Fa0 -\textgreater Sw1 Fa0/2                              & \multirow{2}{*}{LAN B}                                & 192.168.7.33                                     & 255.255.255.224                                           & 192.168.7.62                                          \\ \cmidrule(r){1-2} \cmidrule(l){4-6}
+\textbf{Laptop1}                                   & Fa0 -\textgreater Sw1 Fa0/3                              &                                                       & 192.168.7.34                                     & 255.255.255.224                                           & 192.168.7.62                                          \\ \midrule
+\multirow{3}{*}{\textbf{R0}}                       & Fa5/0 -\textgreater R1 Fa5/0                             & LAN Transit B                                         & 192.168.7.5                                      & 255.255.255.252                                           &                                                       \\ \cmidrule(l){2-6}
+                                                   & Fa4/0 -\textgreater R2   Fa4/0                           & LAN Transit C                                         & 192.168.7.9                                      & 255.255.255.252                                           &                                                       \\ \cmidrule(l){2-6}
+                                                   & Fa0/0                                                    & External                                              &                                                  &                                                           &                                                       \\ \midrule
+\multirow{4}{*}{\textbf{R1}}                       & Fa4/0 -\textgreater R2 Fa5/0                             & LAN Transit A                                         & 192.168.7.1                                      & 255.255.255.252                                           &                                                       \\ \cmidrule(l){2-6}
+                                                   & Fa5/0 -\textgreater R1   Fa4/0                           & LAN Transit B                                         & 192.168.7.6                                      & 255.255.255.252                                           &                                                       \\ \cmidrule(l){2-6}
+                                                   & Fa0/0 -\textgreater Sw0 Fa0/1                            & LAN A                                                 & 192.168.7.126                                    & 255.255.255.192                                           &                                                       \\ \cmidrule(l){2-6}
+                                                   & Fa1/0 -\textgreater Sw1 Fa0/1                            & LAN B                                                 & 192.168.7.62                                     & 255.255.255.224                                           &                                                       \\ \midrule
+\multirow{3}{*}{\textbf{R2}}                       & Fa5/0 -\textgreater R1 Fa4/0                             & LAN Transit A                                         & 192.168.7.2                                      & 255.255.255.252                                           &                                                       \\ \cmidrule(l){2-6}
+                                                   & Fa4/0 -\textgreater R0   Fa4/0                           & LAN Transit C                                         & 192.168.7.10                                     & 255.255.255.252                                           &                                                       \\ \cmidrule(l){2-6}
+                                                   & Fa0/0 -\textgreater Sw2 Fa0/4                            & LAN Server                                            & 192.168.7.254                                    & 255.255.255.128                                           &                                                       \\ \midrule
+\textbf{DHCP Server}                               & Fa0 -\textgreater Sw2 Fa0/3                              & \multirow{3}{*}{LAN Server}                           & 192.168.7.129                                    & 255.255.255.128                                           & 192.168.7.254                                         \\ \cmidrule(r){1-2} \cmidrule(l){4-6}
+\textbf{DNS Server}                                & Fa0 -\textgreater Sw2 Fa0/2                              &                                                       & 192.168.7.130                                    & 255.255.255.128                                           & 192.168.7.254                                         \\ \cmidrule(r){1-2} \cmidrule(l){4-6}
+\textbf{HTTP Server}                               & Fa0 -\textgreater Sw2 Fa0/1                              &                                                       & 192.168.7.131                                    & 255.255.255.128                                           & 192.168.7.254                                         \\ \midrule
+\multirow{3}{*}{\textbf{Sw0}}                      & Fa0/1 -\textgreater R1 Fa0/0                             & \multirow{3}{*}{LAN A}                                & \multicolumn{3}{c}{\multirow{10}{*}{}}                                                                                                                               \\ \cmidrule(lr){2-2}
+                                                   & Fa0/2 -\textgreater   PC0                                &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\ \cmidrule(lr){2-2}
+                                                   & Fa0/3 -\textgreater   Laptop0                            &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\ \cmidrule(r){1-3}
+\multirow{3}{*}{\textbf{Sw1}}                      & Fa0/1 -\textgreater R1 Fa1/0                             & \multirow{3}{*}{LAN B}                                & \multicolumn{3}{c}{}                                                                                                                                                 \\ \cmidrule(lr){2-2}
+                                                   & Fa0/2 -\textgreater   PC1                                &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\ \cmidrule(lr){2-2}
+                                                   & Fa0/3 -\textgreater   Laptop1                            &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\ \cmidrule(r){1-3}
+\multirow{4}{*}{\textbf{Sw2}}                      & Fa0/1 -\textgreater HTTP                                 & \multirow{4}{*}{LAN Server}                           & \multicolumn{3}{c}{}                                                                                                                                                 \\ \cmidrule(lr){2-2}
+                                                   & Fa0/2 -\textgreater   DNS                                &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\ \cmidrule(lr){2-2}
+                                                   & Fa0/3 -\textgreater   DHCP                               &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\ \cmidrule(lr){2-2}
+                                                   & Fa0/4 -\textgreater R2   Fa0/0                           &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\ \bottomrule
+\end{tabular}
+\caption{IP configuration table}
+\label{tab:deviceiptable}
+\end{center}
+\end{table}
+
+%% Chapter: recomendations -----------------------------------------------------{{{1
+\chapter{Issues and fixes}
+    Running python code: \\
+        \hspace*{10mm}Python3 wasn't installed by default. Then had to run the code with: \$ python3 httpsocketv3.py. \\
+    Encrypted html body in wireshark: \\
+        \hspace*{10mm}Initially I had to run wireshark in a remote virtual private network (VPN) connection. Fortunately I could see the VPN doing it's magic but also couldn't see the HTTP body, since it was encrypted. \\
+    Default HTTP protocol, HTTPS: \\
+        \hspace*{10mm}To guarantee the HTTP connection I had to disable SSLEngine in Apache2 WebServer. \\
+
+%% Chapter: conclusions --------------------------------------------------------{{{1
+\chapter{Conclusions}
+During phase 1 many challenges were met.
+By creating (or in this case adapting) a webclient without using the http library, it allowed a better understanding of the protocol requests and replies by taking advantage of the provided protocol stack in a operating system.
+Employing the wireless packet monitor, wireshark, concepts related to http were better understood as all transactions between webclient and webserver were seen in real time, allowing a greater furthering of knowledge.
+
+%% Bibliography ----------------------------------------------------------------{{{1
+%\renewcommand{\bibname}{Bibliographic references}
+%\bibliographystyle{chicago}
+%\bibliography{refs}
+%\addcontentsline{toc}{chapter}{\refname}  % add it to table of contents
+
+%% Appendix --------------------------------------------------------------------{{{1
+\appendix
+\chapter{Appendix}
+%%1}}}
+
+\end{document}

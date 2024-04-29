@@ -1,0 +1,21 @@
+                 External                 
+                     ^                    
+                     |                    
+                     |
+                 ---------                
+                 |       |
+       --------->|Router0|<---------      
+       |         ---------         |      
+       |LAN                     LAN|      
+       |Transit             Transit|      
+       |C                         B|      
+       |                           |      
+       v                           v
+   ---------   LAN Transit A   ---------  
+   |Router1|<----------------->|Router2|  
+   ---------                   ---------  
+       |                           |      
+   ---------                       |      
+   |       |                       |
+   v       v                       v      
+ LAN A   LAN B                 LAN Server 

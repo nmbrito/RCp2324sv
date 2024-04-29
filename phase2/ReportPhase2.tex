@@ -490,6 +490,13 @@ Group 7 -> N = 7 -> 192.168.7.0/24
 Laptop0 -> 192.168.7.1
 PC0     -> 192.168.7.2
 
+Question: How can a PC know if it is connected to a switch? Is traceroute useful in this situation?
+Answer: 
+
+% TODO: attach screenshots
+% TODO: attach outputs
+% TODO: explain how I configured computers
+
 Part 2
                  External                 
                      ▲                    
@@ -553,7 +560,31 @@ Subnet               &                      & 0                        & 3      
 
 The above table will be used for the next phases. Instead of planning for each phase and re-assigning the entire network, the network was fully detailed to accomodate all phases.
 
-However, here we'll focus on router R1 and LAN A.
+However, here we'll focus on router R1 and LAN A. For now let's just focus on the IP addresses, the values will be explained in Phase 3.
+
+\begin{table}[]
+\begin{tabular}{llllll}
+Name        & Device    & Network       & IP            & Subnet Mask     & Gateway       \\ \hline
+PC0         & PC-PT     & LAN A         & 192.168.7.65  & 255.255.255.192 & 192.168.7.126 \\ \hline
+Laptop0     & Laptop-PT & LAN A         & 192.168.7.66  & 255.255.255.192 & 192.168.7.126 \\ \hline
+PC1         & PC-PT     & LAN B         & 192.168.7.33  & 255.255.255.224 & 192.168.7.62  \\ \hline
+Laptop1     & Laptop-PT & LAN B         & 192.168.7.34  & 255.255.255.224 & 192.168.7.62  \\ \hline
+R0          & Router-PT & LAN Transit B & 192.168.7.5   & 255.255.255.252 &               \\ \hline
+R0          & Router-PT & LAN Transit C & 192.168.7.9   & 255.255.255.252 &               \\ \hline
+R1          & Router-PT & LAN Transit A & 192.168.7.1   & 255.255.255.252 &               \\ \hline
+R1          & Router-PT & LAN Transit B & 192.168.7.6   & 255.255.255.252 &               \\ \hline
+R1          & Router-PT & LAN A         & 192.168.7.126 & 255.255.255.192 &               \\ \hline
+R1          & Router-PT & LAN B         & 192.168.7.62  & 255.255.255.224 &               \\ \hline
+R2          & Router-PT & LAN Transit A & 192.168.7.2   & 255.255.255.252 &               \\ \hline
+R2          & Router-PT & LAN Transit C & 192.168.7.10  & 255.255.255.252 &               \\ \hline
+R2          & Router-PT & LAN Server    & 192.168.7.254 & 255.255.255.252 &               \\ \hline
+DHCP Server & Server-PT & LAN Server    & 192.168.7.129 & 255.255.255.128 & 192.168.7.254 \\ \hline
+DNS Server  & Server-PT & LAN Server    & 192.168.7.130 & 255.255.255.128 & 192.168.7.254 \\ \hline
+HTTP Server & Server-PT & LAN Server    & 192.168.7.131 & 255.255.255.128 & 192.168.7.254 \\ \hline
+\end{tabular}
+\caption{IP configuration table}
+\label{tab:iptable}
+\end{table}
 
 %% Chapter: recomendations -----------------------------------------------------{{{1
 \chapter{Issues and fixes}

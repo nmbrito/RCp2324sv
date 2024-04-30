@@ -1,0 +1,122 @@
+
+Cisco Packet Tracer PC Command Line 1.0
+C:\>arp -a
+No ARP Entries Found
+C:\>ping 192.168.7.65
+
+Pinging 192.168.7.65 with 32 bytes of data:
+
+Reply from 192.168.7.65: bytes=32 time<1ms TTL=128
+Reply from 192.168.7.65: bytes=32 time<1ms TTL=128
+Reply from 192.168.7.65: bytes=32 time<1ms TTL=128
+Reply from 192.168.7.65: bytes=32 time<1ms TTL=128
+
+Ping statistics for 192.168.7.65:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>ping 192.168.7.126
+
+Pinging 192.168.7.126 with 32 bytes of data:
+
+Reply from 192.168.7.126: bytes=32 time<1ms TTL=255
+Reply from 192.168.7.126: bytes=32 time<1ms TTL=255
+Reply from 192.168.7.126: bytes=32 time=1ms TTL=255
+Reply from 192.168.7.126: bytes=32 time<1ms TTL=255
+
+Ping statistics for 192.168.7.126:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 1ms, Average = 0ms
+
+C:\>ping 192.168.7.33
+
+Pinging 192.168.7.33 with 32 bytes of data:
+
+Reply from 192.168.7.33: bytes=32 time<1ms TTL=127
+Reply from 192.168.7.33: bytes=32 time<1ms TTL=127
+Reply from 192.168.7.33: bytes=32 time<1ms TTL=127
+Reply from 192.168.7.33: bytes=32 time<1ms TTL=127
+
+Ping statistics for 192.168.7.33:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>ping 192.168.7.34
+
+Pinging 192.168.7.34 with 32 bytes of data:
+
+Reply from 192.168.7.34: bytes=32 time=23ms TTL=127
+Reply from 192.168.7.34: bytes=32 time<1ms TTL=127
+Reply from 192.168.7.34: bytes=32 time<1ms TTL=127
+Reply from 192.168.7.34: bytes=32 time<1ms TTL=127
+
+Ping statistics for 192.168.7.34:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 23ms, Average = 5ms
+
+C:\>ping 192.168.7.62
+
+Pinging 192.168.7.62 with 32 bytes of data:
+
+Reply from 192.168.7.62: bytes=32 time<1ms TTL=255
+Reply from 192.168.7.62: bytes=32 time<1ms TTL=255
+Reply from 192.168.7.62: bytes=32 time<1ms TTL=255
+Reply from 192.168.7.62: bytes=32 time<1ms TTL=255
+
+Ping statistics for 192.168.7.62:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>arp -a
+  Internet Address      Physical Address      Type
+  192.168.7.65          0001.429b.91a6        dynamic
+  192.168.7.126         0060.2fcd.90bd        dynamic
+
+C:\>tracert 192.168.7.65
+
+Tracing route to 192.168.7.65 over a maximum of 30 hops: 
+
+  1   0 ms      0 ms      0 ms      192.168.7.65
+
+Trace complete.
+
+C:\>tracert 192.168.7.33
+
+Tracing route to 192.168.7.33 over a maximum of 30 hops: 
+
+  1   0 ms      0 ms      0 ms      192.168.7.126
+  2   0 ms      0 ms      0 ms      192.168.7.33
+
+Trace complete.
+
+C:\>tracert 192.168.7.34
+
+Tracing route to 192.168.7.34 over a maximum of 30 hops: 
+
+  1   0 ms      0 ms      19 ms     192.168.7.126
+  2   0 ms      0 ms      0 ms      192.168.7.34
+
+Trace complete.
+
+C:\>tracert 192.168.7.126
+
+Tracing route to 192.168.7.126 over a maximum of 30 hops: 
+
+  1   0 ms      0 ms      0 ms      192.168.7.126
+
+Trace complete.
+
+C:\>tracert 192.168.7.62
+
+Tracing route to 192.168.7.62 over a maximum of 30 hops: 
+
+  1   0 ms      0 ms      0 ms      192.168.7.62
+
+Trace complete.
+
+C:\>

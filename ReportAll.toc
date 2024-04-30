@@ -15,6 +15,8 @@
 \contentsline {section}{\numberline {2.6}Wireshark captures}{9}{section.2.6}%
 \contentsline {section}{\numberline {2.7}List of headers and replies}{14}{section.2.7}%
 \contentsline {chapter}{\numberline {3}Phase 2}{16}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Issues and fixes}{21}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Conclusions}{22}{chapter.5}%
-\contentsline {chapter}{\numberline {A}Appendix}{23}{appendix.A}%
+\contentsline {section}{\numberline {3.1}Connecting two devices with a switch}{16}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Connecting two LANs with a router}{16}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Issues and fixes}{20}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Conclusions}{21}{chapter.5}%
+\contentsline {chapter}{\numberline {A}Appendix}{22}{appendix.A}%

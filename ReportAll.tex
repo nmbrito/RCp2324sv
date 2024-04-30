@@ -90,6 +90,31 @@
     stringstyle=\color{deepgreen},
     tabsize=2,                                      % sets default tabsize to 2 spaces
 }
+\lstdefinestyle{termoutputs}                        % {listings} - Python syntax
+{
+    aboveskip=8mm,
+    backgroundcolor=\color{cloudwhite},             
+    basicstyle=\scriptsize\ttfamily,
+    numbers=left,                                   % where to put the line-numbers
+    belowskip=4mm,
+    breakatwhitespace=false,                        % sets if automatic breaks should only happen at whitespace
+    breaklines=true,                                % sets automatic line breaking
+    captionpos=b,                                   % sets the caption-position to bottom
+    escapeinside={\%*}{*)},                         % if you want to add a comment within your code
+    float=htb,
+    frame=tb,
+    keepspaces=true,
+    keywordstyle=\bfseries\color{deepblue},
+    morekeywords={*,var,template,new}               % if you want to add more keywords to the set
+    numbersep=8pt,                                  % how far the line-numbers are from the code
+    numberstyle=\scriptsize\texttt,                 % the size of the fonts that are used for the line-numbers
+    showspaces=false,                               % show spaces adding particular underscores
+    showstringspaces=false,                         % underline spaces within strings
+    showtabs=false,                                 % show tabs within strings adding particular underscores
+    stepnumber=1,                                   % the step between two line-numbers. If it's 1 each line will be numbered
+    stringstyle=\color{deepgreen},
+    tabsize=2,                                      % sets default tabsize to 2 spaces
+}
 \fancyhf{}                                          % {fancyhdr} clear off all default fancyhdr headers and footers
 \lfoot{\small{\emph{\projtitle, \projsubtitle}}}    % {fancyhdr}
 \rfoot{\small{\thepage\ / \pageref{LastPage}}}      % {fancyhdr}
@@ -176,11 +201,16 @@
     \begin{flushleft}
         \begin{tabular}{l p{0.8\linewidth}}
             API     & Application Programming Interface\\
+            CLI     & Command Line Interface\\
+            CMD     & Command Line Prompt\\
             GUI     & Graphical User Interface\\
             HTTP    & Hyper Text Transfer Protocol\\
             HTTPS   & Hyper Text Transfer Protocol Secure\\
+            IP      & Internet Protocol\\
+            LAN     & Local Area Network\\
             OS      & Operating System\\
             OSS     & openSUSE\\
+            PC      & Personal Computer\\
             PHP     & PHP: Hypertext Preprocessor\\
             SSL     & Secure Sockets Layer\\
             TCP     & Transmission Control Protocol\\
@@ -200,26 +230,51 @@
     \begin{description}
         \item[Apache2] \hfill \\
             An opensource HTTP web server.
+        \item[Broadcast] \hfill \\
+            %TODO
         \item[Browser] \hfill \\
             A browser is a internet navigation software. It comes in multiple flavours, nowadays the big three are Microsoft Edge, Mozilla Firefox and Google Chrome.
+        \item[Cisco Packet Tracer] \hfill \\
+            %TODO
+        \item[Command Line Prompt] \hfill \\
+            %TODO
         \item[Firewall] \hfill \\
             A barrier between networks. Controls inbound and outbound traffic.
+        \item[Gateway] \hfill \\
+            %TODO
         \item[LibreWolf] \hfill \\
             An internet browser based on Mozilla's Firefox. It's primary purpose is to allow privacy, and with it comes security. It achieves this by removing telemetry and data collection.
+        \item[Linux] \hfill \\
+            %TODO
         \item[MariaDB] \hfill \\
             A community-developed fork of MySQL database server.
+        \item[Network] \hfill \\
         \item[openSUSE Tumbleweed] \hfill \\
             An openSUSE (OSS) is an open-source community driven Linux-based distribuition sponsored by SUSE Software Solutions. Tumbleweed is a rolling release version allowing for up-to-date software releases.
         \item[Operating system] \hfill \\
             A program that manages a computer's resources from software to hardware.
+        \item[Ping] \hfill \\
+            %TODO
+        \item[Tracert] \hfill \\
+            %TODO
+        \item[Ipconfig] \hfill \\
+            %TODO
         \item[Python] \hfill \\
             Python is a high-level programming language, object-oriented.
         \item[Perl] \hfill \\
             A high-level, general-purpose, interpreted, dynamic programming language
         \item[Rolling release distribuition] \hfill \\
             A distribuition where it's software release cycle is more frequent than those of Long Term Support (LTS). It's up to the Linux-based distribuitor to guarantee the testing of a package.
+        \item[Router] \hfill \\
+            %TODO
+        \item[Switch] \hfill \\
+            %TODO
         \item[Socket] \hfill \\
             A network socket serves as an endpoint for sending and receiving data across the network.
+        \item[Subnet Mask] \hfill \\
+            %TODO
+        \item[Unix] \hfill \\
+            %TODO
         \item[VPN] \hfill \\
             A private network creating a secure connection between a device and a network.
         \item[Windows] \hfill \\
@@ -283,7 +338,9 @@
                         \textbf{Steps} & \textbf{Example} \\
                         \hline
                         \endfirsthead
-                        {{\bfseries \tablename\ \thetable{} -- continued}} \\
+                        \multicolumn{2}{c}%
+                        {{\bfseries Table \thetable\ continued from previous page}} \\
+                        %{{\bfseries \tablename\ \thetable{} -- continued}} \\
                         \textbf{Steps} & \textbf{Example} \\
                         \hline
                         \endhead
@@ -332,7 +389,9 @@
                         \textbf{Steps} & \textbf{Example} \\
                         \hline
                         \endfirsthead
-                        {{\bfseries \tablename\ \thetable{} -- continued}} \\
+                        \multicolumn{2}{c}%
+                        {{\bfseries Table \thetable\ continued from previous page}} \\
+                        %{{\bfseries \tablename\ \thetable{} -- continued}} \\
                         \textbf{Steps} & \textbf{Example} \\
                         \hline
                         \endhead
@@ -476,7 +535,7 @@
 %% Chapter: phase 2 ------------------------------------------------------------{{{1
 \chapter{Phase 2}
     \section{Connecting two devices with a switch}
-        This first part is very simple. There are two devices (PC0 and Laptop0) connected to a switch and their network start with 192.168.\textbf{\textit{GROUP NUMBER}}.0.
+        This first part is very simple. There are two devices (PC0 and Laptop0) connected to a switch and their network starts with 192.168.\textbf{\textit{GROUP NUMBER}}.0.\\
         Therefore:
 
         \begin{itemize}
@@ -487,17 +546,57 @@
 
         After applying the configuration we must run a set of commands to test our network.
         \begin{itemize}
-            \item ping
-            \item tracert
-            \item ipconfig
+            \item Ping: to test connectivity between devices over IP.
+            \item Tracert: diagnostic command for displaying possible routes, also measures transit delay of packages across IP.
+            \item Ipconfig: console application program of some computer operating systems that displays all current TCP/IP network configuration values. Unix and linux equivalent is \textit{ifconfig}.
         \end{itemize}
 
-        % TODO: attach screenshots
-        % TODO: attach outputs
-        % TODO: explain how I configured computers
+    \subsection{Simulating a network using Cisco Packet Tracer}
+        For this project Cisco Packet Tracer will be our main tool. Using the Command Line Prompt (CMD) in each device, will simulate all referenced commands in the network.\\
+        So let's get in this magnificient world starting with these steps:\\
+        \begin{flushleft}
+                \begin{center}
+                    \begin{longtable}{ m{5cm} l }
+                        \textbf{Steps} & \textbf{Example} \\
+                        \hline
+                        \endfirsthead
+                        \multicolumn{2}{c}%
+                        {{\bfseries Table \thetable\ continued from previous page}} \\
+                        %{{\bfseries \tablename\ \thetable{} -- continued}} \\
+                        \textbf{Steps} & \textbf{Example} \\
+                        \hline
+                        \endhead
+                        \hline Continued on next page \\
+                        \endfoot
+                        \endlastfoot
 
-        Question: How can a PC know if it is connected to a switch? Is traceroute useful in this situation?
-        Answer: 
+                        To configure the IP on a device we must \textbf{single-click} in the intended device (1), go to the \textit{desktop tab} (2) and select \textit{IP Configuration} (3).                                                                                                      & \includegraphics[scale=0.35,valign=c]{phase2/images/p1-connectingdevices/CiscoPacketTracer_configIP} \\ \hline
+                        Now we configure our devices according to the required addresses.                                                                                                                                                                                                           & \includegraphics[scale=0.34,valign=c]{phase2/images/p1-connectingdevices/Laptop0PC0_ip} \\ \hline
+                        To test the connection we select a device by \textbf{single-clicking} it (1), go to the \textit{desktop tab} (2) and select \textit{Command Prompt} (3).                                                                                                                    & \includegraphics[scale=0.35,valign=c]{phase2/images/p1-connectingdevices/CiscoPacketTracer_cmdOutput} \\ \hline
+                        We start by running \textit{arp -a} command, no prior discovery was made so the arp table will be empty. Then will \textit{ping} our other device. Run the \textit{arp -a} command again and will see it populated. If we do a \textit{tracert} there won't be any hops.    & \includegraphics[scale=0.34,valign=c]{phase2/images/p1-connectingdevices/Laptop0PC0_cmd} \\ \hline
+
+                        \caption{Cisco Packet Tracer guide} \label{tab:cptg}
+                    \end{longtable}
+                \end{center}
+        \end{flushleft}
+
+        And to supplement the output images, below are the text versions:
+        \lstset{style=termoutputs}
+        \lstinputlisting[
+            language={},
+            caption={PC0 CMD output},
+            label={lst:pc0cmdoutp1}
+        ]{phase2/outputs/p1-connectingdevices/PC0.txt}
+        \lstinputlisting[
+            language={},
+            caption={Laptop0 CMD output},
+            label={lst:laptop0cmdoutp1}
+        ]{phase2/outputs/p1-connectingdevices/Laptop0.txt}
+
+        \textbf{Question:} How can a PC know if it is connected to a switch? Is traceroute useful in this situation? \\
+        \textbf{Answer:}\\
+        \hspace*{10mm}If a device is connected to a switch, the arp table will include both devices IP addresses after a ping to each other. However, if connected to a router (as will see in the next section), they will only include their gateways IP addresses.\\
+        \hspace*{10mm}Traceroute isn't very useful here. It only shows hops in a routed network path (layer 3). Layer 2 devices such as switches won't show up since they receive and forward ethernet frames.\\
 
     \section{Connecting two LANs with a router}
         \lstinputlisting[
@@ -578,117 +677,120 @@
             \end{longtable}
         \end{center}
 
-        The above table will be used for the next phases. Instead of planning for each phase and re-assigning the entire network, the network was fully detailed to accomodate all phases.
-        
-        However, here we'll focus on router R1 and LAN A. For now let's just focus on the IP addresses, the values will be explained in Phase 3.
-
-        \begin{center}
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
-% \usepackage{multirow}
-% \usepackage{longtable}
-% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
-\begin{longtable}{@{}llllll@{}}
-\toprule
-\multicolumn{1}{c}{\multirow{2}{*}{\textbf{Name}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Ports Link}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Network}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{IP}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Subnet Mask}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Gateway}}} \\
-\multicolumn{1}{c}{}                               & \multicolumn{1}{c}{}                                     & \multicolumn{1}{c}{}                                  & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\* \midrule
-\endfirsthead
-%
-\multicolumn{6}{c}%
-{{\bfseries Table \thetable\ continued from previous page}} \\
-\toprule
-\multicolumn{1}{c}{\multirow{2}{*}{\textbf{Name}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Ports Link}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Network}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{IP}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Subnet Mask}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Gateway}}} \\
-\multicolumn{1}{c}{}                               & \multicolumn{1}{c}{}                                     & \multicolumn{1}{c}{}                                  & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\* \midrule
-\endhead
-%
-\bottomrule
-\endfoot
-%
-\endlastfoot
-%
-\textbf{PC0}                                       & Fa0 - Sw0 Fa0/2                                          & \multirow{2}{*}{LAN A}                                & 192.168.7.65                                     & 255.255.255.192                                           & 192.168.7.126                                         \\
-\textbf{Laptop0}                                   & Fa0 - Sw0 Fa0/3                                          &                                                       & 192.168.7.66                                     & 255.255.255.192                                           & 192.168.7.126                                         \\* \midrule
-\textbf{PC1}                                       & Fa0 - Sw1 Fa0/2                                          & \multirow{2}{*}{LAN B}                                & 192.168.7.33                                     & 255.255.255.224                                           & 192.168.7.62                                          \\
-\textbf{Laptop1}                                   & Fa0 - Sw1 Fa0/3                                          &                                                       & 192.168.7.34                                     & 255.255.255.224                                           & 192.168.7.62                                          \\* \midrule
-\multirow{3}{*}{\textbf{R0}}                       & Fa5/0 - R1 Fa5/0                                         & LAN Transit B                                         & 192.168.7.5                                      & 255.255.255.252                                           &                                                       \\
-                                                   & Fa4/0 - R2 Fa4/0                                         & LAN Transit C                                         & 192.168.7.9                                      & 255.255.255.252                                           &                                                       \\
-                                                   & Fa0/0                                                    & External                                              &                                                  &                                                           &                                                       \\* \midrule
-\multirow{4}{*}{\textbf{R1}}                       & Fa4/0 - R2 Fa5/0                                         & LAN Transit A                                         & 192.168.7.1                                      & 255.255.255.252                                           &                                                       \\
-                                                   & Fa5/0 - R1 Fa4/0                                         & LAN Transit B                                         & 192.168.7.6                                      & 255.255.255.252                                           &                                                       \\
-                                                   & Fa0/0 - Sw0 Fa0/1                                        & LAN A                                                 & 192.168.7.126                                    & 255.255.255.192                                           &                                                       \\
-                                                   & Fa1/0 - Sw1 Fa0/1                                        & LAN B                                                 & 192.168.7.62                                     & 255.255.255.224                                           &                                                       \\* \midrule
-\multirow{3}{*}{\textbf{R2}}                       & Fa5/0 - R1 Fa4/0                                         & LAN Transit A                                         & 192.168.7.2                                      & 255.255.255.252                                           &                                                       \\
-                                                   & Fa4/0 - R0 Fa4/0                                         & LAN Transit C                                         & 192.168.7.10                                     & 255.255.255.252                                           &                                                       \\
-                                                   & Fa0/0 - Sw2 Fa0/4                                        & LAN Server                                            & 192.168.7.254                                    & 255.255.255.128                                           &                                                       \\* \midrule
-\textbf{DHCP Server}                               & Fa0 - Sw2 Fa0/3                                          & \multirow{3}{*}{LAN Server}                           & 192.168.7.129                                    & 255.255.255.128                                           & 192.168.7.254                                         \\
-\textbf{DNS Server}                                & Fa0 - Sw2 Fa0/2                                          &                                                       & 192.168.7.130                                    & 255.255.255.128                                           & 192.168.7.254                                         \\
-\textbf{HTTP Server}                               & Fa0 - Sw2 Fa0/1                                          &                                                       & 192.168.7.131                                    & 255.255.255.128                                           & 192.168.7.254                                         \\* \midrule
-\multirow{3}{*}{\textbf{Sw0}}                      & Fa0/1 - R1 Fa0/0                                         & \multirow{3}{*}{LAN A}                                & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\
-                                                   & Fa0/2 - PC0                                              &                                                       & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\
-                                                   & Fa0/3 - Laptop0                                          &                                                       & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\* \midrule
-\multirow{3}{*}{\textbf{Sw1}}                      & Fa0/1 - R1 Fa1/0                                         & \multirow{3}{*}{LAN B}                                & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\
-                                                   & Fa0/2 - PC1                                              &                                                       & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\
-                                                   & Fa0/3 - Laptop1                                          &                                                       & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\* \midrule
-\multirow{4}{*}{\textbf{Sw2}}                      & Fa0/1 - HTTP                                             & \multirow{4}{*}{LAN Server}                           & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\
-                                                   & Fa0/2 - DNS                                              &                                                       & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\
-                                                   & Fa0/3 - DHCP                                             &                                                       & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\
-                                                   & Fa0/4 - R2 Fa0/0                                         &                                                       & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\* \bottomrule
-\caption{IP configuration table}
-\label{tab:deviceiptable}\\
-\end{longtable}
-        \end{center}
-
         \begin{center}
             \begin{longtable}{@{}llllll@{}}
-            \toprule
-            \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Name}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Ports Link}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Network}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{IP}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Subnet Mask}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Gateway}}} \\
-            \multicolumn{1}{c}{}                               & \multicolumn{1}{c}{}                                     & \multicolumn{1}{c}{}                                  & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\* \midrule
-            \endfirsthead
-            %
-            \multicolumn{6}{c}%
-            {{\bfseries Table \thetable\ continued from previous page}} \\
-            \toprule
-            \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Name}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Ports Link}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Network}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{IP}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Subnet Mask}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Gateway}}} \\
-            \multicolumn{1}{c}{}                               & \multicolumn{1}{c}{}                                     & \multicolumn{1}{c}{}                                  & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\* \midrule
-            \endhead
-            %
-            \textbf{PC0}                                       & Fa0 - Sw0 Fa0/2                                          & \multirow{2}{*}{LAN A}                                & 192.168.7.65                                     & 255.255.255.192                                           & 192.168.7.126                                         \\* \cmidrule(r){1-2} \cmidrule(l){4-6}
-            \textbf{Laptop0}                                   & Fa0 - Sw0 Fa0/3                                          &                                                       & 192.168.7.66                                     & 255.255.255.192                                           & 192.168.7.126                                         \\* \midrule
-            \textbf{PC1}                                       & Fa0 - Sw1 Fa0/2                                          & \multirow{2}{*}{LAN B}                                & 192.168.7.33                                     & 255.255.255.224                                           & 192.168.7.62                                          \\* \cmidrule(r){1-2} \cmidrule(l){4-6}
-            \textbf{Laptop1}                                   & Fa0 - Sw1 Fa0/3                                          &                                                       & 192.168.7.34                                     & 255.255.255.224                                           & 192.168.7.62                                          \\* \midrule
-            \multirow{3}{*}{\textbf{R0}}                       & Fa5/0 - R1 Fa5/0                                         & LAN Transit B                                         & 192.168.7.5                                      & 255.255.255.252                                           &                                                       \\* \cmidrule(l){2-6}
-                                                               & Fa4/0 - R2 Fa4/0                                         & LAN Transit C                                         & 192.168.7.9                                      & 255.255.255.252                                           &                                                       \\* \cmidrule(l){2-6}
-                                                               & Fa0/0                                                    & External                                              &                                                  &                                                           &                                                       \\* \midrule
-            \multirow{4}{*}{\textbf{R1}}                       & Fa4/0 - R2 Fa5/0                                         & LAN Transit A                                         & 192.168.7.1                                      & 255.255.255.252                                           &                                                       \\* \cmidrule(l){2-6}
-                                                               & Fa5/0 - R1 Fa4/0                                         & LAN Transit B                                         & 192.168.7.6                                      & 255.255.255.252                                           &                                                       \\* \cmidrule(l){2-6}
-                                                               & Fa0/0 - Sw0 Fa0/1                                        & LAN A                                                 & 192.168.7.126                                    & 255.255.255.192                                           &                                                       \\* \cmidrule(l){2-6}
-                                                               & Fa1/0 - Sw1 Fa0/1                                        & LAN B                                                 & 192.168.7.62                                     & 255.255.255.224                                           &                                                       \\* \midrule
-            \multirow{3}{*}{\textbf{R2}}                       & Fa5/0 - R1 Fa4/0                                         & LAN Transit A                                         & 192.168.7.2                                      & 255.255.255.252                                           &                                                       \\* \cmidrule(l){2-6}
-                                                               & Fa4/0 - R0 Fa4/0                                         & LAN Transit C                                         & 192.168.7.10                                     & 255.255.255.252                                           &                                                       \\* \cmidrule(l){2-6}
-                                                               & Fa0/0 - Sw2 Fa0/4                                        & LAN Server                                            & 192.168.7.254                                    & 255.255.255.128                                           &                                                       \\* \midrule
-            \textbf{DHCP Server}                               & Fa0 - Sw2 Fa0/3                                          & \multirow{3}{*}{LAN Server}                           & 192.168.7.129                                    & 255.255.255.128                                           & 192.168.7.254                                         \\* \cmidrule(r){1-2} \cmidrule(l){4-6}
-            \textbf{DNS Server}                                & Fa0 - Sw2 Fa0/2                                          &                                                       & 192.168.7.130                                    & 255.255.255.128                                           & 192.168.7.254                                         \\* \cmidrule(r){1-2} \cmidrule(l){4-6}
-            \textbf{HTTP Server}                               & Fa0 - Sw2 Fa0/1                                          &                                                       & 192.168.7.131                                    & 255.255.255.128                                           & 192.168.7.254                                         \\* \midrule
-            \multirow{3}{*}{\textbf{Sw0}}                      & Fa0/1 - R1 Fa0/0                                         & \multirow{3}{*}{LAN A}                                & \multicolumn{3}{c}{\multirow{10}{*}{}}                                                                                                                               \\* \cmidrule(lr){2-2}
-                                                               & Fa0/2 - PC0                                              &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\* \cmidrule(lr){2-2}
-                                                               & Fa0/3 - Laptop0                                          &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\* \cmidrule(r){1-3}
-            \multirow{3}{*}{\textbf{Sw1}}                      & Fa0/1 - R1 Fa1/0                                         & \multirow{3}{*}{LAN B}                                & \multicolumn{3}{c}{}                                                                                                                                                 \\* \cmidrule(lr){2-2}
-                                                               & Fa0/2 - PC1                                              &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\* \cmidrule(lr){2-2}
-                                                               & Fa0/3 - Laptop1                                          &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\* \cmidrule(r){1-3}
-            \multirow{4}{*}{\textbf{Sw2}}                      & Fa0/1 - HTTP                                             & \multirow{4}{*}{LAN Server}                           & \multicolumn{3}{c}{}                                                                                                                                                 \\* \cmidrule(lr){2-2}
-                                                               & Fa0/2 - DNS                                              &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\* \cmidrule(lr){2-2}
-                                                               & Fa0/3 - DHCP                                             &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\* \cmidrule(lr){2-2}
-                                                               & Fa0/4 - R2 Fa0/0                                         &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\* \bottomrule
-            \caption{IP configuration table}
-            \label{tab:deviceiptable}\\
-            \end{longtable}
+                \toprule
+                \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Name}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Ports Link}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Network}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{IP}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Subnet Mask}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Gateway}}} \\
+                \multicolumn{1}{c}{}                               & \multicolumn{1}{c}{}                                     & \multicolumn{1}{c}{}                                  & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\* \midrule
+                \endfirsthead
+                %
+                \multicolumn{6}{c}%
+                {{\bfseries Table \thetable\ continued from previous page}} \\
+                \toprule
+                \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Name}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Ports Link}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Network}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{IP}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Subnet Mask}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Gateway}}} \\
+                \multicolumn{1}{c}{}                               & \multicolumn{1}{c}{}                                     & \multicolumn{1}{c}{}                                  & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\* \midrule
+                \endhead
+                %
+                \bottomrule
+                \endfoot
+                %
+                \endlastfoot
+                %
+                \textbf{PC0}                                       & Fa0 - Sw0 Fa0/2                                          & \multirow{2}{*}{LAN A}                                & 192.168.7.65                                     & 255.255.255.192                                           & 192.168.7.126                                         \\
+                \textbf{Laptop0}                                   & Fa0 - Sw0 Fa0/3                                          &                                                       & 192.168.7.66                                     & 255.255.255.192                                           & 192.168.7.126                                         \\* \midrule
+                \textbf{PC1}                                       & Fa0 - Sw1 Fa0/2                                          & \multirow{2}{*}{LAN B}                                & 192.168.7.33                                     & 255.255.255.224                                           & 192.168.7.62                                          \\
+                \textbf{Laptop1}                                   & Fa0 - Sw1 Fa0/3                                          &                                                       & 192.168.7.34                                     & 255.255.255.224                                           & 192.168.7.62                                          \\* \midrule
+                \multirow{3}{*}{\textbf{R0}}                       & Fa5/0 - R1 Fa5/0                                         & LAN Transit B                                         & 192.168.7.5                                      & 255.255.255.252                                           &                                                       \\
+                                                                   & Fa4/0 - R2 Fa4/0                                         & LAN Transit C                                         & 192.168.7.9                                      & 255.255.255.252                                           &                                                       \\
+                                                                   & Fa0/0                                                    & External                                              &                                                  &                                                           &                                                       \\* \midrule
+                \multirow{4}{*}{\textbf{R1}}                       & Fa4/0 - R2 Fa5/0                                         & LAN Transit A                                         & 192.168.7.1                                      & 255.255.255.252                                           &                                                       \\
+                                                                   & Fa5/0 - R1 Fa4/0                                         & LAN Transit B                                         & 192.168.7.6                                      & 255.255.255.252                                           &                                                       \\
+                                                                   & Fa0/0 - Sw0 Fa0/1                                        & LAN A                                                 & 192.168.7.126                                    & 255.255.255.192                                           &                                                       \\
+                                                                   & Fa1/0 - Sw1 Fa0/1                                        & LAN B                                                 & 192.168.7.62                                     & 255.255.255.224                                           &                                                       \\* \midrule
+                \multirow{3}{*}{\textbf{R2}}                       & Fa5/0 - R1 Fa4/0                                         & LAN Transit A                                         & 192.168.7.2                                      & 255.255.255.252                                           &                                                       \\
+                                                                   & Fa4/0 - R0 Fa4/0                                         & LAN Transit C                                         & 192.168.7.10                                     & 255.255.255.252                                           &                                                       \\
+                                                                   & Fa0/0 - Sw2 Fa0/4                                        & LAN Server                                            & 192.168.7.254                                    & 255.255.255.128                                           &                                                       \\* \midrule
+                \textbf{DHCP Server}                               & Fa0 - Sw2 Fa0/3                                          & \multirow{3}{*}{LAN Server}                           & 192.168.7.129                                    & 255.255.255.128                                           & 192.168.7.254                                         \\
+                \textbf{DNS Server}                                & Fa0 - Sw2 Fa0/2                                          &                                                       & 192.168.7.130                                    & 255.255.255.128                                           & 192.168.7.254                                         \\
+                \textbf{HTTP Server}                               & Fa0 - Sw2 Fa0/1                                          &                                                       & 192.168.7.131                                    & 255.255.255.128                                           & 192.168.7.254                                         \\* \midrule
+                \multirow{3}{*}{\textbf{Sw0}}                      & Fa0/1 - R1 Fa0/0                                         & \multirow{3}{*}{LAN A}                                & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\
+                                                                   & Fa0/2 - PC0                                              &                                                       & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\
+                                                                   & Fa0/3 - Laptop0                                          &                                                       & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\* \midrule
+                \multirow{3}{*}{\textbf{Sw1}}                      & Fa0/1 - R1 Fa1/0                                         & \multirow{3}{*}{LAN B}                                & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\
+                                                                   & Fa0/2 - PC1                                              &                                                       & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\
+                                                                   & Fa0/3 - Laptop1                                          &                                                       & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\* \midrule
+                \multirow{4}{*}{\textbf{Sw2}}                      & Fa0/1 - HTTP                                             & \multirow{4}{*}{LAN Server}                           & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\
+                                                                   & Fa0/2 - DNS                                              &                                                       & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\
+                                                                   & Fa0/3 - DHCP                                             &                                                       & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\
+                                                                   & Fa0/4 - R2 Fa0/0                                         &                                                       & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                      & \multicolumn{1}{c}{}                                  \\* \bottomrule
+                \caption{IP configuration table}
+                \label{tab:deviceiptable}\\
+                \end{longtable}
         \end{center}
 
-        %\lstinputlisting[
-        %    language={},
-        %    caption={WebClient output},
-        %    label={lst:webclientoutput}
-        %]{phase1/webclient/httpsocketv3output20240329.txt}
+        The above tables will be used through out the project. Instead of planning for each phase and re-assigning the entire network, It was opted to fully outline every subnet and device for the sake of simplicity and work.
+        However, here we'll focus on router \textbf{\textit{R1}}, and networks \textbf{\textit{LAN A}} and \textbf{\textit{LAN B}}. For now let's just focus on the IP addresses, the meaning of values will be explained in Phase 3.
+        And once again, \textbf{Cisco Packet Tracer} to the help:
+
+        \begin{flushleft}
+                \begin{center}
+                    \begin{longtable}{ m{5cm} l }
+                        \textbf{Steps} & \textbf{Example} \\
+                        \hline
+                        \endfirsthead
+                        \multicolumn{2}{c}%
+                        {{\bfseries Table \thetable\ continued from previous page}} \\
+                        %{{\bfseries \tablename\ \thetable{} -- continued}} \\
+                        \textbf{Steps} & \textbf{Example} \\
+                        \hline
+                        \endhead
+                        \hline Continued on next page \\
+                        \endfoot
+                        \endlastfoot
+
+                        text & \includegraphics[scale=0.35,valign=c]{phase2/images/p1-connectingdevices/CiscoPacketTracer_configIP} \\ \hline
+                        text & \includegraphics[scale=0.34,valign=c]{phase2/images/p2-connecting2lanswithrouter/Laptop0PC0_ip} \\ \hline
+                        text & \includegraphics[scale=0.34,valign=c]{phase2/images/p2-connecting2lanswithrouter/Laptop1PC1_ip} \\ \hline
+                        text & \includegraphics[scale=0.31,valign=c]{phase2/images/p2-connecting2lanswithrouter/R1-interfaces} \\ \hline
+                        text & \includegraphics[scale=0.35,valign=c]{phase2/images/p1-connectingdevices/CiscoPacketTracer_cmdOutput} \\ \hline
+                        text & \includegraphics[scale=0.34,valign=c]{phase2/images/p2-connecting2lanswithrouter/Laptop0_cmdall} \\ \hline
+                        text & \includegraphics[scale=0.34,valign=c]{phase2/images/p2-connecting2lanswithrouter/PC0_cmdall} \\ \hline
+                        text & \includegraphics[scale=0.34,valign=c]{phase2/images/p2-connecting2lanswithrouter/Laptop1_cmdall} \\ \hline
+                        text & \includegraphics[scale=0.34,valign=c]{phase2/images/p2-connecting2lanswithrouter/PC1_cmdall} \\ \hline
+                        text & \includegraphics[scale=0.202,valign=c]{phase2/images/p2-connecting2lanswithrouter/R1-cliall} \\ \hline
+
+                        \caption{Cisco Packet Tracer guide} \label{tab:cptg2}
+                    \end{longtable}
+                \end{center}
+        \end{flushleft}
+
+        And to supplement the output images, below are the text versions \textit{(considering this isn't a report for ants)}:
+        \lstset{style=termoutputs}
+        \lstinputlisting[
+            language={},
+            caption={PC0 CMD output},
+            label={lst:pc0cmdoutp2}
+        ]{phase2/outputs/p2-connecting2lanswithrouter/PC0.txt}
+        \lstinputlisting[
+            language={},
+            caption={Laptop0 CMD output},
+            label={lst:laptop0cmdoutp2}
+        ]{phase2/outputs/p2-connecting2lanswithrouter/Laptop0.txt}
+        \lstinputlisting[
+            language={},
+            caption={PC1 CMD output},
+            label={lst:pc1cmdoutp2}
+        ]{phase2/outputs/p2-connecting2lanswithrouter/PC1.txt}
+        \lstinputlisting[
+            language={},
+            caption={Laptop1 CMD output},
+            label={lst:laptop1cmdoutp2}
+        ]{phase2/outputs/p2-connecting2lanswithrouter/Laptop1.txt}
+        \lstinputlisting[
+            language={},
+            caption={Router 1 CLI output},
+            label={lst:r1cmdoutp2}
+        ]{phase2/outputs/p2-connecting2lanswithrouter/R1.txt}
 
 %% Chapter: recomendations -----------------------------------------------------{{{1
 \chapter{Issues and fixes}

@@ -462,12 +462,10 @@ INPUT phase1/wireshark/wscapture02export.txt
 INPUT ./phase1/wireshark/wscapture04export.txt
 INPUT ./phase1/wireshark/wscapture04export.txt
 INPUT phase1/wireshark/wscapture04export.txt
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntx-BoldItalic-tlf-t1.tfm
 INPUT ./phase2/outputs/diagram.txt
 INPUT ./phase2/outputs/diagram.txt
 INPUT phase2/outputs/diagram.txt
-INPUT ./phase1/webclient/httpsocketv3output20240329.txt
-INPUT ./phase1/webclient/httpsocketv3output20240329.txt
-INPUT phase1/webclient/httpsocketv3output20240329.txt
 INPUT ReportAll.aux
 INPUT ./ReportAll.out
 INPUT ./ReportAll.out
@@ -477,5 +475,6 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/txfonts/t1xbtt.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmb.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmbi.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmr.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmri.pfb

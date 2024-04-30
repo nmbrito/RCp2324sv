@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.10)  30 APR 2024 08:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.10)  30 APR 2024 16:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -708,63 +708,59 @@ Package caption Info: New subtype `subtable' on input line 238.
 Package babel Info: Importing basic data for portuguese
 (babel)             from babel-pt.ini. Reported on input line 11.
 )
-Package hyperref Info: Option `plainpages' set `false' on input line 112.
-Package hyperref Info: Option `bookmarksopen' set `false' on input line 112.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 112.
-Package hyperref Info: Option `breaklinks' set `true' on input line 112.
-Package hyperref Info: Option `linktocpage' set `true' on input line 112.
-Package hyperref Info: Option `colorlinks' set `true' on input line 112.
-LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line 115.
+Package hyperref Info: Option `plainpages' set `false' on input line 137.
+Package hyperref Info: Option `bookmarksopen' set `false' on input line 137.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 137.
+Package hyperref Info: Option `breaklinks' set `true' on input line 137.
+Package hyperref Info: Option `linktocpage' set `true' on input line 137.
+Package hyperref Info: Option `colorlinks' set `true' on input line 137.
+LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line 140.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/t1ntxtlf.fd
 File: t1ntxtlf.fd 2021/05/24 v1.1 font definition file for T1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.95pt on input line 115.
- (./ReportAll.aux
-
-LaTeX Warning: Label `tab:deviceiptable' multiply defined.
-
-)
+(Font)              scaled to size 10.95pt on input line 140.
+ (./ReportAll.aux)
 \openout1 = `ReportAll.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 115.
-LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 115.
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 140.
+LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 140.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 115.
-LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 115.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 140.
+LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 140.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 115.
-LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 115.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 140.
+LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 140.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 115.
-LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 115.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 140.
+LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 140.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    ... okay on input line 140.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -819,8 +815,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Info: Command `\dddot' is already robust on input line 115.
-LaTeX Info: Command `\ddddot' is already robust on input line 115.
+LaTeX Info: Command `\dddot' is already robust on input line 140.
+LaTeX Info: Command `\ddddot' is already robust on input line 140.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
@@ -830,7 +826,7 @@ Package caption Info: longtable package is loaded.
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 115.
+Package hyperref Info: Link coloring ON on input line 140.
  (./ReportAll.out) (./ReportAll.out)
 \@outlinefile=\write3
 \openout3 = `ReportAll.out'.
@@ -839,46 +835,46 @@ Package hyperref Info: Link coloring ON on input line 115.
 \c@mv@tabular=\count349
 \c@mv@boldtabular=\count350
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 123.
+(Font)              scaled to size 12.0pt on input line 148.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 12.0pt on input line 123.
+(Font)              scaled to size 12.0pt on input line 148.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/sc' will be
-(Font)              scaled to size 12.0pt on input line 123.
-<phase1/images/logoisel.png, id=84, 426.8748pt x 286.1892pt>
+(Font)              scaled to size 12.0pt on input line 148.
+<phase1/images/logoisel.png, id=88, 426.8748pt x 286.1892pt>
 File: phase1/images/logoisel.png Graphic file (type png)
 <use phase1/images/logoisel.png>
-Package pdftex.def Info: phase1/images/logoisel.png  used on input line 127.
+Package pdftex.def Info: phase1/images/logoisel.png  used on input line 152.
 (pdftex.def)             Requested size: 176.40707pt x 118.26846pt.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 20.74pt on input line 131.
+(Font)              scaled to size 20.74pt on input line 156.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 20.74pt on input line 131.
+(Font)              scaled to size 20.74pt on input line 156.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 132.
+(Font)              scaled to size 14.4pt on input line 157.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 14.4pt on input line 132.
-LaTeX Font Info:    Trying to load font information for OT1+minntx on input line 148.
+(Font)              scaled to size 14.4pt on input line 157.
+LaTeX Font Info:    Trying to load font information for OT1+minntx on input line 173.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/ot1minntx.fd
 File: ot1minntx.fd 2023/09/09 v1.1 font definition file for OT1/minntx
 )
-LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 148.
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 173.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
 )
-LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 148.
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 173.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
 )
-LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 148.
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 173.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 ) [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc} <./phase1/images/logoisel.png>]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 24.88pt on input line 158.
+(Font)              scaled to size 24.88pt on input line 183.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 24.88pt on input line 158.
+(Font)              scaled to size 24.88pt on input line 183.
  (./ReportAll.toc
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 10.95pt on input line 3.
@@ -890,7 +886,7 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.161 \listoffigures
+l.186 \listoffigures
                      [1
 
 ] (./ReportAll.lof
@@ -916,139 +912,203 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 
 ] [5
 
-] [6
+]
+Underfull \hbox (badness 10000) in paragraph at lines 233--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 239--241
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 243--245
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--249
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--258
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--260
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--262
+
+ []
+
+[6
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 268--270
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--272
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--276
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 276--278
+
+ []
+
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 235.
+(Font)              scaled to size 10.0pt on input line 290.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 10.0pt on input line 235.
- [7]
+(Font)              scaled to size 10.0pt on input line 290.
+[7]
 Chapter 1.
 [1
 
 ]
 Chapter 2.
-LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 248.
+LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 303.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 )
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.95pt on input line 248.
+(Font)              scaled to size 10.95pt on input line 303.
  [2
 
 {/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}]
-Overfull \hbox (6.91705pt too wide) in alignment at lines 282--285
+Overfull \hbox (6.91705pt too wide) in alignment at lines 337--340
  [] [] 
  []
 
 
-Overfull \hbox (6.91705pt too wide) in alignment at lines 285--289
+Overfull \hbox (6.91705pt too wide) in alignment at lines 340--346
  [] [] 
  []
 
 
-Overfull \hbox (6.91705pt too wide) in alignment at lines 289--291
+Overfull \hbox (6.91705pt too wide) in alignment at lines 346--348
  [] [] 
  []
 
 
-Overfull \hbox (6.91705pt too wide) in alignment at lines 291--292
+Overfull \hbox (6.91705pt too wide) in alignment at lines 348--349
  [] [] 
  []
 
-<phase1/images/install_xampp08.png, id=191, 844.65562pt x 444.91219pt>
+<phase1/images/install_xampp08.png, id=212, 844.65562pt x 444.91219pt>
 File: phase1/images/install_xampp08.png Graphic file (type png)
 <use phase1/images/install_xampp08.png>
-Package pdftex.def Info: phase1/images/install_xampp08.png  used on input line 295.
+Package pdftex.def Info: phase1/images/install_xampp08.png  used on input line 352.
 (pdftex.def)             Requested size: 295.6339pt x 155.72159pt.
-<phase1/images/install_xampp09.png, id=192, 975.645pt x 484.81125pt>
+<phase1/images/install_xampp09.png, id=213, 975.645pt x 484.81125pt>
 File: phase1/images/install_xampp09.png Graphic file (type png)
 <use phase1/images/install_xampp09.png>
-Package pdftex.def Info: phase1/images/install_xampp09.png  used on input line 299.
+Package pdftex.def Info: phase1/images/install_xampp09.png  used on input line 356.
 (pdftex.def)             Requested size: 295.61363pt x 146.89442pt.
-<phase1/images/install_xampp10.png, id=193, 845.40843pt x 444.91219pt>
+<phase1/images/install_xampp10.png, id=214, 845.40843pt x 444.91219pt>
 File: phase1/images/install_xampp10.png Graphic file (type png)
 <use phase1/images/install_xampp10.png>
-Package pdftex.def Info: phase1/images/install_xampp10.png  used on input line 303.
+Package pdftex.def Info: phase1/images/install_xampp10.png  used on input line 360.
 (pdftex.def)             Requested size: 295.89738pt x 155.72159pt.
-<phase1/images/install_xampp13.png, id=194, 956.07187pt x 465.23813pt>
+<phase1/images/install_xampp13.png, id=215, 956.07187pt x 465.23813pt>
 File: phase1/images/install_xampp13.png Graphic file (type png)
 <use phase1/images/install_xampp13.png>
-Package pdftex.def Info: phase1/images/install_xampp13.png  used on input line 304.
+Package pdftex.def Info: phase1/images/install_xampp13.png  used on input line 361.
 (pdftex.def)             Requested size: 289.6831pt x 140.9639pt.
-<phase1/images/install_xampp14.png, id=195, 956.07187pt x 465.23813pt>
+<phase1/images/install_xampp14.png, id=216, 956.07187pt x 465.23813pt>
 File: phase1/images/install_xampp14.png Graphic file (type png)
 <use phase1/images/install_xampp14.png>
-Package pdftex.def Info: phase1/images/install_xampp14.png  used on input line 308.
+Package pdftex.def Info: phase1/images/install_xampp14.png  used on input line 365.
 (pdftex.def)             Requested size: 289.6831pt x 140.9639pt.
-<phase1/images/install_xampp15.png, id=196, 1015.54407pt x 523.9575pt>
+<phase1/images/install_xampp15.png, id=217, 1015.54407pt x 523.9575pt>
 File: phase1/images/install_xampp15.png Graphic file (type png)
 <use phase1/images/install_xampp15.png>
-Package pdftex.def Info: phase1/images/install_xampp15.png  used on input line 312.
+Package pdftex.def Info: phase1/images/install_xampp15.png  used on input line 369.
 (pdftex.def)             Requested size: 289.43306pt x 149.32944pt.
-<phase1/images/install_xampp16.png, id=197, 1015.54407pt x 523.9575pt>
+<phase1/images/install_xampp16.png, id=218, 1015.54407pt x 523.9575pt>
 File: phase1/images/install_xampp16.png Graphic file (type png)
 <use phase1/images/install_xampp16.png>
-Package pdftex.def Info: phase1/images/install_xampp16.png  used on input line 316.
+Package pdftex.def Info: phase1/images/install_xampp16.png  used on input line 373.
 (pdftex.def)             Requested size: 289.43306pt x 149.32944pt.
-<phase1/images/install_xampp17.png, id=198, 1028.34187pt x 517.935pt>
+<phase1/images/install_xampp17.png, id=219, 1028.34187pt x 517.935pt>
 File: phase1/images/install_xampp17.png Graphic file (type png)
 <use phase1/images/install_xampp17.png>
-Package pdftex.def Info: phase1/images/install_xampp17.png  used on input line 322.
+Package pdftex.def Info: phase1/images/install_xampp17.png  used on input line 379.
 (pdftex.def)             Requested size: 293.08047pt x 147.61299pt.
 
-Overfull \hbox (6.91705pt too wide) in alignment at lines 292--326
+Overfull \hbox (6.91705pt too wide) in alignment at lines 349--383
  [] [] 
  []
 
 [3 <./phase1/images/install_xampp08.png> <./phase1/images/install_xampp09.png> <./phase1/images/install_xampp10.png>] [4 <./phase1/images/install_xampp13.png> <./phase1/images/install_xampp14.png> <./phase1/images/install_xampp15.png> <./phase1/images/install_xampp16.png>]
-Overfull \hbox (9.73607pt too wide) in alignment at lines 331--334
+Overfull \hbox (9.73607pt too wide) in alignment at lines 388--391
  [] [] 
  []
 
 
-Overfull \hbox (9.73607pt too wide) in alignment at lines 334--338
+Overfull \hbox (9.73607pt too wide) in alignment at lines 391--397
  [] [] 
  []
 
 
-Overfull \hbox (9.73607pt too wide) in alignment at lines 338--340
+Overfull \hbox (9.73607pt too wide) in alignment at lines 397--399
  [] [] 
  []
 
 
-Overfull \hbox (9.73607pt too wide) in alignment at lines 340--341
+Overfull \hbox (9.73607pt too wide) in alignment at lines 399--400
  [] [] 
  []
 
-<phase1/images/install_wireshark02.png, id=215, 373.395pt x 289.83281pt>
+<phase1/images/install_wireshark02.png, id=236, 373.395pt x 289.83281pt>
 File: phase1/images/install_wireshark02.png Graphic file (type png)
 <use phase1/images/install_wireshark02.png>
-Package pdftex.def Info: phase1/images/install_wireshark02.png  used on input line 344.
+Package pdftex.def Info: phase1/images/install_wireshark02.png  used on input line 403.
 (pdftex.def)             Requested size: 298.7164pt x 231.86655pt.
-<phase1/images/install_wireshark21.png, id=216, 373.395pt x 289.83281pt>
+<phase1/images/install_wireshark21.png, id=237, 373.395pt x 289.83281pt>
 File: phase1/images/install_wireshark21.png Graphic file (type png)
 <use phase1/images/install_wireshark21.png>
-Package pdftex.def Info: phase1/images/install_wireshark21.png  used on input line 347.
+Package pdftex.def Info: phase1/images/install_wireshark21.png  used on input line 406.
 (pdftex.def)             Requested size: 298.7164pt x 231.86655pt.
 
-Overfull \hbox (9.73607pt too wide) in alignment at lines 341--351
+Overfull \hbox (9.73607pt too wide) in alignment at lines 400--410
  [] [] 
  []
 
 [5 <./phase1/images/install_xampp17.png> <./phase1/images/install_wireshark02.png>] (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/02/21 1.10 listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 361.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 420.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.0pt on input line 361.
-LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 361.
+(Font)              scaled to size 9.0pt on input line 420.
+LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 420.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/t1ntxtt.fd
 File: t1ntxtt.fd 2012/04/20 v3.1
 )
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 9.0pt on input line 361.
+(Font)              scaled to size 9.0pt on input line 420.
  (./phase1/webclient/httpsocketv3.py
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.0pt on input line 1.
@@ -1064,134 +1124,247 @@ LaTeX Font Info:    Font shape `T1/ntxtt/b/n' in size <9> not available
 (Font)              Font shape `T1/txtt/bx/n' tried instead on input line 11.
  [6 <./phase1/images/install_wireshark21.png>])
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 10.95pt on input line 361.
+(Font)              scaled to size 10.95pt on input line 420.
  (./phase1/webclient/httpsocketv3output20240329.txt [7] [8]) [9]
-<phase1/images/librewolf_tls.png, id=419, 971.12813pt x 583.42969pt>
+<phase1/images/librewolf_tls.png, id=440, 971.12813pt x 583.42969pt>
 File: phase1/images/librewolf_tls.png Graphic file (type png)
 <use phase1/images/librewolf_tls.png>
-Package pdftex.def Info: phase1/images/librewolf_tls.png  used on input line 381.
+Package pdftex.def Info: phase1/images/librewolf_tls.png  used on input line 440.
 (pdftex.def)             Requested size: 388.44437pt x 233.36774pt.
-<phase1/images/wscapwcsocket05.png, id=420, 1028.34187pt x 523.9575pt>
+<phase1/images/wscapwcsocket05.png, id=441, 1028.34187pt x 523.9575pt>
 File: phase1/images/wscapwcsocket05.png Graphic file (type png)
 <use phase1/images/wscapwcsocket05.png>
-Package pdftex.def Info: phase1/images/wscapwcsocket05.png  used on input line 390.
+Package pdftex.def Info: phase1/images/wscapwcsocket05.png  used on input line 449.
 (pdftex.def)             Requested size: 442.17839pt x 225.29733pt.
-<phase1/images/wscapwcsocket08.png, id=421, 1028.34187pt x 523.9575pt>
+<phase1/images/wscapwcsocket08.png, id=442, 1028.34187pt x 523.9575pt>
 File: phase1/images/wscapwcsocket08.png Graphic file (type png)
 <use phase1/images/wscapwcsocket08.png>
-Package pdftex.def Info: phase1/images/wscapwcsocket08.png  used on input line 397.
+Package pdftex.def Info: phase1/images/wscapwcsocket08.png  used on input line 456.
 (pdftex.def)             Requested size: 205.66473pt x 104.78964pt.
-<phase1/images/wscapwcsocket07.png, id=422, 1028.34187pt x 523.9575pt>
+<phase1/images/wscapwcsocket07.png, id=443, 1028.34187pt x 523.9575pt>
 File: phase1/images/wscapwcsocket07.png Graphic file (type png)
 <use phase1/images/wscapwcsocket07.png>
-Package pdftex.def Info: phase1/images/wscapwcsocket07.png  used on input line 401.
+Package pdftex.def Info: phase1/images/wscapwcsocket07.png  used on input line 460.
 (pdftex.def)             Requested size: 205.66473pt x 104.78964pt.
-<phase1/images/wscapwcsocket06.png, id=423, 1028.34187pt x 523.9575pt>
+<phase1/images/wscapwcsocket06.png, id=444, 1028.34187pt x 523.9575pt>
 File: phase1/images/wscapwcsocket06.png Graphic file (type png)
 <use phase1/images/wscapwcsocket06.png>
-Package pdftex.def Info: phase1/images/wscapwcsocket06.png  used on input line 409.
+Package pdftex.def Info: phase1/images/wscapwcsocket06.png  used on input line 468.
 (pdftex.def)             Requested size: 442.17839pt x 225.29733pt.
  [10
 
  <./phase1/images/librewolf_tls.png> <./phase1/images/wscapwcsocket05.png>] [11 <./phase1/images/wscapwcsocket08.png> <./phase1/images/wscapwcsocket07.png> <./phase1/images/wscapwcsocket06.png>] (./phase1/wireshark/wscapture01export.txt [12
 
 ]) (./phase1/wireshark/wscapture02export.txt [13]) (./phase1/wireshark/wscapture04export.txt)
-Underfull \hbox (badness 10000) in paragraph at lines 448--475
+Underfull \hbox (badness 10000) in paragraph at lines 507--534
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--475
+Underfull \hbox (badness 10000) in paragraph at lines 507--534
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--475
+Underfull \hbox (badness 10000) in paragraph at lines 507--534
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--475
+Underfull \hbox (badness 10000) in paragraph at lines 507--534
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--475
+Underfull \hbox (badness 10000) in paragraph at lines 507--534
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--475
+Underfull \hbox (badness 10000) in paragraph at lines 507--534
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--475
+Underfull \hbox (badness 10000) in paragraph at lines 507--534
 
  []
 
 [14] [15]
 Chapter 3.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/it' will be
-(Font)              scaled to size 10.95pt on input line 479.
-(./phase2/outputs/diagram.txt [16
+(Font)              scaled to size 10.95pt on input line 538.
 
-])
-Overfull \hbox (15.78528pt too wide) in alignment at lines 591--595
+Underfull \hbox (badness 10000) in paragraph at lines 555--557
+
+ []
+
+
+Overfull \hbox (18.1631pt too wide) in alignment at lines 559--562
+ [] [] 
+ []
+
+
+Overfull \hbox (18.1631pt too wide) in alignment at lines 562--568
+ [] [] 
+ []
+
+
+Overfull \hbox (18.1631pt too wide) in alignment at lines 568--570
+ [] [] 
+ []
+
+
+Overfull \hbox (18.1631pt too wide) in alignment at lines 570--571
+ [] [] 
+ []
+
+<phase2/images/p1-connectingdevices/CiscoPacketTracer_configIP.png, id=619, 875.27pt x 454.69875pt>
+File: phase2/images/p1-connectingdevices/CiscoPacketTracer_configIP.png Graphic file (type png)
+<use phase2/images/p1-connectingdevices/CiscoPacketTracer_configIP.png>
+Package pdftex.def Info: phase2/images/p1-connectingdevices/CiscoPacketTracer_configIP.png  used on input line 573.
+(pdftex.def)             Requested size: 306.34909pt x 159.14694pt.
+<phase2/images/p1-connectingdevices/Laptop0PC0_ip.png, id=620, 903.375pt x 738.76pt>
+File: phase2/images/p1-connectingdevices/Laptop0PC0_ip.png Graphic file (type png)
+<use phase2/images/p1-connectingdevices/Laptop0PC0_ip.png>
+Package pdftex.def Info: phase2/images/p1-connectingdevices/Laptop0PC0_ip.png  used on input line 574.
+(pdftex.def)             Requested size: 307.14343pt x 251.17506pt.
+<phase2/images/p1-connectingdevices/CiscoPacketTracer_cmdOutput.png, id=621, 875.27pt x 454.69875pt>
+File: phase2/images/p1-connectingdevices/CiscoPacketTracer_cmdOutput.png Graphic file (type png)
+<use phase2/images/p1-connectingdevices/CiscoPacketTracer_cmdOutput.png>
+Package pdftex.def Info: phase2/images/p1-connectingdevices/CiscoPacketTracer_cmdOutput.png  used on input line 575.
+(pdftex.def)             Requested size: 306.34909pt x 159.14694pt.
+<phase2/images/p1-connectingdevices/Laptop0PC0_cmd.png, id=622, 903.375pt x 738.76pt>
+File: phase2/images/p1-connectingdevices/Laptop0PC0_cmd.png Graphic file (type png)
+<use phase2/images/p1-connectingdevices/Laptop0PC0_cmd.png>
+Package pdftex.def Info: phase2/images/p1-connectingdevices/Laptop0PC0_cmd.png  used on input line 576.
+(pdftex.def)             Requested size: 307.14343pt x 251.17506pt.
+
+Overfull \hbox (18.1631pt too wide) in alignment at lines 571--579
+ [] [] 
+ []
+
+[16
+
+] [17 <./phase2/images/p1-connectingdevices/CiscoPacketTracer_configIP.png (PNG copy)> <./phase2/images/p1-connectingdevices/Laptop0PC0_ip.png> <./phase2/images/p1-connectingdevices/CiscoPacketTracer_cmdOutput.png>] (./phase2/outputs/p1-connectingdevices/PC0.txt) [18 <./phase2/images/p1-connectingdevices/Laptop0PC0_cmd.png>] (./phase2/outputs/p1-connectingdevices/Laptop0.txt)
+Underfull \hbox (badness 10000) in paragraph at lines 596--600
+
+ []
+
+(./phase2/outputs/diagram.txt [19])
+Overfull \hbox (15.78528pt too wide) in alignment at lines 681--685
  [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (15.78528pt too wide) in alignment at lines 595--602
+Overfull \hbox (15.78528pt too wide) in alignment at lines 685--692
  [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (15.78528pt too wide) in alignment at lines 602--605
+Overfull \hbox (15.78528pt too wide) in alignment at lines 692--695
  [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (15.78528pt too wide) in alignment at lines 605--607
+Overfull \hbox (15.78528pt too wide) in alignment at lines 695--697
  [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (15.78528pt too wide) in alignment at lines 607--638
+Overfull \hbox (15.78528pt too wide) in alignment at lines 697--728
  [] [] [] [] [] [] 
  []
 
-[17]
-Overfull \hbox (15.78528pt too wide) in alignment at lines 642--646
- [] [] [] [] [] [] 
+[20]
+Overfull \hbox (18.1631pt too wide) in alignment at lines 737--740
+ [] [] 
  []
 
 
-Overfull \hbox (15.78528pt too wide) in alignment at lines 646--653
- [] [] [] [] [] [] 
+Overfull \hbox (18.1631pt too wide) in alignment at lines 740--746
+ [] [] 
  []
 
 
-Overfull \hbox (15.78528pt too wide) in alignment at lines 653--684
- [] [] [] [] [] [] 
+Overfull \hbox (18.1631pt too wide) in alignment at lines 746--748
+ [] [] 
  []
 
-[18] [19]
+
+Overfull \hbox (18.1631pt too wide) in alignment at lines 748--749
+ [] [] 
+ []
+
+File: phase2/images/p1-connectingdevices/CiscoPacketTracer_configIP.png Graphic file (type png)
+<use phase2/images/p1-connectingdevices/CiscoPacketTracer_configIP.png>
+Package pdftex.def Info: phase2/images/p1-connectingdevices/CiscoPacketTracer_configIP.png  used on input line 751.
+(pdftex.def)             Requested size: 306.34909pt x 159.14694pt.
+<phase2/images/p2-connecting2lanswithrouter/Laptop0PC0_ip.png, id=734, 903.375pt x 738.76pt>
+File: phase2/images/p2-connecting2lanswithrouter/Laptop0PC0_ip.png Graphic file (type png)
+<use phase2/images/p2-connecting2lanswithrouter/Laptop0PC0_ip.png>
+Package pdftex.def Info: phase2/images/p2-connecting2lanswithrouter/Laptop0PC0_ip.png  used on input line 752.
+(pdftex.def)             Requested size: 307.14343pt x 251.17506pt.
+<phase2/images/p2-connecting2lanswithrouter/Laptop1PC1_ip.png, id=735, 903.375pt x 738.76pt>
+File: phase2/images/p2-connecting2lanswithrouter/Laptop1PC1_ip.png Graphic file (type png)
+<use phase2/images/p2-connecting2lanswithrouter/Laptop1PC1_ip.png>
+Package pdftex.def Info: phase2/images/p2-connecting2lanswithrouter/Laptop1PC1_ip.png  used on input line 753.
+(pdftex.def)             Requested size: 307.14343pt x 251.17506pt.
+<phase2/images/p2-connecting2lanswithrouter/R1-interfaces.png, id=736, 987.69pt x 905.3825pt>
+File: phase2/images/p2-connecting2lanswithrouter/R1-interfaces.png Graphic file (type png)
+<use phase2/images/p2-connecting2lanswithrouter/R1-interfaces.png>
+Package pdftex.def Info: phase2/images/p2-connecting2lanswithrouter/R1-interfaces.png  used on input line 754.
+(pdftex.def)             Requested size: 306.18074pt x 280.66568pt.
+File: phase2/images/p1-connectingdevices/CiscoPacketTracer_cmdOutput.png Graphic file (type png)
+<use phase2/images/p1-connectingdevices/CiscoPacketTracer_cmdOutput.png>
+Package pdftex.def Info: phase2/images/p1-connectingdevices/CiscoPacketTracer_cmdOutput.png  used on input line 755.
+(pdftex.def)             Requested size: 306.34909pt x 159.14694pt.
+<phase2/images/p2-connecting2lanswithrouter/Laptop0_cmdall.png, id=737, 903.375pt x 738.76pt>
+File: phase2/images/p2-connecting2lanswithrouter/Laptop0_cmdall.png Graphic file (type png)
+<use phase2/images/p2-connecting2lanswithrouter/Laptop0_cmdall.png>
+Package pdftex.def Info: phase2/images/p2-connecting2lanswithrouter/Laptop0_cmdall.png  used on input line 756.
+(pdftex.def)             Requested size: 307.14343pt x 251.17506pt.
+<phase2/images/p2-connecting2lanswithrouter/PC0_cmdall.png, id=738, 903.375pt x 738.76pt>
+File: phase2/images/p2-connecting2lanswithrouter/PC0_cmdall.png Graphic file (type png)
+<use phase2/images/p2-connecting2lanswithrouter/PC0_cmdall.png>
+Package pdftex.def Info: phase2/images/p2-connecting2lanswithrouter/PC0_cmdall.png  used on input line 757.
+(pdftex.def)             Requested size: 307.14343pt x 251.17506pt.
+<phase2/images/p2-connecting2lanswithrouter/Laptop1_cmdall.png, id=739, 903.375pt x 738.76pt>
+File: phase2/images/p2-connecting2lanswithrouter/Laptop1_cmdall.png Graphic file (type png)
+<use phase2/images/p2-connecting2lanswithrouter/Laptop1_cmdall.png>
+Package pdftex.def Info: phase2/images/p2-connecting2lanswithrouter/Laptop1_cmdall.png  used on input line 758.
+(pdftex.def)             Requested size: 307.14343pt x 251.17506pt.
+<phase2/images/p2-connecting2lanswithrouter/PC1_cmdall.png, id=740, 903.375pt x 738.76pt>
+File: phase2/images/p2-connecting2lanswithrouter/PC1_cmdall.png Graphic file (type png)
+<use phase2/images/p2-connecting2lanswithrouter/PC1_cmdall.png>
+Package pdftex.def Info: phase2/images/p2-connecting2lanswithrouter/PC1_cmdall.png  used on input line 759.
+(pdftex.def)             Requested size: 307.14343pt x 251.17506pt.
+<phase2/images/p2-connecting2lanswithrouter/R1-cliall.png, id=741, 1517.67pt x 765.86125pt>
+File: phase2/images/p2-connecting2lanswithrouter/R1-cliall.png Graphic file (type png)
+<use phase2/images/p2-connecting2lanswithrouter/R1-cliall.png>
+Package pdftex.def Info: phase2/images/p2-connecting2lanswithrouter/R1-cliall.png  used on input line 760.
+(pdftex.def)             Requested size: 306.56229pt x 154.70041pt.
+
+Overfull \hbox (18.1631pt too wide) in alignment at lines 749--763
+ [] [] 
+ []
+
+[21] [22 <./phase2/images/p2-connecting2lanswithrouter/Laptop0PC0_ip.png> <./phase2/images/p2-connecting2lanswithrouter/Laptop1PC1_ip.png>] [23 <./phase2/images/p2-connecting2lanswithrouter/R1-interfaces.png>] [24 <./phase2/images/p2-connecting2lanswithrouter/Laptop0_cmdall.png> <./phase2/images/p2-connecting2lanswithrouter/PC0_cmdall.png>] [25 <./phase2/images/p2-connecting2lanswithrouter/Laptop1_cmdall.png> <./phase2/images/p2-connecting2lanswithrouter/PC1_cmdall.png> <./phase2/images/p2-connecting2lanswithrouter/R1-cliall.png>] (./phase2/outputs/p2-connecting2lanswithrouter/PC0.txt [26]) (./phase2/outputs/p2-connecting2lanswithrouter/Laptop0.txt [27] [28]) (./phase2/outputs/p2-connecting2lanswithrouter/PC1.txt [29] [30]) (./phase2/outputs/p2-connecting2lanswithrouter/Laptop1.txt [31] [32]) (./phase2/outputs/p2-connecting2lanswithrouter/R1.txt [33] [34]) [35]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 695--701
+Underfull \hbox (badness 10000) in paragraph at lines 797--803
 
  []
 
-[20
+[36
 
 ]
 Chapter 5.
-[21
+[37
 
 ]
 Appendix A.
-[22
+[38
 
 ] 
 enddocument/afterlastpage: lastpage setting LastPage.
@@ -1200,26 +1373,22 @@ enddocument/afterlastpage: lastpage setting LastPage.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `ReportAll.out' has not changed.
-(rerunfilecheck)             Checksum: A2BB6B06A899FAB6AB0AE6BF70A71B6B;2890.
+(rerunfilecheck)             Checksum: FFF7E7082229DDFDDFD3510843253FB6;3233.
  ) 
 Here is how much of TeX's memory you used:
- 21868 strings out of 474116
- 344604 string characters out of 5743682
- 2462187 words of memory out of 5000000
- 43453 multiletter control sequences out of 15000+600000
+ 22963 strings out of 474116
+ 368870 string characters out of 5743682
+ 2506187 words of memory out of 5000000
+ 43808 multiletter control sequences out of 15000+600000
  634622 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,14n,117p,774b,2379s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/txfonts/t1xbtt.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmbi.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on ReportAll.pdf (30 pages, 2076341 bytes).
+Output written on ReportAll.pdf (46 pages, 4609570 bytes).
 PDF statistics:
- 778 PDF objects out of 1000 (max. 8388607)
- 692 compressed objects within 7 object streams
- 393 named destinations out of 1000 (max. 500000)
- 241 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1755 PDF objects out of 2073 (max. 8388607)
+ 1620 compressed objects within 17 object streams
+ 1112 named destinations out of 1200 (max. 500000)
+ 309 words of extra memory for PDF output out of 10000 (max. 10000000)
 

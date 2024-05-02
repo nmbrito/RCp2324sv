@@ -39,24 +39,13 @@
 \usepackage{multicol}               % 
 \usepackage{multirow}               % tabular cells spanning multiple rows
 \usepackage{newtxtext,newtxmath}    % do not use CM fonts
+\usepackage{paralist}
 \usepackage{setspace}               % setting the spacing between lines
 \usepackage{subcaption}             % for subfigures and the like
 
-%other macros, if needed
-\newcommand{\windspt}{\textsf{WindsPT\/}}
-\newcommand{\windscannerpt}{\emph{Windscanner.PT\/}}
-\newcommand{\class}[1]{{\normalfont\slshape #1\/}}
-\newcommand{\svg}{\class{SVG}}
-
-%environments for infos
-\newenvironment{info}[1]{\vspace*{6mm}\color{blue}[ \begin{em} #1}
-                        {\vspace*{6mm}\end{em} ]}
-\newenvironment{infoopt}[1]{\vspace*{6mm}\color{blue}[ \textbf{Elemento opcional.} \begin{em} #1}
-                        {\vspace*{6mm}\end{em} ]}
-
 %% Package settings ------------------------------------------------------------
-\graphicspath{{./}}                                 % {graphicx} - Images path
-\selectlanguage{portuguese}                         % {babel} - Language portuguese
+\graphicspath{{./images}}                           % {graphicx} - Images path % BY PHASE!!!
+\selectlanguage{english}                            % {babel} - Language portuguese
 \setlength{\columnsep}{3cm}                         % {multicol} - Column spacement
 \definecolor{engineering}{rgb}{0.549,0.176,0.098}   % {color}
 \definecolor{cloudwhite}{cmyk}{0,0,0,0.025}         % {color}
@@ -138,7 +127,7 @@
 
 %% Document start --------------------------------------------------------------
 \begin{document}
-\pagenumbering{roman}\setcounter{page}{1}
+    \pagenumbering{roman}\setcounter{page}{1}
 
 %% Cover -----------------------------------------------------------------------
 \begin{titlepage}
@@ -149,7 +138,7 @@
 
     \vfill
 
-    \includegraphics[width=62mm]{phase1/images/logoisel}
+    \includegraphics[width=62mm]{logoisel}
     
     \vfill
     
@@ -174,7 +163,7 @@
     
     \vspace*{10mm}
     
-    \renewcommand{\today}{April 14th 2024}
+    \renewcommand{\today}{May 5th 2024}
     \today
     
 \end{titlepage}
@@ -202,11 +191,13 @@
         \begin{tabular}{l p{0.8\linewidth}}
             API     & Application Programming Interface\\
             CLI     & Command Line Interface\\
-            CMD     & Command Line Prompt\\
+            CMD     & Command Prompt\\
             GUI     & Graphical User Interface\\
             HTTP    & Hyper Text Transfer Protocol\\
             HTTPS   & Hyper Text Transfer Protocol Secure\\
             IP      & Internet Protocol\\
+            IPv4    & Internet Protocol version 4\\
+            IPv6    & Internet Protocol version 6\\
             LAN     & Local Area Network\\
             OS      & Operating System\\
             OSS     & openSUSE\\
@@ -230,35 +221,38 @@
     \begin{description}
         \item[Apache2] \hfill \\
             An opensource HTTP web server.
+        \item[Bit] \hfill \\
+            A unit of information in computing and digital communications. The bit represents a logical state with one of two possible values, 0 or 1 (other representations such as \textit{true / false} are also valid).
+        \item[Byte] \hfill \\
+            Also a unit of digital information, consists of 8 bits.
         \item[Broadcast] \hfill \\
-            %TODO
+            A method of transferring a message to all recipients simultaneously.
         \item[Browser] \hfill \\
             A browser is a internet navigation software. It comes in multiple flavours, nowadays the big three are Microsoft Edge, Mozilla Firefox and Google Chrome.
         \item[Cisco Packet Tracer] \hfill \\
-            %TODO
-        \item[Command Line Prompt] \hfill \\
-            %TODO
+            A cross-platform visual network simulation tool.
+        \item[Command Prompt] \hfill \\
+            The default command-line interpreter for Windows operating systems.
         \item[Firewall] \hfill \\
             A barrier between networks. Controls inbound and outbound traffic.
         \item[Gateway] \hfill \\
-            %TODO
+            A network gateway provides a connection between networks and devices. Known as protocol translation gateways or mapping gateways, can perform protocol conversions to connect networks with different network protocol technologies.
         \item[LibreWolf] \hfill \\
             An internet browser based on Mozilla's Firefox. It's primary purpose is to allow privacy, and with it comes security. It achieves this by removing telemetry and data collection.
         \item[Linux] \hfill \\
-            %TODO
+            Open-source Unix-like operating systems based on the Linux kernel.
         \item[MariaDB] \hfill \\
             A community-developed fork of MySQL database server.
-        \item[Network] \hfill \\
         \item[openSUSE Tumbleweed] \hfill \\
             An openSUSE (OSS) is an open-source community driven Linux-based distribuition sponsored by SUSE Software Solutions. Tumbleweed is a rolling release version allowing for up-to-date software releases.
         \item[Operating system] \hfill \\
             A program that manages a computer's resources from software to hardware.
         \item[Ping] \hfill \\
-            %TODO
+             A software utility used to test the reachability of a host on an IP network.
         \item[Tracert] \hfill \\
-            %TODO
+            Or \textbf{traceroute} in unix and linux systems, is a computer network diagnostic command for displaying possible routes and measuring transit delays of packets across an IP network.
         \item[Ipconfig] \hfill \\
-            %TODO
+            Or \textbf{ifconfig} in unix and linux systems, is a console application program that displays all current TCP/IP network configuration values.
         \item[Python] \hfill \\
             Python is a high-level programming language, object-oriented.
         \item[Perl] \hfill \\
@@ -266,15 +260,15 @@
         \item[Rolling release distribuition] \hfill \\
             A distribuition where it's software release cycle is more frequent than those of Long Term Support (LTS). It's up to the Linux-based distribuitor to guarantee the testing of a package.
         \item[Router] \hfill \\
-            %TODO
+            A networking device that forwards data packets between computer networks, including internetworks such as the global Internet.
         \item[Switch] \hfill \\
-            %TODO
+            A networking hardware that connects devices on a computer network by using packet switching to receive and forward data to the destination device.
         \item[Socket] \hfill \\
             A network socket serves as an endpoint for sending and receiving data across the network.
         \item[Subnet Mask] \hfill \\
-            %TODO
+            Is a logical subdivision of an IP network.
         \item[Unix] \hfill \\
-            %TODO
+            Is a family of multitasking, multi-user computer operating systems that derive from the original AT\&T Unix.
         \item[VPN] \hfill \\
             A private network creating a secure connection between a device and a network.
         \item[Windows] \hfill \\
@@ -292,26 +286,86 @@
     \pagestyle{fancy}
     The project consists in building a computer network through four phases. First with a webserver, then simulating a local area network (LAN) with two computers and a switch.
     By the end of the journey, this project will develop into something similar to a corporate network.
-
     %TODO
 
 % main page numbers with arabic numerals
     \pagenumbering{arabic}\setcounter{page}{1}
 
-%% Chapter: phase 1 ------------------------------------------------------------
-\chapter{Phase 1}
 %% Chapter: phase 2 ------------------------------------------------------------
 \chapter{Phase 2}
-%TODO: IP datagram definitions and other stuff
+    \section{The IP Header}
+        Before getting our hands-on business. Let's acquaintance our Internet Protocol (IP) friend, IPv4. To keep it simple we'll not touch IPv6.
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.3]{stopdoingipv6} 
+            \caption{Guess IPv4 is enough for everything}
+            \label{fig:funnyipv6}
+        \end{figure}
+        \pagebreak
+
+        Ok, now that we're at ease, we can explore the IP datagram.\\
+        IP Datagram is the data transmitted over a network connection carried in messages, using specific formats as seen in table \ref{tab:ipdatagram}.
+
+        \begin{center}
+            \begin{longtable}{|ccclcccc|}
+                \hline
+                \multicolumn{1}{|c|}{\begin{tabular}[c]{@{}c@{}}Version\\ 4 bits\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Header Length\\ 4bits\end{tabular}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}Type of Service\\ 8 bits\end{tabular}} & \multicolumn{4}{c|}{\begin{tabular}[c]{@{}c@{}}Total Length\\ 16 bits\end{tabular}}                                                                                                                                                                                                                                          \\ \hline
+                \endfirsthead
+                %
+                \multicolumn{8}{c}%
+                {{\bfseries Table \thetable\ continued from previous page}} \\
+                \hline
+                \multicolumn{1}{|c|}{\begin{tabular}[c]{@{}c@{}}Version\\ 4 bits\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Header Length\\ 4bits\end{tabular}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}Type of Service\\ 8 bits\end{tabular}} & \multicolumn{4}{c|}{\begin{tabular}[c]{@{}c@{}}Total Length\\ 16 bits\end{tabular}}                                                                                                                                                                                                                                          \\ \hline
+                \endhead
+                %
+                \multicolumn{4}{|c|}{\begin{tabular}[c]{@{}c@{}}Identification\\ 16 bits\end{tabular}}                                                                                                                                                                      & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Reserved\\ 1 bit\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Don't Fragment\\ 1 bit\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}More Fragment\\ 1 bit\end{tabular}} & \begin{tabular}[c]{@{}c@{}}Fragment Offset\\ 13 bits\end{tabular} \\ \hline
+                \multicolumn{2}{|c|}{\begin{tabular}[c]{@{}c@{}}Time to Live\\ 8 bits\end{tabular}}                                                                                 & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}Protocol\\ 8 bits\end{tabular}}        & \multicolumn{4}{c|}{\begin{tabular}[c]{@{}c@{}}Header Checksum\\ 16 bits\end{tabular}}                                                                                                                                                                                                                                       \\ \hline
+                \multicolumn{8}{|c|}{\begin{tabular}[c]{@{}c@{}}Source IP\\ 32 bits (4 Bytes)\end{tabular}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                \\ \hline
+                \multicolumn{8}{|c|}{\begin{tabular}[c]{@{}c@{}}Destination IP\\ 32 bits (4 Bytes)\end{tabular}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           \\ \hline
+                \multicolumn{8}{|c|}{\begin{tabular}[c]{@{}c@{}}Option\\ 0 - 40 Bytes\end{tabular}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        \\ \hline
+                \multicolumn{8}{|c|}{\begin{tabular}[c]{@{}c@{}}DATA\\ 20 Bytes - 65536 Bytes\end{tabular}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                \\ \hline
+                \caption{IPv4 datagram dissected}
+                \label{tab:ipdatagram}\\
+            \end{longtable}
+        \end{center}
+
+        Each line, excluding \textit{option} and \textit{data}, have 32 bits (4 Bytes) of size.\\
+        Breaking down each part of the protocol we can see the following:\\
+
+        \begin{compactitem}
+            \item \textbf{Version:} the IP version, 4 for IPv4.
+            \item \textbf{Header Length:} the number of 32 bits words in the header with a minimum value of 5 and a maximum value of 15.
+            \item \textbf{Type of service:} low delay, high throughput or reliability.
+            \item \textbf{Total Length:} header plus data length with minimum value of 20 Bytes and a maximum value of 65535 Bytes.
+                32 bits in total (4 Bytes)
+            \item \textbf{Identification:} a unique packet id.
+            \item \textbf{Flags}
+            \begin{compactitem}
+                \item \textbf{Reserved bit:} must be zero.
+                \item \textbf{Don't Fragment}
+                \item \textbf{More Fragment}
+            \end{compactitem}
+        \item \textbf{Fragment offset:} number of data Bytes ahead of the particular fragment in the particular datagram.
+                32 bits in total (4 Bytes)
+            \item \textbf{Time to live:} datagram lifetime.
+            \item \textbf{Protocol:} name of the protocol.
+            \item \textbf{Header checksum:} allows error checking in the header.
+                32 bits in total (4 Bytes)
+            \item \textbf{Source IP}
+            \item \textbf{Destination IP}
+            \item \textbf{Option:} optional information for network administrators.
+        \end{compactitem}
+
     \section{Connecting two devices with a switch}
         This first part is very simple. There are two devices (PC0 and Laptop0) connected to a switch and their network starts with 192.168.\textbf{\textit{GROUP NUMBER}}.0.\\
         Therefore:
 
-        \begin{itemize}
+        \begin{compactitem}
             \item Group: 7 [192.168.7.0/24]
             \item Laptop0  [192.168.7.1]
             \item PC0      [192.168.7.2]
-        \end{itemize}
+        \end{compactitem}
 
         After applying the configuration we must run a set of commands to test our network.
         \begin{itemize}
@@ -321,32 +375,32 @@
         \end{itemize}
 
     \subsection{Simulating a network using Cisco Packet Tracer}
-        For this project Cisco Packet Tracer will be our main tool. Using the Command Line Prompt (CMD) in each device, will simulate all referenced commands in the network.\\
-        So let's get in this magnificient world starting with these steps:\\
+        For this project Cisco Packet Tracer will be our main tool. Using the Command Prompt (CMD) in each device, we'll simulate all referenced commands in the network.\\
+        So let's get into this magnificient world, starting with these steps:\\
         \begin{flushleft}
-                \begin{center}
-                    \begin{longtable}{ m{5cm} l }
-                        \textbf{Steps} & \textbf{Example} \\
-                        \hline
-                        \endfirsthead
-                        \multicolumn{2}{c}%
-                        {{\bfseries Table \thetable\ continued from previous page}} \\
-                        %{{\bfseries \tablename\ \thetable{} -- continued}} \\
-                        \textbf{Steps} & \textbf{Example} \\
-                        \hline
-                        \endhead
-                        \hline Continued on next page \\
-                        \endfoot
-                        \endlastfoot
+            \begin{center}
+                \begin{longtable}{ m{5cm} l }
+                    \textbf{Steps} & \textbf{Example} \\
+                    \hline
+                    \endfirsthead
+                    \multicolumn{2}{c}%
+                    {{\bfseries Table \thetable\ continued from previous page}} \\
+                    \textbf{Steps} & \textbf{Example} \\
+                    \hline
+                    \endhead
+                    \hline Continued on next page \\
+                    \endfoot
+                    \endlastfoot
 
-                        To configure the IP on a device we must \textbf{single-click} in the intended device (1), go to the \textit{desktop tab} (2) and select \textit{IP Configuration} (3).                                                                                                      & \includegraphics[scale=0.35,valign=c]{phase2/images/p1-connectingdevices/CiscoPacketTracer_configIP} \\ \hline
-                        Now we configure our devices according to the required addresses.                                                                                                                                                                                                           & \includegraphics[scale=0.34,valign=c]{phase2/images/p1-connectingdevices/Laptop0PC0_ip} \\ \hline
-                        To test the connection we select a device by \textbf{single-clicking} it (1), go to the \textit{desktop tab} (2) and select \textit{Command Prompt} (3).                                                                                                                    & \includegraphics[scale=0.35,valign=c]{phase2/images/p1-connectingdevices/CiscoPacketTracer_cmdOutput} \\ \hline
-                        We start by running \textit{arp -a} command, no prior discovery was made so the arp table will be empty. Then will \textit{ping} our other device. Run the \textit{arp -a} command again and will see it populated. If we do a \textit{tracert} there won't be any hops.    & \includegraphics[scale=0.34,valign=c]{phase2/images/p1-connectingdevices/Laptop0PC0_cmd} \\ \hline
+                    To configure the IP on a device we must \textbf{single-click} in the intended device (1), go to the \textit{desktop tab} (2) and select \textit{IP Configuration} (3).                                                                                                      & \includegraphics[scale=0.35,valign=c]{p1-connectingdevices/CiscoPacketTracer_configIP} \\ \hline
+                    Now we configure our devices according to the required addresses.                                                                                                                                                                                                           & \includegraphics[scale=0.34,valign=c]{p1-connectingdevices/Laptop0PC0_ip} \\ \hline
+                    To test the connection we select a device by \textbf{single-clicking} it (1), go to the \textit{desktop tab} (2) and select \textit{Command Prompt} (3).                                                                                                                    & \includegraphics[scale=0.35,valign=c]{p1-connectingdevices/CiscoPacketTracer_cmdOutput} \\ \hline
+                    We start by running \textit{arp -a} command, no prior discovery was made so the arp table will be empty. Then we'll \textit{ping} our other device. Run the \textit{arp -a} command again and we'll see it populated. If we do a \textit{tracert} there won't be any hops.    & \includegraphics[scale=0.34,valign=c]{p1-connectingdevices/Laptop0PC0_cmd} \\ \hline
 
-                        \caption{Cisco Packet Tracer guide} \label{tab:cptg}
-                    \end{longtable}
-                \end{center}
+                    \caption{Cisco Packet Tracer guide}
+                    \label{tab:cptg}
+                \end{longtable}
+            \end{center}
         \end{flushleft}
 
         And to supplement the output images, below are the text versions:
@@ -355,25 +409,40 @@
             language={},
             caption={PC0 CMD output},
             label={lst:pc0cmdoutp1}
-        ]{phase2/outputs/p1-connectingdevices/PC0.txt}
+        ]{./outputs/p1-connectingdevices/PC0.txt}
         \lstinputlisting[
             language={},
             caption={Laptop0 CMD output},
             label={lst:laptop0cmdoutp1}
-        ]{phase2/outputs/p1-connectingdevices/Laptop0.txt}
+        ]{./outputs/p1-connectingdevices/Laptop0.txt}
 
-        \textbf{Question:} How can a PC know if it is connected to a switch? Is traceroute useful in this situation? \\
-        \textbf{Answer:}\\
-        \hspace*{10mm}If a device is connected to a switch, the arp table will include both devices IP addresses after a ping to each other. However, if connected to a router (as will see in the next section), they will only include their gateways IP addresses.\\
-        \hspace*{10mm}Traceroute isn't very useful here. It only shows hops in a routed network path (layer 3). Layer 2 devices such as switches won't show up since they receive and forward ethernet frames.\\
+        \begin{quote}
+            \textbf{Question:} How can a PC know if it is connected to a switch? Is traceroute useful in this situation? \\
+            \\
+            \textbf{Answer:}
+            If a device is connected to a switch, the arp table will include both devices IP addresses after a ping to each other. However, if connected to a router (as we'll see in the next section), they we'll only include their gateways IP addresses.\\
+            Traceroute isn't very useful here. It only shows hops in a routed network path (layer 3). Layer 2 devices, such as switches, won't show up since they receive and forward ethernet frames.\\
+        \end{quote}
 
     \section{Connecting two LANs with a router}
-        \lstinputlisting[
-            language={},
-            numbers=none,
-            caption={Network plan},
-            label={lst:netplan}
-        ]{phase2/outputs/diagram.txt}
+        \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.40,valign=c]{diagramL250}
+            \caption{Part 2 network diagram}
+            \label{fig:p2netdiag}
+        \end{figure}
+
+        Connecting to devices was pretty straight forward. Now comes the expected progress. What follows next tackles a network approach paramount for the next four phases.\\
+            \[
+                Clients_{LAN_A} = max\left(20, \left(\sum_{k=0}^n studentnumber_k\right)mod 100\right)\quad
+                Clients_{LAN_A} = 48\quad
+            \] \\
+            \[
+                Clients_{LAN_B} = \frac{Clients_{LAN_A}}{2}\quad
+                Clients_{LAN_B} = 27\quad
+            \]\\
+
+        Using the required mathmatical equations, provided in the project, we reach the conclusions presented in the following tables.\\
 
         \begin{center}
             \begin{longtable}{rlcccccccccccccccc}
@@ -417,15 +486,15 @@
         \begin{center}
             \begin{longtable}{lllllll}
                 \hline
-                                                               & \textbf{Network}           & \textbf{Usable IPs} & \textbf{Router} & \multicolumn{1}{c}{\textbf{Broadcast}} & \multicolumn{1}{c}{\textbf{Subnet Mask}} &                                      \\ \cline{2-6}
-                \multirow{-2}{*}{\textbf{Name}}                & \multicolumn{5}{c}{192.168.7.}                                                                                                                         & \multirow{-2}{*}{\textbf{Populated}} \\ \hline
+                                                               & \textbf{Network}           & \textbf{Usable IPs} & \textbf{Router} & \multicolumn{1}{c}{\textbf{Broadcast}} & \multicolumn{1}{c}{\textbf{Subnet Mask}} &                                      \\ \cline{2-5}
+                \multirow{-2}{*}{\textbf{Name}}                & \multicolumn{4}{c}{192.168.7.}                                                                              & \multicolumn{1}{c}{255.255.255.}         & \multirow{-2}{*}{\textbf{Populated}} \\ \hline
                 \endfirsthead
                 %
                 \multicolumn{7}{c}%
                 {{\bfseries Table \thetable\ continued from previous page}} \\
                 \hline
-                                                               & \textbf{Network}           & \textbf{Usable IPs} & \textbf{Router} & \multicolumn{1}{c}{\textbf{Broadcast}} & \multicolumn{1}{c}{\textbf{Subnet Mask}} &                                      \\ \cline{2-6}
-                \multirow{-2}{*}{\textbf{Name}}                & \multicolumn{5}{c}{192.168.7.}                                                                                                                         & \multirow{-2}{*}{\textbf{Populated}} \\ \hline
+                                                               & \textbf{Network}           & \textbf{Usable IPs} & \textbf{Router} & \multicolumn{1}{c}{\textbf{Broadcast}} & \multicolumn{1}{c}{\textbf{Subnet Mask}} &                                      \\ \cline{2-5}
+                \multirow{-2}{*}{\textbf{Name}}                & \multicolumn{4}{c}{192.168.7.}                                                                              & \multicolumn{1}{c}{255.255.255.}         & \multirow{-2}{*}{\textbf{Populated}} \\ \hline
                 \endhead
                 %
                 \hline
@@ -497,9 +566,10 @@
                 \end{longtable}
         \end{center}
 
-        The above tables will be used through out the project. Instead of planning for each phase and re-assigning the entire network, It was opted to fully outline every subnet and device for the sake of simplicity and work.
-        However, here we'll focus on router \textbf{\textit{R1}}, and networks \textbf{\textit{LAN A}} and \textbf{\textit{LAN B}}. For now let's just focus on the IP addresses, the meaning of values will be explained in Phase 3.
-        And once again, \textbf{Cisco Packet Tracer} to the help:
+        Instead of planning for each phase and re-assigning the entire network, it was opted to fully outline every subnet and device in a pramatic manner.\\
+        However, here we'll focus on router \textbf{\textit{R1}}, and the respective networks, \textbf{\textit{LAN A}} and \textbf{\textit{LAN B}}.\\
+
+        Once again, \textbf{Cisco Packet Tracer} to the help:
 
         \begin{flushleft}
                 \begin{center}
@@ -509,7 +579,6 @@
                         \endfirsthead
                         \multicolumn{2}{c}%
                         {{\bfseries Table \thetable\ continued from previous page}} \\
-                        %{{\bfseries \tablename\ \thetable{} -- continued}} \\
                         \textbf{Steps} & \textbf{Example} \\
                         \hline
                         \endhead
@@ -517,18 +586,19 @@
                         \endfoot
                         \endlastfoot
 
-                        text & \includegraphics[scale=0.35,valign=c]{phase2/images/p1-connectingdevices/CiscoPacketTracer_configIP} \\ \hline
-                        text & \includegraphics[scale=0.34,valign=c]{phase2/images/p2-connecting2lanswithrouter/Laptop0PC0_ip} \\ \hline
-                        text & \includegraphics[scale=0.34,valign=c]{phase2/images/p2-connecting2lanswithrouter/Laptop1PC1_ip} \\ \hline
-                        text & \includegraphics[scale=0.31,valign=c]{phase2/images/p2-connecting2lanswithrouter/R1-interfaces} \\ \hline
-                        text & \includegraphics[scale=0.35,valign=c]{phase2/images/p1-connectingdevices/CiscoPacketTracer_cmdOutput} \\ \hline
-                        text & \includegraphics[scale=0.34,valign=c]{phase2/images/p2-connecting2lanswithrouter/Laptop0_cmdall} \\ \hline
-                        text & \includegraphics[scale=0.34,valign=c]{phase2/images/p2-connecting2lanswithrouter/PC0_cmdall} \\ \hline
-                        text & \includegraphics[scale=0.34,valign=c]{phase2/images/p2-connecting2lanswithrouter/Laptop1_cmdall} \\ \hline
-                        text & \includegraphics[scale=0.34,valign=c]{phase2/images/p2-connecting2lanswithrouter/PC1_cmdall} \\ \hline
-                        text & \includegraphics[scale=0.202,valign=c]{phase2/images/p2-connecting2lanswithrouter/R1-cliall} \\ \hline
+                        To configure the IP on a device we must \textbf{single-click} in the intended device (1), go to the \textit{desktop tab} (2) and select \textit{IP Configuration} (3).                                                                                                                                                                                                                      & \includegraphics[scale=0.35 ,valign=c]{p1-connectingdevices/CiscoPacketTracer_configIP}   \\ \hline
+                        Configure Laptop0 and PC0 computers accordingly to our results.                                                                                                                                                                                                                                                                                                                             & \includegraphics[scale=0.34 ,valign=c]{p2-connecting2lanswithrouter/Laptop0PC0_ip}        \\ \hline
+                        And the same for Laptop1 and PC1.                                                                                                                                                                                                                                                                                                                                                           & \includegraphics[scale=0.34 ,valign=c]{p2-connecting2lanswithrouter/Laptop1PC1_ip}        \\ \hline
+                        For the router there's two options, both valid and exhibited in the report. The GUI in the right and the CLI, after this table, along CMD equivalent commands output. We're using \textbf{FastEthernet0/0} for \textit{LAN A} and \textbf{FastEthernet1/0} for \textit{LAN B}, going by the graphical user interface (GUI) it's crystal clear, just input the necessary IP and subnet mask. & \includegraphics[scale=0.31 ,valign=c]{p2-connecting2lanswithrouter/R1-interfaces}        \\ \hline
+                        To test the connection we select a device by \textbf{single-clicking} it (1), go to the \textit{desktop tab} (2) and select \textit{Command Prompt} (3).                                                                                                                                                                                                                                    & \includegraphics[scale=0.35 ,valign=c]{p1-connectingdevices/CiscoPacketTracer_cmdOutput}  \\ \hline
+                        Contrary to our experiment in the previous section, it's unmistakable that after the first ping, the router provides information related to the whereabouts of the pinged device, due to \textbf{arp -a} command showing the router configured gateways.                                                                                                                                    & \includegraphics[scale=0.34 ,valign=c]{p2-connecting2lanswithrouter/Laptop0_cmdall}       \\ \hline
+                        From the viewpoint of PC0.                                                                                                                                                                                                                                                                                                                                                                  & \includegraphics[scale=0.34 ,valign=c]{p2-connecting2lanswithrouter/PC0_cmdall}           \\ \hline
+                        From the viewpoint of Laptop1.                                                                                                                                                                                                                                                                                                                                                              & \includegraphics[scale=0.34 ,valign=c]{p2-connecting2lanswithrouter/Laptop1_cmdall}       \\ \hline
+                        From the viewpoint of PC1.                                                                                                                                                                                                                                                                                                                                                                  & \includegraphics[scale=0.34 ,valign=c]{p2-connecting2lanswithrouter/PC1_cmdall}           \\ \hline
+                        From the viewpoint of Router1.                                                                                                                                                                                                                                                                                                                                                              & \includegraphics[scale=0.202,valign=c]{p2-connecting2lanswithrouter/R1-cliall}            \\ \hline
 
-                        \caption{Cisco Packet Tracer guide} \label{tab:cptg2}
+                        \caption{Cisco Packet Tracer guide}
+                        \label{tab:cptg2}
                     \end{longtable}
                 \end{center}
         \end{flushleft}
@@ -539,27 +609,38 @@
             language={},
             caption={PC0 CMD output},
             label={lst:pc0cmdoutp2}
-        ]{phase2/outputs/p2-connecting2lanswithrouter/PC0.txt}
+        ]{./outputs/p2-connecting2lanswithrouter/PC0.txt}
         \lstinputlisting[
             language={},
             caption={Laptop0 CMD output},
             label={lst:laptop0cmdoutp2}
-        ]{phase2/outputs/p2-connecting2lanswithrouter/Laptop0.txt}
+        ]{./outputs/p2-connecting2lanswithrouter/Laptop0.txt}
         \lstinputlisting[
             language={},
             caption={PC1 CMD output},
             label={lst:pc1cmdoutp2}
-        ]{phase2/outputs/p2-connecting2lanswithrouter/PC1.txt}
+        ]{./outputs/p2-connecting2lanswithrouter/PC1.txt}
         \lstinputlisting[
             language={},
             caption={Laptop1 CMD output},
             label={lst:laptop1cmdoutp2}
-        ]{phase2/outputs/p2-connecting2lanswithrouter/Laptop1.txt}
+        ]{./outputs/p2-connecting2lanswithrouter/Laptop1.txt}
         \lstinputlisting[
             language={},
             caption={Router 1 CLI output},
             label={lst:r1cmdoutp2}
-        ]{phase2/outputs/p2-connecting2lanswithrouter/R1.txt}
+        ]{./outputs/p2-connecting2lanswithrouter/R1.txt}
+
+        It's evident why tracert is showing hops here. Now we have a router managing two local networks, as a consequence, each device goes through the router path.\\
+        Ergo, the arp table is filled, not with device addresses but, with the router's network IP address.\\
+
+        We're one step closer to become full network engineers!\\
+        \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.3]{ccna} 
+            \caption{The best kind there is!}
+            \label{fig:funnyccna}
+        \end{figure}
 
 %% Chapter: recomendations -----------------------------------------------------
 \chapter{Issues and fixes}

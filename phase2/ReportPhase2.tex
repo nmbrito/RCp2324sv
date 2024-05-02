@@ -284,9 +284,11 @@
 \chapter{Introduction}
 % display headers & footers
     \pagestyle{fancy}
-    The project consists in building a computer network through four phases. First with a webserver, then simulating a local area network (LAN) with two computers and a switch.
-    By the end of the journey, this project will develop into something similar to a corporate network.
-    %TODO
+    For phase 2 we were tasked to configure two local area networks using a router. By applying the principles of subnetting we can dimension our network pragmatically, keeping in check the assigned requirements, wasting only a minimal ammount of unallocated IP addresses.\\
+    Since the next phases overlap in planning, the majority of information presented in this report will be used for the upcoming parts. Time is of essence, this little manuveur allowed to save time and energy since all the hard work is done.\\
+    To better understand what we're dealing with we'll also explore a little bit about IP version 4, what it contains and how does it work. Concepts about routers, configuring our devices, taking advantage of switches and so on are displayed in this phase.\\
+    %TODO: gotta go finish this thing!!!!
+    %Phase 3 almost copy paste except all the theory. create mucho nats
 
 % main page numbers with arabic numerals
     \pagenumbering{arabic}\setcounter{page}{1}
@@ -644,19 +646,14 @@
 
 %% Chapter: recomendations -----------------------------------------------------
 \chapter{Issues and fixes}
-    Running python code: \\
-        \hspace*{10mm}Python3 wasn't installed by default. Then had to run the code with: \$ python3 httpsocketv3.py. \\
-    Encrypted html body in wireshark: \\
-        \hspace*{10mm}Initially I had to run wireshark in a remote virtual private network (VPN) connection. Fortunately I could see the VPN doing it's magic but also couldn't see the HTTP body, since it was encrypted. \\
-    Default HTTP protocol, HTTPS: \\
-        \hspace*{10mm}To guarantee the HTTP connection I had to disable SSLEngine in Apache2 WebServer. \\
+    Cisco Packet Tracer in MacOS:\\
+        \hspace*{10mm}No solution was found to deal with those annoying popups that takes primary focus over other windows, even using the latest version.
 
 %% Chapter: conclusions --------------------------------------------------------
 \chapter{Conclusions}
-During phase 1 many challenges were met.
-By creating (or in this case adapting) a webclient without using the http library, it allowed a better understanding of the protocol requests and replies by taking advantage of the provided protocol stack in a operating system.
-Employing the wireless packet monitor, wireshark, concepts related to http were better understood as all transactions between webclient and webserver were seen in real time, allowing a greater furthering of knowledge.
-%TODO
+    By outlining our entire project we reached a, somewhat, relief.\\
+    By testing first with a switch we understood how arp tables work, storing it's information in devices since layered 2 equipments don't provide that functionality. Right after we got to put that argument to the test by using a router to connect to distinct LANs. And it checks out, layered 3 devices keep arp tables, displaying only their gateways through tracert (traceroute).
+    %TODO: end it please
 
 %% Bibliography ----------------------------------------------------------------
 %\renewcommand{\bibname}{Bibliographic references}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.10)  2 MAY 2024 12:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.10)  3 MAY 2024 08:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -925,6 +925,11 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 (Font)              scaled to size 10.0pt on input line 284.
  [7]
 Chapter 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 287--292
+
+ []
+
 [1
 
 ]
@@ -932,266 +937,261 @@ Chapter 2.
 <./images/stopdoingipv6.png, id=154, 1084.05pt x 1055.945pt>
 File: ./images/stopdoingipv6.png Graphic file (type png)
 <use ./images/stopdoingipv6.png>
-Package pdftex.def Info: ./images/stopdoingipv6.png  used on input line 301.
+Package pdftex.def Info: ./images/stopdoingipv6.png  used on input line 303.
 (pdftex.def)             Requested size: 325.21751pt x 316.78595pt.
 [2
 
  <./images/stopdoingipv6.png>]
-Overfull \hbox (49.53343pt too wide) in alignment at lines 311--314
+Overfull \hbox (49.53343pt too wide) in alignment at lines 313--316
  [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (49.53343pt too wide) in alignment at lines 314--320
+Overfull \hbox (49.53343pt too wide) in alignment at lines 316--322
  [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (49.53343pt too wide) in alignment at lines 320--330
+Overfull \hbox (49.53343pt too wide) in alignment at lines 322--332
  [] [] [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--335
+Underfull \hbox (badness 10000) in paragraph at lines 335--337
 
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 337.
+LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 339.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 )
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.95pt on input line 337.
+(Font)              scaled to size 10.95pt on input line 339.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/it' will be
-(Font)              scaled to size 10.95pt on input line 361.
+(Font)              scaled to size 10.95pt on input line 363.
  [3{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 378--380
+Underfull \hbox (badness 10000) in paragraph at lines 380--382
 
  []
 
 
-Overfull \hbox (18.1631pt too wide) in alignment at lines 382--385
+Overfull \hbox (18.1631pt too wide) in alignment at lines 384--387
  [] [] 
  []
 
 
-Overfull \hbox (18.1631pt too wide) in alignment at lines 385--390
+Overfull \hbox (18.1631pt too wide) in alignment at lines 387--392
  [] [] 
  []
 
 
-Overfull \hbox (18.1631pt too wide) in alignment at lines 390--392
+Overfull \hbox (18.1631pt too wide) in alignment at lines 392--394
  [] [] 
  []
 
 
-Overfull \hbox (18.1631pt too wide) in alignment at lines 392--393
+Overfull \hbox (18.1631pt too wide) in alignment at lines 394--395
  [] [] 
  []
 
 <./images/p1-connectingdevices/CiscoPacketTracer_configIP.png, id=168, 875.27pt x 454.69875pt>
 File: ./images/p1-connectingdevices/CiscoPacketTracer_configIP.png Graphic file (type png)
 <use ./images/p1-connectingdevices/CiscoPacketTracer_configIP.png>
-Package pdftex.def Info: ./images/p1-connectingdevices/CiscoPacketTracer_configIP.png  used on input line 395.
+Package pdftex.def Info: ./images/p1-connectingdevices/CiscoPacketTracer_configIP.png  used on input line 397.
 (pdftex.def)             Requested size: 306.34909pt x 159.14694pt.
 <./images/p1-connectingdevices/Laptop0PC0_ip.png, id=169, 903.375pt x 738.76pt>
 File: ./images/p1-connectingdevices/Laptop0PC0_ip.png Graphic file (type png)
 <use ./images/p1-connectingdevices/Laptop0PC0_ip.png>
-Package pdftex.def Info: ./images/p1-connectingdevices/Laptop0PC0_ip.png  used on input line 396.
+Package pdftex.def Info: ./images/p1-connectingdevices/Laptop0PC0_ip.png  used on input line 398.
 (pdftex.def)             Requested size: 307.14343pt x 251.17506pt.
 <./images/p1-connectingdevices/CiscoPacketTracer_cmdOutput.png, id=170, 875.27pt x 454.69875pt>
 File: ./images/p1-connectingdevices/CiscoPacketTracer_cmdOutput.png Graphic file (type png)
 <use ./images/p1-connectingdevices/CiscoPacketTracer_cmdOutput.png>
-Package pdftex.def Info: ./images/p1-connectingdevices/CiscoPacketTracer_cmdOutput.png  used on input line 397.
+Package pdftex.def Info: ./images/p1-connectingdevices/CiscoPacketTracer_cmdOutput.png  used on input line 399.
 (pdftex.def)             Requested size: 306.34909pt x 159.14694pt.
 <./images/p1-connectingdevices/Laptop0PC0_cmd.png, id=171, 903.375pt x 738.76pt>
 File: ./images/p1-connectingdevices/Laptop0PC0_cmd.png Graphic file (type png)
 <use ./images/p1-connectingdevices/Laptop0PC0_cmd.png>
-Package pdftex.def Info: ./images/p1-connectingdevices/Laptop0PC0_cmd.png  used on input line 398.
+Package pdftex.def Info: ./images/p1-connectingdevices/Laptop0PC0_cmd.png  used on input line 400.
 (pdftex.def)             Requested size: 307.14343pt x 251.17506pt.
 
-Overfull \hbox (18.1631pt too wide) in alignment at lines 393--402
+Overfull \hbox (18.1631pt too wide) in alignment at lines 395--404
  [] [] 
  []
 
 [4 <./images/p1-connectingdevices/CiscoPacketTracer_configIP.png (PNG copy)>] [5 <./images/p1-connectingdevices/Laptop0PC0_ip.png> <./images/p1-connectingdevices/CiscoPacketTracer_cmdOutput.png> <./images/p1-connectingdevices/Laptop0PC0_cmd.png>]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 412.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 414.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 412.
-LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 412.
+(Font)              scaled to size 8.0pt on input line 414.
+LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 414.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/t1ntxtt.fd
 File: t1ntxtt.fd 2012/04/20 v3.1
 )
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 8.0pt on input line 412.
+(Font)              scaled to size 8.0pt on input line 414.
  (./outputs/p1-connectingdevices/PC0.txt)
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 10.95pt on input line 412.
+(Font)              scaled to size 10.95pt on input line 414.
  (./outputs/p1-connectingdevices/Laptop0.txt [6])
-Underfull \hbox (badness 10000) in paragraph at lines 420--425
+Underfull \hbox (badness 10000) in paragraph at lines 422--427
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 420--425
+Underfull \hbox (badness 10000) in paragraph at lines 422--427
 
  []
 
 <./images/diagramL250.png, id=246, 806.01125pt x 702.625pt>
 File: ./images/diagramL250.png Graphic file (type png)
 <use ./images/diagramL250.png>
-Package pdftex.def Info: ./images/diagramL250.png  used on input line 430.
+Package pdftex.def Info: ./images/diagramL250.png  used on input line 432.
 (pdftex.def)             Requested size: 322.39879pt x 281.04501pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--436
+Underfull \hbox (badness 10000) in paragraph at lines 437--438
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 439--440
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
 
  []
 
 [7{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc} <./images/diagramL250.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 443--444
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 445--446
 
  []
 
 
-Overfull \hbox (15.78528pt too wide) in alignment at lines 519--523
+Underfull \hbox (badness 10000) in paragraph at lines 447--448
+
+ []
+
+
+Overfull \hbox (15.78528pt too wide) in alignment at lines 521--525
  [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (15.78528pt too wide) in alignment at lines 523--530
+Overfull \hbox (15.78528pt too wide) in alignment at lines 525--532
  [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (15.78528pt too wide) in alignment at lines 530--533
+Overfull \hbox (15.78528pt too wide) in alignment at lines 532--535
  [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (15.78528pt too wide) in alignment at lines 533--535
+Overfull \hbox (15.78528pt too wide) in alignment at lines 535--537
  [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (15.78528pt too wide) in alignment at lines 535--566
+Overfull \hbox (15.78528pt too wide) in alignment at lines 537--568
  [] [] [] [] [] [] 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 569--571
+Underfull \hbox (badness 10000) in paragraph at lines 571--573
 
  []
 
 
-Overfull \hbox (18.1631pt too wide) in alignment at lines 576--579
+Overfull \hbox (18.1631pt too wide) in alignment at lines 578--581
  [] [] 
  []
 
 
-Overfull \hbox (18.1631pt too wide) in alignment at lines 579--584
+Overfull \hbox (18.1631pt too wide) in alignment at lines 581--586
  [] [] 
  []
 
 
-Overfull \hbox (18.1631pt too wide) in alignment at lines 584--586
+Overfull \hbox (18.1631pt too wide) in alignment at lines 586--588
  [] [] 
  []
 
 
-Overfull \hbox (18.1631pt too wide) in alignment at lines 586--587
+Overfull \hbox (18.1631pt too wide) in alignment at lines 588--589
  [] [] 
  []
 
 File: ./images/p1-connectingdevices/CiscoPacketTracer_configIP.png Graphic file (type png)
 <use ./images/p1-connectingdevices/CiscoPacketTracer_configIP.png>
-Package pdftex.def Info: ./images/p1-connectingdevices/CiscoPacketTracer_configIP.png  used on input line 589.
+Package pdftex.def Info: ./images/p1-connectingdevices/CiscoPacketTracer_configIP.png  used on input line 591.
 (pdftex.def)             Requested size: 306.34909pt x 159.14694pt.
 
-Underfull \hbox (badness 2443) in paragraph at lines 590--590
+Underfull \hbox (badness 2443) in paragraph at lines 592--592
 []|\T1/ntxtlf/m/n/10.95 Configure Lap-top0 and PC0
  []
 
 <./images/p2-connecting2lanswithrouter/Laptop0PC0_ip.png, id=270, 903.375pt x 738.76pt>
 File: ./images/p2-connecting2lanswithrouter/Laptop0PC0_ip.png Graphic file (type png)
 <use ./images/p2-connecting2lanswithrouter/Laptop0PC0_ip.png>
-Package pdftex.def Info: ./images/p2-connecting2lanswithrouter/Laptop0PC0_ip.png  used on input line 590.
+Package pdftex.def Info: ./images/p2-connecting2lanswithrouter/Laptop0PC0_ip.png  used on input line 592.
 (pdftex.def)             Requested size: 307.14343pt x 251.17506pt.
 <./images/p2-connecting2lanswithrouter/Laptop1PC1_ip.png, id=271, 903.375pt x 738.76pt>
 File: ./images/p2-connecting2lanswithrouter/Laptop1PC1_ip.png Graphic file (type png)
 <use ./images/p2-connecting2lanswithrouter/Laptop1PC1_ip.png>
-Package pdftex.def Info: ./images/p2-connecting2lanswithrouter/Laptop1PC1_ip.png  used on input line 591.
+Package pdftex.def Info: ./images/p2-connecting2lanswithrouter/Laptop1PC1_ip.png  used on input line 593.
 (pdftex.def)             Requested size: 307.14343pt x 251.17506pt.
 
-Underfull \hbox (badness 1052) in paragraph at lines 592--592
+Underfull \hbox (badness 1052) in paragraph at lines 594--594
 \T1/ntxtlf/m/n/10.95 mands out-put. We're us-ing
  []
 
 <./images/p2-connecting2lanswithrouter/R1-interfaces.png, id=272, 987.69pt x 905.3825pt>
 File: ./images/p2-connecting2lanswithrouter/R1-interfaces.png Graphic file (type png)
 <use ./images/p2-connecting2lanswithrouter/R1-interfaces.png>
-Package pdftex.def Info: ./images/p2-connecting2lanswithrouter/R1-interfaces.png  used on input line 592.
+Package pdftex.def Info: ./images/p2-connecting2lanswithrouter/R1-interfaces.png  used on input line 594.
 (pdftex.def)             Requested size: 306.18074pt x 280.66568pt.
 File: ./images/p1-connectingdevices/CiscoPacketTracer_cmdOutput.png Graphic file (type png)
 <use ./images/p1-connectingdevices/CiscoPacketTracer_cmdOutput.png>
-Package pdftex.def Info: ./images/p1-connectingdevices/CiscoPacketTracer_cmdOutput.png  used on input line 593.
+Package pdftex.def Info: ./images/p1-connectingdevices/CiscoPacketTracer_cmdOutput.png  used on input line 595.
 (pdftex.def)             Requested size: 306.34909pt x 159.14694pt.
 <./images/p2-connecting2lanswithrouter/Laptop0_cmdall.png, id=273, 903.375pt x 738.76pt>
 File: ./images/p2-connecting2lanswithrouter/Laptop0_cmdall.png Graphic file (type png)
 <use ./images/p2-connecting2lanswithrouter/Laptop0_cmdall.png>
-Package pdftex.def Info: ./images/p2-connecting2lanswithrouter/Laptop0_cmdall.png  used on input line 594.
+Package pdftex.def Info: ./images/p2-connecting2lanswithrouter/Laptop0_cmdall.png  used on input line 596.
 (pdftex.def)             Requested size: 307.14343pt x 251.17506pt.
 <./images/p2-connecting2lanswithrouter/PC0_cmdall.png, id=274, 903.375pt x 738.76pt>
 File: ./images/p2-connecting2lanswithrouter/PC0_cmdall.png Graphic file (type png)
 <use ./images/p2-connecting2lanswithrouter/PC0_cmdall.png>
-Package pdftex.def Info: ./images/p2-connecting2lanswithrouter/PC0_cmdall.png  used on input line 595.
+Package pdftex.def Info: ./images/p2-connecting2lanswithrouter/PC0_cmdall.png  used on input line 597.
 (pdftex.def)             Requested size: 307.14343pt x 251.17506pt.
 <./images/p2-connecting2lanswithrouter/Laptop1_cmdall.png, id=275, 903.375pt x 738.76pt>
 File: ./images/p2-connecting2lanswithrouter/Laptop1_cmdall.png Graphic file (type png)
 <use ./images/p2-connecting2lanswithrouter/Laptop1_cmdall.png>
-Package pdftex.def Info: ./images/p2-connecting2lanswithrouter/Laptop1_cmdall.png  used on input line 596.
+Package pdftex.def Info: ./images/p2-connecting2lanswithrouter/Laptop1_cmdall.png  used on input line 598.
 (pdftex.def)             Requested size: 307.14343pt x 251.17506pt.
 <./images/p2-connecting2lanswithrouter/PC1_cmdall.png, id=276, 903.375pt x 738.76pt>
 File: ./images/p2-connecting2lanswithrouter/PC1_cmdall.png Graphic file (type png)
 <use ./images/p2-connecting2lanswithrouter/PC1_cmdall.png>
-Package pdftex.def Info: ./images/p2-connecting2lanswithrouter/PC1_cmdall.png  used on input line 597.
+Package pdftex.def Info: ./images/p2-connecting2lanswithrouter/PC1_cmdall.png  used on input line 599.
 (pdftex.def)             Requested size: 307.14343pt x 251.17506pt.
 <./images/p2-connecting2lanswithrouter/R1-cliall.png, id=277, 1517.67pt x 765.86125pt>
 File: ./images/p2-connecting2lanswithrouter/R1-cliall.png Graphic file (type png)
 <use ./images/p2-connecting2lanswithrouter/R1-cliall.png>
-Package pdftex.def Info: ./images/p2-connecting2lanswithrouter/R1-cliall.png  used on input line 598.
+Package pdftex.def Info: ./images/p2-connecting2lanswithrouter/R1-cliall.png  used on input line 600.
 (pdftex.def)             Requested size: 306.56229pt x 154.70041pt.
 
-Overfull \hbox (18.1631pt too wide) in alignment at lines 587--602
+Overfull \hbox (18.1631pt too wide) in alignment at lines 589--604
  [] [] 
  []
 
 [9] [10 <./images/p2-connecting2lanswithrouter/Laptop0PC0_ip.png> <./images/p2-connecting2lanswithrouter/Laptop1PC1_ip.png>] [11 <./images/p2-connecting2lanswithrouter/R1-interfaces.png>] [12 <./images/p2-connecting2lanswithrouter/Laptop0_cmdall.png> <./images/p2-connecting2lanswithrouter/PC0_cmdall.png>] [13 <./images/p2-connecting2lanswithrouter/Laptop1_cmdall.png> <./images/p2-connecting2lanswithrouter/PC1_cmdall.png> <./images/p2-connecting2lanswithrouter/R1-cliall.png>] (./outputs/p2-connecting2lanswithrouter/PC0.txt [14]) (./outputs/p2-connecting2lanswithrouter/Laptop0.txt [15] [16]) (./outputs/p2-connecting2lanswithrouter/PC1.txt [17] [18]) (./outputs/p2-connecting2lanswithrouter/Laptop1.txt [19] [20]) (./outputs/p2-connecting2lanswithrouter/R1.txt [21] [22])
-Underfull \hbox (badness 10000) in paragraph at lines 634--636
+Underfull \hbox (badness 10000) in paragraph at lines 636--638
 
  []
 
 <./images/ccna.png, id=983, 1174.3875pt x 1099.10625pt>
 File: ./images/ccna.png Graphic file (type png)
 <use ./images/ccna.png>
-Package pdftex.def Info: ./images/ccna.png  used on input line 640.
+Package pdftex.def Info: ./images/ccna.png  used on input line 642.
 (pdftex.def)             Requested size: 352.31897pt x 329.73442pt.
 [23 <./images/ccna.png>]
 Chapter 3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 647--653
-
- []
-
 [24
 
 ]
@@ -1221,7 +1221,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  86i,14n,117p,784b,2158s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmbi.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on ReportPhase2.pdf (34 pages, 6143660 bytes).
+Output written on ReportPhase2.pdf (34 pages, 6143502 bytes).
 PDF statistics:
  1231 PDF objects out of 1440 (max. 8388607)
  1130 compressed objects within 12 object streams

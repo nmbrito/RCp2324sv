@@ -285,10 +285,8 @@
 % display headers & footers
     \pagestyle{fancy}
     For phase 2 we were tasked to configure two local area networks using a router. By applying the principles of subnetting we can dimension our network pragmatically, keeping in check the assigned requirements, wasting only a minimal ammount of unallocated IP addresses.\\
-    Since the next phases overlap in planning, the majority of information presented in this report will be used for the upcoming parts. Time is of essence, this little manuveur allowed to save time and energy since all the hard work is done.\\
-    To better understand what we're dealing with we'll also explore a little bit about IP version 4, what it contains and how does it work. Concepts about routers, configuring our devices, taking advantage of switches and so on are displayed in this phase.\\
-    %TODO: gotta go finish this thing!!!!
-    %Phase 3 almost copy paste except all the theory. create mucho nats
+    Since the next phases overlap in planning, the majority of information presented in this report will be used for the upcoming parts. Time is of essence, this little manuveur allowed us to save on time and energy since all the hard work is done.\\
+    To better understand what we're dealing with we'll also explore a little bit about IP version 4, what it contains and how does it work. Concepts about routers, configuring our devices, taking advantage of switches and so on are also displayed in this phase.\\
 
 % main page numbers with arabic numerals
     \pagenumbering{arabic}\setcounter{page}{1}
@@ -437,10 +435,14 @@
         Connecting to devices was pretty straight forward. Now comes the expected progress. What follows next tackles a network approach paramount for the next four phases.\\
             \[
                 Clients_{LAN_A} = max\left(20, \left(\sum_{k=0}^n studentnumber_k\right)mod 100\right)\quad
+            \] \\
+            \[
                 Clients_{LAN_A} = 48\quad
             \] \\
             \[
                 Clients_{LAN_B} = \frac{Clients_{LAN_A}}{2}\quad
+            \] \\
+            \[
                 Clients_{LAN_B} = 27\quad
             \]\\
 
@@ -651,9 +653,7 @@
 
 %% Chapter: conclusions --------------------------------------------------------
 \chapter{Conclusions}
-    By outlining our entire project we reached a, somewhat, relief.\\
-    By testing first with a switch we understood how arp tables work, storing it's information in devices since layered 2 equipments don't provide that functionality. Right after we got to put that argument to the test by using a router to connect to distinct LANs. And it checks out, layered 3 devices keep arp tables, displaying only their gateways through tracert (traceroute).
-    %TODO: end it please
+    By testing first with a switch we understood how arp tables work, storing it's information in devices since layered 2 equipments don't provide that functionality. Right after we got to put that argument to the test by using a router to connect to two distinct LANs. And it checks out, layered 3 devices store arp tables, displaying only their gateways through tracert (traceroute).
 
 %% Bibliography ----------------------------------------------------------------
 %\renewcommand{\bibname}{Bibliographic references}

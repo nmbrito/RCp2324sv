@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.10)  8 MAY 2024 22:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.10)  9 MAY 2024 10:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -937,59 +937,59 @@ File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 )
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
 (Font)              scaled to size 10.95pt on input line 297.
-<./images/diagramL250.png, id=112, 806.01125pt x 702.625pt>
+<./images/diagramL250.png, id=114, 806.01125pt x 702.625pt>
 File: ./images/diagramL250.png Graphic file (type png)
 <use ./images/diagramL250.png>
 Package pdftex.def Info: ./images/diagramL250.png  used on input line 304.
 (pdftex.def)             Requested size: 322.39879pt x 281.04501pt.
 
-Overfull \hbox (44.18639pt too wide) in alignment at lines 315--319
+Overfull \hbox (33.35683pt too wide) in alignment at lines 315--319
  [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (44.18639pt too wide) in alignment at lines 319--326
+Overfull \hbox (33.35683pt too wide) in alignment at lines 319--326
  [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (44.18639pt too wide) in alignment at lines 326--329
+Overfull \hbox (33.35683pt too wide) in alignment at lines 326--329
  [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (44.18639pt too wide) in alignment at lines 329--331
+Overfull \hbox (33.35683pt too wide) in alignment at lines 329--331
  [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (44.18639pt too wide) in alignment at lines 331--350
+Overfull \hbox (33.35683pt too wide) in alignment at lines 331--350
  [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 [2
 
-{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc} <./images/diagramL250.png>] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 481--482
+{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc} <./images/diagramL250.png>] [3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 514--515
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 485--486
+Underfull \hbox (badness 10000) in paragraph at lines 518--519
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 489--490
+Underfull \hbox (badness 10000) in paragraph at lines 522--523
 
  []
 
-[4{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 491--492
+
+Underfull \hbox (badness 10000) in paragraph at lines 524--525
 
  []
 
-[5]
+[5{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}]
 Chapter 3.
 [6
 
@@ -1012,18 +1012,18 @@ Package rerunfilecheck Info: File `ReportPhase3.out' has not changed.
 (rerunfilecheck)             Checksum: 3ACAF0C79E7A22504C28861C9406C7D2;1068.
  ) 
 Here is how much of TeX's memory you used:
- 20519 strings out of 474116
- 322177 string characters out of 5743682
- 1997187 words of memory out of 5000000
+ 20520 strings out of 474116
+ 322151 string characters out of 5743682
+ 1998187 words of memory out of 5000000
  42486 multiletter control sequences out of 15000+600000
  632864 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,13n,117p,726b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,13n,117p,712b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmbi.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on ReportPhase3.pdf (16 pages, 282055 bytes).
+Output written on ReportPhase3.pdf (16 pages, 282730 bytes).
 PDF statistics:
- 213 PDF objects out of 1000 (max. 8388607)
- 167 compressed objects within 2 object streams
- 32 named destinations out of 1000 (max. 500000)
+ 215 PDF objects out of 1000 (max. 8388607)
+ 169 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 

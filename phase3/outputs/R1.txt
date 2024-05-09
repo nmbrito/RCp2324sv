@@ -48,8 +48,6 @@ Router#
 Router#configure terminal
 Enter configuration commands, one per line.  End with CNTL/Z.
 Router(config)#interface FastEthernet0/0
-Router(config-if)#ip address  255.255.255.192
-% Incomplete command.
 Router(config-if)#ip address 192.168.7.190 255.255.255.192
 Router(config-if)#no shutdown
 Router(config-if)#
@@ -59,48 +57,6 @@ Router(config-if)#
 
 Router(config-if)#exit
 Router(config)#interface FastEthernet1/0
-Router(config-if)#ip address  255.255.255.224
-% Incomplete command.
-Router(config-if)#ip address 192.168.7.222 255.255.255.224
-Router(config-if)#ip address 192.168.7.222 255.255.255.224
-Router(config-if)#
-Router(config-if)#exit
-Router(config)#interface FastEthernet0/0
-Router(config-if)#ip address  
-% Incomplete command.
-Router(config-if)#ip address  
-% Incomplete command.
-Router(config-if)#
-Router(config-if)#exit
-Router(config)#interface FastEthernet1/0
-Router(config-if)#ip address  
-% Incomplete command.
-Router(config-if)#ip address  
-% Incomplete command.
-Router(config-if)#
-Router(config-if)#exit
-Router(config)#interface FastEthernet0/0
-Router(config-if)#shutdown
-Router(config-if)#
-%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to administratively down
-
-%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to down
-
-Router(config-if)#exit
-Router(config)#interface FastEthernet0/0
-Router(config-if)#ip address  255.255.255.192
-% Incomplete command.
-Router(config-if)#ip address 192.168.7.190 255.255.255.192
-Router(config-if)#no shutdown
-Router(config-if)#
-%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up
-
-%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to up
-
-Router(config-if)#exit
-Router(config)#interface FastEthernet1/0
-Router(config-if)#ip address  255.255.255.224
-% Incomplete command.
 Router(config-if)#ip address 192.168.7.222 255.255.255.224
 Router(config-if)#no shutdown
 Router(config-if)#
@@ -110,18 +66,22 @@ Router(config-if)#
 
 Router(config-if)#exit
 Router(config)#interface FastEthernet4/0
-Router(config-if)#no ip address
-Router(config-if)#ip address  255.255.255.252
-% Incomplete command.
 Router(config-if)#ip address 192.168.7.253 255.255.255.252
 Router(config-if)#no shutdown
 Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet4/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet4/0, changed state to up
+
 Router(config-if)#exit
 Router(config)#interface FastEthernet5/0
-Router(config-if)#ip address  255.255.255.252
-% Incomplete command.
 Router(config-if)#ip address 192.168.7.250 255.255.255.252
 Router(config-if)#no shutdown
 Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet5/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet5/0, changed state to up
+
 Router(config)#
 Router(config)#ip route 192.168.7.0 255.255.255.128 192.168.7.254
+Router(config)#ip route 8.8.8.8 255.255.255.252 192.168.7.249

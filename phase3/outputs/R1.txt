@@ -85,3 +85,210 @@ Router(config-if)#
 Router(config)#
 Router(config)#ip route 192.168.7.0 255.255.255.128 192.168.7.254
 Router(config)#ip route 8.8.8.8 255.255.255.252 192.168.7.249
+
+Router>ping 192.168.7.129
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.7.129, timeout is 2 seconds:
+.!!!!
+Success rate is 80 percent (4/5), round-trip min/avg/max = 0/0/0 ms
+
+Router>ping 192.168.7.130
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.7.130, timeout is 2 seconds:
+.!!!!
+Success rate is 80 percent (4/5), round-trip min/avg/max = 0/0/1 ms
+
+Router>ping 192.168.7.193
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.7.193, timeout is 2 seconds:
+.!!!!
+Success rate is 80 percent (4/5), round-trip min/avg/max = 0/0/0 ms
+
+Router>ping 192.168.7.194
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.7.194, timeout is 2 seconds:
+.!!!!
+Success rate is 80 percent (4/5), round-trip min/avg/max = 0/0/0 ms
+
+Router>ping 192.168.7.1
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.7.1, timeout is 2 seconds:
+..!!!
+Success rate is 60 percent (3/5), round-trip min/avg/max = 0/0/0 ms
+
+Router>ping 192.168.7.2
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.7.2, timeout is 2 seconds:
+.!!!!
+Success rate is 80 percent (4/5), round-trip min/avg/max = 0/1/5 ms
+
+Router>ping 192.168.7.3
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.7.3, timeout is 2 seconds:
+.!!!!
+Success rate is 80 percent (4/5), round-trip min/avg/max = 0/0/0 ms
+
+Router>ping 8.8.8.8
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 8.8.8.8, timeout is 2 seconds:
+.!!!!
+Success rate is 80 percent (4/5), round-trip min/avg/max = 0/0/0 ms
+
+Router>ping 192.168.7.245
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.7.245, timeout is 2 seconds:
+.....
+Success rate is 0 percent (0/5)
+
+Router>ping 192.168.7.249
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.7.249, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 0/0/0 ms
+
+Router>ping 192.168.7.126
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.7.126, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 0/0/0 ms
+
+Router>ping 192.168.7.246
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.7.246, timeout is 2 seconds:
+.....
+Success rate is 0 percent (0/5)
+
+Router>traceroute 192.168.7.129
+Type escape sequence to abort.
+Tracing the route to 192.168.7.129
+
+  1   192.168.7.129   0 msec    0 msec    0 msec
+Router>traceroute 192.168.7.130
+Type escape sequence to abort.
+Tracing the route to 192.168.7.130
+
+  1   192.168.7.130   0 msec    0 msec    0 msec
+Router>traceroute 192.168.7.193
+Type escape sequence to abort.
+Tracing the route to 192.168.7.193
+
+  1   192.168.7.193   0 msec    0 msec    0 msec
+Router>traceroute 192.168.7.194
+Type escape sequence to abort.
+Tracing the route to 192.168.7.194
+
+  1   192.168.7.194   0 msec    0 msec    0 msec
+Router>traceroute 192.168.7.1
+Type escape sequence to abort.
+Tracing the route to 192.168.7.1
+
+  1   192.168.7.254   0 msec    0 msec    0 msec
+  2   192.168.7.1     0 msec    0 msec    0 msec
+Router>traceroute 192.168.7.2
+Type escape sequence to abort.
+Tracing the route to 192.168.7.2
+
+  1   192.168.7.254   0 msec    0 msec    0 msec
+  2   192.168.7.2     0 msec    0 msec    0 msec
+Router>traceroute 192.168.7.3
+Type escape sequence to abort.
+Tracing the route to 192.168.7.3
+
+  1   192.168.7.254   0 msec    0 msec    19 msec
+  2   192.168.7.3     0 msec    0 msec    0 msec
+Router>traceroute 8.8.8.8
+Type escape sequence to abort.
+Tracing the route to 8.8.8.8
+
+  1   192.168.7.249   0 msec    0 msec    0 msec
+Router>traceroute 192.168.7.245
+Type escape sequence to abort.
+Tracing the route to 192.168.7.245
+
+  1   *     *     *
+  2   *     *     *
+  3   *     *     *
+  4   *     *     *
+  5   *     *     *
+  6   *     *     *
+  7   *     *     *
+  8   *     *     *
+  9   *     *     *
+  10   *     *     *
+  11   *     *     *
+  12   *     *     *
+  13   *     *     *
+  14   *     *     *
+  15   *     *     *
+  16   *     *     *
+  17   *     *     *
+  18   *     *     *
+  19   *     *     *
+  20   *     *     *
+  21   *     *     *
+  22   *     *     *
+  23   *     *     *
+  24   *     *     *
+  25   *     *     *
+  26   *     *     *
+  27   *     *     *
+  28   *     *     *
+  29   *     *     *
+  30   *     *     *
+Router>traceroute 192.168.7.249
+Type escape sequence to abort.
+Tracing the route to 192.168.7.249
+
+  1   192.168.7.249   0 msec    0 msec    0 msec
+Router>traceroute 192.168.7.126
+Type escape sequence to abort.
+Tracing the route to 192.168.7.126
+
+  1   192.168.7.254   0 msec    0 msec    0 msec
+Router>traceroute 192.168.7.246
+Type escape sequence to abort.
+Tracing the route to 192.168.7.246
+
+  1   *     *     *
+  2   *     *     *
+  3   *     *     *
+  4   *     *     *
+  5   *     *     *
+  6   *     *     *
+  7   *     *     *
+  8   *     *     *
+  9   *     *     *
+  10   *     *     *
+  11   *     *     *
+  12   *     *     *
+  13   *     *     *
+  14   *     *     *
+  15   *     *     *
+  16   *     *     *
+  17   *     *     *
+  18   *     *     *
+  19   *     *     *
+  20   *     *     *
+  21   *     *     *
+  22   *     *     *
+  23   *     *     *
+  24   *     *     *
+  25   *     *     *
+  26   *     *     *
+  27   *     *     *
+  28   *     *     *
+  29   *     *     *
+  30   *     *     *
+Router>

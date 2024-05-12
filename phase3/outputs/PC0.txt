@@ -1,6 +1,7 @@
 Cisco Packet Tracer PC Command Line 1.0
 C:\>arp -a
 No ARP Entries Found
+
 C:\>ping 192.168.7.130
 
 Pinging 192.168.7.130 with 32 bytes of data:

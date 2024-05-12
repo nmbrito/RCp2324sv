@@ -1,4 +1,227 @@
+Cisco Packet Tracer SERVER Command Line 1.0
+C:\>arp -a
+  Internet Address      Physical Address      Type
+  192.168.7.126         0003.e425.d44a        dynamic
+
+C:\>ping 192.168.7.129
+
+Pinging 192.168.7.129 with 32 bytes of data:
+
+Reply from 192.168.7.129: bytes=32 time<1ms TTL=126
+Reply from 192.168.7.129: bytes=32 time<1ms TTL=126
+Reply from 192.168.7.129: bytes=32 time<1ms TTL=126
+Reply from 192.168.7.129: bytes=32 time<1ms TTL=126
+
+Ping statistics for 192.168.7.129:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
     Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>ping 192.168.7.130
+
+Pinging 192.168.7.130 with 32 bytes of data:
+
+Reply from 192.168.7.130: bytes=32 time<1ms TTL=126
+Reply from 192.168.7.130: bytes=32 time<1ms TTL=126
+Reply from 192.168.7.130: bytes=32 time<1ms TTL=126
+Reply from 192.168.7.130: bytes=32 time=1ms TTL=126
+
+Ping statistics for 192.168.7.130:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 1ms, Average = 0ms
+
+C:\>ping 192.168.7.193
+
+Pinging 192.168.7.193 with 32 bytes of data:
+
+Reply from 192.168.7.193: bytes=32 time=1ms TTL=126
+Reply from 192.168.7.193: bytes=32 time<1ms TTL=126
+Reply from 192.168.7.193: bytes=32 time<1ms TTL=126
+Reply from 192.168.7.193: bytes=32 time<1ms TTL=126
+
+Ping statistics for 192.168.7.193:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 1ms, Average = 0ms
+
+C:\>ping 192.168.7.194
+
+Pinging 192.168.7.194 with 32 bytes of data:
+
+Reply from 192.168.7.194: bytes=32 time<1ms TTL=126
+Reply from 192.168.7.194: bytes=32 time<1ms TTL=126
+Reply from 192.168.7.194: bytes=32 time<1ms TTL=126
+Reply from 192.168.7.194: bytes=32 time<1ms TTL=126
+
+Ping statistics for 192.168.7.194:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>ping 192.168.7.2
+
+Pinging 192.168.7.2 with 32 bytes of data:
+
+Reply from 192.168.7.2: bytes=32 time=12ms TTL=128
+Reply from 192.168.7.2: bytes=32 time=4ms TTL=128
+Reply from 192.168.7.2: bytes=32 time<1ms TTL=128
+Reply from 192.168.7.2: bytes=32 time<1ms TTL=128
+
+Ping statistics for 192.168.7.2:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 12ms, Average = 4ms
+
+C:\>ping 192.168.7.3
+
+Pinging 192.168.7.3 with 32 bytes of data:
+
+Reply from 192.168.7.3: bytes=32 time<1ms TTL=128
+Reply from 192.168.7.3: bytes=32 time<1ms TTL=128
+Reply from 192.168.7.3: bytes=32 time<1ms TTL=128
+Reply from 192.168.7.3: bytes=32 time<1ms TTL=128
+
+Ping statistics for 192.168.7.3:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>ping 8.8.8.8
+
+Pinging 8.8.8.8 with 32 bytes of data:
+
+Request timed out.
+Reply from 8.8.8.8: bytes=32 time<1ms TTL=254
+Reply from 8.8.8.8: bytes=32 time<1ms TTL=254
+Reply from 8.8.8.8: bytes=32 time<1ms TTL=254
+
+Ping statistics for 8.8.8.8:
+    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>ping 192.168.7.245
+
+Pinging 192.168.7.245 with 32 bytes of data:
+
+Reply from 192.168.7.245: bytes=32 time<1ms TTL=254
+Reply from 192.168.7.245: bytes=32 time<1ms TTL=254
+Reply from 192.168.7.245: bytes=32 time<1ms TTL=254
+Reply from 192.168.7.245: bytes=32 time<1ms TTL=254
+
+Ping statistics for 192.168.7.245:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>ping 192.168.7.249
+
+Pinging 192.168.7.249 with 32 bytes of data:
+
+Reply from 192.168.7.126: Destination host unreachable.
+Request timed out.
+Reply from 192.168.7.126: Destination host unreachable.
+Request timed out.
+
+Ping statistics for 192.168.7.249:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+
+C:\>ping 192.168.7.190
+
+Pinging 192.168.7.190 with 32 bytes of data:
+
+Reply from 192.168.7.190: bytes=32 time=5ms TTL=254
+Reply from 192.168.7.190: bytes=32 time=1ms TTL=254
+Reply from 192.168.7.190: bytes=32 time<1ms TTL=254
+Reply from 192.168.7.190: bytes=32 time<1ms TTL=254
+
+Ping statistics for 192.168.7.190:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 5ms, Average = 1ms
+
+C:\>ping 192.168.7.222
+
+Pinging 192.168.7.222 with 32 bytes of data:
+
+Reply from 192.168.7.222: bytes=32 time<1ms TTL=254
+Reply from 192.168.7.222: bytes=32 time<1ms TTL=254
+Reply from 192.168.7.222: bytes=32 time<1ms TTL=254
+Reply from 192.168.7.222: bytes=32 time<1ms TTL=254
+
+Ping statistics for 192.168.7.222:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>ping 192.168.7.253
+
+Pinging 192.168.7.253 with 32 bytes of data:
+
+Reply from 192.168.7.253: bytes=32 time<1ms TTL=254
+Reply from 192.168.7.253: bytes=32 time<1ms TTL=254
+Reply from 192.168.7.253: bytes=32 time<1ms TTL=254
+Reply from 192.168.7.253: bytes=32 time<1ms TTL=254
+
+Ping statistics for 192.168.7.253:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>ping 192.168.7.250
+
+Pinging 192.168.7.250 with 32 bytes of data:
+
+Reply from 192.168.7.126: Destination host unreachable.
+Request timed out.
+Reply from 192.168.7.126: Destination host unreachable.
+Reply from 192.168.7.126: Destination host unreachable.
+
+Ping statistics for 192.168.7.250:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+
+C:\>ping 192.168.7.126
+
+Pinging 192.168.7.126 with 32 bytes of data:
+
+Reply from 192.168.7.126: bytes=32 time<1ms TTL=255
+Reply from 192.168.7.126: bytes=32 time<1ms TTL=255
+Reply from 192.168.7.126: bytes=32 time<1ms TTL=255
+Reply from 192.168.7.126: bytes=32 time<1ms TTL=255
+
+Ping statistics for 192.168.7.126:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>ping 192.168.7.246
+
+Pinging 192.168.7.246 with 32 bytes of data:
+
+Reply from 192.168.7.246: bytes=32 time<1ms TTL=255
+Reply from 192.168.7.246: bytes=32 time<1ms TTL=255
+Reply from 192.168.7.246: bytes=32 time<1ms TTL=255
+Reply from 192.168.7.246: bytes=32 time<1ms TTL=255
+
+Ping statistics for 192.168.7.246:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>ping 192.168.7.254
+
+Pinging 192.168.7.254 with 32 bytes of data:
+
+Reply from 192.168.7.254: bytes=32 time<1ms TTL=255
+Reply from 192.168.7.254: bytes=32 time<1ms TTL=255
+Reply from 192.168.7.254: bytes=32 time=7ms TTL=255
+Reply from 192.168.7.254: bytes=32 time<1ms TTL=255
+
+Ping statistics for 192.168.7.254:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 7ms, Average = 1ms
 
 C:\>arp -a
   Internet Address      Physical Address      Type

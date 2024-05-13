@@ -163,7 +163,7 @@
     
     \vspace*{10mm}
     
-    \renewcommand{\today}{May 5th 2024}
+    \renewcommand{\today}{May 19th 2024}
     \today
     
 \end{titlepage}
@@ -284,28 +284,79 @@
 \chapter{Introduction}
 % display headers & footers
     \pagestyle{fancy}
-    For phase 3 
+    For this phase we're going to expand on the previous phase 2 outline. \\
+    Conveniently taking advantage of the work already performed, it's time to execute it. If only it were that simple.
+    As we'll see, firstly correcting the IP assigments to meet the right standards, then re-applying those new IP addresses to the network.
 
 % main page numbers with arabic numerals
     \pagenumbering{arabic}\setcounter{page}{1}
 
 %% Chapter: phase 3 ------------------------------------------------------------
 \chapter{Phase 3}
-    This first part is very simple. There are two devices (PC0 and Laptop0) connected to a switch and their network starts with 192.168.\textbf{\textit{GROUP NUMBER}}.0.\\
-    After applying the configuration we must run a set of commands to test our network.
-    \begin{itemize}
-        \item Ping: to test connectivity between devices over IP.
-        \item Tracert: diagnostic command for displaying possible routes, also measures transit delay of packages across IP.
-        \item Ipconfig: console application program of some computer operating systems that displays all current TCP/IP network configuration values. Unix and linux equivalent is \textit{ifconfig}.
-    \end{itemize}
+    Taking information from the previous phase 2 project, this is what we're re-applying:\\
+    \begin{compactitem}
+        \item IP range: 192.168.\textbf{\textit{GROUP NUMBER}}.0.
+        \item Commands:
+        \begin{compactitem}
+            \item ping: to test connectivity between devices over IP.
+            \item tracert: diagnostic command for displaying possible routes, also measures transit delay of packages across IP.
+            \item ipconfig: console application program of some computer operating systems that displays all current TCP/IP network configuration values. Unix and linux equivalent is \textit{ifconfig}.
+        \end{compactitem}
+    \end{compactitem}
+
+    Now for the specific requirements in phase 3. Most of it was already accomplished in phase 2 as means to speed up progress.
+    The mathemathical formula is still valid here:\\
+    \[
+        Clients_{LAN_A} = max\left(20, \left(\sum_{k=0}^n studentnumber_k\right)mod 100\right)\quad <=> 
+        Clients_{LAN_A} = 48\quad
+    \] \\
+    \[
+        Clients_{LAN_B} = \frac{Clients_{LAN_A}}{2}\quad <=>
+        Clients_{LAN_B} = 27\quad
+    \]\\
+
+    What about our network diagram? Well, it's still pretty much the same only with one small caveat, static routes.\\
+    This circuit must obey to the subsequent rules:\\
+    \begin{compactitem}
+        \item Connection between LAN's A and B to LAN Servers always go through router R1 to router R2.
+        \item LAN's A and B with outside destination always use the router R1 and router R0 path.
+        \item LAN server to the outside must go through router R2 and router R0.
+    \end{compactitem}
 
     \begin{figure}[h]
         \centering
         \includegraphics[scale=0.40,valign=c]{diagramL250}
-        \caption{Part 2 network diagram}
+        \caption{Phase 3 simplified network diagram}
         \label{fig:p2netdiag}
     \end{figure}
+
+    IP values are properly explained right after this table.\\
+    \begin{longtable}[c]{@{}lllllclc@{}}
+        \toprule
+        \textbf{Router}     & \textbf{From}                  & \textbf{To} & \textbf{Network} & \textbf{Via}                                       & \multicolumn{3}{c}{\textbf{Through}}                                        \\* \midrule
+        \endfirsthead
+        %
+        \multicolumn{8}{c}%
+        {{\bfseries Table \thetable\ continued from previous page}} \\
+        \toprule
+        \textbf{Router}     & \textbf{From}                  & \textbf{To} & \textbf{Network} & \textbf{Via}                                       & \multicolumn{3}{c}{\textbf{Through}}                                        \\* \midrule
+        \endhead
+        %
+        \multirow{2}{*}{R1} & \multirow{2}{*}{LAN A / LAN B} & LAN Servers & 192.168.7.0/25   & 192.168.7.254                                      & \multirow{2}{*}{R1} & \textgreater{}                  & R2                  \\
+                            &                                & Any         & 8.8.8.8/30       & 192.168.7.249                                      &                     & \textgreater{}                  & R0                  \\* \midrule
+        \multirow{3}{*}{R2} & \multirow{3}{*}{LAN Servers}   & LAN A       & 192.168.7.128/26 & \multicolumn{1}{c}{\multirow{2}{*}{192.168.7.253}} & \multirow{3}{*}{R2} & \multirow{2}{*}{\textgreater{}} & \multirow{2}{*}{R1} \\
+                            &                                & LAN B       & 192.168.7.192/27 & \multicolumn{1}{c}{}                               &                     &                                 &                     \\* \cmidrule(lr){3-5} \cmidrule(l){7-8}
+                            &                                & Any         & 8.8.8.8/30       & 192.168.7.245                                      &                     & \textgreater{}                  & R0                  \\* \midrule
+        \multirow{3}{*}{R0} & \multirow{3}{*}{Any}           & LAN A       & 192.168.7.128/26 & \multicolumn{1}{c}{\multirow{2}{*}{192.168.7.250}} & \multirow{3}{*}{R0} & \multirow{2}{*}{\textgreater{}} & \multirow{2}{*}{R1} \\
+                            &                                & LAN B       & 192.168.7.192/27 & \multicolumn{1}{c}{}                               &                     &                                 &                     \\* \cmidrule(lr){3-5} \cmidrule(l){7-8}
+                            &                                & LAN Servers & 192.168.7.0/25   & 192.168.7.246                                      &                     & \textgreater{}                  & R2                  \\* \bottomrule
+        \caption{Static routes table}
+        \label{tab:staticroutetbl}\\
+    \end{longtable}
     
+    Previously the subdivision was perfomed by opening with the lowest subdivision, \textbf{/30}, then expanding till \textbf{/25}. \\
+    However, this was inappropriate due to best practices rules which asserts that network subdivision starts with the largest network, \textbf{/25}, and then continues till the smallest network, \textbf{/30}. \\
+    And so, here are the results:\\
     \begin{longtable}[c]{rcccccccccccccccc}
         \hline
         \multicolumn{1}{c}{}                                                                       & \multicolumn{16}{c}{\textbf{IP}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  \\
@@ -424,29 +475,37 @@
         \label{tab:ipconftable}\\
     \end{longtable}
 
-    \begin{longtable}[c]{@{}lllllclc@{}}
-        \toprule
-        \textbf{Router}     & \textbf{From}                  & \textbf{To} & \textbf{Network} & \textbf{Via}                                       & \multicolumn{3}{c}{\textbf{Through}}                                        \\* \midrule
-        \endfirsthead
-        %
-        \multicolumn{8}{c}%
-        {{\bfseries Table \thetable\ continued from previous page}} \\
-        \toprule
-        \textbf{Router}     & \textbf{From}                  & \textbf{To} & \textbf{Network} & \textbf{Via}                                       & \multicolumn{3}{c}{\textbf{Through}}                                        \\* \midrule
-        \endhead
-        %
-        \multirow{2}{*}{R1} & \multirow{2}{*}{LAN A / LAN B} & LAN Servers & 192.168.7.0/25   & 192.168.7.254                                      & \multirow{2}{*}{R1} & \textgreater{}                  & R2                  \\
-                            &                                & Any         & 8.8.8.8/30       & 192.168.7.249                                      &                     & \textgreater{}                  & R0                  \\* \midrule
-        \multirow{3}{*}{R2} & \multirow{3}{*}{LAN Servers}   & LAN A       & 192.168.7.128/26 & \multicolumn{1}{c}{\multirow{2}{*}{192.168.7.253}} & \multirow{3}{*}{R2} & \multirow{2}{*}{\textgreater{}} & \multirow{2}{*}{R1} \\
-                            &                                & LAN B       & 192.168.7.192/27 & \multicolumn{1}{c}{}                               &                     &                                 &                     \\* \cmidrule(lr){3-5} \cmidrule(l){7-8}
-                            &                                & Any         & 8.8.8.8/30       & 192.168.7.245                                      &                     & \textgreater{}                  & R0                  \\* \midrule
-        \multirow{3}{*}{R0} & \multirow{3}{*}{Any}           & LAN A       & 192.168.7.128/26 & \multicolumn{1}{c}{\multirow{2}{*}{192.168.7.250}} & \multirow{3}{*}{R0} & \multirow{2}{*}{\textgreater{}} & \multirow{2}{*}{R1} \\
-                            &                                & LAN B       & 192.168.7.192/27 & \multicolumn{1}{c}{}                               &                     &                                 &                     \\* \cmidrule(lr){3-5} \cmidrule(l){7-8}
-                            &                                & LAN Servers & 192.168.7.0/25   & 192.168.7.246                                      &                     & \textgreater{}                  & R2                  \\* \bottomrule
-        \caption{Static routes table}
-        \label{tab:staticroutetbl}\\
-    \end{longtable}
+    Beautifully charted. Let's implement it with our favorite tool, Cisco Packet Trace.\\
+    \begin{flushleft}
+            \begin{center}
+                \begin{longtable}{ m{5cm} l }
+                    \textbf{Steps} & \textbf{Example} \\
+                    \hline
+                    \endfirsthead
+                    \multicolumn{2}{c}%
+                    {{\bfseries Table \thetable\ continued from previous page}} \\
+                    \textbf{Steps} & \textbf{Example} \\
+                    \hline
+                    \endhead
+                    \hline Continued on next page \\
+                    \endfoot
+                    \endlastfoot
 
+                    To configure the IP on a device we must \textbf{single-click} in the intended device (1), go to the \textit{desktop tab} (2) and select \textit{IP Configuration} (3).                                                                                                              & \includegraphics[scale=0.35 ,valign=c]{} \\ \hline
+                    IP configuration for LAN A, PC0 and Laptop0.                                                                                                                                                                                                                                        & \includegraphics[scale=0.34 ,valign=c]{} \\ \hline
+                    IP configuration for LAN B, PC1 and Laptop1.                                                                                                                                                                                                                                        & \includegraphics[scale=0.34 ,valign=c]{} \\ \hline
+                    IP configuration for LAN Servers, DHCP-Server, DNS-Server and HTTP-Server.                                                                                                                                                                                                          & \includegraphics[scale=0.31 ,valign=c]{} \\ \hline
+                    For the router there's two options, both valid and exhibited in the report. The graphical user interface (GUI) in the right and the CLI in the output subsection. Going by the GUI it's crystal clear, just input the necessary IP and subnet mask.                                 & \includegraphics[scale=0.31 ,valign=c]{} \\ \hline
+                    IP configuration for Router 0.                                                                                                                                                                                                                                                      & \includegraphics[scale=0.31 ,valign=c]{} \\ \hline
+                    IP configuration for Router 1.                                                                                                                                                                                                                                                      & \includegraphics[scale=0.31 ,valign=c]{} \\ \hline
+                    IP configuration for Router 2.                                                                                                                                                                                                                                                      & \includegraphics[scale=0.31 ,valign=c]{} \\ \hline
+                    \caption{Cisco Packet Tracer IP guide}
+                    \label{tab:cptg1}
+                \end{longtable}
+            \end{center}
+    \end{flushleft}
+
+    After configuring we're testing our network by running diagnostic commands, first arp, then ping, then arp again and finally tracert:
     \begin{longtable}[c]{@{}lll@{}}
         \toprule
         \textbf{Ping}      & \textbf{Trace Route}  & \textbf{Device} \\* \midrule
@@ -485,33 +544,7 @@
         \label{tab:clicommands}\\
     \end{longtable}
 
-    Connecting to devices was pretty straight forward. Now comes the expected progress. What follows next tackles a network approach paramount for the next four phases.\\
-        \[
-            Clients_{LAN_A} = max\left(20, \left(\sum_{k=0}^n studentnumber_k\right)mod 100\right)\quad <=> 
-            Clients_{LAN_A} = 48\quad
-        \] \\
-        \[
-            Clients_{LAN_B} = \frac{Clients_{LAN_A}}{2}\quad <=>
-            Clients_{LAN_B} = 27\quad
-        \]\\
-
-    Using the required mathmatical equations, provided in the project, we reach the conclusions presented in the following tables.\\
-
-    % Outputs
-    \lstset{style=termoutputs}
-    \lstinputlisting[
-        language={},
-        caption={},
-        label={lst:}
-    ]{./outputs/}
-    \lstinputlisting[
-        language={},
-        caption={},
-        label={lst:}
-    ]{./outputs/}
-
-    These outputs might have some differences as i had to close and reopen cisco packet tracer multiple times, erasing the arp table.
-
+    Note that not everything fits in the images, the outputs after this guide attests to what was performed.
     % Guide
     \begin{flushleft}
             \begin{center}
@@ -528,23 +561,90 @@
                     \endfoot
                     \endlastfoot
 
-                    text & \includegraphics[scale=0.35 ,valign=c]{} \\ \hline
-                    text & \includegraphics[scale=0.34 ,valign=c]{} \\ \hline
-                    text & \includegraphics[scale=0.34 ,valign=c]{} \\ \hline
-                    text & \includegraphics[scale=0.31 ,valign=c]{} \\ \hline
-                    text & \includegraphics[scale=0.35 ,valign=c]{} \\ \hline
-                    text & \includegraphics[scale=0.34 ,valign=c]{} \\ \hline
-                    text & \includegraphics[scale=0.34 ,valign=c]{} \\ \hline
-                    text & \includegraphics[scale=0.34 ,valign=c]{} \\ \hline
-                    text & \includegraphics[scale=0.34 ,valign=c]{} \\ \hline
-                    text & \includegraphics[scale=0.202,valign=c]{} \\ \hline
+                    To test the connection from devices we select a device by \textbf{single-clicking} it (1), go to the \textit{desktop tab} (2) and select \textit{Command Prompt} (3).   & \includegraphics[scale=0.35 ,valign=c]{} \\ \hline
+                    From PC0 viewpoint.                                                                                                                                                     & \includegraphics[scale=0.35 ,valign=c]{} \\ \hline
+                    From Laptop0 viewpoint.                                                                                                                                                 & \includegraphics[scale=0.34 ,valign=c]{} \\ \hline
+                    From PC1 viewpoint.                                                                                                                                                     & \includegraphics[scale=0.34 ,valign=c]{} \\ \hline
+                    From Laptop1 viewpoint.                                                                                                                                                 & \includegraphics[scale=0.31 ,valign=c]{} \\ \hline
+                    From DHCP-Server viewpoint.                                                                                                                                             & \includegraphics[scale=0.35 ,valign=c]{} \\ \hline
+                    From DNS-Server viewpoint.                                                                                                                                              & \includegraphics[scale=0.35 ,valign=c]{} \\ \hline
+                    From HTTP-Server viewpoint.                                                                                                                                             & \includegraphics[scale=0.34 ,valign=c]{} \\ \hline
+                    To test the connection from routers we select a router by \textbf{single-clicking} it (1), go to the \textit{CLI tab} (2) and select \textit{Command Prompt} (3).       & \includegraphics[scale=0.35 ,valign=c]{} \\ \hline
+                    From router R0 viewpoint.                                                                                                                                               & \includegraphics[scale=0.34 ,valign=c]{} \\ \hline
+                    From router R1 viewpoint.                                                                                                                                               & \includegraphics[scale=0.34 ,valign=c]{} \\ \hline
+                    From router R2 viewpoint.                                                                                                                                               & \includegraphics[scale=0.34 ,valign=c]{} \\ \hline
 
-                    \caption{Cisco Packet Tracer guide}
+                    \caption{Cisco Packet Tracer CLI guide}
                     \label{tab:cptg2}
                 \end{longtable}
             \end{center}
     \end{flushleft}
 
+    % Outputs
+    \lstset{style=termoutputs}
+    \lstinputlisting[
+        language={},
+        caption={PC0 output},
+        label={lst:pc0output}
+    ]{./outputs/PC0.txt}
+
+    \lstinputlisting[
+        language={},
+        caption={Laptop0 output},
+        label={lst:laptop0output}
+    ]{./outputs/Laptop0.txt}
+
+    \lstset{style=termoutputs}
+    \lstinputlisting[
+        language={},
+        caption={PC1 output},
+        label={lst:pc1output}
+    ]{./outputs/PC1.txt}
+
+    \lstinputlisting[
+        language={},
+        caption={Laptop1 output},
+        label={lst:laptop1output}
+    ]{./outputs/Laptop1.txt}
+
+    \lstinputlisting[
+        language={},
+        caption={DHCP-Server output},
+        label={lst:dhcpoutput}
+    ]{./outputs/DHCP-Server.txt}
+
+    \lstinputlisting[
+        language={},
+        caption={DNS-Server output},
+        label={lst:dnsoutput}
+    ]{./outputs/DNS-Server.txt}
+
+    \lstinputlisting[
+        language={},
+        caption={HTTP-Server output},
+        label={lst:httpoutput}
+    ]{./outputs/HTTP-Server.txt}
+
+    \lstinputlisting[
+        language={},
+        caption={Router 0 output},
+        label={lst:r0output}
+    ]{./outputs/R0.txt}
+
+    \lstinputlisting[
+        language={},
+        caption={Router 1 output},
+        label={lst:r1output}
+    ]{./outputs/R1.txt}
+
+    \lstinputlisting[
+        language={},
+        caption={Router 2 output},
+        label={lst:r2output}
+    ]{./outputs/R2.txt}
+
+    We can actually see that everything complies with what was required.\\
+    PC0 can only reach blabla bla...%TODO
 
 %% Chapter: issues and fixes ---------------------------------------------------
 \chapter{Issues and fixes}
@@ -555,6 +655,7 @@
 
 %% Chapter: conclusions --------------------------------------------------------
 \chapter{Conclusions}
+    As we could corroborate
 
 %% Bibliography ----------------------------------------------------------------
 %\renewcommand{\bibname}{Bibliographic references}

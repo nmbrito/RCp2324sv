@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.10)  9 MAY 2024 10:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.10)  14 MAY 2024 17:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -844,7 +844,7 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 12.0pt on input line 137.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/sc' will be
 (Font)              scaled to size 12.0pt on input line 137.
-<./images/logoisel.png, id=44, 426.8748pt x 286.1892pt>
+<./images/logoisel.png, id=64, 426.8748pt x 286.1892pt>
 File: ./images/logoisel.png Graphic file (type png)
 <use ./images/logoisel.png>
 Package pdftex.def Info: ./images/logoisel.png  used on input line 141.
@@ -929,101 +929,193 @@ Chapter 1.
 
 ]
 Chapter 2.
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/it' will be
-(Font)              scaled to size 10.95pt on input line 294.
-LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 297.
+LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 298.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 )
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.95pt on input line 297.
-<./images/diagramL250.png, id=114, 806.01125pt x 702.625pt>
+(Font)              scaled to size 10.95pt on input line 298.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/it' will be
+(Font)              scaled to size 10.95pt on input line 298.
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--309
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
+
+ []
+
+<./images/diagramL250.png, id=168, 746.79pt x 625.33624pt>
 File: ./images/diagramL250.png Graphic file (type png)
 <use ./images/diagramL250.png>
-Package pdftex.def Info: ./images/diagramL250.png  used on input line 304.
-(pdftex.def)             Requested size: 322.39879pt x 281.04501pt.
+Package pdftex.def Info: ./images/diagramL250.png  used on input line 328.
+(pdftex.def)             Requested size: 298.7107pt x 250.13007pt.
 
-Overfull \hbox (33.35683pt too wide) in alignment at lines 315--319
- [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (33.35683pt too wide) in alignment at lines 319--326
- [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (33.35683pt too wide) in alignment at lines 326--329
- [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (33.35683pt too wide) in alignment at lines 329--331
- [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (33.35683pt too wide) in alignment at lines 331--350
- [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2
 
-{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc} <./images/diagramL250.png>] [3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 514--515
+{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}]
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 358.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 359--361
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 518--519
-
+Overfull \hbox (33.35683pt too wide) in alignment at lines 363--367
+ [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 522--523
-
+Overfull \hbox (33.35683pt too wide) in alignment at lines 367--374
+ [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 524--525
+Overfull \hbox (33.35683pt too wide) in alignment at lines 374--377
+ [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (33.35683pt too wide) in alignment at lines 377--379
+ [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (33.35683pt too wide) in alignment at lines 379--398
+ [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+[3 <./images/diagramL250.png>] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 481--482
 
  []
 
-[5{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}]
-Chapter 3.
-[6
+<./images/CiscoPacketTracer_cmdOutput.png, id=191, 875.27pt x 454.69875pt>
+File: ./images/CiscoPacketTracer_cmdOutput.png Graphic file (type png)
+<use ./images/CiscoPacketTracer_cmdOutput.png>
+Package pdftex.def Info: ./images/CiscoPacketTracer_cmdOutput.png  used on input line 499.
+(pdftex.def)             Requested size: 280.09212pt x 145.50656pt.
+<./images/lana-ipall.png, id=192, 1133.23375pt x 838.13126pt>
+File: ./images/lana-ipall.png Graphic file (type png)
+<use ./images/lana-ipall.png>
+Package pdftex.def Info: ./images/lana-ipall.png  used on input line 500.
+(pdftex.def)             Requested size: 283.30774pt x 209.5323pt.
+<./images/lanb-ipall.png, id=193, 1133.23375pt x 838.13126pt>
+File: ./images/lanb-ipall.png Graphic file (type png)
+<use ./images/lanb-ipall.png>
+Package pdftex.def Info: ./images/lanb-ipall.png  used on input line 501.
+(pdftex.def)             Requested size: 283.30774pt x 209.5323pt.
 
-]
-Chapter 4.
-[7
+Underfull \hbox (badness 10000) in paragraph at lines 502--502
+[]|\T1/ntxtlf/m/n/10.95 IP con-fig-u-ra-tion for LAN
+ []
 
-]
-Appendix A.
-[8
 
-] 
-enddocument/afterlastpage: lastpage setting LastPage.
-(./ReportPhase3.aux)
- ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2020/03/25>
- ***********
-Package rerunfilecheck Info: File `ReportPhase3.out' has not changed.
-(rerunfilecheck)             Checksum: 3ACAF0C79E7A22504C28861C9406C7D2;1068.
- ) 
-Here is how much of TeX's memory you used:
- 20520 strings out of 474116
- 322151 string characters out of 5743682
- 1998187 words of memory out of 5000000
- 42486 multiletter control sequences out of 15000+600000
- 632864 words of font info for 119 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 86i,13n,117p,712b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmbi.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on ReportPhase3.pdf (16 pages, 282730 bytes).
-PDF statistics:
- 215 PDF objects out of 1000 (max. 8388607)
- 169 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+Underfull \hbox (badness 1248) in paragraph at lines 502--502
+\T1/ntxtlf/m/n/10.95 Servers, DHCP-Server, DNS-
+ []
 
+<./images/lanservers-ipall.png, id=194, 1473.505pt x 867.24pt>
+File: ./images/lanservers-ipall.png Graphic file (type png)
+<use ./images/lanservers-ipall.png>
+Package pdftex.def Info: ./images/lanservers-ipall.png  used on input line 502.
+(pdftex.def)             Requested size: 279.96886pt x 164.77731pt.
+[5 <./images/CiscoPacketTracer_cmdOutput.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 511--512
+
+ []
+
+[6 <./images/lana-ipall.png> <./images/lanb-ipall.png> <./images/lanservers-ipall.png>]
+<./images/r0-ipall.png, id=210, 1112.155pt x 1312.905pt>
+File: ./images/r0-ipall.png Graphic file (type png)
+<use ./images/r0-ipall.png>
+Package pdftex.def Info: ./images/r0-ipall.png  used on input line 528.
+(pdftex.def)             Requested size: 272.47188pt x 321.65453pt.
+<./images/r1-ipall.png, id=211, 1268.74pt x 1584.92125pt>
+File: ./images/r1-ipall.png Graphic file (type png)
+<use ./images/r1-ipall.png>
+Package pdftex.def Info: ./images/r1-ipall.png  used on input line 529.
+(pdftex.def)             Requested size: 279.12366pt x 348.68376pt.
+<./images/r2-ipall.png, id=212, 1100.11pt x 1312.905pt>
+File: ./images/r2-ipall.png Graphic file (type png)
+<use ./images/r2-ipall.png>
+Package pdftex.def Info: ./images/r2-ipall.png  used on input line 530.
+(pdftex.def)             Requested size: 269.52092pt x 321.65453pt.
+<./images/r0-staticroute.png, id=213, 798.985pt x 809.0225pt>
+File: ./images/r0-staticroute.png Graphic file (type png)
+<use ./images/r0-staticroute.png>
+Package pdftex.def Info: ./images/r0-staticroute.png  used on input line 531.
+(pdftex.def)             Requested size: 279.64894pt x 283.16212pt.
+<./images/r1-staticroute.png, id=214, 798.985pt x 809.0225pt>
+File: ./images/r1-staticroute.png Graphic file (type png)
+<use ./images/r1-staticroute.png>
+Package pdftex.def Info: ./images/r1-staticroute.png  used on input line 532.
+(pdftex.def)             Requested size: 279.64894pt x 283.16212pt.
+<./images/r2-staticroute.png, id=215, 798.985pt x 809.0225pt>
+File: ./images/r2-staticroute.png Graphic file (type png)
+<use ./images/r2-staticroute.png>
+Package pdftex.def Info: ./images/r2-staticroute.png  used on input line 533.
+(pdftex.def)             Requested size: 279.64894pt x 283.16212pt.
+ [7 <./images/r0-ipall.png>] [8 <./images/r1-ipall.png>] [9 <./images/r2-ipall.png> <./images/r0-staticroute.png>]
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 542.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 9.0pt on input line 542.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 7.3pt on input line 542.
+ [10 <./images/r1-staticroute.png> <./images/r2-staticroute.png>]
+Underfull \hbox (badness 1173) in paragraph at lines 598--598
+\T1/ntxtlf/m/n/10.95 vices we se-lect a de-vice by
+ []
+
+File: ./images/CiscoPacketTracer_cmdOutput.png Graphic file (type png)
+<use ./images/CiscoPacketTracer_cmdOutput.png>
+Package pdftex.def Info: ./images/CiscoPacketTracer_cmdOutput.png  used on input line 598.
+(pdftex.def)             Requested size: 271.3309pt x 140.95515pt.
+<./images/lana-outputall.png, id=243, 1016.79875pt x 838.13126pt>
+File: ./images/lana-outputall.png Graphic file (type png)
+<use ./images/lana-outputall.png>
+Package pdftex.def Info: ./images/lana-outputall.png  used on input line 599.
+(pdftex.def)             Requested size: 274.53934pt x 226.29846pt.
+<./images/lanb-outputall.png, id=244, 1016.79875pt x 838.13126pt>
+File: ./images/lanb-outputall.png Graphic file (type png)
+<use ./images/lanb-outputall.png>
+Package pdftex.def Info: ./images/lanb-outputall.png  used on input line 600.
+(pdftex.def)             Requested size: 274.53934pt x 226.29846pt.
+<./images/lanservers-outputall.png, id=245, 1168.365pt x 867.24pt>
+File: ./images/lanservers-outputall.png Graphic file (type png)
+<use ./images/lanservers-outputall.png>
+Package pdftex.def Info: ./images/lanservers-outputall.png  used on input line 601.
+(pdftex.def)             Requested size: 268.71829pt x 199.461pt.
+[11] [12 <./images/lana-outputall.png> <./images/lanb-outputall.png> <./images/lanservers-outputall.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 609--610
+
+ []
+
+<./images/r0-cliall.png, id=261, 1109.14375pt x 838.13126pt>
+File: ./images/r0-cliall.png Graphic file (type png)
+<use ./images/r0-cliall.png>
+Package pdftex.def Info: ./images/r0-cliall.png  used on input line 625.
+(pdftex.def)             Requested size: 277.28526pt x 209.5323pt.
+<./images/r1-cliall.png, id=262, 1109.14375pt x 838.13126pt>
+File: ./images/r1-cliall.png Graphic file (type png)
+<use ./images/r1-cliall.png>
+Package pdftex.def Info: ./images/r1-cliall.png  used on input line 626.
+(pdftex.def)             Requested size: 277.28526pt x 209.5323pt.
+<./images/r2-cliall.png, id=263, 1100.11pt x 838.13126pt>
+File: ./images/r2-cliall.png Graphic file (type png)
+<use ./images/r2-cliall.png>
+Package pdftex.def Info: ./images/r2-cliall.png  used on input line 627.
+(pdftex.def)            

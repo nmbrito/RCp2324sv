@@ -293,7 +293,7 @@
 
 %% Chapter: phase 3 ------------------------------------------------------------
 \chapter{Phase 3}
-    Taking information from the previous phase 2 project, this is what we're re-applying:\\
+    Taking information from the previous phase 2 project, this is what we're re-applying:
     \begin{compactitem}
         \item IP range: 192.168.\textbf{\textit{GROUP NUMBER}}.0.
         \item Commands:
@@ -304,7 +304,7 @@
         \end{compactitem}
     \end{compactitem}
 
-    Now for the specific requirements in phase 3. Most of it was already accomplished in phase 2 as means to speed up progress.
+    Now for the specific requirements in phase 3. Most of it was already accomplished in phase 2.
     The mathemathical formula is still valid here:\\
     \[
         Clients_{LAN_A} = max\left(20, \left(\sum_{k=0}^n studentnumber_k\right)mod 100\right)\quad <=> 
@@ -315,8 +315,8 @@
         Clients_{LAN_B} = 27\quad
     \]\\
 
-    What about our network diagram? Well, it's still pretty much the same only with one small caveat, static routes.\\
-    This circuit must obey to the subsequent rules:\\
+    What about our network diagram? Well, it's still pretty much the same with only one small caveat, static routes.\\
+    This circuit must obey the subsequent rules:
     \begin{compactitem}
         \item Connection between LAN's A and B to LAN Servers always go through router R1 to router R2.
         \item LAN's A and B with outside destination always use the router R1 and router R0 path.
@@ -330,7 +330,8 @@
         \label{fig:p2netdiag}
     \end{figure}
 
-    IP values are properly explained right after this table.\\
+    \pagebreak
+
     \begin{longtable}[c]{@{}lllllclc@{}}
         \toprule
         \textbf{Router}     & \textbf{From}                  & \textbf{To} & \textbf{Network} & \textbf{Via}                                       & \multicolumn{3}{c}{\textbf{Through}}                                        \\* \midrule
@@ -354,308 +355,358 @@
         \label{tab:staticroutetbl}\\
     \end{longtable}
     
-    Previously the subdivision was perfomed by opening with the lowest subdivision, \textbf{/30}, then expanding till \textbf{/25}. \\
-    However, this was inappropriate due to best practices rules which asserts that network subdivision starts with the largest network, \textbf{/25}, and then continues till the smallest network, \textbf{/30}. \\
-    And so, here are the results:\\
-    \begin{longtable}[c]{rcccccccccccccccc}
-        \hline
-        \multicolumn{1}{c}{}                                                                       & \multicolumn{16}{c}{\textbf{IP}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  \\
-        \multicolumn{1}{c}{\multirow{-2}{*}{\textbf{Subnet}}}                                      & \cellcolor[HTML]{F4B084}0     & \cellcolor[HTML]{F4B084}127    & \cellcolor[HTML]{A9D08E}128    & \cellcolor[HTML]{A9D08E}191   & \cellcolor[HTML]{FFD966}192    & \cellcolor[HTML]{FFD966}223   & \cellcolor[HTML]{BFBFBF}224    & \cellcolor[HTML]{BFBFBF}239   & \cellcolor[HTML]{C09FE5}240 & \cellcolor[HTML]{C09FE5}243 & \cellcolor[HTML]{C09FE5}244 & \cellcolor[HTML]{C09FE5}247 & \cellcolor[HTML]{C09FE5}248 & \cellcolor[HTML]{C09FE5}251 & \cellcolor[HTML]{C09FE5}252 & \cellcolor[HTML]{C09FE5}255 \\ \hline
-        \endfirsthead
-        %
-        \multicolumn{17}{c}%
-        {{\bfseries Table \thetable\ continued from previous page}} \\
-        \hline
-        \multicolumn{1}{c}{}                                                                       & \multicolumn{16}{c}{\textbf{IP}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  \\
-        \multicolumn{1}{c}{\multirow{-2}{*}{\textbf{Subnet}}}                                      & \cellcolor[HTML]{F4B084}0     & \cellcolor[HTML]{F4B084}127    & \cellcolor[HTML]{A9D08E}128    & \cellcolor[HTML]{A9D08E}191   & \cellcolor[HTML]{FFD966}192    & \cellcolor[HTML]{FFD966}223   & \cellcolor[HTML]{BFBFBF}224    & \cellcolor[HTML]{BFBFBF}239   & \cellcolor[HTML]{C09FE5}240 & \cellcolor[HTML]{C09FE5}243 & \cellcolor[HTML]{C09FE5}244 & \cellcolor[HTML]{C09FE5}247 & \cellcolor[HTML]{C09FE5}248 & \cellcolor[HTML]{C09FE5}251 & \cellcolor[HTML]{C09FE5}252 & \cellcolor[HTML]{C09FE5}255 \\ \hline
-        \endhead
-        %
-        \hline
-        \endfoot
-        %
-        \endlastfoot
-        %
-        \textbf{/30}                                                                               &                               &                                &                                &                               &                                &                               &                                &                               &                             &                             &                             &                             &                             &                             & \cellcolor[HTML]{C09FE5}    & \cellcolor[HTML]{C09FE5}    \\
-        \textbf{/30}                                                                               &                               &                                &                                &                               &                                &                               &                                &                               &                             &                             &                             &                             & \cellcolor[HTML]{C09FE5}    & \cellcolor[HTML]{C09FE5}    &                             &                             \\
-        \textbf{/30}                                                                               &                               &                                &                                &                               &                                &                               &                                &                               &                             &                             & \cellcolor[HTML]{C09FE5}    & \cellcolor[HTML]{C09FE5}    &                             &                             &                             &                             \\
-        \textbf{/30}                                                                               &                               &                                &                                &                               &                                &                               &                                &                               & \cellcolor[HTML]{C09FE5}    & \cellcolor[HTML]{C09FE5}    &                             &                             &                             &                             &                             &                             \\
-        \textbf{/28}                                                                               &                               &                                &                                &                               &                                &                               & \cellcolor[HTML]{BFBFBF}       & \cellcolor[HTML]{BFBFBF}      &                             &                             &                             &                             &                             &                             &                             &                             \\
-        \textbf{/27}                                                                               &                               &                                &                                &                               & \cellcolor[HTML]{FFD966}       & \cellcolor[HTML]{FFD966}      &                                &                               &                             &                             &                             &                             &                             &                             &                             &                             \\
-        \textbf{/26}                                                                               &                               &                                & \cellcolor[HTML]{A9D08E}       & \cellcolor[HTML]{A9D08E}      &                                &                               &                                &                               &                             &                             &                             &                             &                             &                             &                             &                             \\
-        \textbf{/25}                                                                               & \cellcolor[HTML]{F4B084}      & \cellcolor[HTML]{F4B084}       &                                &                               &                                &                               &                                &                               &                             &                             &                             &                             &                             &                             &                             &                             \\ \hline
-                                                                                                   & \multicolumn{16}{r}{\cellcolor[HTML]{00B0F0}/24}                                                                                                                                                                                                                                                                                                                                                                                                                                                                  \\
-                                                                                                   & \multicolumn{2}{r}{\cellcolor[HTML]{F4B084}}                   & \multicolumn{14}{r}{\cellcolor[HTML]{F4B084}/25}                                                                                                                                                                                                                                                                                                                                                                                                 \\
-                                                                                                   & \multicolumn{2}{r}{\cellcolor[HTML]{F4B084}}                   & \multicolumn{2}{r}{\cellcolor[HTML]{A9D08E}}                   & \multicolumn{12}{r}{\cellcolor[HTML]{A9D08E}/26}                                                                                                                                                                                                                                                                                                                                \\
-                                                                                                   & \multicolumn{2}{r}{\cellcolor[HTML]{F4B084}}                   & \multicolumn{2}{r}{\cellcolor[HTML]{A9D08E}}                   & \multicolumn{2}{r}{\cellcolor[HTML]{FFD966}}                   & \multicolumn{10}{r}{\cellcolor[HTML]{FFD966}/27}                                                                                                                                                                                                                                                               \\
-                                                                                                   & \multicolumn{2}{r}{\cellcolor[HTML]{F4B084}}                   & \multicolumn{2}{r}{\cellcolor[HTML]{A9D08E}}                   & \multicolumn{2}{r}{\cellcolor[HTML]{FFD966}}                   & \multicolumn{2}{r}{\cellcolor[HTML]{BFBFBF}}                   & \multicolumn{8}{r}{\cellcolor[HTML]{BFBFBF}/28}                                                                                                                                                                                               \\
-                                                                                                   & \multicolumn{2}{r}{\multirow{-5}{*}{\cellcolor[HTML]{F4B084}}} & \multicolumn{2}{r}{\multirow{-4}{*}{\cellcolor[HTML]{A9D08E}}} & \multicolumn{2}{r}{\multirow{-3}{*}{\cellcolor[HTML]{FFD966}}} & \multicolumn{2}{r}{\multirow{-2}{*}{\cellcolor[HTML]{BFBFBF}}} & \multicolumn{4}{r}{/29}                                                                                               & \multicolumn{4}{r}{/29}                                                                                               \\
-        \multirow{-7}{*}{\textbf{\begin{tabular}[c]{@{}r@{}}Subnet\\ visual\\ split\end{tabular}}} & \multicolumn{2}{r}{\cellcolor[HTML]{F4B084}/25}                & \multicolumn{2}{r}{\cellcolor[HTML]{A9D08E}/26}                & \multicolumn{2}{r}{\cellcolor[HTML]{FFD966}/27}                & \multicolumn{2}{r}{\cellcolor[HTML]{BFBFBF}/28}                & \multicolumn{2}{r}{\cellcolor[HTML]{C09FE5}/30}           & \multicolumn{2}{r}{\cellcolor[HTML]{C09FE5}/30}           & \multicolumn{2}{r}{\cellcolor[HTML]{C09FE5}/30}           & \multicolumn{2}{r}{\cellcolor[HTML]{C09FE5}/30}           \\ \hline
-        \caption{Visual LAN allocation}
-        \label{tab:visuallanalloc}\\
-    \end{longtable}
+    \subsection{Outline}
+        Previously the subdivision was perfomed by opening with the lowest subdivision, \textbf{/30}, then expanding till \textbf{/25}. \\
+        However, this was inappropriate due to best practices rules which assert that network subdivision starts with the largest network, \textbf{/25}, and then continues till the smallest network, \textbf{/30}. \\
 
-    \begin{longtable}[c]{lllllll}
-        \hline
-                                                                                              & \textbf{Network}            & \textbf{Usable IPs} & \textbf{Router} & \textbf{Broadcast} & \multicolumn{1}{c}{\textbf{Subnet Mask}} &                                      \\ \cline{2-5}
-        \multirow{-2}{*}{\textbf{Name}}                                                       & \multicolumn{4}{c}{192.168.7.}                                                           & \multicolumn{1}{c}{255.255.255.}         & \multirow{-2}{*}{\textbf{Populated}} \\ \hline
-        \endfirsthead
-        %
-        \multicolumn{7}{c}%
-        {{\bfseries Table \thetable\ continued from previous page}} \\
-        \hline
-                                                                                              & \textbf{Network}            & \textbf{Usable IPs} & \textbf{Router} & \textbf{Broadcast} & \multicolumn{1}{c}{\textbf{Subnet Mask}} &                                      \\ \cline{2-5}
-        \multirow{-2}{*}{\textbf{Name}}                                                       & \multicolumn{4}{c}{192.168.7.}                                                           & \multicolumn{1}{c}{255.255.255.}         & \multirow{-2}{*}{\textbf{Populated}} \\ \hline
-        \endhead
-        %
-        \hline
-        \endfoot
-        %
-        \endlastfoot
-        %
-        \cellcolor[HTML]{C09FE5}\textbf{LAN Transit A}                                        & 252                         & 253 - 254           &                 & 255                & 252                                      & 2                                    \\
-        \cellcolor[HTML]{C09FE5}\textbf{LAN Transit B}                                        & 248                         & 249 - 250           &                 & 251                & 252                                      & 2                                    \\
-        \cellcolor[HTML]{C09FE5}\textbf{LAN Transit C}                                        & 244                         & 245 - 246           &                 & 247                & 252                                      & 2                                    \\ \hline
-                                                                                              & \cellcolor[HTML]{C09FE5}240 & 241 - 242           &                 & 243                &                                          & 0                                    \\
-        \multirow{-2}{*}{\textbf{\begin{tabular}[c]{@{}l@{}}Unused\\ remaining\end{tabular}}} & \cellcolor[HTML]{BFBFBF}224 & 225 - 238           &                 & 239                &                                          & 0                                    \\ \hline
-        \cellcolor[HTML]{FFD966}\textbf{LAN B}                                                & 192                         & 193 - 221           & 222             & 223                & 224                                      & 27                                   \\
-        \cellcolor[HTML]{A9D08E}\textbf{LAN A}                                                & 128                         & 129 - 189           & 190             & 191                & 192                                      & 48                                   \\
-        \cellcolor[HTML]{F4B084}\textbf{LAN Server}                                           & 0                           & 1 - 125             & 126             & 127                & 128                                      & 126                                  \\ \hline
-        \caption{LAN allocation table}
-        \label{tab:lanalloctable}\\
-    \end{longtable}
+        And so, here are the results:
+        \begin{longtable}[c]{rcccccccccccccccc}
+            \hline
+            \multicolumn{1}{c}{}                                                                       & \multicolumn{16}{c}{\textbf{IP}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  \\
+            \multicolumn{1}{c}{\multirow{-2}{*}{\textbf{Subnet}}}                                      & \cellcolor[HTML]{F4B084}0     & \cellcolor[HTML]{F4B084}127    & \cellcolor[HTML]{A9D08E}128    & \cellcolor[HTML]{A9D08E}191   & \cellcolor[HTML]{FFD966}192    & \cellcolor[HTML]{FFD966}223   & \cellcolor[HTML]{BFBFBF}224    & \cellcolor[HTML]{BFBFBF}239   & \cellcolor[HTML]{C09FE5}240 & \cellcolor[HTML]{C09FE5}243 & \cellcolor[HTML]{C09FE5}244 & \cellcolor[HTML]{C09FE5}247 & \cellcolor[HTML]{C09FE5}248 & \cellcolor[HTML]{C09FE5}251 & \cellcolor[HTML]{C09FE5}252 & \cellcolor[HTML]{C09FE5}255 \\ \hline
+            \endfirsthead
+            %
+            \multicolumn{17}{c}%
+            {{\bfseries Table \thetable\ continued from previous page}} \\
+            \hline
+            \multicolumn{1}{c}{}                                                                       & \multicolumn{16}{c}{\textbf{IP}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  \\
+            \multicolumn{1}{c}{\multirow{-2}{*}{\textbf{Subnet}}}                                      & \cellcolor[HTML]{F4B084}0     & \cellcolor[HTML]{F4B084}127    & \cellcolor[HTML]{A9D08E}128    & \cellcolor[HTML]{A9D08E}191   & \cellcolor[HTML]{FFD966}192    & \cellcolor[HTML]{FFD966}223   & \cellcolor[HTML]{BFBFBF}224    & \cellcolor[HTML]{BFBFBF}239   & \cellcolor[HTML]{C09FE5}240 & \cellcolor[HTML]{C09FE5}243 & \cellcolor[HTML]{C09FE5}244 & \cellcolor[HTML]{C09FE5}247 & \cellcolor[HTML]{C09FE5}248 & \cellcolor[HTML]{C09FE5}251 & \cellcolor[HTML]{C09FE5}252 & \cellcolor[HTML]{C09FE5}255 \\ \hline
+            \endhead
+            %
+            \hline
+            \endfoot
+            %
+            \endlastfoot
+            %
+            \textbf{/30}                                                                               &                               &                                &                                &                               &                                &                               &                                &                               &                             &                             &                             &                             &                             &                             & \cellcolor[HTML]{C09FE5}    & \cellcolor[HTML]{C09FE5}    \\
+            \textbf{/30}                                                                               &                               &                                &                                &                               &                                &                               &                                &                               &                             &                             &                             &                             & \cellcolor[HTML]{C09FE5}    & \cellcolor[HTML]{C09FE5}    &                             &                             \\
+            \textbf{/30}                                                                               &                               &                                &                                &                               &                                &                               &                                &                               &                             &                             & \cellcolor[HTML]{C09FE5}    & \cellcolor[HTML]{C09FE5}    &                             &                             &                             &                             \\
+            \textbf{/30}                                                                               &                               &                                &                                &                               &                                &                               &                                &                               & \cellcolor[HTML]{C09FE5}    & \cellcolor[HTML]{C09FE5}    &                             &                             &                             &                             &                             &                             \\
+            \textbf{/28}                                                                               &                               &                                &                                &                               &                                &                               & \cellcolor[HTML]{BFBFBF}       & \cellcolor[HTML]{BFBFBF}      &                             &                             &                             &                             &                             &                             &                             &                             \\
+            \textbf{/27}                                                                               &                               &                                &                                &                               & \cellcolor[HTML]{FFD966}       & \cellcolor[HTML]{FFD966}      &                                &                               &                             &                             &                             &                             &                             &                             &                             &                             \\
+            \textbf{/26}                                                                               &                               &                                & \cellcolor[HTML]{A9D08E}       & \cellcolor[HTML]{A9D08E}      &                                &                               &                                &                               &                             &                             &                             &                             &                             &                             &                             &                             \\
+            \textbf{/25}                                                                               & \cellcolor[HTML]{F4B084}      & \cellcolor[HTML]{F4B084}       &                                &                               &                                &                               &                                &                               &                             &                             &                             &                             &                             &                             &                             &                             \\ \hline
+                                                                                                       & \multicolumn{16}{r}{\cellcolor[HTML]{00B0F0}/24}                                                                                                                                                                                                                                                                                                                                                                                                                                                                  \\
+                                                                                                       & \multicolumn{2}{r}{\cellcolor[HTML]{F4B084}}                   & \multicolumn{14}{r}{\cellcolor[HTML]{F4B084}/25}                                                                                                                                                                                                                                                                                                                                                                                                 \\
+                                                                                                       & \multicolumn{2}{r}{\cellcolor[HTML]{F4B084}}                   & \multicolumn{2}{r}{\cellcolor[HTML]{A9D08E}}                   & \multicolumn{12}{r}{\cellcolor[HTML]{A9D08E}/26}                                                                                                                                                                                                                                                                                                                                \\
+                                                                                                       & \multicolumn{2}{r}{\cellcolor[HTML]{F4B084}}                   & \multicolumn{2}{r}{\cellcolor[HTML]{A9D08E}}                   & \multicolumn{2}{r}{\cellcolor[HTML]{FFD966}}                   & \multicolumn{10}{r}{\cellcolor[HTML]{FFD966}/27}                                                                                                                                                                                                                                                               \\
+                                                                                                       & \multicolumn{2}{r}{\cellcolor[HTML]{F4B084}}                   & \multicolumn{2}{r}{\cellcolor[HTML]{A9D08E}}                   & \multicolumn{2}{r}{\cellcolor[HTML]{FFD966}}                   & \multicolumn{2}{r}{\cellcolor[HTML]{BFBFBF}}                   & \multicolumn{8}{r}{\cellcolor[HTML]{BFBFBF}/28}                                                                                                                                                                                               \\
+                                                                                                       & \multicolumn{2}{r}{\multirow{-5}{*}{\cellcolor[HTML]{F4B084}}} & \multicolumn{2}{r}{\multirow{-4}{*}{\cellcolor[HTML]{A9D08E}}} & \multicolumn{2}{r}{\multirow{-3}{*}{\cellcolor[HTML]{FFD966}}} & \multicolumn{2}{r}{\multirow{-2}{*}{\cellcolor[HTML]{BFBFBF}}} & \multicolumn{4}{r}{/29}                                                                                               & \multicolumn{4}{r}{/29}                                                                                               \\
+            \multirow{-7}{*}{\textbf{\begin{tabular}[c]{@{}r@{}}Subnet\\ visual\\ split\end{tabular}}} & \multicolumn{2}{r}{\cellcolor[HTML]{F4B084}/25}                & \multicolumn{2}{r}{\cellcolor[HTML]{A9D08E}/26}                & \multicolumn{2}{r}{\cellcolor[HTML]{FFD966}/27}                & \multicolumn{2}{r}{\cellcolor[HTML]{BFBFBF}/28}                & \multicolumn{2}{r}{\cellcolor[HTML]{C09FE5}/30}           & \multicolumn{2}{r}{\cellcolor[HTML]{C09FE5}/30}           & \multicolumn{2}{r}{\cellcolor[HTML]{C09FE5}/30}           & \multicolumn{2}{r}{\cellcolor[HTML]{C09FE5}/30}           \\ \hline
+            \caption{Visual LAN allocation}
+            \label{tab:visuallanalloc}\\
+        \end{longtable}
 
-    \begin{longtable}[c]{@{}llrllrr@{}}
-        \toprule
-        \multicolumn{1}{c}{\multirow{3}{*}{\textbf{Name}}} & \multicolumn{2}{c}{\multirow{2}{*}{\textbf{Ports Link}}} & \multicolumn{1}{c}{\multirow{3}{*}{\textbf{Network}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{IP}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Gateway}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Subnet Mask}}} \\
-        \multicolumn{1}{c}{}                               & \multicolumn{2}{c}{}                                     & \multicolumn{1}{c}{}                                  & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                  & \multicolumn{1}{c}{}                                      \\* \cmidrule(lr){2-3} \cmidrule(l){5-7}
-        \multicolumn{1}{c}{}                               & \textbf{From}                & \textbf{To}               & \multicolumn{1}{c}{}                                  & \multicolumn{2}{c}{192.168.7.}                                                                           & \multicolumn{1}{c}{255.255.255.}                          \\* \midrule
-        \endfirsthead
-        %
-        \multicolumn{7}{c}%
-        {{\bfseries Table \thetable\ continued from previous page}} \\
-        \toprule
-        \multicolumn{1}{c}{\multirow{3}{*}{\textbf{Name}}} & \multicolumn{2}{c}{\multirow{2}{*}{\textbf{Ports Link}}} & \multicolumn{1}{c}{\multirow{3}{*}{\textbf{Network}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{IP}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Gateway}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Subnet Mask}}} \\
-        \multicolumn{1}{c}{}                               & \multicolumn{2}{c}{}                                     & \multicolumn{1}{c}{}                                  & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                  & \multicolumn{1}{c}{}                                      \\* \cmidrule(lr){2-3} \cmidrule(l){5-7}
-        \multicolumn{1}{c}{}                               & \textbf{From}                & \textbf{To}               & \multicolumn{1}{c}{}                                  & \multicolumn{2}{c}{192.168.7.}                                                                           & \multicolumn{1}{c}{255.255.255.}                          \\* \midrule
-        \endhead
-        %
-        \bottomrule
-        \endfoot
-        %
-        \endlastfoot
-        %
-        \textbf{PC0}                                       & Fa0                          & Sw0 Fa0/2                 & \multirow{2}{*}{LAN A}                                & 129                                              & \multirow{2}{*}{190}                                  & \multirow{2}{*}{192}                                      \\
-        \textbf{Laptop0}                                   & Fa0                          & Sw0 Fa0/3                 &                                                       & 130                                              &                                                       &                                                           \\* \midrule
-        \textbf{PC1}                                       & Fa0                          & Sw1 Fa0/2                 & \multirow{2}{*}{LAN B}                                & 193                                              & \multirow{2}{*}{222}                                  & \multirow{2}{*}{224}                                      \\
-        \textbf{Laptop1}                                   & Fa0                          & Sw1 Fa0/3                 &                                                       & 194                                              &                                                       &                                                           \\* \midrule
-        \multirow{3}{*}{\textbf{R0}}                       & Fa0/0                        & Fa0/0                     & External                                              &                                                  &                                                       & \multicolumn{1}{l}{}                                      \\* \cmidrule(l){5-7}
-                                                           & Fa4/0                        & R2 Fa4/0                  & LAN Transit C                                         & 245                                              &                                                       & \multirow{2}{*}{252}                                      \\
-                                                           & Fa5/0                        & R1 Fa5/0                  & LAN Transit B                                         & 249                                              &                                                       &                                                           \\* \midrule
-        \multirow{4}{*}{\textbf{R1}}                       & Fa0/0                        & Sw0 Fa0/1                 & LAN A                                                 & 190                                              &                                                       & \multicolumn{1}{l}{192}                                   \\
-                                                           & Fa1/0                        & Sw1 Fa0/1                 & LAN B                                                 & 222                                              &                                                       & \multicolumn{1}{l}{224}                                   \\* \cmidrule(l){5-7}
-                                                           & Fa4/0                        & R2 Fa5/0                  & LAN Transit A                                         & 253                                              &                                                       & \multirow{2}{*}{252}                                      \\
-                                                           & Fa5/0                        & R1 Fa4/0                  & LAN Transit B                                         & 250                                              &                                                       &                                                           \\* \midrule
-        \multirow{3}{*}{\textbf{R2}}                       & Fa0/0                        & Sw2 Fa0/4                 & LAN Server                                            & 126                                              &                                                       & \multicolumn{1}{l}{128}                                   \\* \cmidrule(l){5-7}
-                                                           & Fa4/0                        & R0 Fa4/0                  & LAN Transit C                                         & 246                                              &                                                       & \multirow{2}{*}{252}                                      \\
-                                                           & Fa5/0                        & R1 Fa4/0                  & LAN Transit A                                         & 254                                              &                                                       &                                                           \\* \midrule
-        \textbf{HTTP-Server}                               & Fa0                          & Sw2 Fa0/1                 & \multirow{3}{*}{LAN Server}                           & 3                                                & \multirow{3}{*}{126}                                  & \multirow{3}{*}{128}                                      \\
-        \textbf{DNS-Server}                                & Fa0                          & Sw2 Fa0/2                 &                                                       & 2                                                &                                                       &                                                           \\
-        \textbf{DHCP-Server}                               & Fa0                          & Sw2 Fa0/3                 &                                                       & 1                                                &                                                       &                                                           \\* \midrule
-        \multirow{3}{*}{\textbf{Sw0}}                      & Fa0/1                        & R1 Fa0/0                  & \multirow{3}{*}{LAN A}                                & \multicolumn{3}{c}{\multirow{3}{*}{}}                                                                                                                                \\
-                                                           & Fa0/2                        & PC0                       &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\
-                                                           & Fa0/3                        & Laptop0                   &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\* \midrule
-        \multirow{3}{*}{\textbf{Sw1}}                      & Fa0/1                        & R1 Fa1/0                  & \multirow{3}{*}{LAN B}                                & \multicolumn{3}{c}{\multirow{3}{*}{}}                                                                                                                                \\
-                                                           & Fa0/2                        & PC1                       &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\
-                                                           & Fa0/3                        & Laptop1                   &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\* \midrule
-        \multirow{4}{*}{\textbf{Sw2}}                      & Fa0/1                        & HTTP-Server               & \multirow{4}{*}{LAN Server}                           & \multicolumn{3}{c}{\multirow{4}{*}{}}                                                                                                                                \\
-                                                           & Fa0/2                        & DNS-Server                &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\
-                                                           & Fa0/3                        & DHCP-Server               &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\
-                                                           & Fa0/4                        & R2 Fa0/0                  &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\* \bottomrule
-        \caption{IP configuration table}
-        \label{tab:ipconftable}\\
-    \end{longtable}
+        \begin{longtable}[c]{lllllll}
+            \hline
+                                                                                                  & \textbf{Network}            & \textbf{Usable IPs} & \textbf{Router} & \textbf{Broadcast} & \multicolumn{1}{c}{\textbf{Subnet Mask}} &                                      \\ \cline{2-5}
+            \multirow{-2}{*}{\textbf{Name}}                                                       & \multicolumn{4}{c}{192.168.7.}                                                           & \multicolumn{1}{c}{255.255.255.}         & \multirow{-2}{*}{\textbf{Populated}} \\ \hline
+            \endfirsthead
+            %
+            \multicolumn{7}{c}%
+            {{\bfseries Table \thetable\ continued from previous page}} \\
+            \hline
+                                                                                                  & \textbf{Network}            & \textbf{Usable IPs} & \textbf{Router} & \textbf{Broadcast} & \multicolumn{1}{c}{\textbf{Subnet Mask}} &                                      \\ \cline{2-5}
+            \multirow{-2}{*}{\textbf{Name}}                                                       & \multicolumn{4}{c}{192.168.7.}                                                           & \multicolumn{1}{c}{255.255.255.}         & \multirow{-2}{*}{\textbf{Populated}} \\ \hline
+            \endhead
+            %
+            \hline
+            \endfoot
+            %
+            \endlastfoot
+            %
+            \cellcolor[HTML]{F4B084}\textbf{LAN Server}                                           & 0                           & 1 - 125             & 126             & 127                & 128                                      & 126                                  \\
+            \cellcolor[HTML]{A9D08E}\textbf{LAN A}                                                & 128                         & 129 - 189           & 190             & 191                & 192                                      & 48                                   \\
+            \cellcolor[HTML]{FFD966}\textbf{LAN B}                                                & 192                         & 193 - 221           & 222             & 223                & 224                                      & 27                                   \\ \hline
+            \multirow{+2}{*}{\textbf{\begin{tabular}[c]{@{}l@{}}Unused\\ remaining\end{tabular}}} & \cellcolor[HTML]{BFBFBF}224 & 225 - 238           &                 & 239                &                                          & 0                                    \\
+                                                                                                  & \cellcolor[HTML]{C09FE5}240 & 241 - 242           &                 & 243                &                                          & 0                                    \\ \hline
+            \cellcolor[HTML]{C09FE5}\textbf{LAN Transit C}                                        & 244                         & 245 - 246           &                 & 247                & 252                                      & 2                                    \\
+            \cellcolor[HTML]{C09FE5}\textbf{LAN Transit B}                                        & 248                         & 249 - 250           &                 & 251                & 252                                      & 2                                    \\
+            \cellcolor[HTML]{C09FE5}\textbf{LAN Transit A}                                        & 252                         & 253 - 254           &                 & 255                & 252                                      & 2                                    \\ \hline
+            \caption{LAN allocation table}
+            \label{tab:lanalloctable}\\
+        \end{longtable}
 
-    Beautifully charted. Let's implement it with our favorite tool, Cisco Packet Trace.\\
-    \begin{flushleft}
-            \begin{center}
-                \begin{longtable}{ m{5cm} l }
-                    \textbf{Steps} & \textbf{Example} \\
-                    \hline
-                    \endfirsthead
-                    \multicolumn{2}{c}%
-                    {{\bfseries Table \thetable\ continued from previous page}} \\
-                    \textbf{Steps} & \textbf{Example} \\
-                    \hline
-                    \endhead
-                    \hline Continued on next page \\
-                    \endfoot
-                    \endlastfoot
+        \begin{longtable}[c]{@{}llrllrr@{}}
+            \toprule
+            \multicolumn{1}{c}{\multirow{3}{*}{\textbf{Name}}} & \multicolumn{2}{c}{\multirow{2}{*}{\textbf{Ports Link}}} & \multicolumn{1}{c}{\multirow{3}{*}{\textbf{Network}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{IP}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Gateway}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Subnet Mask}}} \\
+            \multicolumn{1}{c}{}                               & \multicolumn{2}{c}{}                                     & \multicolumn{1}{c}{}                                  & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                  & \multicolumn{1}{c}{}                                      \\* \cmidrule(lr){2-3} \cmidrule(l){5-7}
+            \multicolumn{1}{c}{}                               & \textbf{From}                & \textbf{To}               & \multicolumn{1}{c}{}                                  & \multicolumn{2}{c}{192.168.7.}                                                                           & \multicolumn{1}{c}{255.255.255.}                          \\* \midrule
+            \endfirsthead
+            %
+            \multicolumn{7}{c}%
+            {{\bfseries Table \thetable\ continued from previous page}} \\
+            \toprule
+            \multicolumn{1}{c}{\multirow{3}{*}{\textbf{Name}}} & \multicolumn{2}{c}{\multirow{2}{*}{\textbf{Ports Link}}} & \multicolumn{1}{c}{\multirow{3}{*}{\textbf{Network}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{IP}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Gateway}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Subnet Mask}}} \\
+            \multicolumn{1}{c}{}                               & \multicolumn{2}{c}{}                                     & \multicolumn{1}{c}{}                                  & \multicolumn{1}{c}{}                             & \multicolumn{1}{c}{}                                  & \multicolumn{1}{c}{}                                      \\* \cmidrule(lr){2-3} \cmidrule(l){5-7}
+            \multicolumn{1}{c}{}                               & \textbf{From}                & \textbf{To}               & \multicolumn{1}{c}{}                                  & \multicolumn{2}{c}{192.168.7.}                                                                           & \multicolumn{1}{c}{255.255.255.}                          \\* \midrule
+            \endhead
+            %
+            \bottomrule
+            \endfoot
+            %
+            \endlastfoot
+            %
+            \textbf{PC0}                                       & Fa0                          & Sw0 Fa0/2                 & \multirow{2}{*}{LAN A}                                & 129                                              & \multirow{2}{*}{190}                                  & \multirow{2}{*}{192}                                      \\
+            \textbf{Laptop0}                                   & Fa0                          & Sw0 Fa0/3                 &                                                       & 130                                              &                                                       &                                                           \\* \midrule
+            \textbf{PC1}                                       & Fa0                          & Sw1 Fa0/2                 & \multirow{2}{*}{LAN B}                                & 193                                              & \multirow{2}{*}{222}                                  & \multirow{2}{*}{224}                                      \\
+            \textbf{Laptop1}                                   & Fa0                          & Sw1 Fa0/3                 &                                                       & 194                                              &                                                       &                                                           \\* \midrule
+            \multirow{3}{*}{\textbf{R0}}                       & Fa0/0                        & Fa0/0                     & External                                              &                                                  &                                                       & \multicolumn{1}{l}{}                                      \\* \cmidrule(l){5-7}
+                                                               & Fa4/0                        & R2 Fa4/0                  & LAN Transit C                                         & 245                                              &                                                       & \multirow{2}{*}{252}                                      \\
+                                                               & Fa5/0                        & R1 Fa5/0                  & LAN Transit B                                         & 249                                              &                                                       &                                                           \\* \midrule
+            \multirow{4}{*}{\textbf{R1}}                       & Fa0/0                        & Sw0 Fa0/1                 & LAN A                                                 & 190                                              &                                                       & \multicolumn{1}{l}{192}                                   \\
+                                                               & Fa1/0                        & Sw1 Fa0/1                 & LAN B                                                 & 222                                              &                                                       & \multicolumn{1}{l}{224}                                   \\* \cmidrule(l){5-7}
+                                                               & Fa4/0                        & R2 Fa5/0                  & LAN Transit A                                         & 253                                              &                                                       & \multirow{2}{*}{252}                                      \\
+                                                               & Fa5/0                        & R1 Fa4/0                  & LAN Transit B                                         & 250                                              &                                                       &                                                           \\* \midrule
+            \multirow{3}{*}{\textbf{R2}}                       & Fa0/0                        & Sw2 Fa0/4                 & LAN Server                                            & 126                                              &                                                       & \multicolumn{1}{l}{128}                                   \\* \cmidrule(l){5-7}
+                                                               & Fa4/0                        & R0 Fa4/0                  & LAN Transit C                                         & 246                                              &                                                       & \multirow{2}{*}{252}                                      \\
+                                                               & Fa5/0                        & R1 Fa4/0                  & LAN Transit A                                         & 254                                              &                                                       &                                                           \\* \midrule
+            \textbf{HTTP-Server}                               & Fa0                          & Sw2 Fa0/1                 & \multirow{3}{*}{LAN Server}                           & 3                                                & \multirow{3}{*}{126}                                  & \multirow{3}{*}{128}                                      \\
+            \textbf{DNS-Server}                                & Fa0                          & Sw2 Fa0/2                 &                                                       & 2                                                &                                                       &                                                           \\
+            \textbf{DHCP-Server}                               & Fa0                          & Sw2 Fa0/3                 &                                                       & 1                                                &                                                       &                                                           \\* \midrule
+            \multirow{3}{*}{\textbf{Sw0}}                      & Fa0/1                        & R1 Fa0/0                  & \multirow{3}{*}{LAN A}                                & \multicolumn{3}{c}{\multirow{3}{*}{}}                                                                                                                                \\
+                                                               & Fa0/2                        & PC0                       &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\
+                                                               & Fa0/3                        & Laptop0                   &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\* \midrule
+            \multirow{3}{*}{\textbf{Sw1}}                      & Fa0/1                        & R1 Fa1/0                  & \multirow{3}{*}{LAN B}                                & \multicolumn{3}{c}{\multirow{3}{*}{}}                                                                                                                                \\
+                                                               & Fa0/2                        & PC1                       &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\
+                                                               & Fa0/3                        & Laptop1                   &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\* \midrule
+            \multirow{4}{*}{\textbf{Sw2}}                      & Fa0/1                        & HTTP-Server               & \multirow{4}{*}{LAN Server}                           & \multicolumn{3}{c}{\multirow{4}{*}{}}                                                                                                                                \\
+                                                               & Fa0/2                        & DNS-Server                &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\
+                                                               & Fa0/3                        & DHCP-Server               &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\
+                                                               & Fa0/4                        & R2 Fa0/0                  &                                                       & \multicolumn{3}{c}{}                                                                                                                                                 \\* \bottomrule
+            \caption{IP configuration table}
+            \label{tab:ipconftable}\\
+        \end{longtable}
 
-                    To configure the IP on a device we must \textbf{single-click} in the intended device (1), go to the \textit{desktop tab} (2) and select \textit{IP Configuration} (3).                                                                                                              & \includegraphics[scale=0.35 ,valign=c]{} \\ \hline
-                    IP configuration for LAN A, PC0 and Laptop0.                                                                                                                                                                                                                                        & \includegraphics[scale=0.34 ,valign=c]{} \\ \hline
-                    IP configuration for LAN B, PC1 and Laptop1.                                                                                                                                                                                                                                        & \includegraphics[scale=0.34 ,valign=c]{} \\ \hline
-                    IP configuration for LAN Servers, DHCP-Server, DNS-Server and HTTP-Server.                                                                                                                                                                                                          & \includegraphics[scale=0.31 ,valign=c]{} \\ \hline
-                    For the router there's two options, both valid and exhibited in the report. The graphical user interface (GUI) in the right and the CLI in the output subsection. Going by the GUI it's crystal clear, just input the necessary IP and subnet mask.                                 & \includegraphics[scale=0.31 ,valign=c]{} \\ \hline
-                    IP configuration for Router 0.                                                                                                                                                                                                                                                      & \includegraphics[scale=0.31 ,valign=c]{} \\ \hline
-                    IP configuration for Router 1.                                                                                                                                                                                                                                                      & \includegraphics[scale=0.31 ,valign=c]{} \\ \hline
-                    IP configuration for Router 2.                                                                                                                                                                                                                                                      & \includegraphics[scale=0.31 ,valign=c]{} \\ \hline
-                    \caption{Cisco Packet Tracer IP guide}
-                    \label{tab:cptg1}
-                \end{longtable}
-            \end{center}
-    \end{flushleft}
+        Beautifully charted. Let's implement it with our favorite tool, Cisco Packet Trace.\\
 
-    After configuring we're testing our network by running diagnostic commands, first arp, then ping, then arp again and finally tracert:
-    \begin{longtable}[c]{@{}lll@{}}
-        \toprule
-        \textbf{Ping}      & \textbf{Trace Route}  & \textbf{Device} \\* \midrule
-        \endfirsthead
-        %
-        \multicolumn{3}{c}%
-        {{\bfseries Table \thetable\ continued from previous page}} \\
-        \toprule
-        \textbf{Ping}      & \textbf{Trace Route}  & \textbf{Device} \\* \midrule
-        \endhead
-        %
-        \bottomrule
-        \endfoot
-        %
-        \endlastfoot
-        %
-        arp -a             & arp -a                & ARP Table       \\
-        ping 192.168.7.129 & tracert 192.168.7.129 & PC0             \\
-        ping 192.168.7.130 & tracert 192.168.7.130 & Laptop0         \\
-        ping 192.168.7.193 & tracert 192.168.7.193 & PC1             \\
-        ping 192.168.7.194 & tracert 192.168.7.194 & Laptop1         \\
-        ping 192.168.7.1   & tracert 192.168.7.1   & DHCP-Server     \\
-        ping 192.168.7.2   & tracert 192.168.7.2   & DNS-Server      \\
-        ping 192.168.7.3   & tracert 192.168.7.3   & HTTP-Server     \\
-        ping 8.8.8.8       & tracert 8.8.8.8       & R0              \\
-        ping 192.168.7.245 & tracert 192.168.7.245 & R0              \\
-        ping 192.168.7.249 & tracert 192.168.7.249 & R0              \\
-        ping 192.168.7.190 & tracert 192.168.7.190 & R1              \\
-        ping 192.168.7.222 & tracert 192.168.7.222 & R1              \\
-        ping 192.168.7.253 & tracert 192.168.7.253 & R1              \\
-        ping 192.168.7.250 & tracert 192.168.7.250 & R1              \\
-        ping 192.168.7.126 & tracert 192.168.7.126 & R2              \\
-        ping 192.168.7.246 & tracert 192.168.7.246 & R2              \\
-        ping 192.168.7.254 & tracert 192.168.7.254 & R2              \\* \bottomrule
-        \caption{CLI commands}
-        \label{tab:clicommands}\\
-    \end{longtable}
+    \subsection{Configuring devices}
+        \begin{flushleft}
+                \begin{center}
+                    \begin{longtable}{ m{5cm} l }
+                        \textbf{Steps} & \textbf{Example} \\
+                        \hline
+                        \endfirsthead
+                        \multicolumn{2}{c}%
+                        {{\bfseries Table \thetable\ continued from previous page}} \\
+                        \textbf{Steps} & \textbf{Example} \\
+                        \hline
+                        \endhead
+                        \hline Continued on next page \\
+                        \endfoot
+                        \endlastfoot
 
-    Note that not everything fits in the images, the outputs after this guide attests to what was performed.
-    % Guide
-    \begin{flushleft}
-            \begin{center}
-                \begin{longtable}{ m{5cm} l }
-                    \textbf{Steps} & \textbf{Example} \\
-                    \hline
-                    \endfirsthead
-                    \multicolumn{2}{c}%
-                    {{\bfseries Table \thetable\ continued from previous page}} \\
-                    \textbf{Steps} & \textbf{Example} \\
-                    \hline
-                    \endhead
-                    \hline Continued on next page \\
-                    \endfoot
-                    \endlastfoot
+                        To configure the IP on a device we must \textbf{single-click} in the intended device (1), go to the \textit{desktop tab} (2) and select \textit{IP Configuration} (3).  & \includegraphics[scale=0.32 ,valign=c]{CiscoPacketTracer_cmdOutput}   \\ \hline
+                        IP configuration for LAN A, PC0 and Laptop0.                                                                                                                            & \includegraphics[scale=0.25 ,valign=c]{lana-ipall}                    \\ \hline
+                        IP configuration for LAN B, PC1 and Laptop1.                                                                                                                            & \includegraphics[scale=0.25 ,valign=c]{lanb-ipall}                    \\ \hline
+                        IP configuration for LAN Servers, DHCP-Server, DNS-Server and HTTP-Server.                                                                                              & \includegraphics[scale=0.19 ,valign=c]{lanservers-ipall}              \\ \hline
 
-                    To test the connection from devices we select a device by \textbf{single-clicking} it (1), go to the \textit{desktop tab} (2) and select \textit{Command Prompt} (3).   & \includegraphics[scale=0.35 ,valign=c]{} \\ \hline
-                    From PC0 viewpoint.                                                                                                                                                     & \includegraphics[scale=0.35 ,valign=c]{} \\ \hline
-                    From Laptop0 viewpoint.                                                                                                                                                 & \includegraphics[scale=0.34 ,valign=c]{} \\ \hline
-                    From PC1 viewpoint.                                                                                                                                                     & \includegraphics[scale=0.34 ,valign=c]{} \\ \hline
-                    From Laptop1 viewpoint.                                                                                                                                                 & \includegraphics[scale=0.31 ,valign=c]{} \\ \hline
-                    From DHCP-Server viewpoint.                                                                                                                                             & \includegraphics[scale=0.35 ,valign=c]{} \\ \hline
-                    From DNS-Server viewpoint.                                                                                                                                              & \includegraphics[scale=0.35 ,valign=c]{} \\ \hline
-                    From HTTP-Server viewpoint.                                                                                                                                             & \includegraphics[scale=0.34 ,valign=c]{} \\ \hline
-                    To test the connection from routers we select a router by \textbf{single-clicking} it (1), go to the \textit{CLI tab} (2) and select \textit{Command Prompt} (3).       & \includegraphics[scale=0.35 ,valign=c]{} \\ \hline
-                    From router R0 viewpoint.                                                                                                                                               & \includegraphics[scale=0.34 ,valign=c]{} \\ \hline
-                    From router R1 viewpoint.                                                                                                                                               & \includegraphics[scale=0.34 ,valign=c]{} \\ \hline
-                    From router R2 viewpoint.                                                                                                                                               & \includegraphics[scale=0.34 ,valign=c]{} \\ \hline
+                        \caption{Cisco Packet Tracer IP guide}
+                        \label{tab:cptg1}
+                    \end{longtable}
+                \end{center}
+        \end{flushleft}
 
-                    \caption{Cisco Packet Tracer CLI guide}
-                    \label{tab:cptg2}
-                \end{longtable}
-            \end{center}
-    \end{flushleft}
+    \subsection{Configuring routers}
+        For the router there's two options, both valid and exhibited in the report. The graphical user interface (GUI) in the right and the command line interface (CLI) in the output subsection. Going by the GUI it's crystal clear, just input the necessary IP and subnet mask. And also the static routes. \\
 
-    % Outputs
-    \lstset{style=termoutputs}
-    \lstinputlisting[
-        language={},
-        caption={PC0 output},
-        label={lst:pc0output}
-    ]{./outputs/PC0.txt}
+        \begin{flushleft}
+                \begin{center}
+                    \begin{longtable}{ m{5cm} l }
+                        \textbf{Steps} & \textbf{Example} \\
+                        \hline
+                        \endfirsthead
+                        \multicolumn{2}{c}%
+                        {{\bfseries Table \thetable\ continued from previous page}} \\
+                        \textbf{Steps} & \textbf{Example} \\
+                        \hline
+                        \endhead
+                        \hline Continued on next page \\
+                        \endfoot
+                        \endlastfoot
 
-    \lstinputlisting[
-        language={},
-        caption={Laptop0 output},
-        label={lst:laptop0output}
-    ]{./outputs/Laptop0.txt}
+                        IP configuration for Router 0.  & \includegraphics[scale=0.245 ,valign=c]{r0-ipall}                      \\ \hline
+                        IP configuration for Router 1.  & \includegraphics[scale=0.22  ,valign=c]{r1-ipall}                      \\ \hline
+                        IP configuration for Router 2.  & \includegraphics[scale=0.245 ,valign=c]{r2-ipall}                      \\ \hline
+                        Static routes for Router 0.     & \includegraphics[scale=0.35  ,valign=c]{r0-staticroute}                \\ \hline
+                        Static routes for Router 1.     & \includegraphics[scale=0.35  ,valign=c]{r1-staticroute}                \\ \hline
+                        Static routes for Router 2.     & \includegraphics[scale=0.35  ,valign=c]{r2-staticroute}                \\ \hline
 
-    \lstset{style=termoutputs}
-    \lstinputlisting[
-        language={},
-        caption={PC1 output},
-        label={lst:pc1output}
-    ]{./outputs/PC1.txt}
+                        \caption{Cisco Packet Tracer IP guide}
+                        \label{tab:cptg1.5}
+                    \end{longtable}
+                \end{center}
+        \end{flushleft}
 
-    \lstinputlisting[
-        language={},
-        caption={Laptop1 output},
-        label={lst:laptop1output}
-    ]{./outputs/Laptop1.txt}
+    \subsection{Testing connectivity}
+        After applying the configuration, we must test our network by running diagnostic commands. First arp, then ping, then arp again and finally tracert\footnote{Excluding commands to the device itself.}:
 
-    \lstinputlisting[
-        language={},
-        caption={DHCP-Server output},
-        label={lst:dhcpoutput}
-    ]{./outputs/DHCP-Server.txt}
+        \begin{longtable}[c]{@{}lll@{}}
+            \toprule
+            \textbf{Ping}      & \textbf{Trace Route}  & \textbf{Device} \\* \midrule
+            \endfirsthead
+            %
+            \multicolumn{3}{c}%
+            {{\bfseries Table \thetable\ continued from previous page}} \\
+            \toprule
+            \textbf{Ping}      & \textbf{Trace Route}  & \textbf{Device} \\* \midrule
+            \endhead
+            %
+            \bottomrule
+            \endfoot
+            %
+            \endlastfoot
+            %
+            arp -a             & arp -a                & ARP Table       \\
+            ping 192.168.7.129 & tracert 192.168.7.129 & PC0             \\
+            ping 192.168.7.130 & tracert 192.168.7.130 & Laptop0         \\
+            ping 192.168.7.193 & tracert 192.168.7.193 & PC1             \\
+            ping 192.168.7.194 & tracert 192.168.7.194 & Laptop1         \\
+            ping 192.168.7.1   & tracert 192.168.7.1   & DHCP-Server     \\
+            ping 192.168.7.2   & tracert 192.168.7.2   & DNS-Server      \\
+            ping 192.168.7.3   & tracert 192.168.7.3   & HTTP-Server     \\
+            ping 8.8.8.8       & tracert 8.8.8.8       & R0              \\
+            ping 192.168.7.245 & tracert 192.168.7.245 & R0              \\
+            ping 192.168.7.249 & tracert 192.168.7.249 & R0              \\
+            ping 192.168.7.190 & tracert 192.168.7.190 & R1              \\
+            ping 192.168.7.222 & tracert 192.168.7.222 & R1              \\
+            ping 192.168.7.253 & tracert 192.168.7.253 & R1              \\
+            ping 192.168.7.250 & tracert 192.168.7.250 & R1              \\
+            ping 192.168.7.126 & tracert 192.168.7.126 & R2              \\
+            ping 192.168.7.246 & tracert 192.168.7.246 & R2              \\
+            ping 192.168.7.254 & tracert 192.168.7.254 & R2              \\* \bottomrule
+            \caption{CLI commands}
+            \label{tab:clicommands}\\
+        \end{longtable}
 
-    \lstinputlisting[
-        language={},
-        caption={DNS-Server output},
-        label={lst:dnsoutput}
-    ]{./outputs/DNS-Server.txt}
+        Since not everything fit in the images, their respective outputs are in the outputs subsection attesting to what was performed.
+        \begin{flushleft}
+                \begin{center}
+                    \begin{longtable}{ m{5cm} l }
+                        \textbf{Steps} & \textbf{Example} \\
+                        \hline
+                        \endfirsthead
+                        \multicolumn{2}{c}%
+                        {{\bfseries Table \thetable\ continued from previous page}} \\
+                        \textbf{Steps} & \textbf{Example} \\
+                        \hline
+                        \endhead
+                        \hline Continued on next page \\
+                        \endfoot
+                        \endlastfoot
 
-    \lstinputlisting[
-        language={},
-        caption={HTTP-Server output},
-        label={lst:httpoutput}
-    ]{./outputs/HTTP-Server.txt}
+                        To test the connection from devices we select a device by \textbf{single-clicking} it (1), go to the \textit{desktop tab} (2) and select \textit{Command Prompt} (3).                                               & \includegraphics[scale=0.31 ,valign=c]{CiscoPacketTracer_cmdOutput}   \\ \hline
+                        From LAN A, PC0 and Laptop0, viewpoint.                                                                                                                                                                             & \includegraphics[scale=0.27 ,valign=c]{lana-outputall}                \\ \hline
+                        From LAN B, PC1 and Laptop1, viewpoint.                                                                                                                                                                             & \includegraphics[scale=0.27 ,valign=c]{lanb-outputall}                \\ \hline
+                        From LAN Servers, DHCP, DNS and HTTP servers, viewpoint.                                                                                                                                                            & \includegraphics[scale=0.23 ,valign=c]{lanservers-outputall}          \\ \hline
 
-    \lstinputlisting[
-        language={},
-        caption={Router 0 output},
-        label={lst:r0output}
-    ]{./outputs/R0.txt}
+                        \caption{Cisco Packet Tracer CLI guide}
+                        \label{tab:cptg2}
+                    \end{longtable}
+                \end{center}
+        \end{flushleft}
 
-    \lstinputlisting[
-        language={},
-        caption={Router 1 output},
-        label={lst:r1output}
-    ]{./outputs/R1.txt}
+        To test the connection from routers we select a router by \textbf{single-clicking}, go to the \textit{CLI tab}, input \textbf{exit} until \textbf{\textit{router>}} is shown, insted of \textbf{\textit{router\#}}. \\
+        \begin{flushleft}
+                \begin{center}
+                    \begin{longtable}{ m{5cm} l }
+                        \textbf{Steps} & \textbf{Example} \\
+                        \hline
+                        \endfirsthead
+                        \multicolumn{2}{c}%
+                        {{\bfseries Table \thetable\ continued from previous page}} \\
+                        \textbf{Steps} & \textbf{Example} \\
+                        \hline
+                        \endhead
+                        \hline Continued on next page \\
+                        \endfoot
+                        \endlastfoot
 
-    \lstinputlisting[
-        language={},
-        caption={Router 2 output},
-        label={lst:r2output}
-    ]{./outputs/R2.txt}
+                        From router R0 viewpoint.   & \includegraphics[scale=0.25 ,valign=c]{r0-cliall} \\ \hline
+                        From router R1 viewpoint.   & \includegraphics[scale=0.25 ,valign=c]{r1-cliall} \\ \hline
+                        From router R2 viewpoint.   & \includegraphics[scale=0.25 ,valign=c]{r2-cliall} \\ \hline
 
-    We can actually see that everything complies with what was required.\\
-    PC0 can only reach blabla bla...%TODO
+                        \caption{Cisco Packet Tracer CLI guide}
+                        \label{tab:cptg2.5}
+                    \end{longtable}
+                \end{center}
+        \end{flushleft}
+
+    \subsection{Command line outputs}
+        \lstset{style=termoutputs}
+        \lstinputlisting[
+            language={},
+            caption={PC0 output},
+            label={lst:pc0output}
+        ]{./outputs/PC0.txt}
+
+        \lstinputlisting[
+            language={},
+            caption={Laptop0 output},
+            label={lst:laptop0output}
+        ]{./outputs/Laptop0.txt}
+
+        \lstset{style=termoutputs}
+        \lstinputlisting[
+            language={},
+            caption={PC1 output},
+            label={lst:pc1output}
+        ]{./outputs/PC1.txt}
+
+        \lstinputlisting[
+            language={},
+            caption={Laptop1 output},
+            label={lst:laptop1output}
+        ]{./outputs/Laptop1.txt}
+
+        \lstinputlisting[
+            language={},
+            caption={DHCP-Server output},
+            label={lst:dhcpoutput}
+        ]{./outputs/DHCP-Server.txt}
+
+        \lstinputlisting[
+            language={},
+            caption={DNS-Server output},
+            label={lst:dnsoutput}
+        ]{./outputs/DNS-Server.txt}
+
+        \lstinputlisting[
+            language={},
+            caption={HTTP-Server output},
+            label={lst:httpoutput}
+        ]{./outputs/HTTP-Server.txt}
+
+        \lstinputlisting[
+            language={},
+            caption={Router 0 output},
+            label={lst:r0output}
+        ]{./outputs/R0.txt}
+
+        \lstinputlisting[
+            language={},
+            caption={Router 1 output},
+            label={lst:r1output}
+        ]{./outputs/R1.txt}
+
+        \lstinputlisting[
+            language={},
+            caption={Router 2 output},
+            label={lst:r2output}
+        ]{./outputs/R2.txt}
 
 %% Chapter: issues and fixes ---------------------------------------------------
 \chapter{Issues and fixes}
     Cisco Packet Tracer in MacOS:\\
-        \hspace*{10mm}*STILL* no solution was found to deal with those annoying popups that takes primary focus over other windows, even using the latest version.
+        \hspace*{10mm}*STILL* no solution was found to deal with those annoying popups that takes primary focus over other windows, even using the latest version.\\
     Misenterpretation of NATs:\\
         \hspace*{10mm}%TODO
 
 %% Chapter: conclusions --------------------------------------------------------
 \chapter{Conclusions}
     As we could corroborate
+    We can actually see that everything complies with what was required.\\
+    PC0 can only reach blabla bla...%TODO
 
 %% Bibliography ----------------------------------------------------------------
 %\renewcommand{\bibname}{Bibliographic references}

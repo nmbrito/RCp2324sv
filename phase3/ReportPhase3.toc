@@ -7,6 +7,11 @@
 \contentsline {chapter}{Glossary}{vi}{chapter*.6}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Phase 3}{2}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Issues and fixes}{6}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Conclusions}{7}{chapter.4}%
-\contentsline {chapter}{\numberline {A}Appendix}{8}{appendix.A}%
+\contentsline {subsection}{\numberline {2.0.1}Outline}{3}{subsection.2.0.1}%
+\contentsline {subsection}{\numberline {2.0.2}Configuring devices}{5}{subsection.2.0.2}%
+\contentsline {subsection}{\numberline {2.0.3}Configuring routers}{7}{subsection.2.0.3}%
+\contentsline {subsection}{\numberline {2.0.4}Testing connectivity}{11}{subsection.2.0.4}%
+\contentsline {subsection}{\numberline {2.0.5}Command line outputs}{14}{subsection.2.0.5}%
+\contentsline {chapter}{\numberline {3}Issues and fixes}{69}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Conclusions}{70}{chapter.4}%
+\contentsline {chapter}{\numberline {A}Appendix}{71}{appendix.A}%

@@ -355,7 +355,7 @@
         \label{tab:staticroutetbl}\\
     \end{longtable}
     
-    \subsection{Outline}
+    \section{Outline}
         Previously the subdivision was perfomed by opening with the lowest subdivision, \textbf{/30}, then expanding till \textbf{/25}. \\
         However, this was inappropriate due to best practices rules which assert that network subdivision starts with the largest network, \textbf{/25}, and then continues till the smallest network, \textbf{/30}. \\
 
@@ -478,9 +478,9 @@
             \label{tab:ipconftable}\\
         \end{longtable}
 
-        Beautifully charted. Let's implement it with our favorite tool, Cisco Packet Trace.\\
+        Beautifully charted. Let's implement it with our favorite tool, Cisco Packet Trace.
 
-    \subsection{Configuring devices}
+    \section{Configuring devices}
         \begin{flushleft}
                 \begin{center}
                     \begin{longtable}{ m{5cm} l }
@@ -501,14 +501,14 @@
                         IP configuration for LAN B, PC1 and Laptop1.                                                                                                                            & \includegraphics[scale=0.25 ,valign=c]{lanb-ipall}                    \\ \hline
                         IP configuration for LAN Servers, DHCP-Server, DNS-Server and HTTP-Server.                                                                                              & \includegraphics[scale=0.19 ,valign=c]{lanservers-ipall}              \\ \hline
 
-                        \caption{Cisco Packet Tracer IP guide}
+                        \caption{Cisco Packet Tracer IP device guide}
                         \label{tab:cptg1}
                     \end{longtable}
                 \end{center}
         \end{flushleft}
 
-    \subsection{Configuring routers}
-        For the router there's two options, both valid and exhibited in the report. The graphical user interface (GUI) in the right and the command line interface (CLI) in the output subsection. Going by the GUI it's crystal clear, just input the necessary IP and subnet mask. And also the static routes. \\
+    \section{Configuring routers}
+        For the router there's two options, both valid and exhibited in the report. The graphical user interface (GUI) in the right and the command line interface (CLI) in the output subsection. Going by the GUI it's crystal clear, just input the necessary IP and subnet mask. And also the static routes.
 
         \begin{flushleft}
                 \begin{center}
@@ -532,13 +532,13 @@
                         Static routes for Router 1.     & \includegraphics[scale=0.35  ,valign=c]{r1-staticroute}                \\ \hline
                         Static routes for Router 2.     & \includegraphics[scale=0.35  ,valign=c]{r2-staticroute}                \\ \hline
 
-                        \caption{Cisco Packet Tracer IP guide}
+                        \caption{Cisco Packet Tracer IP router guide}
                         \label{tab:cptg1.5}
                     \end{longtable}
                 \end{center}
         \end{flushleft}
 
-    \subsection{Testing connectivity}
+    \section{Testing connectivity}
         After applying the configuration, we must test our network by running diagnostic commands. First arp, then ping, then arp again and finally tracert\footnote{Excluding commands to the device itself.}:
 
         \begin{longtable}[c]{@{}lll@{}}
@@ -580,6 +580,7 @@
         \end{longtable}
 
         Since not everything fit in the images, their respective outputs are in the outputs subsection attesting to what was performed.
+
         \begin{flushleft}
                 \begin{center}
                     \begin{longtable}{ m{5cm} l }
@@ -600,13 +601,14 @@
                         From LAN B, PC1 and Laptop1, viewpoint.                                                                                                                                                                             & \includegraphics[scale=0.27 ,valign=c]{lanb-outputall}                \\ \hline
                         From LAN Servers, DHCP, DNS and HTTP servers, viewpoint.                                                                                                                                                            & \includegraphics[scale=0.23 ,valign=c]{lanservers-outputall}          \\ \hline
 
-                        \caption{Cisco Packet Tracer CLI guide}
+                        \caption{Cisco Packet Tracer CLI device guide}
                         \label{tab:cptg2}
                     \end{longtable}
                 \end{center}
         \end{flushleft}
 
-        To test the connection from routers we select a router by \textbf{single-clicking}, go to the \textit{CLI tab}, input \textbf{exit} until \textbf{\textit{router>}} is shown, insted of \textbf{\textit{router\#}}. \\
+        To test the connection from routers we select a router by \textbf{single-clicking}, go to the \textit{CLI tab}, input \textbf{exit} until \textbf{\textit{router>}} is shown, insted of \textbf{\textit{router\#}}.
+
         \begin{flushleft}
                 \begin{center}
                     \begin{longtable}{ m{5cm} l }
@@ -626,56 +628,33 @@
                         From router R1 viewpoint.   & \includegraphics[scale=0.25 ,valign=c]{r1-cliall} \\ \hline
                         From router R2 viewpoint.   & \includegraphics[scale=0.25 ,valign=c]{r2-cliall} \\ \hline
 
-                        \caption{Cisco Packet Tracer CLI guide}
+                        \caption{Cisco Packet Tracer CLI router guide}
                         \label{tab:cptg2.5}
                     \end{longtable}
                 \end{center}
         \end{flushleft}
 
-    \subsection{Command line outputs}
+    \section{Command line outputs}
+        To not over saturate the report, the outputs displayed only refer to one device per network. The others are in the \ref{clioutapxref} section from the appendix \ref{appendixref}.
+
         \lstset{style=termoutputs}
         \lstinputlisting[
             language={},
-            caption={PC0 output},
+            caption={PC0 output (LAN A)},
             label={lst:pc0output}
         ]{./outputs/PC0.txt}
 
         \lstinputlisting[
             language={},
-            caption={Laptop0 output},
-            label={lst:laptop0output}
-        ]{./outputs/Laptop0.txt}
-
-        \lstset{style=termoutputs}
-        \lstinputlisting[
-            language={},
-            caption={PC1 output},
-            label={lst:pc1output}
-        ]{./outputs/PC1.txt}
-
-        \lstinputlisting[
-            language={},
-            caption={Laptop1 output},
+            caption={Laptop1 output (LAN B)},
             label={lst:laptop1output}
         ]{./outputs/Laptop1.txt}
 
         \lstinputlisting[
             language={},
-            caption={DHCP-Server output},
+            caption={DHCP-Server output (LAN Servers)},
             label={lst:dhcpoutput}
         ]{./outputs/DHCP-Server.txt}
-
-        \lstinputlisting[
-            language={},
-            caption={DNS-Server output},
-            label={lst:dnsoutput}
-        ]{./outputs/DNS-Server.txt}
-
-        \lstinputlisting[
-            language={},
-            caption={HTTP-Server output},
-            label={lst:httpoutput}
-        ]{./outputs/HTTP-Server.txt}
 
         \lstinputlisting[
             language={},
@@ -697,16 +676,18 @@
 
 %% Chapter: issues and fixes ---------------------------------------------------
 \chapter{Issues and fixes}
-    Cisco Packet Tracer in MacOS:\\
+    \textbf{Cisco Packet Tracer in MacOS:}\\
         \hspace*{10mm}*STILL* no solution was found to deal with those annoying popups that takes primary focus over other windows, even using the latest version.\\
-    Misenterpretation of NATs:\\
-        \hspace*{10mm}%TODO
+    \textbf{Misenterpretation of NATs:}\\
+        \hspace*{10mm}Initially thought that static routes were meant to allow a certain network to go through another address. As it turned out it's quite the opposite, it should be understood as \textbf{\textit{I want to access LAN X from Router Y going through Router Z}}.
 
 %% Chapter: conclusions --------------------------------------------------------
 \chapter{Conclusions}
-    As we could corroborate
     We can actually see that everything complies with what was required.\\
-    PC0 can only reach blabla bla...%TODO
+    LAN A and B can only reach LAN Servers going through Router 1 and Router 2. They reach the outside through Router 1 and Router 0.\\
+    LAN Servers reach LANs A and B through Router 2 and Router 1. External connections go over Router 2 and Router 0.\\
+    This is possible because there isn't a static router designed to allow Router 1 to communicate with Router 0 with the intent to connect to LAN Servers.\\
+    All of this is clear when reviewing the outputs. Most prominent with the \textit{Destination host unreachable} from ping and tracert's thirty retries outputing \textit{Request timed out} (or even the unmistakable hops taken when tracert is successful).
 
 %% Bibliography ----------------------------------------------------------------
 %\renewcommand{\bibname}{Bibliographic references}
@@ -716,7 +697,34 @@
 
 %% Appendix --------------------------------------------------------------------
 \appendix
-\chapter{Appendix}
-%%1}}}
+    \chapter{Outputs}
+    \label{appendixref}
+        \section{Command line encore}
+        \label{clioutapxref}
+
+            \lstset{style=termoutputs}
+            \lstinputlisting[
+                language={},
+                caption={Laptop0 output},
+                label={lst:laptop0output}
+            ]{./outputs/Laptop0.txt}
+
+            \lstinputlisting[
+                language={},
+                caption={PC1 output},
+                label={lst:pc1output}
+            ]{./outputs/PC1.txt}
+
+            \lstinputlisting[
+                language={},
+                caption={DNS-Server output},
+                label={lst:dnsoutput}
+            ]{./outputs/DNS-Server.txt}
+
+            \lstinputlisting[
+                language={},
+                caption={HTTP-Server output},
+                label={lst:httpoutput}
+            ]{./outputs/HTTP-Server.txt}
 
 \end{document}

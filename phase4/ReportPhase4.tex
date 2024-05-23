@@ -1,0 +1,347 @@
+%% Document template source: LaTeX2e template for FEUP's Project FE-UP
+%% Document template author: jlopes@fe.up.pt
+%% Template adapted
+
+%% A alterar: <--ALTERAR-->
+
+\documentclass[11pt,a4paper]{report}
+
+%% Macros ----------------------------------------------------------------------
+\newcommand{\school}{Instituto Superior de Engenharia de Lisboa}
+\newcommand{\degree}{Licenciatura em Engenharia Eletrotécnica, Telecomunicações e Computadores}
+\newcommand{\projisel}{Projeto ISEL 2023/24 --- LEETC}
+\newcommand{\projtitle}{Computer Networks}
+\newcommand{\projsubtitle}{Phase 4 - Deploy Services}
+\newcommand{\projteam}{Grupo LP-07}
+
+%% Package ---------------------------------------------------------------------
+\usepackage[a4paper,left=25mm,right=25mm,top=25mm,bottom=25mm,headheight=6mm,footskip=12mm]{geometry}   % Document dimensions
+\usepackage[T1]{fontenc}            % PS fonts
+\usepackage[english]{babel}         % [portuges]??
+\usepackage[export]{adjustbox}      %
+\usepackage[normalem]{ulem}         % various types of underlining
+\usepackage[table,xcdraw]{xcolor}   % driver-independent color extensions
+\usepackage[utf8]{inputenc}         % accents
+\usepackage{amsmath}                % multi-line and other mathematical statements
+\usepackage{array}                  % Images in tables
+\usepackage{booktabs}               %
+\usepackage{caption}                % rotating captions, sideways captions, etc.
+\usepackage{chicago}                % Bibliography style
+\usepackage{color}                  %
+\usepackage{fancyhdr}               % Headers and footers
+\usepackage{float}                  % tables and figures in the multi-column environment 
+\usepackage{graphicx}               % 
+\usepackage{hyperref}               % Hyper references
+\usepackage{lastpage}               % 
+\usepackage{lipsum}                 % loren dummy text
+\usepackage{listings}               % Programming syntax
+\usepackage{longtable}              % Tables continue in the next page
+\usepackage{multicol}               % 
+\usepackage{multirow}               % tabular cells spanning multiple rows
+\usepackage{newtxtext,newtxmath}    % do not use CM fonts
+\usepackage{paralist}
+\usepackage{setspace}               % setting the spacing between lines
+\usepackage{subcaption}             % for subfigures and the like
+
+%% Package settings ------------------------------------------------------------
+\graphicspath{{./images}}                           % {graphicx} - Images path % BY PHASE!!!
+\selectlanguage{english}                            % {babel} - Language portuguese
+\setlength{\columnsep}{3cm}                         % {multicol} - Column spacement
+\definecolor{engineering}{rgb}{0.549,0.176,0.098}   % {color}
+\definecolor{cloudwhite}{cmyk}{0,0,0,0.025}         % {color}
+\definecolor{deepblue}{rgb}{0,0,0.5}                % {color}
+\definecolor{deepred}{rgb}{0.6,0,0}                 % {color}
+\definecolor{deepgreen}{rgb}{0,0.5,0}               % {color}
+\setlength{\parindent}{0em}                         % {geometry}
+\setlength{\parskip}{1ex}                           % {geometry}
+\lstdefinestyle{pythoncode}                         % {listings} - Python syntax
+{
+    aboveskip=8mm,
+    backgroundcolor=\color{cloudwhite},             
+    basicstyle=\footnotesize\ttfamily,
+    numbers=left,                                   % where to put the line-numbers
+    belowskip=4mm,
+    breakatwhitespace=false,                        % sets if automatic breaks should only happen at whitespace
+    breaklines=true,                                % sets automatic line breaking
+    captionpos=b,                                   % sets the caption-position to bottom
+    escapeinside={\%*}{*)},                         % if you want to add a comment within your code
+    float=htb,
+    frame=tb,
+    keepspaces=true,
+    keywordstyle=\bfseries\color{deepblue},
+    morekeywords={*,var,template,new}               % if you want to add more keywords to the set
+    numbersep=8pt,                                  % how far the line-numbers are from the code
+    numberstyle=\scriptsize\texttt,                 % the size of the fonts that are used for the line-numbers
+    showspaces=false,                               % show spaces adding particular underscores
+    showstringspaces=false,                         % underline spaces within strings
+    showtabs=false,                                 % show tabs within strings adding particular underscores
+    stepnumber=1,                                   % the step between two line-numbers. If it's 1 each line will be numbered
+    stringstyle=\color{deepgreen},
+    tabsize=2,                                      % sets default tabsize to 2 spaces
+}
+\lstdefinestyle{termoutputs}                        % {listings} - Python syntax
+{
+    aboveskip=8mm,
+    backgroundcolor=\color{cloudwhite},             
+    basicstyle=\scriptsize\ttfamily,
+    numbers=left,                                   % where to put the line-numbers
+    belowskip=4mm,
+    breakatwhitespace=false,                        % sets if automatic breaks should only happen at whitespace
+    breaklines=true,                                % sets automatic line breaking
+    captionpos=b,                                   % sets the caption-position to bottom
+    escapeinside={\%*}{*)},                         % if you want to add a comment within your code
+    float=htb,
+    frame=tb,
+    keepspaces=true,
+    keywordstyle=\bfseries\color{deepblue},
+    morekeywords={*,var,template,new}               % if you want to add more keywords to the set
+    numbersep=8pt,                                  % how far the line-numbers are from the code
+    numberstyle=\scriptsize\texttt,                 % the size of the fonts that are used for the line-numbers
+    showspaces=false,                               % show spaces adding particular underscores
+    showstringspaces=false,                         % underline spaces within strings
+    showtabs=false,                                 % show tabs within strings adding particular underscores
+    stepnumber=1,                                   % the step between two line-numbers. If it's 1 each line will be numbered
+    stringstyle=\color{deepgreen},
+    tabsize=2,                                      % sets default tabsize to 2 spaces
+}
+\fancyhf{}                                          % {fancyhdr} clear off all default fancyhdr headers and footers
+\lfoot{\small{\emph{\projtitle, \projsubtitle}}}    % {fancyhdr}
+\rfoot{\small{\thepage\ / \pageref{LastPage}}}      % {fancyhdr}
+\pagestyle{fancy}                                   % {fancyhdr} apply the fancy header style
+\renewcommand{\headrulewidth}{0.0pt}                % {fancyhdr} no head rule
+\renewcommand{\footrulewidth}{0.4pt}                % {fancyhdr}
+\hypersetup{                                        % {hyperref}
+    plainpages=false,
+    pdfpagelayout=SinglePage,
+    bookmarksopen=false,
+    bookmarksnumbered=true,
+    breaklinks=true,
+    linktocpage,
+    colorlinks=true,
+    linkcolor=engineering,
+    urlcolor=engineering,
+    filecolor=engineering,
+    citecolor=engineering,
+    allcolors=engineering
+}
+
+%% Document start --------------------------------------------------------------
+\begin{document}
+    \pagenumbering{roman}\setcounter{page}{1}
+
+%% Cover -----------------------------------------------------------------------
+\begin{titlepage}
+    \center
+
+    \vspace*{-12mm}
+    {\large \textbf{\textsc{\school}}}\\
+
+    \vfill
+
+    \includegraphics[width=62mm]{logoisel}
+    
+    \vfill
+    
+    {\huge \textbf{\projtitle}}\\[6mm]
+    {\Large \textbf{\projsubtitle}}\\
+    
+    \vfill
+    
+    \vfill
+    
+    {\Large \textbf{\projisel}}\\[12mm]
+    
+    {\Large \textbf{Coordination}}\\[4mm]
+    {\large General: Carlos Meneses\hspace*{18mm}
+            Course: Nuno Cruz}\\[6mm]
+    
+    {\Large \textbf{\projteam}}\\[4mm]
+    {\large Supervisor: Luís Pires\hspace*{12mm}}\\[6mm]
+    
+    {\Large \textbf{Student}}\\[4mm]
+    {\large Nuno Brito $<$A46948@alunos.isel.pt$>$}
+    
+    \vspace*{10mm}
+    
+    \renewcommand{\today}{June 2th 2024}
+    \today
+    
+\end{titlepage}
+
+%% TOC -------------------------------------------------------------------------
+\tableofcontents
+
+%% List of figures -------------------------------------------------------------
+\listoffigures
+\addcontentsline{toc}{chapter}{Figure list}
+
+%% List of tables --------------------------------------------------------------
+\listoftables
+\addcontentsline{toc}{chapter}{Table list}
+
+%% List of listings --------------------------------------------------------------
+\lstlistoflistings
+\addcontentsline{toc}{chapter}{Listings list}
+
+%% Acronyms --------------------------------------------------------------------
+\chapter*{Acronyms list}
+    \addcontentsline{toc}{chapter}{Acronyms list}
+
+    \begin{flushleft}
+        \begin{tabular}{l p{0.8\linewidth}}
+            API     & Application Programming Interface\\
+            CLI     & Command Line Interface\\
+            CMD     & Command Prompt\\
+            GUI     & Graphical User Interface\\
+            HTTP    & Hyper Text Transfer Protocol\\
+            HTTPS   & Hyper Text Transfer Protocol Secure\\
+            IP      & Internet Protocol\\
+            IPv4    & Internet Protocol version 4\\
+            IPv6    & Internet Protocol version 6\\
+            LAN     & Local Area Network\\
+            OS      & Operating System\\
+            OSS     & openSUSE\\
+            PC      & Personal Computer\\
+            PHP     & PHP: Hypertext Preprocessor\\
+            SSL     & Secure Sockets Layer\\
+            TCP     & Transmission Control Protocol\\
+            TLS     & Transport Layer Security\\
+            TUI     & Terminal User Interface\\ % Not used yet
+            UDP     & User Datagram Protocol\\
+            VPN     & Virtual Private Network\\
+            WWW     & World Wide Web\\
+            XAMPP   & Cross-Platform, Apache, MySQL, PHP, and Perl
+        \end{tabular}
+    \end{flushleft}
+
+%% Glossary --------------------------------------------------------------------
+\chapter*{Glossary}
+    \addcontentsline{toc}{chapter}{Glossary}
+
+    \begin{description}
+        \item[Apache2] \hfill \\
+            An opensource HTTP web server.
+        \item[Bit] \hfill \\
+            A unit of information in computing and digital communications. The bit represents a logical state with one of two possible values, 0 or 1 (other representations such as \textit{true / false} are also valid).
+        \item[Byte] \hfill \\
+            Also a unit of digital information, consists of 8 bits.
+        \item[Broadcast] \hfill \\
+            A method of transferring a message to all recipients simultaneously.
+        \item[Browser] \hfill \\
+            A browser is a internet navigation software. It comes in multiple flavours, nowadays the big three are Microsoft Edge, Mozilla Firefox and Google Chrome.
+        \item[Cisco Packet Tracer] \hfill \\
+            A cross-platform visual network simulation tool.
+        \item[Command Prompt] \hfill \\
+            The default command-line interpreter for Windows operating systems.
+        \item[Firewall] \hfill \\
+            A barrier between networks. Controls inbound and outbound traffic.
+        \item[Gateway] \hfill \\
+            A network gateway provides a connection between networks and devices. Known as protocol translation gateways or mapping gateways, can perform protocol conversions to connect networks with different network protocol technologies.
+        \item[LibreWolf] \hfill \\
+            An internet browser based on Mozilla's Firefox. It's primary purpose is to allow privacy, and with it comes security. It achieves this by removing telemetry and data collection.
+        \item[Linux] \hfill \\
+            Open-source Unix-like operating systems based on the Linux kernel.
+        \item[MariaDB] \hfill \\
+            A community-developed fork of MySQL database server.
+        \item[openSUSE Tumbleweed] \hfill \\
+            An openSUSE (OSS) is an open-source community driven Linux-based distribuition sponsored by SUSE Software Solutions. Tumbleweed is a rolling release version allowing for up-to-date software releases.
+        \item[Operating system] \hfill \\
+            A program that manages a computer's resources from software to hardware.
+        \item[Ping] \hfill \\
+             A software utility used to test the reachability of a host on an IP network.
+        \item[Tracert] \hfill \\
+            Or \textbf{traceroute} in unix and linux systems, is a computer network diagnostic command for displaying possible routes and measuring transit delays of packets across an IP network.
+        \item[Ipconfig] \hfill \\
+            Or \textbf{ifconfig} in unix and linux systems, is a console application program that displays all current TCP/IP network configuration values.
+        \item[Python] \hfill \\
+            Python is a high-level programming language, object-oriented.
+        \item[Perl] \hfill \\
+            A high-level, general-purpose, interpreted, dynamic programming language
+        \item[Rolling release distribuition] \hfill \\
+            A distribuition where it's software release cycle is more frequent than those of Long Term Support (LTS). It's up to the Linux-based distribuitor to guarantee the testing of a package.
+        \item[Router] \hfill \\
+            A networking device that forwards data packets between computer networks, including internetworks such as the global Internet.
+        \item[Switch] \hfill \\
+            A networking hardware that connects devices on a computer network by using packet switching to receive and forward data to the destination device.
+        \item[Socket] \hfill \\
+            A network socket serves as an endpoint for sending and receiving data across the network.
+        \item[Subnet Mask] \hfill \\
+            Is a logical subdivision of an IP network.
+        \item[Unix] \hfill \\
+            Is a family of multitasking, multi-user computer operating systems that derive from the original AT\&T Unix.
+        \item[VPN] \hfill \\
+            A private network creating a secure connection between a device and a network.
+        \item[Windows] \hfill \\
+            Microsoft's operating system. First released in 1985 as a Graphical User Interface (GUI) for MS-DOS, continued to evolve with it's latest version being 11.
+            Due to it's nature, it's not recommended for server production environment.
+        \item[Wireshark] \hfill \\
+            Wireshark is a network protocol analyser software. Allows traffic capture between a computer and a network.
+        \item[XAMPP] \hfill \\
+            A software package environment collection containing Apache2 webserver, MariaDB database, PHP and Perl.
+    \end{description}
+
+%% Chapter: introduction -------------------------------------------------------
+\chapter{Introduction}
+% display headers & footers
+    \pagestyle{fancy}
+    *placeover_text*
+
+% main page numbers with arabic numerals
+    \pagenumbering{arabic}\setcounter{page}{1}
+
+%% Chapter: phase 4 ------------------------------------------------------------
+\chapter{Phase 4}
+    nota falar do servidor web
+    dns / dhcp funcionamento (udp) e records
+    introdução de relays 
+    mencionar rotas (fase 3)
+    correr NSLookup
+    comandos cisco ip helper-address 192.168.7.1
+    ou como remover usando no ip helper-address 192.168.7.x
+    print com show ip interface FastEthernet0/0
+    ipconfig nos equipamentos
+    ipconfig /release /renew
+    dns pools configuradas
+    dns records configurados
+    outputs e printscreens dos comandos e página web
+    explicar o A record no dns server
+
+    *placeover_text*
+    \section{ChangeME}
+    \section{Command line outputs}
+        \lstset{style=termoutputs}
+        \lstinputlisting[
+            language={},
+            caption={PC0 output (LAN A)},
+            label={lst:pc0output}
+        ]{./outputs/PC0.txt}
+
+%% Chapter: issues and fixes ---------------------------------------------------
+\chapter{Issues and fixes}
+    \textbf{Cisco Packet Tracer in MacOS:}\\
+        \hspace*{10mm}*STILL* no solution was found to deal with those annoying popups that takes primary focus over other windows, even using the latest version.\\
+
+%% Chapter: conclusions --------------------------------------------------------
+\chapter{Conclusions}
+    *placeover_text*
+
+%% Bibliography ----------------------------------------------------------------
+%\renewcommand{\bibname}{Bibliographic references}
+%\bibliographystyle{chicago}
+%\bibliography{refs}
+%\addcontentsline{toc}{chapter}{\refname}  % add it to table of contents
+
+%% Appendix --------------------------------------------------------------------
+\appendix
+    \chapter{Outputs}
+    \label{appendixref}
+        \section{Command line encore}
+        \label{clioutapxref}
+            \lstset{style=termoutputs}
+            \lstinputlisting[
+                language={},
+                caption={Laptop0 output},
+                label={lst:laptop0output}
+            ]{./outputs/Laptop0.txt}
+
+\end{document}

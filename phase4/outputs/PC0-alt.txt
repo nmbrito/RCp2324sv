@@ -1,0 +1,53 @@
+
+Cisco Packet Tracer PC Command Line 1.0
+C:\>ipconfig
+
+FastEthernet0 Connection:(default port)
+
+   Connection-specific DNS Suffix..: 
+   Link-local IPv6 Address.........: FE80::201:42FF:FE9B:91A6
+   IPv6 Address....................: ::
+   IPv4 Address....................: 192.168.7.129
+   Subnet Mask.....................: 255.255.255.192
+   Default Gateway.................: ::
+                                     192.168.7.190
+
+Bluetooth Connection:
+
+   Connection-specific DNS Suffix..: 
+   Link-local IPv6 Address.........: ::
+   IPv6 Address....................: ::
+   IPv4 Address....................: 0.0.0.0
+   Subnet Mask.....................: 0.0.0.0
+   Default Gateway.................: ::
+                                     0.0.0.0
+
+C:\>nslookup www.company.com
+
+Server: [192.168.7.2]
+Address:  192.168.7.2
+DNS request timed out.
+	timeout was 15000 milli seconds.
+
+Server: [192.168.7.2]
+Address:  192.168.7.2
+
+Non-authoritative answer:
+Name:   www.company.com
+Address:   192.168.7.3
+           
+C:\>ipconfig /release
+
+   IP Address......................: 0.0.0.0
+   Subnet Mask.....................: 0.0.0.0
+   Default Gateway.................: 0.0.0.0
+   DNS Server......................: 0.0.0.0
+
+C:\>ipconfig /renew
+
+   IP Address......................: 192.168.7.131
+   Subnet Mask.....................: 255.255.255.192
+   Default Gateway.................: 192.168.7.190
+   DNS Server......................: 192.168.7.2
+
+C:\>

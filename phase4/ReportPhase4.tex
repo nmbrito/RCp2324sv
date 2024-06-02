@@ -192,6 +192,8 @@
             API     & Application Programming Interface\\
             CLI     & Command Line Interface\\
             CMD     & Command Prompt\\
+            DHCP    & Dynamic Host Configuration Protocol\\
+            DNS     & Domain Name System\\
             GUI     & Graphical User Interface\\
             HTTP    & Hyper Text Transfer Protocol\\
             HTTPS   & Hyper Text Transfer Protocol Secure\\
@@ -201,6 +203,7 @@
             LAN     & Local Area Network\\
             OS      & Operating System\\
             OSS     & openSUSE\\
+            OSI     & Open Systems Interconnection\\
             PC      & Personal Computer\\
             PHP     & PHP: Hypertext Preprocessor\\
             SSL     & Secure Sockets Layer\\
@@ -284,24 +287,17 @@
 \chapter{Introduction}
 % display headers & footers
     \pagestyle{fancy}
-    % TODO
-    We've reached our big finale. In phase 4 we'll accomplish a network managed by a DHCP server.
+    We've reached our big finale. In phase 4 we'll accomplish a network managed by a DHCP server, web surf to an HTTP server and use a DNS to recognize a web page by name.\\
+    Applying everything learned until now and much more.
 
 % main page numbers with arabic numerals
     \pagenumbering{arabic}\setcounter{page}{1}
 
 %% Chapter: phase 4 ------------------------------------------------------------
 \chapter{Phase 4}
-
     \section{Tehcnical aspects}
-        mencionar rotas (fase 3)
-        nota falar do servidor web
-        dns / dhcp funcionamento (udp) e records
-        introdução de relays 
-
-
-        PREVIOUSLY ON PHASE3:\\
-        Mathematical formulas:\\
+        For phase 4 there's going to be some recycling.\\
+        Mathematical formulas:
         \[
             Clients_{LAN_A} = max\left(20, \left(\sum_{k=0}^n studentnumber_k\right)mod 100\right)\quad <=> 
             Clients_{LAN_A} = 48\quad
@@ -311,7 +307,7 @@
             Clients_{LAN_B} = 27\quad
         \]\\
 
-        Static routes:\\
+        Static routes:
         \begin{longtable}[c]{@{}lllllclc@{}}
         \toprule
             \textbf{Router}     & \textbf{From}                  & \textbf{To} & \textbf{Network} & \textbf{Via}                                       & \multicolumn{3}{c}{\textbf{Through}}                                        \\* \midrule
@@ -335,7 +331,7 @@
             \label{tab:staticroutetbl}\\
         \end{longtable}
 
-        IP allocation:\\
+        IP allocation:
         \begin{longtable}[c]{lllllll}
             \hline
                                                                                                   & \textbf{Network}            & \textbf{Usable IPs} & \textbf{Router} & \textbf{Broadcast} & \multicolumn{1}{c}{\textbf{Subnet Mask}} &                                      \\ \cline{2-5}
@@ -366,9 +362,19 @@
             \label{tab:lanalloctable}\\
         \end{longtable}
 
+        But we also have new toys to play with.\\
+
+        A fully functional DHCP server capable of assigning IP addresses to LAN's A and B.\\
+        But how does it work? Well, for starters it works in the application layer (7) of the Open Systems Interconnection (OSI) model. A plot twist for sure as it could be easily mistaken for a network layer. It uses UDP protocol for its connectionless model and operates in four phases (no pun intended): server discovery, IP lease offer, IP lease request, and IP lease acknowledgement.\\
+
+        "BUT WAIT, there's more!" Since our DHCP server is located in another subnetwork and behind another router, we must somehow be able to \textbf{\textit{relay}} the assigned IP address to our devices in LAN's A and B. So that's exactly what we are going to create, a relay. In the following sections a detailed explained will be presented.\\
+
+        Additionally a web server will also be deployed to serve a single web page. To reach it like a sanely human being a Domain Name Service (DNS) record will also be created.\\
+        A DNS is a hierarchical and distributed name service that provides a naming system for computers and other services. There's all types of records: MX for SMTP mail exchangers, NS for name servers, PTR for pointers for reverse DNS lookups, CNAME for domain name aliases and A and AAAA for IP addresses. For this project it's the latter one we're using.
+
     \section{Changes}
         For this phase we are reverting some configurations, namely LAN's A and B devices static IP address. \\
-        The rest are still valid here, now as IP pool addresses.\\
+        The rest are still valid here, now as IP pool addresses.
         \begin{longtable}[c]{llrllrr}
             \hline
             \multicolumn{1}{c}{\multirow{3}{*}{\textbf{Name}}} & \multicolumn{2}{c}{\multirow{2}{*}{\textbf{Ports Link}}} & \multicolumn{1}{c}{\multirow{3}{*}{\textbf{Network}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{IP}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Gateway}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Subnet Mask}}} \\
@@ -421,40 +427,56 @@
         \end{longtable}
 
     \section{Server configuration}
-        Servers should be configured with static IP addresses, either in the device itself of in a router.
-        \includegraphics[scale=0.32, valign=c]{LanServer-IP}\\
-        \caption{LanServer devices static IP addresses}
-        \label{tab:lanserverdev}
+        Servers should be configured with static IP addresses, either in the device itself of in a network controller.
+        \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.25]{LanServer-IP}
+            \caption{LanServer devices static IP addresses}
+            \label{tab:lanserverdev}
+        \end{figure}
 
         Using our reference table, we proceed with the pool assignment.
-        \includegraphics[scale=0.32, valign=c]{DHCP-Pool}\\
-        \caption{DHCP pool configuration}
-        \label{tab:dhcpconf}
+        \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.23]{DHCP-Pool}
+            \caption{DHCP pool configuration}
+            \label{tab:dhcpconf}
+        \end{figure}
 
-        To allow access to our HTTP server using a name and not a prisioner number we must configure a record.
-        \includegraphics[scale=0.32, valign=c]{DNS-Record}\\
-        \caption{DNS records configuration}
-        \label{tab:dnsconf}
-
-        But what is a record? And in this case, the A Record?
+        To allow access to our HTTP server using a name and not a prisioner number we must configure a record. In this case, as refered before, A record.
+        \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.35]{DNS-Record}
+            \caption{DNS records configuration}
+            \label{tab:dnsconf}
+        \end{figure}
 
     \section{Router additional configuration}
-        Router 1 needs a tiny little command to allow our DHCP server: ip helper-address \textbf{\textit{DHCP_IP_ADDRESS}}\\
-        Simple as that.\\
-        \includegraphics[scale=0.32, valign=c]{R1}\\
-        \caption{Router1 helper-address}
-        \label{tab:router1}
+        Router 1 needs a tiny little command to allow our DHCP server: ip helper-address \textbf{\textit{DHCP.IP.ADDRESS}}\\
+        Simple as that.
+        \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.40]{R1}
+            \caption{Router1 helper-address}
+            \label{tab:router1}
+        \end{figure}
 
     \section{Preparing devices and results}
-        For our devices we'll configure them as DHCP. What follows are the executed commands, mainly in PC0.\\
-        \includegraphics[scale=0.32, valign=c]{PC0}\\
-        \caption{PC0 configuration and commands}
-        \label{tab:pc0conf}
+        For our devices we'll configure them as DHCP. What follows are the executed commands.\\
 
         With PC0 we went above and beyond testing the network. First observing the new assigned IP by our DHCP server, then running nslookup to the HTTP server configured website and, to conclude, IP address renewal.\\
         We can also see the browser in action, showing that everything is working as expected.\\
 
-        The remaining devices are in the appendix section.
+        The remaining devices are in the \ref{printscreens} section from the appendix \ref{appendixref}.
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.26]{PC0}
+            \caption{PC0 configuration and commands}
+            \label{tab:pc0conf}
+        \end{figure}
+
+        \pagebreak
 
     \section{Command line outputs}
         \lstset{style=termoutputs}
@@ -467,14 +489,16 @@
         \lstinputlisting[
             language={},
             caption={PC1 output (LAN B)},
-            label={lst:pc0output}
+            label={lst:pc1output}
         ]{./outputs/PC1.txt}
 
         \lstinputlisting[
             language={},
             caption={R1 output},
-            label={lst:pc0output}
+            label={lst:r1output}
         ]{./outputs/R1.txt}
+
+        The remaining devices are in the \ref{clioutapxref} section from the appendix \ref{appendixref}.
 
 %% Chapter: issues and fixes ---------------------------------------------------
 \chapter{Issues and fixes}
@@ -483,7 +507,9 @@
 
 %% Chapter: conclusions --------------------------------------------------------
 \chapter{Conclusions}
-    *placeover_text*
+    Looking at our output results we realize that everything is working as anticipated.\\
+    We have IP addresses being assigned by a DHCP server over different sub networks and behind multiple routers. Renewal requests by devices are served without trouble.\\
+    DNS records are also fully functional, devices can reach the web server by name and IP address. Unfortunately the same cannot be done for DHCP assigned IP addresses, only static addresses.
 
 %% Bibliography ----------------------------------------------------------------
 %\renewcommand{\bibname}{Bibliographic references}
@@ -497,30 +523,42 @@
     \label{appendixref}
         \section{Command line encore}
         \label{clioutapxref}
-            \lstset{style=termoutputs}
-            \lstinputlisting[
-                language={},
-                caption={Laptop0 output (LAN A)},
-                label={lst:pc0output}
-            ]{./outputs/Laptop0.txt}
-            \lstinputlisting[
-                language={},
-                caption={Laptop1 output (LAN B)},
-                label={lst:pc0output}
-            ]{./outputs/Laptop1.txt}
+
+        \lstset{style=termoutputs}
+        \lstinputlisting[
+            language={},
+            caption={Laptop0 output (LAN A)},
+            label={lst:laptop0output}
+        ]{./outputs/Laptop0.txt}
+        \lstinputlisting[
+            language={},
+            caption={Laptop1 output (LAN B)},
+            label={lst:laptop1output}
+        ]{./outputs/Laptop1.txt}
+
     \chapter{Remaining devices}
         \section{Printscreens}
         \label{printscreens}
-            \includegraphics[scale=0.32, valign=c]{PC1}\\
-            \caption{PC1 configuration and commands}
-            \label{tab:pc1conf}
 
-            \includegraphics[scale=0.32, valign=c]{Laptop0}\\
+        \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.40]{Laptop0}
             \caption{Laptop0 configuration and commands}
             \label{tab:laptop0conf}
+        \end{figure}
 
-            \includegraphics[scale=0.32, valign=c]{Laptop1}\\
+        \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.40]{PC1}
+            \caption{PC1 configuration and commands}
+            \label{tab:pc1conf}
+        \end{figure}
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.40]{Laptop1}
             \caption{Laptop1 configuration and commands}
             \label{tab:laptop1conf}
+        \end{figure}
 
 \end{document}
